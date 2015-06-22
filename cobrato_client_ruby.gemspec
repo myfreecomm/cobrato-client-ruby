@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'plugin/version'
+require 'cobrato-client-ruby/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "plugin"
-  spec.version       = Plugin::VERSION
+  spec.name          = "cobrato-client-ruby"
+  spec.version       = Cnabber::VERSION
   spec.authors       = ["mrsantos"]
   spec.email         = ["mrsantos.caxias@gmail.com"]
 
