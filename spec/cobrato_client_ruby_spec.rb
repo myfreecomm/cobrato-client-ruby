@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Plugin do
+describe Cobrato do
   it 'has a version number' do
-    expect(Plugin::VERSION).not_to be nil
+    expect(Cobrato::VERSION).not_to be nil
   end
 
   it 'does something useful' do
