@@ -5,7 +5,7 @@ require 'cobrato/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "cobrato"
-  spec.version       = Cobrato:VERSION
+  spec.version       = Cobrato::VERSION
   spec.authors       = ["mrsantos"]
   spec.email         = ["mrsantos.caxias@gmail.com"]
 
