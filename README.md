@@ -36,13 +36,13 @@ end
 
 #### [Payees](#todo)
 
-| HTTP method | Endpoint          | Client method         |
-| ----------- | ----------------- | --------------------- |
-| POST        | api/v1/payees     | client.payees.create  |
-| GET         | api/v1/payees     | client.payees.list    |
-| GET         | api/v1/payees/:id | client.payees.show    |
-| PUT         | api/v1/payees/:id | client.payees.update  |
-| DELETE      | api/v1/payees/:id | client.payees.destroy |
+| HTTP method | Endpoint                   | Client method         |
+| ----------- | -------------------------- | --------------------- |
+| POST        | [api/v1/payees](#todo)     | client.payees.create  |
+| GET         | [api/v1/payees](#todo)     | client.payees.list    |
+| GET         | [api/v1/payees/:id](#todo) | client.payees.show    |
+| PUT         | [api/v1/payees/:id](#todo) | client.payees.update  |
+| DELETE      | [api/v1/payees/:id](#todo) | client.payees.destroy |
 
 #### [Bank Accounts](#todo)
 
@@ -82,11 +82,11 @@ end
 
 | HTTP method | Endpoint            | Client method           |
 | ----------- | ------------------- | ----------------------- |
-| POST        | api/v1/webhooks     | client.webhooks.create  |
-| GET         | api/v1/webhooks     | client.webhooks.list    |
-| GET         | api/v1/webhooks/:id | client.webhooks.show    |
-| PUT         | api/v1/webhooks/:id | client.webhooks.update  |
-| DELETE      | api/v1/webhooks/:id | client.webhooks.destroy |
+| POST        | [api/v1/webhooks     | client.webhooks.create  |
+| GET         | [api/v1/webhooks     | client.webhooks.list    |
+| GET         | [api/v1/webhooks/:id | client.webhooks.show    |
+| PUT         | [api/v1/webhooks/:id | client.webhooks.update  |
+| DELETE      | [api/v1/webhooks/:id | client.webhooks.destroy |
 
 ## Contributing
 
