@@ -20,15 +20,73 @@ Or install it yourself as:
 
     $ gem install cobrato-client-ruby
 
-## Usage
+## Configuration
 
-TODO: Write usage instructions here
+##### Use Cobrato.configure to setup your environment:
 
-## Development
+```ruby
+require "cobrato"
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+Cobrato.configure do |config|
+  #TODO configuration
+end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Endpoints
+
+#### [Payees](#todo)
+
+| HTTP method | Endpoint          | Client method         |
+| ----------- | ----------------- | --------------------- |
+| POST        | api/v1/payees     | client.payees.create  |
+| GET         | api/v1/payees     | client.payees.list    |
+| GET         | api/v1/payees/:id | client.payees.show    |
+| PUT         | api/v1/payees/:id | client.payees.update  |
+| DELETE      | api/v1/payees/:id | client.payees.destroy |
+
+#### [Bank Accounts](#todo)
+
+| HTTP method | Endpoint                             | Client method                       |
+| ----------- | ------------------------------------ | ----------------------------------- |
+| POST        | api/v1/bank_accounts                 | client.bank_accounts.create         |
+| GET         | api/v1/bank_accounts                 | client.bank_accounts.list           |
+| GET         | api/v1/bank_accounts/:id             | client.bank_accounts.show           |
+| PUT         | api/v1/bank_accounts/:id             | client.bank_accounts.update         |
+| DELETE      | api/v1/bank_accounts/:id             | client.bank_accounts.destroy        |
+| GET         | api/v1/bank_accounts/portfolio_codes | client.bank_accounts.porfolio_codes |
+
+#### [Charge Accounts](#todo)
+
+| HTTP method | Endpoint                   | Client method                  |
+| ----------- | -------------------------- | ------------------------------ |
+| POST        | api/v1/charge_accounts     | client.charge_accounts.create  |
+| GET         | api/v1/charge_accounts     | client.charge_accounts.list    |
+| GET         | api/v1/charge_accounts/:id | client.charge_accounts.show    |
+| PUT         | api/v1/charge_accounts/:id | client.charge_accounts.update  |
+| DELETE      | api/v1/charge_accounts/:id | client.charge_accounts.destroy |
+
+#### [Charges](#todo)
+
+| HTTP method | Endpoint                          | Client method                 |
+| ----------- | --------------------------------- | ----------------------------- |
+| POST        | api/v1/charges                    | client.charges.create         |
+| GET         | api/v1/charges                    | client.charges.list           |
+| GET         | api/v1/charges/:id                | client.charges.show           |
+| PUT         | api/v1/charges/:id                | client.charges.update         |
+| DELETE      | api/v1/charges/:id                | client.charges.destroy        |
+| POST        | api/v1/charges/:id/receive        | client.charges.receive        |
+| POST        | api/v1/charges/:id/undo_receive   | client.charges.undo_receive   |
+| POST        | api/v1/charges/:id/deliver_billet | client.charges.deliver_billet |
+
+#### [Webhooks](#todo)
+
+| HTTP method | Endpoint            | Client method           |
+| ----------- | ------------------- | ----------------------- |
+| POST        | api/v1/webhooks     | client.webhooks.create  |
+| GET         | api/v1/webhooks     | client.webhooks.list    |
+| GET         | api/v1/webhooks/:id | client.webhooks.show    |
+| PUT         | api/v1/webhooks/:id | client.webhooks.update  |
+| DELETE      | api/v1/webhooks/:id | client.webhooks.destroy |
 
 ## Contributing
 
