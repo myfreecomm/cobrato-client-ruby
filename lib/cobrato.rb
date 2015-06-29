@@ -6,6 +6,13 @@ require "cobrato/configuration"
 require "cobrato/client"
 require "cobrato/http"
 
+require "cobrato/entities/base"
+require "cobrato/entities/payee"
+require "cobrato/entities/bank_account"
+require "cobrato/entities/charge_account"
+require "cobrato/entities/charge"
+require "cobrato/entities/webhook"
+
 require "cobrato/resources/base"
 require "cobrato/resources/payee"
 require "cobrato/resources/bank_account"

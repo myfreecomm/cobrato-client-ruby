@@ -14,7 +14,7 @@ module Cobrato
 
           define_method method do |*args|
             result = send("#{method}_without_notifier", *args)
-            publish("emites.#{base_klass.downcase}.#{method}", result, args.flatten)
+            publish("cobrato.#{base_klass.downcase}.#{method}", result, args.flatten)
             result
           end
         end
