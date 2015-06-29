@@ -24,9 +24,7 @@ module Cobrato
         url:        "#{Cobrato.configuration.url}#{path}",
         user_agent: Cobrato.configuration.user_agent
       }))
-
       response = Response.new(request.run)
-
       response.resolve!(&block)
     end
 

@@ -22,6 +22,7 @@ module Cobrato
           params:           args[:params],
           body:             body,
           headers:          headers,
+          userpwd:          token,
           accept_encoding:  "gzip"
         }.reject {|k,v| v.nil?}
       end
@@ -33,7 +34,6 @@ module Cobrato
           "Accept"         => "application/json",
           "Content-Type"   => "application/json",
           "User-Agent"     => args[:user_agent],
-          "Authorization" => "Basic #{args[:authorization_hash]}" #review how will work the authorization
         }.merge(headers)
       end
 
@@ -41,6 +41,10 @@ module Cobrato
         body = args[:body]
         body = MultiJson.dump(body) if body.is_a?(Hash)
         body
+      end
+
+      def token
+        "#{args[:token]}:x"
       end
 
   end

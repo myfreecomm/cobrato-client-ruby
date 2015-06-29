@@ -27,7 +27,7 @@ module Cobrato
       Resources::ChargeAccount.new(http)
     end
 
-    def charge
+    def charges
       Resources::Charge.new(http)
     end
 
