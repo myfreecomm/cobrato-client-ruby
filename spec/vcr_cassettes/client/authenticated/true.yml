@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Jun 2015 18:28:03 GMT
+      ETag:
+      - W/"d9ae1784ad8c8e21a0636b13a5fc484d"
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 1a90ebc4-fc30-4dde-a853-c0946cc3becf
+      X-Runtime:
+      - '0.039826'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '120'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":42,"uuid":"c60879af-c6c4-4503-8eb1-512257df0cf1","name":"my favorite
+        account","plan_slug":"cobrato-basic"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1
+  recorded_at: Thu, 25 Jun 2015 18:28:03 GMT
+recorded_with: VCR 2.9.3
