@@ -48,6 +48,34 @@ describe Cobrato::Resources::Base do
     end
   end
 
+  describe ".notify" do
+    before do
+      allow(http).to receive(:send_request).and_return(request)
+    end
+
+    class FakeListener
+      def call(result, args)
+        [result, args]
+      end
+    end
+
+    let(:listener) { FakeListener.new }
+
+    before do
+      Cobrato.subscribe("cobrato.dummy.notifiable", listener)
+    end
+
+    it "does not affect method return" do
+      expect(subject.notifiable(42)).to eq("notifiable [42]")
+    end
+
+    it "notifies listeners about event" do
+      expect(listener).to receive(:call).with("notifiable [42]", [42]).
+        and_return(["notifiable [42]", [42]])
+      subject.notifiable(42)
+    end
+  end
+
   context "when request fails" do
 
     it "raises an RequestError" do

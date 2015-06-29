@@ -113,6 +113,59 @@ end
 | PUT         | [api/v1/webhooks/:id](#todo) | client.webhooks.update  |
 | DELETE      | [api/v1/webhooks/:id](#todo) | client.webhooks.destroy |
 
+## Callbacks
+
+All actions that change data triggers an event that you can subscribe to. This event allow you to extend the logic executed when you call a client method.
+
+#### Subscribing to an event
+
+All you have to do is create a class that responds to a method `#call` with two arguments:
+
+```ruby
+class MyListener
+  def call(result, args)
+  end
+end
+```
+
+**Where:**
+
+* `result` is the return of a client method
+* `args` is an array of arguments passed to the client method you called
+
+Now you have a listener, you can subscribe to an event:
+
+```ruby
+Cobrato.subscribe("cobrato.payees.destroy", MyListener.new)
+```
+
+**Example:**
+
+When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will be triggered. Your listener method `#call` will receive:
+
+* `result` would be `true or false` - depending on what `client.payees.destroy(1)` returned
+* `args` would be `[1]` - an array with the arguments passed to the client method
+
+#### Available hooks
+
+* payees
+    - cobrato.payees.create
+    - cobrato.payees.destroy
+* bank_accounts
+    - cobrato.bank_accounts.create
+    - cobrato.bank_accounts.destroy
+* charge_accounts
+    - cobrato.charge_accounts.create
+    - cobrato.charge_accounts.destroy
+* charges
+    - cobrato.charges.create
+    - cobrato.charges.destroy
+    - cobrato.charges.receive
+    - cobrato.charges.undo_receive
+* webhooks
+    - cobrato.webhooks.create
+    - cobrato.webhooks.destroy
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/cobrato-client-ruby/fork )

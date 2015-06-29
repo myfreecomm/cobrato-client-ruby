@@ -21,6 +21,8 @@ module Cobrato
         end
       end
 
+      notify :receive, :undo_receive
+
     end
   end
 end

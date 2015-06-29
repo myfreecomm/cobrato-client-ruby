@@ -3,8 +3,9 @@ require "cobrato/resources/hooks"
 module Cobrato
   module Resources
     class Base
-      attr_accessor :http
+      include Wisper::Publisher
       extend Hooks
+      attr_accessor :http
 
       def collection_name
         "#{base_klass.downcase}s"
@@ -49,6 +50,8 @@ module Cobrato
           respond_with_entity(response)
         end
       end
+
+      notify :create, :destroy
 
       protected
         def respond_with_collection(response, naked_klass = entity_klass)
