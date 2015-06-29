@@ -1,8 +1,6 @@
-# Cobrato::Client::Ruby
+# Cobrato Client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cobrato/client/ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is the official Ruby client for the [Cobrato](https://app.cobrato.com) API
 
 ## Installation
 
@@ -28,9 +26,26 @@ Or install it yourself as:
 require "cobrato"
 
 Cobrato.configure do |config|
-  #TODO configuration
+  config.url = "https://sandbox.cobrato.com/api/v1" # defaults to "https://app.cobrato.com.br/api/v1"
+  config.user_agent = 'My App v1.0' # optional, but you should pass a custom user-agent identifying your app
 end
 ```
+
+## Usage
+
+##### Given your token, create an instance of Cobrato::Client, as below:
+
+```ruby
+    client = Cobrato.client("YOUR_TOKEN_HERE") 
+```
+
+##### Now you have acess to every API endpoint:
+
+* [Payees API](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#index)
+* [Bank Accounts API](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#index)
+* [Charge Accounts API](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#index)
+* [Charges API](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#index)
+* [Webhooks API](http://myfreecomm.github.io/cobrato/api/v1/webhooks/index.html#index)
 
 ## Endpoints
 
