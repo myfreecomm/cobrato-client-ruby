@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Cobrato do
+
   it 'has a version number' do
     expect(Cobrato::VERSION).not_to be nil
   end
@@ -28,9 +29,9 @@ describe Cobrato do
     end
 
     it "raise error if no method" do
-      expect { Cobrato.configure do |c|
-        c.user = "Bart"
-      end }.to raise_error(NoMethodError)
+      expect do
+        Cobrato.configure { |c| c.user = "Bart" }
+      end.to raise_error(NoMethodError)
     end
   end
 

@@ -6,8 +6,8 @@ CodeClimate::TestReporter.start
 SimpleCov.start do
   SimpleCov.maximum_coverage_drop 0.2
   SimpleCov.start do
-    add_group  "Resources", "lib/cobrato/resources"
-    add_group  "Entities",  "lib/emites/entities"
+    add_group "Resources", "lib/cobrato/resources"
+    add_group "Entities", "lib/emites/entities"
     add_filter "vendor"
   end
 end

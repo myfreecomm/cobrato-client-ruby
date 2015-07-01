@@ -1,11 +1,11 @@
 require "spec_helper"
 
 describe Cobrato::Resources::Webhook do
-  let(:http)          { Cobrato::Http.new("45d4e96c707f2a45f73ac9848ff8eeab") }
-  let(:entity_klass)  { Cobrato::Entities::Webhook }
+  let(:http) { Cobrato::Http.new("45d4e96c707f2a45f73ac9848ff8eeab") }
+  let(:entity_klass) { Cobrato::Entities::Webhook }
   let(:params) do
     {
-      url:  "http://requestb.in/vp301qvp",
+      url: "http://requestb.in/vp301qvp",
       description: "My Fake Webhook"
     }
   end
@@ -22,7 +22,7 @@ describe Cobrato::Resources::Webhook do
         webhooks = subject.list
         expect(webhooks).to be_a(Array)
         webhooks.each do |e|
-          expect(e).to be_a(entity_klass )
+          expect(e).to be_a(entity_klass)
         end
       end
     end
@@ -31,7 +31,7 @@ describe Cobrato::Resources::Webhook do
   describe "#update" do
     it "returns an Webhook instance updated" do
       VCR.use_cassette("webhooks/update/success") do
-        webhook = subject.update(8, {description: "RSpec integration"})
+        webhook = subject.update(8, { description: "RSpec integration" })
         expect(webhook).to be_a(entity_klass)
         expect(webhook.description).to eq("RSpec integration")
       end
