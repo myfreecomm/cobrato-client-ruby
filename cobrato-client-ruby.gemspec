@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'vcr', '~> 2.9.3'
   spec.add_development_dependency 'pry-byebug', '~> 2.0.0'
   spec.add_development_dependency 'pry-remote', '~> 0.1.8'
-  spec.add_development_dependency 'rspec', '~> 3.1.0'
+  spec.add_development_dependency 'rspec', '~> 3.3.0'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.1'
   spec.add_development_dependency 'simplecov', '~> 0.9.1'
 end
