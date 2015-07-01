@@ -5,12 +5,12 @@ describe Cobrato::Resources::BankAccount do
   let(:entity_klass)  { Cobrato::Entities::BankAccount }
   let(:params) do
     {
-      "payee_id": "17",
-      "bank_code": "001",
-      "agency": "1606",
-      "agency_digit": "3",
-      "account": "91000",
-      "account_digit": "7"
+      "payee_id" =>  "17",
+      "bank_code" =>  "001",
+      "agency" =>  "1606",
+      "agency_digit" =>  "3",
+      "account" =>  "91000",
+      "account_digit" =>  "7"
     }
   end
 

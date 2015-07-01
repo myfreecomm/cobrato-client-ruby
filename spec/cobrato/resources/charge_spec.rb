@@ -5,28 +5,28 @@ describe Cobrato::Resources::Charge do
   let(:entity_klass)  { Cobrato::Entities::Charge }
   let(:params) do
     {
-      "charge_account_id": 88,
-      "due_date": "2015-02-14",
-      "document_kind": "DV",
-      "document_date": nil,
-      "document_number": nil,
-      "custom_our_number": true,
-      "our_number": "122",
-      "our_number_digit": nil,
-      "total_amount": "10.07",
-      "instructions": "Pagável em qualquer agência até data do vencimento",
-      "demonstrative": "Demonstrativo",
-      "payer_emails": ["myemail@gmail.com"],
-      "processing_date": "2015-01-30",
-      "for_homologation": true,
-      "billet": "https://cobrato-billet-storage.s3.amazonaws.com/"
+      "charge_account_id" => 88,
+      "due_date" => "2015-02-14",
+      "document_kind" => "DV",
+      "document_date" => nil,
+      "document_number" => nil,
+      "custom_our_number" => true,
+      "our_number" => "122",
+      "our_number_digit" => nil,
+      "total_amount" => "10.07",
+      "instructions" => "Pagável em qualquer agência até data do vencimento",
+      "demonstrative" => "Demonstrativo",
+      "payer_emails" => ["myemail@gmail.com"],
+      "processing_date" => "2015-01-30",
+      "for_homologation" => true,
+      "billet" => "https://cobrato-billet-storage.s3.amazonaws.com/"
     }
   end
 
   let(:receive_params) do
     {
-      "received_amount": "10.07",
-      "received_at": "2015-01-30"
+      "received_amount" => "10.07",
+      "received_at" => "2015-01-30"
     }
   end
 

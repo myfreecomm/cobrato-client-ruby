@@ -5,16 +5,16 @@ describe Cobrato::Resources::Payee do
   let(:entity_klass)  { Cobrato::Entities::Payee }
   let(:params) do
     {
-      "national_identifier_type":"cpf",
-      "national_identifier":"38031171513",
-      "name":"João Silveira",
-      "zipcode":"99000-750",
-      "city":"Carapebus",
-      "state":"RJ",
-      "neighbourhood":"Centro",
-      "street":"Rua Julio de Castilhos",
-      "number":"100",
-      "complement": "Ao lado da lotérica."
+      "national_identifier_type" => "cpf",
+      "national_identifier" => "38031171513",
+      "name" => "João Silveira",
+      "zipcode" => "99000-750",
+      "city" => "Carapebus",
+      "state" => "RJ",
+      "neighbourhood" => "Centro",
+      "street" => "Rua Julio de Castilhos",
+      "number" => "100",
+      "complement" => "Ao lado da lotérica."
     }
   end
 

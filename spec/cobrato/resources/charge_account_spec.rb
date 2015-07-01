@@ -5,15 +5,15 @@ describe Cobrato::Resources::ChargeAccount do
   let(:entity_klass)  { Cobrato::Entities::ChargeAccount }
   let(:params) do
     {
-      "bank_account_id": 25,
-      "portfolio_code": "17",
-      "agreement_code": "123456",
-      "agreement_code_digit": "1",
-      "name": "Conta Cobrança",
-      "initial_number": 1,
-      "current_number": 1,
-      "end_number": 1000,
-      "status": "pending",
+      "bank_account_id" => 25,
+      "portfolio_code" => "17",
+      "agreement_code" => "123456",
+      "agreement_code_digit" => "1",
+      "name" => "Conta Cobrança",
+      "initial_number" => 1,
+      "current_number" => 1,
+      "end_number" => 1000,
+      "status" => "pending",
     }
   end
 
