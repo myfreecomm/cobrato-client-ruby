@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cobrato/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cobrato"
+  spec.name          = "cobrato-client"
   spec.version       = Cobrato::VERSION
-  spec.authors       = ["mrsantos"]
-  spec.email         = ["mrsantos.caxias@gmail.com"]
+  spec.authors       = ["Marcio Ricardo Santos, Rodrigo Tassinari de Oliveira"]
+  spec.email         = ["mrsantos.caxias@gmail.com", "rodrigo@pittlandia.net"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This is the official Ruby client for the Cobrato API.}
+  spec.description   = %q{This is the official Ruby client for the Cobrato API. See https://app.cobrato.com for more information.}
+  spec.homepage      = "https://github.com/myfreecomm/cobrato-client-ruby/"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
