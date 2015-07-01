@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payees
+    body:
+      encoding: UTF-8
+      string: '{"national_identifier_type":"cpf","national_identifier":"38031171513","name":"João
+        Silveira","zipcode":"99000-750","city":"Carapebus","state":"RJ","neighbourhood":"Centro","street":"Rua
+        Julio de Castilhos","number":"100","complement":"Ao lado da lotérica."}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Jun 2015 21:05:04 GMT
+      ETag:
+      - W/"cd7bb2e4349c918a9a5396a8e87dd8cd"
+      Location:
+      - https://sandbox.cobrato.com/api/v1/payees/17
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 2adb3440-2f59-447e-8475-5896ba58e5c2
+      X-Runtime:
+      - '0.042635'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '538'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTcsIm5hdGlvbmFsX2lkZW50aWZpZXJfdHlwZSI6ImNwZiIsIm5h
+        dGlvbmFsX2lkZW50aWZpZXIiOiIzODAzMTE3MTUxMyIsIm5hbWUiOiJKb8Oj
+        byBTaWx2ZWlyYSIsInppcGNvZGUiOiI5OTAwMC03NTAiLCJjaXR5IjoiQ2Fy
+        YXBlYnVzIiwic3RhdGUiOiJSSiIsIm5laWdoYm91cmhvb2QiOiJDZW50cm8i
+        LCJzdHJlZXQiOiJSdWEgSnVsaW8gZGUgQ2FzdGlsaG9zIiwibnVtYmVyIjoi
+        MTAwIiwiY29tcGxlbWVudCI6IkFvIGxhZG8gZGEgbG90w6lyaWNhLiIsIl9s
+        aW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJo
+        dHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL3BheWVlcy8xNyJ9
+        LHsicmVsIjoidXBkYXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0dHBz
+        Oi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvcGF5ZWVzLzE3In0seyJy
+        ZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHBz
+        Oi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvcGF5ZWVzLzE3In1dfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payees
+  recorded_at: Fri, 26 Jun 2015 21:05:04 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/webhooks
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://requestb.in/vp301qvp","description":"My Fake Webhook"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Jun 2015 18:37:49 GMT
+      ETag:
+      - W/"ce12f2809200158f07a2beac0c7fc131"
+      Location:
+      - https://sandbox.cobrato.com/api/v1/webhooks/7
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - b58045f8-dc44-406b-956f-adb319be6cfc
+      X-Runtime:
+      - '0.692218'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '350'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":7,"url":"http://requestb.in/vp301qvp","description":"My Fake
+        Webhook","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/webhooks/7"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/webhooks/7"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/webhooks/7"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/webhooks
+  recorded_at: Fri, 26 Jun 2015 18:37:49 GMT
+recorded_with: VCR 2.9.3

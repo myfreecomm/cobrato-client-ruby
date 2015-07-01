@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/bank_accounts/24
+    body:
+      encoding: UTF-8
+      string: '{"agency":"1623"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 29 Jun 2015 12:25:58 GMT
+      ETag:
+      - W/"b8451d4bb9f02e0cf333137e748cb75c"
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 157e64d0-64e4-49df-889f-125f1f100515
+      X-Runtime:
+      - '0.045729'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '238'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":24,"payee_id":17,"bank_code":"001","agency":"1623","agency_digit":"3","account":"91000","account_digit":"7","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/24"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/24"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/24"},{"rel":"payee","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payees/17"},{"rel":"portfolio_code","method":"GET","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/24/portfolio_codes"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/bank_accounts/24
+  recorded_at: Mon, 29 Jun 2015 12:25:59 GMT
+recorded_with: VCR 2.9.3

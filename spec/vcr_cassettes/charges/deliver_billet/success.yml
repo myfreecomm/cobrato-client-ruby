@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/charges/87/deliver_billet
+    body:
+      encoding: UTF-8
+      string: '{"to":null}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 29 Jun 2015 17:57:19 GMT
+      ETag:
+      - W/"39a143cada00643b87503b539755126c"
+      Location:
+      - https://sandbox.cobrato.com/charges/87/download_billet
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 1676a4ec-927b-4e6f-9b08-5e4f8adf7dea
+      X-Runtime:
+      - '0.065954'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '103'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"to":["myemail@gmail.com"],"billet":"https://sandbox.cobrato.com/charges/87/download_billet"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charges/87/deliver_billet
+  recorded_at: Mon, 29 Jun 2015 17:57:19 GMT
+recorded_with: VCR 2.9.3

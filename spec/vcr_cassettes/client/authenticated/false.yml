@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 25 Jun 2015 18:28:27 GMT
+      Server:
+      - nginx/1.8.0
+      WWW-Authenticate:
+      - Token realm="Cobrato API"
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 1307a9ae-3f2a-41eb-977a-cf39a8797c8f
+      X-Runtime:
+      - '0.044884'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvcnMiOnsibWVzc2FnZSI6IkFjZXNzbyBuw6NvIGF1dG9yaXphZG8i
+        fX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1
+  recorded_at: Thu, 25 Jun 2015 18:28:27 GMT
+recorded_with: VCR 2.9.3

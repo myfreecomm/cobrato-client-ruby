@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/bank_accounts
+    body:
+      encoding: UTF-8
+      string: '{"payee_id":"17","bank_code":"001","agency":"1606","agency_digit":"3","account":"91000","account_digit":"7"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 29 Jun 2015 12:28:06 GMT
+      ETag:
+      - W/"17d17bed1b98fddfac5e1b5642bb1c3d"
+      Location:
+      - https://sandbox.cobrato.com/api/v1/bank_accounts/25
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 6523d7f8-0f37-403b-bb6e-b66a08e8c79a
+      X-Runtime:
+      - '0.076459'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '608'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":25,"payee_id":17,"bank_code":"001","agency":"1606","agency_digit":"3","account":"91000","account_digit":"7","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/25"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/25"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/25"},{"rel":"payee","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payees/17"},{"rel":"portfolio_code","method":"GET","href":"https://sandbox.cobrato.com/api/v1/bank_accounts/25/portfolio_codes"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/bank_accounts
+  recorded_at: Mon, 29 Jun 2015 12:28:06 GMT
+recorded_with: VCR 2.9.3

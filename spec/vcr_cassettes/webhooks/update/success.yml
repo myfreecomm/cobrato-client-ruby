@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/webhooks/8
+    body:
+      encoding: UTF-8
+      string: '{"description":"RSpec integration"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Jun 2015 20:21:36 GMT
+      ETag:
+      - W/"a36c90467faa5feb7af46787fc9641c0"
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 9130e8a8-c3aa-497a-bbf6-3c7e4b83c56e
+      X-Runtime:
+      - '0.486248'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '197'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":8,"url":"http://requestb.in/we9598we","description":"RSpec integration","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/webhooks/8"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/webhooks/8"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/webhooks/8"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/webhooks/8
+  recorded_at: Fri, 26 Jun 2015 20:21:36 GMT
+recorded_with: VCR 2.9.3

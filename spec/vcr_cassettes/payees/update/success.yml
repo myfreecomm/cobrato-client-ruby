@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/payees/16
+    body:
+      encoding: UTF-8
+      string: '{"name":"RSpec integration"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 26 Jun 2015 20:43:18 GMT
+      ETag:
+      - W/"8bca9be0a6ff78dec26f71c1adcfed44"
+      Server:
+      - nginx/1.8.0
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 937cbbc3-6877-4698-9b9c-0d860d26259d
+      X-Runtime:
+      - '0.034434'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '311'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTYsIm5hdGlvbmFsX2lkZW50aWZpZXJfdHlwZSI6ImNwZiIsIm5h
+        dGlvbmFsX2lkZW50aWZpZXIiOiIzODAzMTE3MTUxMyIsIm5hbWUiOiJSU3Bl
+        YyBpbnRlZ3JhdGlvbiIsInppcGNvZGUiOiI5OTAwMC03NTAiLCJjaXR5Ijoi
+        Q2FyYXBlYnVzIiwic3RhdGUiOiJSSiIsIm5laWdoYm91cmhvb2QiOiJDZW50
+        cm8iLCJzdHJlZXQiOiJSdWEgSnVsaW8gZGUgQ2FzdGlsaG9zIiwibnVtYmVy
+        IjoiMTAwIiwiY29tcGxlbWVudCI6IkFvIGxhZG8gZGEgbG90w6lyaWNhLiIs
+        Il9saW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYi
+        OiJodHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL3BheWVlcy8x
+        NiJ9LHsicmVsIjoidXBkYXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0
+        dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvcGF5ZWVzLzE2In0s
+        eyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0
+        dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvcGF5ZWVzLzE2In1d
+        fQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payees/16
+  recorded_at: Fri, 26 Jun 2015 20:43:18 GMT
+recorded_with: VCR 2.9.3

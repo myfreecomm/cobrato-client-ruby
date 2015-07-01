@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - 2.0.0
+  - 2.1.6
+  - 2.2.2
+env:
+  global:
+    # CODECLIMATE_REPO_TOKEN
+    - secure: "tIIFBoB2Ftm8tyi0g34YxMgutCtLvdf5D/ifxzyILEujEirw/auxfok1GFC4pT4Adh1GWh7jkBF34DDYU2eIdz7K5c7EwskrsqQO5ZFJzuey25977tzZGUJcoauFterCxaRYwUrSMYF05JcHeaULIGqQKQZS3cl67OaFyyD4Dveees3w6kQGVODIdSyi1eU6w2cpIOFiOApyUWnqC45JQQHUEP+Eg1cbw16W3+ywsgakoYd/b81+vj7kPUTET2ADvv2jwzgCt9ejX/unrON0JOW2g+QE+VbqzDT6cSoLfTKxFVzPCsutNx2nZ1wHahhilHXqs5nW+FJTOTSt+fmNidRcr+WrgG2jarOZcMAvtuf6OnfLopL1SB8taE67YCwHE/2nX1myALx+LVtOOqV+ohE++WMDzMx+P0Hop3EAtewzg5IvBEJ2nDEVGv3cLYE3Y+IzTi4ccN9ReUlUae+DZCvpun7iElh+YAChMVeCZPg2h4dLAbDXrhZW5HbWoX1S34FjcvY5pwpSkm+QyOAKcHWInplv3HqQiqm8aLuFX+DSRi2sJxIvl0dXF15GVeNfoFdgf38ug1Seg4e93K1jgt+6UWEcRbawxb9DUNEo0B3YgdXcWtC/lZJRrJjWZLDb+PPOUKM7pkV3jjmfOQ/Oa3PU52E9JKlJaNlgq0gbesA="
+script:
+  - bundle exec rake --trace spec
