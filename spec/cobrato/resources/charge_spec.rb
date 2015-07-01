@@ -82,7 +82,7 @@ describe Cobrato::Resources::Charge do
       VCR.use_cassette("charges/create/success") do
         charge_account = subject.create(params)
         expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.our_number).to eq(params[:our_number])
+        expect(charge_account.our_number).to eq(params['our_number'])
       end
     end
   end

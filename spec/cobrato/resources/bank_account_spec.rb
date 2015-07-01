@@ -66,7 +66,7 @@ describe Cobrato::Resources::BankAccount do
       VCR.use_cassette("bank_accounts/create/success") do
         bank_account = subject.create(params)
         expect(bank_account).to be_a(entity_klass)
-        expect(bank_account.account).to eq(params[:account])
+        expect(bank_account.account).to eq(params['account'])
       end
     end
   end

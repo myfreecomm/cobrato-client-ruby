@@ -70,7 +70,7 @@ describe Cobrato::Resources::Payee do
       VCR.use_cassette("payees/create/success") do
         payee = subject.create(params)
         expect(payee).to be_a(entity_klass)
-        expect(payee.name).to eq(params[:name])
+        expect(payee.name).to eq(params['name'])
       end
     end
   end
