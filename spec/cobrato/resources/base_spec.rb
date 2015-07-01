@@ -40,7 +40,7 @@ describe Cobrato::Resources::Base do
     end
 
     it "does not raise an error" do
-      expect{ subject.parseable }.not_to raise_error
+      expect { subject.parseable }.not_to raise_error
     end
 
     it "response returns an empty hash" do

@@ -44,7 +44,7 @@ module Cobrato
           response.code == 204
         end
       end
-      
+
       def update(id, params)
         http.put("#{resource_base_path}/#{id}", { body: params }) do |response|
           respond_with_entity(response)
