@@ -1,6 +1,12 @@
 # Cobrato Client
 
-This is the official Ruby client for the [Cobrato](https://app.cobrato.com) API
+This is the official Ruby client for the [Cobrato](https://app.cobrato.com) API.
+
+[![Gem Version](https://badge.fury.io/rb/cobrato-client.png)](https://rubygems.org/gems/cobrato-client)
+[![Build Status](https://api.travis-ci.org/myfreecomm/cobrato-client-ruby.svg?branch=master)](https://travis-ci.org/myfreecomm/cobrato-client-ruby)
+[![Test Coverage](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby/badges/coverage.svg)](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby/coverage)
+[![Code Climate Grade](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby/badges/gpa.svg)](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby)
+[![Inline docs](http://inch-ci.org/github/myfreecomm/cobrato-client-ruby.svg?branch=master)](http://inch-ci.org/github/myfreecomm/cobrato-client-ruby)
 
 ## Installation
 
@@ -36,7 +42,7 @@ end
 ##### Given your token, create an instance of Cobrato::Client, as below:
 
 ```ruby
-    client = Cobrato.client("YOUR_TOKEN_HERE") 
+    client = Cobrato.client("YOUR_TOKEN_HERE")
 ```
 
 ##### Now you have acess to every API endpoint:
