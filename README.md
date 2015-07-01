@@ -13,7 +13,7 @@ This is the official Ruby client for the [Cobrato](https://app.cobrato.com) API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'cobrato-client-ruby'
+gem 'cobrato-client'
 ```
 
 And then execute:
@@ -22,7 +22,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install cobrato-client-ruby
+    $ gem install cobrato-client
 
 ## Configuration
 
