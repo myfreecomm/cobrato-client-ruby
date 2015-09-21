@@ -109,16 +109,6 @@ end
 | PUT         | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#update) | client.webhooks.update  |
 | DELETE      | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#delete) | client.webhooks.destroy |
 
-#### [Webhooks](#todo)
-
-| HTTP method | Endpoint            | Client method           |
-| ----------- | ------------------- | ----------------------- |
-| POST        | [api/v1/webhooks](#todo)     | client.webhooks.create  |
-| GET         | [api/v1/webhooks](#todo)     | client.webhooks.list    |
-| GET         | [api/v1/webhooks/:id](#todo) | client.webhooks.show    |
-| PUT         | [api/v1/webhooks/:id](#todo) | client.webhooks.update  |
-| DELETE      | [api/v1/webhooks/:id](#todo) | client.webhooks.destroy |
-
 ## Callbacks
 
 All actions that change data triggers an event that you can subscribe to. This event allow you to extend the logic executed when you call a client method.
