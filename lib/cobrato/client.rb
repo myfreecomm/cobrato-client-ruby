@@ -34,5 +34,9 @@ module Cobrato
     def webhooks
       Resources::Webhook.new(http)
     end
+
+    def charging_types
+      Resources::ChargingType.new(http)
+    end
   end
 end
