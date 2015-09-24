@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/charging_types
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.1.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      ETag:
+      - W/"2ccdffc27041ea3d76866925162384bb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bf461bec-6026-4e3e-badc-a9032d1bf6f5
+      X-Runtime:
+      - '0.012675'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"charging_types":{"bank_billets":[{"bank_code":"001","bank_name":"BancoDoBrasil","portfolio_codes":["11","12","16","17","18","31","51"],"regress":true,"remittance":false},{"bank_code":"033","bank_name":"Santander","portfolio_codes":["101","102"],"regress":true,"remittance":false},{"bank_code":"104","bank_name":"Caixa","portfolio_codes":["SINCO-1","SIGCB-1","SIGCB-2","SICOB-82","SICOB-9"],"regress":true,"remittance":false},{"bank_code":"237","bank_name":"Bradesco","portfolio_codes":["3","6","9","25"],"regress":true,"remittance":false},{"bank_code":"341","bank_name":"Itau","portfolio_codes":["109","112","157"],"regress":true,"remittance":false}]}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charging_types
+  recorded_at: Wed, 23 Sep 2015 19:55:03 GMT
+recorded_with: VCR 2.9.3

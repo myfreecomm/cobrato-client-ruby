@@ -1,7 +1,7 @@
 module Cobrato
   module Entities
     class ChargeAccount < Base
-      attribute :id,                   Integer 
+      attribute :id,                   Integer
       attribute :bank_account_id,      Integer
       attribute :portfolio_code,       String
       attribute :agreement_code,       String

@@ -1,7 +1,7 @@
 module Cobrato
   module Entities
     class Charge < Base
-      attribute :id,                Integer 
+      attribute :id,                Integer
       attribute :charge_account_id, Integer
       attribute :due_date,          Date
       attribute :processing_date,   Date
