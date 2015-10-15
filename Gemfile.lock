@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cobrato-client (0.2.1)
+    cobrato-client (0.2.2)
       multi_json (~> 1.11.1)
       typhoeus (~> 0.7.2)
       virtus (~> 1.0.5)
@@ -34,7 +34,7 @@ GEM
     json (1.8.3)
     method_source (0.8.2)
     multi_json (1.11.2)
-    pry (0.10.2)
+    pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
