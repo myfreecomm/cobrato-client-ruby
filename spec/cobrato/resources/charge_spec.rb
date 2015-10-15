@@ -9,7 +9,7 @@ describe Cobrato::Resources::Charge do
       "due_date" => "2015-02-14",
       "document_kind" => "DV",
       "document_date" => nil,
-      "document_number" => nil,
+      "document_number" => 'NA',
       "custom_our_number" => true,
       "our_number" => "122",
       "our_number_digit" => nil,
@@ -17,9 +17,10 @@ describe Cobrato::Resources::Charge do
       "instructions" => "Pagável em qualquer agência até data do vencimento",
       "demonstrative" => "Demonstrativo",
       "payer_emails" => ["myemail@gmail.com"],
+      "payer_info" => "Empresa A - CNPJ X",
       "processing_date" => "2015-01-30",
       "for_homologation" => true,
-      "billet" => "https://cobrato-billet-storage.s3.amazonaws.com/"
+      "payment_method" => "billet"
     }
   end
 

@@ -11,6 +11,7 @@ module Cobrato
       attribute :current_number,       Integer
       attribute :end_number,           Integer
       attribute :status,               String
+      attribute :payment_methods,      Array
     end
   end
 end

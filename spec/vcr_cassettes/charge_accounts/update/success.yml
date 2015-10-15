@@ -8,7 +8,7 @@ http_interactions:
       string: '{"end_number":1337}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.1.0
+      - Cobrato Ruby Client v0.2.1
       Accept:
       - application/json
       Content-Type:
@@ -25,11 +25,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 29 Jun 2015 12:48:14 GMT
+      - Thu, 15 Oct 2015 17:39:22 GMT
       ETag:
-      - W/"57782e6dc6eee452d49d5b4cd1e420c2"
+      - W/"b931bb280eec393e8a94d8751a2b4fd6"
       Server:
       - nginx/1.8.0
+      Set-Cookie:
+      - request_method=PUT; path=/
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains;
       Vary:
@@ -39,13 +41,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 40793d99-bed6-447b-b3d4-8c2ade42f76c
+      - f38790c4-7ee5-4099-ad30-a65019c3fdc4
       X-Runtime:
-      - '0.038119'
+      - '0.047814'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '276'
+      - '295'
       Connection:
       - keep-alive
     body:
@@ -55,18 +57,19 @@ http_interactions:
         IjoiMTciLCJhZ3JlZW1lbnRfY29kZSI6IjEyMzQ1NiIsImFncmVlbWVudF9j
         b2RlX2RpZ2l0IjoiMSIsIm5hbWUiOiJDb250YSBDb2JyYW7Dp2EiLCJpbml0
         aWFsX251bWJlciI6MSwiY3VycmVudF9udW1iZXIiOjEsImVuZF9udW1iZXIi
-        OjEzMzcsInN0YXR1cyI6InBlbmRpbmciLCJfbGlua3MiOlt7InJlbCI6InNl
-        bGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNv
-        YnJhdG8uY29tL2FwaS92MS9jaGFyZ2VfYWNjb3VudHMvODgifSx7InJlbCI6
-        InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwczovL3NhbmRi
+        OjEzMzcsInN0YXR1cyI6InBlbmRpbmciLCJwYXltZW50X21ldGhvZHMiOlsi
+        YmlsbGV0IiwiY25hYiJdLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRo
+        b2QiOiJHRVQiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29t
+        L2FwaS92MS9jaGFyZ2VfYWNjb3VudHMvODgifSx7InJlbCI6InVwZGF0ZSIs
+        Im1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwczovL3NhbmRib3guY29icmF0
+        by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50cy84OCJ9LHsicmVsIjoiZGVz
+        dHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwczovL3NhbmRi
         b3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50cy84OCJ9LHsi
-        cmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRw
-        czovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50
-        cy84OCJ9LHsicmVsIjoiYmFua19hY2NvdW50IiwibWV0aG9kIjoiR0VUIiwi
-        aHJlZiI6Imh0dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvYmFu
-        a19hY2NvdW50cy8yNSJ9XX0=
+        cmVsIjoiYmFua19hY2NvdW50IiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0
+        dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvYmFua19hY2NvdW50
+        cy8yNSJ9XX0=
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts/88
-  recorded_at: Mon, 29 Jun 2015 12:48:14 GMT
+  recorded_at: Thu, 15 Oct 2015 17:39:26 GMT
 recorded_with: VCR 2.9.3
