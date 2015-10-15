@@ -6,8 +6,8 @@ require 'cobrato/version'
 Gem::Specification.new do |spec|
   spec.name          = "cobrato-client"
   spec.version       = Cobrato::VERSION
-  spec.authors       = ["Marcio Ricardo Santos, Rodrigo Tassinari de Oliveira"]
-  spec.email         = ["mrsantos.caxias@gmail.com", "rodrigo@pittlandia.net"]
+  spec.authors       = ["Marcio Ricardo Santos", "Rodrigo Tassinari de Oliveira", "Hugo Maia Vieira"]
+  spec.email         = ["mrsantos.caxias@gmail.com", "rodrigo@pittlandia.net", "hugomaiavieira@gmail.com"]
 
   spec.summary       = %q{This is the official Ruby client for the Cobrato API.}
   spec.description   = %q{This is the official Ruby client for the Cobrato API. See https://app.cobrato.com for more information.}
