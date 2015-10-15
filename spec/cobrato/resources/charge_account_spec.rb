@@ -14,6 +14,7 @@ describe Cobrato::Resources::ChargeAccount do
       "current_number" => 1,
       "end_number" => 1000,
       "status" => "pending",
+      "payment_methods" => ["billet", "cnab"]
     }
   end
 

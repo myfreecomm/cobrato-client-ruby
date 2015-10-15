@@ -11,11 +11,12 @@ describe Cobrato::Entities::ChargeAccount do
       initial_number: 1,
       current_number: 1,
       end_number: 1000,
-      status: "pending"
+      status: "pending",
+      payment_methods: ["billet", "cnab"],
     }
   end
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :name, :initial_number, :current_number, :end_number, :status]
+  it_behaves_like "entity_attributes", [:id, :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :name, :initial_number, :current_number, :end_number, :status, :payment_methods]
 end
