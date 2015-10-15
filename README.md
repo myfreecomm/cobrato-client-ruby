@@ -47,15 +47,15 @@ end
 
 ##### Now you have acess to every API endpoint:
 
-* [Payees API](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#index)
-* [Bank Accounts API](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#index)
-* [Charge Accounts API](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#index)
-* [Charges API](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#index)
-* [Webhooks API](http://myfreecomm.github.io/cobrato/api/v1/webhooks/index.html#index)
+* [Payees API](http://docs.cobrato.com/#beneficiário)
+* [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
+* [Charge Accounts API](http://docs.cobrato.com/#conta-de-cobrança)
+* [Charges API](http://docs.cobrato.com/#cobrança)
+* [Webhooks API](http://docs.cobrato.com/#webhook)
 
 ## Endpoints
 
-#### [Payees](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#index)
+#### [Payees](http://docs.cobrato.com/#beneficiário)
 
 | HTTP method | Endpoint                                                                                 | Client method         |
 | ----------- | ---------------------------------------------------------------------------------------- | --------------------- |
@@ -65,7 +65,7 @@ end
 | PUT         | [api/v1/payees/:id](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#update) | client.payees.update  |
 | DELETE      | [api/v1/payees/:id](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#delete) | client.payees.destroy |
 
-#### [Bank Accounts](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#index)
+#### [Bank Accounts](http://docs.cobrato.com/#conta-bancária)
 
 | HTTP method | Endpoint                                                                                                                    | Client method                       |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -76,7 +76,7 @@ end
 | DELETE      | [api/v1/bank_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#delete)                      | client.bank_accounts.destroy        |
 | GET         | [api/v1/bank_accounts/portfolio_codes](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#portfolio_codes) | client.bank_accounts.portfolio_codes |
 
-#### [Charge Accounts](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#index)
+#### [Charge Accounts](http://docs.cobrato.com/#conta-de-cobrança)
 
 | HTTP method | Endpoint                                                                                                   | Client method                  |
 | ----------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
@@ -86,7 +86,7 @@ end
 | PUT         | [api/v1/charge_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#update) | client.charge_accounts.update  |
 | DELETE      | [api/v1/charge_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#delete) | client.charge_accounts.destroy |
 
-#### [Charges](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#index)
+#### [Charges](http://docs.cobrato.com/#cobrança)
 
 | HTTP method | Endpoint                                                                                                          | Client method                 |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
@@ -99,7 +99,9 @@ end
 | POST        | [api/v1/charges/:id/undo_receive](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#undo_receive)     | client.charges.undo_receive   |
 | POST        | [api/v1/charges/:id/deliver_billet](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#deliver_billet) | client.charges.deliver_billet |
 
-#### [Webhooks](http://myfreecomm.github.io/cobrato/api/v1/webhooks/index.html#index)
+**Note:**: Beyond the attributes present on the [API docs](http://docs.cobrato.com/#cobrança), the Charge entity has the `billet_url` attribute too.
+
+#### [Webhooks](http://docs.cobrato.com/#webhook)
 
 | HTTP method | Endpoint                                                                                      | Client method           |
 | ----------- | --------------------------------------------------------------------------------------------- | ----------------------- |
@@ -109,11 +111,11 @@ end
 | PUT         | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#update) | client.webhooks.update  |
 | DELETE      | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#delete) | client.webhooks.destroy |
 
-#### [Charging types](#todo)
+#### [Charging types](http://docs.cobrato.com/#tipos-de-cobrança)
 
-| HTTP method | Endpoint                              | Client method              |
-| ----------- | ------------------------------------- | -------------------------- |
-| GET         | [api/v1/charging_types](#todo)        | client.changing_types.list |
+| HTTP method | Endpoint                                                            | Client method              |
+| ----------- | ------------------------------------------------------------------- | -------------------------- |
+| GET         | [api/v1/charging_types](http://docs.cobrato.com/#tipos-de-cobrança) | client.changing_types.list |
 
 ## Callbacks
 
