@@ -23,13 +23,6 @@ module Cobrato
       attribute :for_homologation,    Boolean
       attribute :payment_method,      String
       attribute :has_cnab_remittance, Boolean
-      attribute :billet_url,          String
-
-      def initialize(attrs)
-        attrs = JSON.parse(attrs.to_json, symbolize_names: true)
-        attrs[:billet_url] = attrs[:_links].find { |l| l[:rel] == 'billet' }[:href]
-        super attrs
-      end
     end
   end
 end

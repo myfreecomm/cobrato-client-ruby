@@ -21,6 +21,12 @@ module Cobrato
         end
       end
 
+      def billet(id)
+        http.get("#{resource_base_path}/#{id}/billet") do |response|
+          OpenStruct.new(MultiJson.load(response.body))
+        end
+      end
+
       notify :receive, :undo_receive
 
     end
