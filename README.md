@@ -98,8 +98,7 @@ end
 | POST        | [api/v1/charges/:id/receive](http://docs.cobrato.com/#recebimento-de-cobrança)               | client.charges.receive        |
 | POST        | [api/v1/charges/:id/undo_receive](http://docs.cobrato.com/#desfazer-recebimento-de-cobrança) | client.charges.undo_receive   |
 | POST        | [api/v1/charges/:id/deliver_billet](http://docs.cobrato.com/#envio-de-boleto-da-cobrança)    | client.charges.deliver_billet |
-
-**Note:**: Beyond the attributes present on the [API docs](http://docs.cobrato.com/#cobrança), the Charge entity has the `billet_url` attribute too.
+| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/#boleto-da-cobrança)                      | client.charges.billet         |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 

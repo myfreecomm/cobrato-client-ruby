@@ -52,9 +52,9 @@ describe Cobrato::Resources::Charge do
   describe "#show" do
     it "returns an Charge instance showd" do
       VCR.use_cassette("charges/show/success") do
-        charge_account = subject.show(87)
-        expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.our_number).to eq("121")
+        charge = subject.show(87)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.our_number).to eq("121")
       end
     end
   end
@@ -62,9 +62,9 @@ describe Cobrato::Resources::Charge do
   describe "#update" do
     it "returns a Charge instance updated" do
       VCR.use_cassette("charges/update/success") do
-        charge_account = subject.update(87, {document_number: "1337"})
-        expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.document_number).to eq("1337")
+        charge = subject.update(87, {document_number: "1337"})
+        expect(charge).to be_a(entity_klass)
+        expect(charge.document_number).to eq("1337")
       end
     end
   end
@@ -81,9 +81,9 @@ describe Cobrato::Resources::Charge do
   describe "#create" do
     it "creates a charge" do
       VCR.use_cassette("charges/create/success") do
-        charge_account = subject.create(params)
-        expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.our_number).to eq(params['our_number'])
+        charge = subject.create(params)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.our_number).to eq(params['our_number'])
       end
     end
   end
@@ -91,10 +91,10 @@ describe Cobrato::Resources::Charge do
   describe "#receive" do
     it "returns a Charge received charge" do
       VCR.use_cassette("charges/receive/success") do
-        charge_account = subject.receive(87, receive_params)
-        expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.received_amount).to eq(10.07)
-        expect(charge_account.received).to eq(true)
+        charge = subject.receive(87, receive_params)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.received_amount).to eq(10.07)
+        expect(charge.received).to eq(true)
       end
     end
   end
@@ -102,9 +102,9 @@ describe Cobrato::Resources::Charge do
   describe "#undo_receive" do
     it "returns a Charge not received charge" do
       VCR.use_cassette("charges/undo_receive/success") do
-        charge_account = subject.undo_receive(87)
-        expect(charge_account).to be_a(entity_klass)
-        expect(charge_account.received).to eq(false)
+        charge = subject.undo_receive(87)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.received).to eq(false)
       end
     end
   end
@@ -125,6 +125,16 @@ describe Cobrato::Resources::Charge do
           result = subject.deliver_billet(87, ["cobratoone@mailinator.com", "cobratotest@mailinator.com"])
           expect(result).to be_truthy
         end
+      end
+    end
+  end
+
+  describe "#billet" do
+    it "returns a simple struct with the Charge billet url" do
+      VCR.use_cassette("charges/billet/success") do
+        billet = subject.billet(87)
+        expect(billet).to be_a(OpenStruct)
+        expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
       end
     end
   end

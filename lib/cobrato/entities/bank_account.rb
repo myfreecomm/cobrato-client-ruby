@@ -1,7 +1,7 @@
 module Cobrato
   module Entities
     class BankAccount < Base
-      attribute :id,            Integer 
+      attribute :id,            Integer
       attribute :payee_id,      Integer
       attribute :bank_code,     String
       attribute :agency,        String
