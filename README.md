@@ -57,64 +57,64 @@ end
 
 #### [Payees](http://docs.cobrato.com/#beneficiário)
 
-| HTTP method | Endpoint                                                                                 | Client method         |
-| ----------- | ---------------------------------------------------------------------------------------- | --------------------- |
-| POST        | [api/v1/payees](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#create)     | client.payees.create  |
-| GET         | [api/v1/payees](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#list)       | client.payees.list    |
-| GET         | [api/v1/payees/:id](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#show)   | client.payees.show    |
-| PUT         | [api/v1/payees/:id](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#update) | client.payees.update  |
-| DELETE      | [api/v1/payees/:id](http://myfreecomm.github.io/cobrato/api/v1/payees/index.html#delete) | client.payees.destroy |
+| HTTP method | Endpoint                                                                  | Client method         |
+| ----------- | ------------------------------------------------------------------------- | --------------------- |
+| POST        | [api/v1/payees](http://docs.cobrato.com/#criação-de-beneficiário)         | client.payees.create  |
+| GET         | [api/v1/payees](http://docs.cobrato.com/#lista-de-todos-os-beneficiários) | client.payees.list    |
+| GET         | [api/v1/payees/:id](http://docs.cobrato.com/#informações-do-beneficiário) | client.payees.show    |
+| PUT         | [api/v1/payees/:id](http://docs.cobrato.com/#atualização-de-beneficiário) | client.payees.update  |
+| DELETE      | [api/v1/payees/:id](http://docs.cobrato.com/#exclusão-de-beneficiário)    | client.payees.destroy |
 
 #### [Bank Accounts](http://docs.cobrato.com/#conta-bancária)
 
-| HTTP method | Endpoint                                                                                                                    | Client method                       |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| POST        | [api/v1/bank_accounts](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#create)                          | client.bank_accounts.create         |
-| GET         | [api/v1/bank_accounts](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#list)                            | client.bank_accounts.list           |
-| GET         | [api/v1/bank_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#show)                        | client.bank_accounts.show           |
-| PUT         | [api/v1/bank_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#update)                      | client.bank_accounts.update         |
-| DELETE      | [api/v1/bank_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#delete)                      | client.bank_accounts.destroy        |
-| GET         | [api/v1/bank_accounts/portfolio_codes](http://myfreecomm.github.io/cobrato/api/v1/bank_accounts/index.html#portfolio_codes) | client.bank_accounts.portfolio_codes |
+| HTTP method | Endpoint                                                                               | Client method                        |
+| ----------- | -------------------------------------------------------------------------------------- | ------------------------------------ |
+| POST        | [api/v1/bank_accounts](http://docs.cobrato.com/#criação-de-conta-bancária)             | client.bank_accounts.create          |
+| GET         | [api/v1/bank_accounts](http://docs.cobrato.com/#lista-de-todas-as-contas-bancárias)    | client.bank_accounts.list            |
+| GET         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#informações-da-conta-bancária)     | client.bank_accounts.show            |
+| PUT         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#atualização-de-conta-bancária)     | client.bank_accounts.update          |
+| DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-bancária)        | client.bank_accounts.destroy         |
+| GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-disponíveis) | client.bank_accounts.portfolio_codes |
 
 #### [Charge Accounts](http://docs.cobrato.com/#conta-de-cobrança)
 
-| HTTP method | Endpoint                                                                                                   | Client method                  |
-| ----------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| POST        | [api/v1/charge_accounts](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#create)     | client.charge_accounts.create  |
-| GET         | [api/v1/charge_accounts](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#list)       | client.charge_accounts.list    |
-| GET         | [api/v1/charge_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#show)   | client.charge_accounts.show    |
-| PUT         | [api/v1/charge_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#update) | client.charge_accounts.update  |
-| DELETE      | [api/v1/charge_accounts/:id](http://myfreecomm.github.io/cobrato/api/v1/charge_accounts/index.html#delete) | client.charge_accounts.destroy |
+| HTTP method | Endpoint                                                                                | Client method                  |
+| ----------- | --------------------------------------------------------------------------------------- | ------------------------------ |
+| POST        | [api/v1/charge_accounts](http://docs.cobrato.com/#criação-de-conta-de-cobrança)         | client.charge_accounts.create  |
+| GET         | [api/v1/charge_accounts](http://docs.cobrato.com/#lista-de-todas-as-contas-de-cobrança) | client.charge_accounts.list    |
+| GET         | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#informações-da-conta-de-cobrança) | client.charge_accounts.show    |
+| PUT         | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#atualização-de-conta-de-cobrança) | client.charge_accounts.update  |
+| DELETE      | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-de-cobrança)    | client.charge_accounts.destroy |
 
 #### [Charges](http://docs.cobrato.com/#cobrança)
 
-| HTTP method | Endpoint                                                                                                          | Client method                 |
-| ----------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| POST        | [api/v1/charges](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#create)                            | client.charges.create         |
-| GET         | [api/v1/charges](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#list)                              | client.charges.list           |
-| GET         | [api/v1/charges/:id](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#show)                          | client.charges.show           |
-| PUT         | [api/v1/charges/:id](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#update)                        | client.charges.update         |
-| DELETE      | [api/v1/charges/:id](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#delete)                        | client.charges.destroy        |
-| POST        | [api/v1/charges/:id/receive](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#receive)               | client.charges.receive        |
-| POST        | [api/v1/charges/:id/undo_receive](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#undo_receive)     | client.charges.undo_receive   |
-| POST        | [api/v1/charges/:id/deliver_billet](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#deliver_billet) | client.charges.deliver_billet |
-| GET         | [api/v1/charges/:id/billet](http://myfreecomm.github.io/cobrato/api/v1/charges/index.html#billet)                 | client.charges.billet         |
+| HTTP method | Endpoint                                                                                     | Client method                 |
+| ----------- | -------------------------------------------------------------------------------------------- | ----------------------------- |
+| POST        | [api/v1/charges](http://docs.cobrato.com/#criação-de-cobrança)                               | client.charges.create         |
+| GET         | [api/v1/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança)                        | client.charges.list           |
+| GET         | [api/v1/charges/:id](http://docs.cobrato.com/#informações-da-cobrança)                       | client.charges.show           |
+| PUT         | [api/v1/charges/:id](http://docs.cobrato.com/#atualização-de-cobrança)                       | client.charges.update         |
+| DELETE      | [api/v1/charges/:id](http://docs.cobrato.com/#exclusão-de-cobrança)                          | client.charges.destroy        |
+| POST        | [api/v1/charges/:id/receive](http://docs.cobrato.com/#recebimento-de-cobrança)               | client.charges.receive        |
+| POST        | [api/v1/charges/:id/undo_receive](http://docs.cobrato.com/#desfazer-recebimento-de-cobrança) | client.charges.undo_receive   |
+| POST        | [api/v1/charges/:id/deliver_billet](http://docs.cobrato.com/#envio-de-boleto-da-cobrança)    | client.charges.deliver_billet |
+| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/boleto-da-cobrança)                      | client.charges.billet         |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 
-| HTTP method | Endpoint                                                                                      | Client method           |
-| ----------- | --------------------------------------------------------------------------------------------- | ----------------------- |
-| POST        | [api/v1/webhooks](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#create)     | client.webhooks.create  |
-| GET         | [api/v1/webhooks](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#list)       | client.webhooks.list    |
-| GET         | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#show)   | client.webhooks.show    |
-| PUT         | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#update) | client.webhooks.update  |
-| DELETE      | [api/v1/webhooks/:id](http://myfreecomm.github.io/cobrato//api/v1/webhooks/index.html#delete) | client.webhooks.destroy |
+| HTTP method | Endpoint                                                               | Client method           |
+| ----------- | ---------------------------------------------------------------------- | ----------------------- |
+| POST        | [api/v1/webhooks](http://docs.cobrato.com/#criação-de-webhook)         | client.webhooks.create  |
+| GET         | [api/v1/webhooks](http://docs.cobrato.com/#lista-de-todos-os-webhooks) | client.webhooks.list    |
+| GET         | [api/v1/webhooks/:id](http://docs.cobrato.com/#informações-do-webhook) | client.webhooks.show    |
+| PUT         | [api/v1/webhooks/:id](http://docs.cobrato.com/#atualização-de-webhook) | client.webhooks.update  |
+| DELETE      | [api/v1/webhooks/:id](http://docs.cobrato.com/#exclusão-de-webhook)    | client.webhooks.destroy |
 
 #### [Charging types](http://docs.cobrato.com/#tipos-de-cobrança)
 
-| HTTP method | Endpoint                                                            | Client method              |
-| ----------- | ------------------------------------------------------------------- | -------------------------- |
-| GET         | [api/v1/charging_types](http://docs.cobrato.com/#tipos-de-cobrança) | client.changing_types.list |
+| HTTP method | Endpoint                                                                              | Client method              |
+| ----------- | ------------------------------------------------------------------------------------- | -------------------------- |
+| GET         | [api/v1/charging_types](http://docs.cobrato.com/#lista-de-todos-os-tipos-de-cobrança) | client.changing_types.list |
 
 ## Callbacks
 
