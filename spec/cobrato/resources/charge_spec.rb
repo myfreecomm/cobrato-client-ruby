@@ -20,7 +20,17 @@ describe Cobrato::Resources::Charge do
       "payer_info" => "Empresa A - CNPJ X",
       "processing_date" => "2015-01-30",
       "for_homologation" => true,
-      "payment_method" => "billet"
+      "registered" => true,
+      "payer_national_identifier_type" => "cpf",
+      "payer_national_identifier" => "12345678909",
+      "payer_name" => "Jonh Doe",
+      "payer_number" => "43",
+      "payer_complement" => "8 andar",
+      "payer_street" => "Rua do Carmo",
+      "payer_neighbourhood" => "Centro",
+      "payer_zipcode" => "22230062",
+      "payer_city" => "Rio de Janeiro",
+      "payer_state" => "RJ"
     }
   end
 

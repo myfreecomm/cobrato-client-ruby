@@ -6,10 +6,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"bank_account_id":25,"portfolio_code":"17","agreement_code":"123456","agreement_code_digit":"1","name":"Conta
-        Cobrança","initial_number":1,"current_number":1,"end_number":1000,"status":"pending","payment_methods":["billet","cnab"]}'
+        Cobrança","initial_number":1,"current_number":1,"end_number":1000,"status":"pending","registered_charges":true,"agreement_number":4576361,"initial_remittance_number":1,"remittance_cnab_pattern":240}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.1
+      - Cobrato Ruby Client v0.2.3
       Accept:
       - application/json
       Content-Type:
@@ -24,11 +24,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 17:32:24 GMT
+      - Wed, 30 Dec 2015 17:10:24 GMT
       ETag:
-      - W/"70365601a9df6d03f645ddb735d8cd96"
+      - W/"0962c2a386419fc3c40cbc91c853df9b"
       Location:
-      - https://sandbox.cobrato.com/api/v1/charge_accounts/109
+      - https://sandbox.cobrato.com/api/v1/charge_accounts/121
       Server:
       - nginx/1.8.0
       Set-Cookie:
@@ -40,35 +40,34 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 9b35a79d-81d3-4ca7-8559-a1d7d657bc6a
+      - 5f0a053a-ca41-411e-9075-f4f1a679a530
       X-Runtime:
-      - '0.039108'
+      - '0.119612'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '642'
+      - '606'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6MTA5LCJiYW5rX2FjY291bnRfaWQiOjI1LCJwb3J0Zm9saW9fY29k
+        eyJpZCI6MTIxLCJiYW5rX2FjY291bnRfaWQiOjI1LCJwb3J0Zm9saW9fY29k
         ZSI6IjE3IiwiYWdyZWVtZW50X2NvZGUiOiIxMjM0NTYiLCJhZ3JlZW1lbnRf
         Y29kZV9kaWdpdCI6IjEiLCJuYW1lIjoiQ29udGEgQ29icmFuw6dhIiwiaW5p
         dGlhbF9udW1iZXIiOjEsImN1cnJlbnRfbnVtYmVyIjoxLCJlbmRfbnVtYmVy
-        IjoxMDAwLCJzdGF0dXMiOiJwZW5kaW5nIiwicGF5bWVudF9tZXRob2RzIjpb
-        ImJpbGxldCIsImNuYWIiXSwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0
-        aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNv
-        bS9hcGkvdjEvY2hhcmdlX2FjY291bnRzLzEwOSJ9LHsicmVsIjoidXBkYXRl
-        IiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5jb2Jy
-        YXRvLmNvbS9hcGkvdjEvY2hhcmdlX2FjY291bnRzLzEwOSJ9LHsicmVsIjoi
-        ZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwczovL3Nh
-        bmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50cy8xMDki
-        fSx7InJlbCI6ImJhbmtfYWNjb3VudCIsIm1ldGhvZCI6IkdFVCIsImhyZWYi
-        OiJodHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2JhbmtfYWNj
-        b3VudHMvMjUifV19
+        IjoxMDAwLCJzdGF0dXMiOiJwZW5kaW5nIiwiX2xpbmtzIjpbeyJyZWwiOiJz
+        ZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5j
+        b2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlX2FjY291bnRzLzEyMSJ9LHsicmVs
+        IjoidXBkYXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0dHBzOi8vc2Fu
+        ZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlX2FjY291bnRzLzEyMSJ9
+        LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJo
+        dHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9hY2Nv
+        dW50cy8xMjEifSx7InJlbCI6ImJhbmtfYWNjb3VudCIsIm1ldGhvZCI6IkdF
+        VCIsImhyZWYiOiJodHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3Yx
+        L2JhbmtfYWNjb3VudHMvMjUifV19
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts
-  recorded_at: Thu, 15 Oct 2015 17:32:29 GMT
+  recorded_at: Wed, 30 Dec 2015 17:10:25 GMT
 recorded_with: VCR 2.9.3

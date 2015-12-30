@@ -14,7 +14,10 @@ describe Cobrato::Resources::ChargeAccount do
       "current_number" => 1,
       "end_number" => 1000,
       "status" => "pending",
-      "payment_methods" => ["billet", "cnab"]
+      "registered_charges" => true,
+      "agreement_number" => 4576361,
+      "initial_remittance_number" => 1,
+      "remittance_cnab_pattern" => 240
     }
   end
 
