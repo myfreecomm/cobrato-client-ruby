@@ -17,7 +17,10 @@ describe Cobrato::Resources::ChargeAccount do
       "registered_charges" => true,
       "agreement_number" => 4576361,
       "initial_remittance_number" => 1,
-      "remittance_cnab_pattern" => 240
+      "remittance_cnab_pattern" => 240,
+      "interest_amount_per_month" => 1.02,
+      "mulct_type" => "percentage",
+      "mulct_value" => 10.12
     }
   end
 
