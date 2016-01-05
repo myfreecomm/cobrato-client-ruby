@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cobrato-client (0.2.4)
+    cobrato-client (0.2.5)
       multi_json (~> 1.11.1)
       typhoeus (~> 0.7.2)
       virtus (~> 1.0.5)
