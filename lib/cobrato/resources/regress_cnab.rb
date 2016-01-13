@@ -2,7 +2,7 @@ require "cobrato/resources/hooks"
 
 module Cobrato
   module Resources
-    class Base
+    class RegressCnab
       include Wisper::Publisher
       include Helper
       extend Hooks
@@ -13,36 +13,44 @@ module Cobrato
       end
 
       def create(params)
-        http.post(resource_base_path, { body: params }) do |response|
+        http.post(base_path, { body: params }) do |response|
           respond_with_entity(response)
         end
       end
 
       def show(id)
-        http.get("#{resource_base_path}/#{id}") do |response|
+        http.get("#{base_path}/#{id}") do |response|
           respond_with_entity(response)
         end
       end
 
       def list
-        http.get(resource_base_path) do |response|
+        http.get(base_path) do |response|
           respond_with_collection(response)
         end
       end
 
       def destroy(id)
-        http.delete("#{resource_base_path}/#{id}") do |response|
+        http.delete("#{base_path}/#{id}") do |response|
           response.code == 204
         end
       end
 
-      def update(id, params)
-        http.put("#{resource_base_path}/#{id}", { body: params }) do |response|
-          respond_with_entity(response)
+      def file(id)
+        http.get("#{base_path}/#{id}/file") do |response|
+          respond_with_openstruct(response)
         end
       end
 
-      notify :create, :destroy
+      private
+
+        def base_path
+          '/regress_cnabs'
+        end
+
+        def collection_name
+          "regress_cnabs"
+        end
     end
   end
 end
