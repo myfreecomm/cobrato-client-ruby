@@ -1,6 +1,7 @@
 module Cobrato
   module Resources
     class Charge < Base
+      crud :all
 
       def receive(id, params)
         http.post("#{resource_base_path}/#{id}/receive", { body: params }) do |response|
@@ -23,12 +24,11 @@ module Cobrato
 
       def billet(id)
         http.get("#{resource_base_path}/#{id}/billet") do |response|
-          OpenStruct.new(MultiJson.load(response.body))
+          respond_with_openstruct response
         end
       end
 
       notify :receive, :undo_receive
-
     end
   end
 end

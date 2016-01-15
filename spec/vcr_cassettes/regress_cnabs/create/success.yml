@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs
+    body:
+      encoding: UTF-8
+      string: '{"cnabs":"data:application/octet-stream;base64,MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAzMTMwMDAyMjY5OTAgICAgICAgIFRBWFdFQiBDT01QTElBTkNFIFNPRlRXQVJFIFMvQTM0MUJBTkNPIElUQVUgUy5BLjAzMTIxNTAxNjAwQlBJMDAzNzcwMzEyMTUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMQ0KMTAyMTEwMDg5MTMwMDAxNzAzMTMwMDAyMjY5OTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA4MTI3NzUzMiAgICAgICAgICAgIDE1NzAwMDAwMDA4NSAgICAgICAgICAgICBJMDYwMzEyMTUxMDI0ICAgICAgODEyNzc1MzIgICAgICAgICAgICAyMjEyMTUwMDAwMDAwMDkzODUwMzQxMDAyNDAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOTM4NTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwQVRMQVMgQ09QQ08gQlJBU0lMIExUREEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMg0KOTIwMTM0MSAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAgICAgICAgMDAwMDAwMjUwMDAwMDEyMDQxMzkxNyAgMDMvMTJMICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAgICAgICAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzNzcwMDAwMDAwMjAwMDAwMDA3Njc5OTYyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwNA0K","cnabs_file_name":"exemplo.REM","charge_account_id":"124"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.2.5
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 202
+      message: Accepted
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 13 Jan 2016 12:21:46 GMT
+      Location:
+      - https://sandbox.cobrato.com/api/v1/regress_cnabs/45
+      Server:
+      - nginx/1.8.0
+      Set-Cookie:
+      - request_method=POST; path=/
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - ef443095-2df4-4aeb-bada-76dcc9cfc3d2
+      X-Runtime:
+      - '0.837549'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '468'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":45,"charge_account_id":124,"status":"processing","report":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"charge_account","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_accounts/124"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45/file"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs
+  recorded_at: Wed, 13 Jan 2016 12:21:46 GMT
+recorded_with: VCR 3.0.1

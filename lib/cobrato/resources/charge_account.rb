@@ -1,11 +1,7 @@
 module Cobrato
   module Resources
     class ChargeAccount < Base
-
-      def collection_name
-        "charge_accounts"
-      end
-
+      crud :all
     end
   end
 end
