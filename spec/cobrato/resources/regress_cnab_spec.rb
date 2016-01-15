@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Cobrato::Resources::RegressCnab do
   let(:http)          { Cobrato::Http.new('45d4e96c707f2a45f73ac9848ff8eeab') }
   let(:entity_klass)  { Cobrato::Entities::RegressCnab }
-  let(:params) do 
+  let(:params) do
     {
       'cnabs'=> 'data:application/octet-stream;base64,MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAzMTMwM' +
                'DAyMjY5OTAgICAgICAgIFRBWFdFQiBDT01QTElBTkNFIFNPRlRXQVJFIFMvQTM0MUJBTkNPIElUQVU' +
@@ -29,7 +29,7 @@ describe Cobrato::Resources::RegressCnab do
                'DAwNA0K',
       'cnabs_file_name'=> 'exemplo.REM',
       'charge_account_id'=> '124'
-    } 
+    }
   end
 
   subject { described_class.new(http) }

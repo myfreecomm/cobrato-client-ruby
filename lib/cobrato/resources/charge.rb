@@ -1,6 +1,7 @@
 module Cobrato
   module Resources
     class Charge < Base
+      crud :all
 
       def receive(id, params)
         http.post("#{resource_base_path}/#{id}/receive", { body: params }) do |response|

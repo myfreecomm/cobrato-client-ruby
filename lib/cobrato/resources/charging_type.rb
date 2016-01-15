@@ -1,10 +1,7 @@
 module Cobrato
   module Resources
     class ChargingType < Base
-
-      def collection_name
-        'charging_types'
-      end
+      crud :all
 
       def list
         http.get(resource_base_path) do |response|

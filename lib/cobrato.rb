@@ -16,7 +16,6 @@ require "cobrato/entities/webhook"
 require "cobrato/entities/bank_billet"
 require "cobrato/entities/regress_cnab"
 
-require "cobrato/resources/helper"
 require "cobrato/resources/base"
 require "cobrato/resources/payee"
 require "cobrato/resources/bank_account"

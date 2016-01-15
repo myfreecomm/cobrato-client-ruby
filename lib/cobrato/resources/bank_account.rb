@@ -1,10 +1,7 @@
 module Cobrato
   module Resources
     class BankAccount < Base
-
-      def collection_name
-        "bank_accounts"
-      end
+      crud :all
 
       def portfolio_codes(id)
         http.get("#{resource_base_path}/#{id}/portfolio_codes") do |response|

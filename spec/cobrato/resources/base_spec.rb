@@ -4,6 +4,8 @@ describe Cobrato::Resources::Base do
 
   module Cobrato::Resources
     class Dummy < Base
+      crud :create, :show, :destroy
+
       def parseable
         response = http.get("/1mayrfq1")
         parsed_body(response)
@@ -32,6 +34,21 @@ describe Cobrato::Resources::Base do
 
   before do
     allow(Cobrato.configuration).to receive(:url).and_return("http://requestb.in")
+  end
+
+  describe 'crud' do
+    context 'when subclass do not especify the crud method' do
+      it 'should raise error' do
+        expect{ subject.list }.to raise_error(RuntimeError, "Dummy do not implement the list method")
+      end
+    end
+
+    context 'when especify the crud method' do
+      it 'should make the request' do
+        expect(subject.http).to receive(:get).with('/dummys/15')
+        subject.show(15)
+      end
+    end
   end
 
   describe "#parsed_body" do
@@ -77,7 +94,6 @@ describe Cobrato::Resources::Base do
   end
 
   context "when request fails" do
-
     it "raises an RequestError" do
       Typhoeus.stub(/fail/).and_return(Typhoeus::Response.new(return_code: nil))
       expect { subject.fail }.to raise_error(Cobrato::RequestError)
@@ -86,6 +102,18 @@ describe Cobrato::Resources::Base do
     it "raises an RequestTimeout" do
       Typhoeus.stub(/timeout/).and_return(Typhoeus::Response.new(return_code: :operation_timedout))
       expect { subject.timeout }.to raise_error(Cobrato::RequestTimeout)
+    end
+  end
+
+  describe '#collection_name' do
+    it 'when simple class name' do
+      allow(subject).to receive(:base_klass).and_return('Webhook')
+      expect(subject.collection_name).to eql('webhooks')
+    end
+
+    it 'when composed class name' do
+      allow(subject).to receive(:base_klass).and_return('RegressCnab')
+      expect(subject.collection_name).to eql('regress_cnabs')
     end
   end
 end
