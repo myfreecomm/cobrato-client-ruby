@@ -98,7 +98,17 @@ end
 | POST        | [api/v1/charges/:id/receive](http://docs.cobrato.com/#recebimento-de-cobrança)               | client.charges.receive        |
 | POST        | [api/v1/charges/:id/undo_receive](http://docs.cobrato.com/#desfazer-recebimento-de-cobrança) | client.charges.undo_receive   |
 | POST        | [api/v1/charges/:id/deliver_billet](http://docs.cobrato.com/#envio-de-boleto-da-cobrança)    | client.charges.deliver_billet |
-| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/#boleto-da-cobrança)                      | client.charges.billet         |
+| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/#boleto-da-cobrança)                     | client.charges.billet         |
+
+#### [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
+
+| HTTP method | Endpoint                                                                             | Client method                |
+| ----------- | ------------------------------------------------------------------------------------ | ---------------------------- |
+| POST        | [api/v1/regress_cnabs](http://docs.cobrato.com/#criação-de-cnab-de-retorno)          | client.regress_cnabs.create  |
+| GET         | [api/v1/regress_cnabs](http://docs.cobrato.com/#lista-de-todas-as-cnabs-de-retorno)  | client.regress_cnabs.list    |
+| GET         | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#informações-do-cnab-de-retorno)  | client.regress_cnabs.show    |
+| DELETE      | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#exclusão-de-cnab-de-retorno)     | client.regress_cnabs.destroy |
+| GET         | [api/v1/regress_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-retorno) | client.regress_cnabs.file    |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 
