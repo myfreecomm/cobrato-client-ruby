@@ -38,5 +38,9 @@ module Cobrato
     def charging_types
       Resources::ChargingType.new(http)
     end
+
+    def regress_cnabs
+      Resources::RegressCnab.new(http)
+    end
   end
 end

@@ -48,9 +48,15 @@ describe Cobrato::Client do
     end
   end
 
-  describe "#webhooks" do
-    it "returns an instance of Cobrato::Resources::Webhook" do
-      expect(subject.webhooks).to be_a(Cobrato::Resources::Webhook)
+  describe "#charging_types" do
+    it "returns an instance of Cobrato::Resources::ChargingType" do
+      expect(subject.charging_types).to be_a(Cobrato::Resources::ChargingType)
+    end
+  end
+
+  describe "#regress_cnabs" do
+    it "returns an instance of Cobrato::Resources::RegressCnab" do
+      expect(subject.regress_cnabs).to be_a(Cobrato::Resources::RegressCnab)
     end
   end
 
