@@ -5,50 +5,52 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/regress_cnabs
     body:
       encoding: UTF-8
-      string: '{"cnabs":"data:application/octet-stream;base64,MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAzMTMwMDAyMjY5OTAgICAgICAgIFRBWFdFQiBDT01QTElBTkNFIFNPRlRXQVJFIFMvQTM0MUJBTkNPIElUQVUgUy5BLjAzMTIxNTAxNjAwQlBJMDAzNzcwMzEyMTUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMQ0KMTAyMTEwMDg5MTMwMDAxNzAzMTMwMDAyMjY5OTAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA4MTI3NzUzMiAgICAgICAgICAgIDE1NzAwMDAwMDA4NSAgICAgICAgICAgICBJMDYwMzEyMTUxMDI0ICAgICAgODEyNzc1MzIgICAgICAgICAgICAyMjEyMTUwMDAwMDAwMDkzODUwMzQxMDAyNDAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwOTM4NTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwQVRMQVMgQ09QQ08gQlJBU0lMIExUREEgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMg0KOTIwMTM0MSAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAgICAgICAgMDAwMDAwMjUwMDAwMDEyMDQxMzkxNyAgMDMvMTJMICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAgICAgICAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzNzcwMDAwMDAwMjAwMDAwMDA3Njc5OTYyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwNA0K","cnabs_file_name":"exemplo.REM","charge_account_id":"124"}'
+      string: '{"charge_account_id":"124","cnabs":{"content":"MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAwMDAwMDAwMDAwMDAwNDg3NTA4\nMEZSRUUgQ09NTVVOSVRFUyBDT05TVUxUT1JJQSBFTTIzN0JSQURFU0NPICAg\nICAgIDIxMDExNjAxNjAwMDAwMDAwMDEgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgIDIxMDExNiAgICAgICAgIDAwMDAwMQ0KMTAy\nMDU3OTM4MzIwMDAxMjYwMDAwMDA5MDM0MjgwMDE3MjI1MSAgICAgICAgICAg\nICAgICAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAyMzAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDA5MDYyMTAxMTZBNzVBICAgICAgMDAwMDAwMDAwMDAw\nMDAyMTEyMzMyNTAxMTYwMDAwMDAwMDA1MDAwMjM3MDQxNTIgIDAwMDAwMDAw\nMDAyNTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAg\nMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMg0KOTIwMTIz\nNyAgICAgICAgICAwMDAwMDAwMzAwMDAwMDAwMDIwOTEzMDAwMDAwMDEgICAg\nICAgICAgMDAwMDMwMDAwMDAwMjA5MTMwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgIDAwMDAwNQ0K\n","content_type":"text/plain","filename":"exemplo.RET"}}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.5
+      - Cobrato Ruby Client v0.2.7
       Accept:
       - application/json
       Content-Type:
       - application/json
   response:
     status:
-      code: 202
-      message: Accepted
+      code: 201
+      message: Created
     headers:
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Jan 2016 12:21:46 GMT
-      Location:
-      - https://sandbox.cobrato.com/api/v1/regress_cnabs/45
+      - Fri, 29 Jan 2016 13:44:51 GMT
+      ETag:
+      - W/"fcd0b3ea8e68855dab465278af026715"
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
       Set-Cookie:
       - request_method=POST; path=/
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - ef443095-2df4-4aeb-bada-76dcc9cfc3d2
+      - 7f3dcb73-e200-400f-bb9f-4fe73f4bc271
       X-Runtime:
-      - '0.837549'
+      - '0.741225'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '468'
+      - '533'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"id":45,"charge_account_id":124,"status":"processing","report":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"charge_account","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_accounts/124"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45/file"}]}'
+      string: '{"id":64,"charge_account_id":124,"status":"processing","report":{"charges_not_found":0,"received_charges":[],"registered_charges":[]},"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/64"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/64"},{"rel":"charge_account","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_accounts/124"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/64/file"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs
-  recorded_at: Wed, 13 Jan 2016 12:21:46 GMT
-recorded_with: VCR 3.0.1
+  recorded_at: Fri, 29 Jan 2016 13:44:59 GMT
+recorded_with: VCR 2.9.3
