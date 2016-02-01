@@ -51,6 +51,8 @@ end
 * [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
 * [Charge Accounts API](http://docs.cobrato.com/#conta-de-cobrança)
 * [Charges API](http://docs.cobrato.com/#cobrança)
+* [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
+* [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
 * [Webhooks API](http://docs.cobrato.com/#webhook)
 
 ## Endpoints
@@ -109,6 +111,17 @@ end
 | GET         | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#informações-do-cnab-de-retorno)  | client.regress_cnabs.show    |
 | DELETE      | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#exclusão-de-cnab-de-retorno)     | client.regress_cnabs.destroy |
 | GET         | [api/v1/regress_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-retorno) | client.regress_cnabs.file    |
+
+#### [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
+
+| HTTP method | Endpoint                                                                                                         | Client method                   |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| POST        | [api/v1/remittance_cnabs](http://docs.cobrato.com/##criação-de-arquivo-cnab-de-remessa)                          | client.remittance_cnabs.create  |
+| GET         | [api/v1/remittance_cnabs](http://docs.cobrato.com/#lista-de-todas-as-cnabs-de-remessa)                           | client.remittance_cnabs.list    |
+| GET         | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#informações-do-cnab-de-remessa)                           | client.remittance_cnabs.show    |
+| DELETE      | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#exclusão-de-cnab-de-remessa)                              | client.remittance_cnabs.destroy |
+| GET         | [api/v1/remittance_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-remessa)                          | client.remittance_cnabs.file    |
+| GET         | [api/v1/remittance_cnabs/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança-do-arquivo-de-remessa) | client.remittance_cnabs.charges |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 

@@ -16,7 +16,7 @@ module Cobrato
       end
 
       def collection_name
-        @collection_name ||= "#{base_klass.gsub(/(.)([A-Z])/,'\1_\2').downcase}s"
+        @collection_name ||= underscore_pluralized(base_klass)
       end
 
       def parsed_body(response)
@@ -77,11 +77,13 @@ module Cobrato
           end
         end
 
-        def respond_with_collection(response, naked_klass = entity_klass)
-          hash = parsed_body(response)
-          hash[collection_name].map do |item|
-            naked_klass.new(item)
-          end
+        def respond_with_collection(response, class_name = nil)
+          class_name    ||= base_klass
+          naked_klass     = entity_klass(class_name)
+          hash            = parsed_body(response)
+          collection_name = underscore_pluralized(class_name)
+
+          hash[collection_name].map { |item| naked_klass.new(item) }
         end
 
         def respond_with_entity(response, naked_klass = entity_klass)
@@ -101,8 +103,13 @@ module Cobrato
           @base_klass ||= self.class.name.split('::').last
         end
 
-        def entity_klass
-          @entity_klass ||= Cobrato::Entities.const_get(base_klass.to_sym)
+        def entity_klass(class_name = base_klass)
+          @entity_klass ||= Cobrato::Entities.const_get(class_name.to_sym)
+        end
+
+
+        def underscore_pluralized(str)
+          "#{str.gsub(/(.)([A-Z])/,'\1_\2').downcase}s"
         end
     end
   end
