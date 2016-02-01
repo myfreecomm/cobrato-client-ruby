@@ -42,5 +42,9 @@ module Cobrato
     def regress_cnabs
       Resources::RegressCnab.new(http)
     end
+
+    def remittance_cnabs
+      Resources::RemittanceCnab.new(http)
+    end
   end
 end
