@@ -10,5 +10,5 @@ describe Cobrato::Entities::Webhook do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :description, :url]
+  it_behaves_like "entity_attributes", [:id, :description, :url, :secret]
 end
