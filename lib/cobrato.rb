@@ -6,6 +6,7 @@ require "cobrato/version"
 require "cobrato/configuration"
 require "cobrato/client"
 require "cobrato/http"
+require "cobrato/signature"
 
 require "cobrato/entities/base"
 require "cobrato/entities/payee"
@@ -42,5 +43,9 @@ module Cobrato
 
   def self.subscribe(event, callback)
     Wisper.subscribe(callback, on: event, with: :call)
+  end
+
+  def self.signature(secret)
+    Signature.new(secret)
   end
 end

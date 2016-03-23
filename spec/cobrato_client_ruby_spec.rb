@@ -60,4 +60,11 @@ describe Cobrato do
     end
   end
 
+  describe '.signature' do
+    subject { described_class.signature("my-secret-key") }
+
+    it "returns an instance of Cobrato::Client" do
+      expect(subject).to be_a(Cobrato::Signature)
+    end
+  end
 end
