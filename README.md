@@ -139,6 +139,16 @@ end
 | ----------- | ------------------------------------------------------------------------------------- | -------------------------- |
 | GET         | [api/v1/charging_types](http://docs.cobrato.com/#lista-de-todos-os-tipos-de-cobrança) | client.changing_types.list |
 
+## Payload signature check
+
+You can check the [Cobrato signature](http://docs.cobrato.com/#assinatura-do-payload) on the payload request:
+
+```ruby
+sgnature = Cobrato.signature('secret')
+signature.check?(request.headers['X-Cobrato-RequestId'], request.headers['X-Cobrato-Signature'], request.body)
+# => true
+```
+
 ## Callbacks
 
 All actions that change data triggers an event that you can subscribe to. This event allow you to extend the logic executed when you call a client method.
