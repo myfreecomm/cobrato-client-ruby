@@ -18,11 +18,12 @@ describe Cobrato::Entities::ChargeAccount do
       remittance_cnab_pattern: 240,
       interest_amount_per_month: 1.02,
       mulct_type: 'percentage',
-      mulct_value: 10.12
+      mulct_value: 10.12,
+      transmission_code: "1234567"
     }
   end
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :name, :initial_number, :current_number, :end_number, :status, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number, :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value]
+  it_behaves_like "entity_attributes", [:id, :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :name, :initial_number, :current_number, :end_number, :status, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number, :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value, :transmission_code]
 end
