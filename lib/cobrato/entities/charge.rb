@@ -21,9 +21,8 @@ module Cobrato
       attribute :received_at,                    Date
       attribute :processing_date,                Date
       attribute :for_homologation,               Boolean
-      attribute :has_cnab_remittance,            Boolean
-      attribute :registered,                     Boolean
-      attribute :status,                         String
+      attribute :registrable,                    Boolean
+      attribute :registration_status,            String
       attribute :payer_national_identifier_type, String
       attribute :payer_national_identifier,      String
       attribute :payer_name,                     String
