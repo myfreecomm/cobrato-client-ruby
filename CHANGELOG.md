@@ -10,7 +10,7 @@ To open the path for new charging methods beyond Bank Billet, we made some struc
 
 `ChargeAccount` is now `ChargeConfig` and have new attributes:
 
-- `type`: the only possible value at this moment is "billet" that is the default value
+- `type`: the only possible value at this moment is `"billet"` that is the default value
 
 #### Changes on `Charge`
 
@@ -26,14 +26,14 @@ To open the path for new charging methods beyond Bank Billet, we made some struc
 
 ##### Added `Charge` attributes
 
-- `type`: the only possible value at this moment is "billet"
+- `type`: the only possible value at this moment is `"billet"`
 
 ##### Changed `Charge#registration_status` (old `Charge#status`) names
 
-- "not_generated_remittance" is now "without_remittance"
-- "generated_remittance" is now "remitted"
-- "registered" stays the same
-- "registered_with_error" was added
+- `"not_generated_remittance"` is now `"without_remittance"`
+- `"generated_remittance"` is now `"remitted"`
+- `"registered"` stays the same
+- `"registered_with_error"` was added
 
 #### Changes on `RegressCnab`
 
@@ -52,4 +52,4 @@ To open the path for new charging methods beyond Bank Billet, we made some struc
 
 ### Add `ChargeAccount` attributes:
 
-- `tramission-code`: it is a remittance related attribute only used by billet ChargeConfig for Santander bank
+- `transmission-code`: it is a remittance related attribute only used by billet ChargeConfig for Santander bank
