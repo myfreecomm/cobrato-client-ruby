@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/charge_accounts
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs
     body:
       encoding: US-ASCII
       string: ''
@@ -51,23 +51,23 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJjaGFyZ2VfYWNjb3VudHMiOlt7ImlkIjo4OCwiYmFua19hY2NvdW50X2lk
-        IjoyNSwicG9ydGZvbGlvX2NvZGUiOiIxNyIsImFncmVlbWVudF9jb2RlIjoi
-        MTIzNDU2IiwiYWdyZWVtZW50X2NvZGVfZGlnaXQiOiIxIiwibmFtZSI6IkNv
-        bnRhIENvYnJhbsOnYSIsImluaXRpYWxfbnVtYmVyIjoxLCJjdXJyZW50X251
-        bWJlciI6MSwiZW5kX251bWJlciI6MTMzNywic3RhdHVzIjoicGVuZGluZyIs
-        InBheW1lbnRfbWV0aG9kcyI6WyJiaWxsZXQiLCJjbmFiIl0sIl9saW5rcyI6
-        W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwczov
-        L3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50cy84
-        OCJ9LHsicmVsIjoidXBkYXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0
-        dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlX2FjY291
-        bnRzLzg4In0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwi
-        aHJlZiI6Imh0dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvY2hh
-        cmdlX2FjY291bnRzLzg4In0seyJyZWwiOiJiYW5rX2FjY291bnQiLCJtZXRo
-        b2QiOiJHRVQiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29t
-        L2FwaS92MS9iYW5rX2FjY291bnRzLzI1In1dfV19
+        eyJjaGFyZ2VfY29uZmlncyI6W3siaWQiOjg4LCJiYW5rX2FjY291bnRfaWQi
+        OjI1LCJwb3J0Zm9saW9fY29kZSI6IjE3IiwiYWdyZWVtZW50X2NvZGUiOiIx
+        MjM0NTYiLCJhZ3JlZW1lbnRfY29kZV9kaWdpdCI6IjEiLCJuYW1lIjoiQ29u
+        dGEgQ29icmFuYSIsImluaXRpYWxfbnVtYmVyIjoxLCJjdXJyZW50X251bWJl
+        ciI6MSwiZW5kX251bWJlciI6MTMzNywic3RhdHVzIjoicGVuZGluZyIsInBh
+        eW1lbnRfbWV0aG9kcyI6WyJiaWxsZXQiLCJjbmFiIl0sIl9saW5rcyI6W3si
+        cmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwczovL3Nh
+        bmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9jb25maWdzLzg4In0s
+        eyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cHM6
+        Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2VfY29uZmlncy84
+        OCJ9LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYi
+        OiJodHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9j
+        b25maWdzLzg4In0seyJyZWwiOiJiYW5rX2FjY291bnQiLCJtZXRob2QiOiJH
+        RVQiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92
+        MS9iYW5rX2FjY291bnRzLzI1In1dfV19
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs
   recorded_at: Thu, 15 Oct 2015 17:26:47 GMT
 recorded_with: VCR 2.9.3

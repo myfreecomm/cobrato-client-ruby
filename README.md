@@ -49,7 +49,7 @@ end
 
 * [Payees API](http://docs.cobrato.com/#beneficiário)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
-* [Charge Accounts API](http://docs.cobrato.com/#conta-de-cobrança)
+* [Charge Configs API](http://docs.cobrato.com/#configuração-de-cobrança)
 * [Charges API](http://docs.cobrato.com/#cobrança)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
 * [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
@@ -78,15 +78,15 @@ end
 | DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-bancária)        | client.bank_accounts.destroy         |
 | GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-disponíveis) | client.bank_accounts.portfolio_codes |
 
-#### [Charge Accounts](http://docs.cobrato.com/#conta-de-cobrança)
+#### [Charge Configs](http://docs.cobrato.com/#configuração-de-cobrança)
 
-| HTTP method | Endpoint                                                                                | Client method                  |
-| ----------- | --------------------------------------------------------------------------------------- | ------------------------------ |
-| POST        | [api/v1/charge_accounts](http://docs.cobrato.com/#criação-de-conta-de-cobrança)         | client.charge_accounts.create  |
-| GET         | [api/v1/charge_accounts](http://docs.cobrato.com/#lista-de-todas-as-contas-de-cobrança) | client.charge_accounts.list    |
-| GET         | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#informações-da-conta-de-cobrança) | client.charge_accounts.show    |
-| PUT         | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#atualização-de-conta-de-cobrança) | client.charge_accounts.update  |
-| DELETE      | [api/v1/charge_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-de-cobrança)    | client.charge_accounts.destroy |
+| HTTP method | Endpoint                                                                                      | Client method                  |
+| ----------- | --------------------------------------------------------------------------------------------- | ------------------------------ |
+| POST        | [api/v1/charge_configs](http://docs.cobrato.com/#criação-de-configuração-de-cobrança)         | client.charge_configs.create  |
+| GET         | [api/v1/charge_configs](http://docs.cobrato.com/#lista-de-todas-as-configurações-de-cobrança) | client.charge_configs.list    |
+| GET         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#informações-de-configuração-de-cobrança) | client.charge_configs.show    |
+| PUT         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#atualização-de-configuração-de-cobrança) | client.charge_configs.update  |
+| DELETE      | [api/v1/charge_configs/:id](http://docs.cobrato.com/#exclusão-de-configuração-de-cobrança)    | client.charge_configs.destroy |
 
 #### [Charges](http://docs.cobrato.com/#cobrança)
 
@@ -190,9 +190,9 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
 * bank_accounts
     - cobrato.bank_accounts.create
     - cobrato.bank_accounts.destroy
-* charge_accounts
-    - cobrato.charge_accounts.create
-    - cobrato.charge_accounts.destroy
+* charge_configs
+    - cobrato.charge_configs.create
+    - cobrato.charge_configs.destroy
 * charges
     - cobrato.charges.create
     - cobrato.charges.destroy

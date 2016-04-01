@@ -50,7 +50,7 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"remittance_cnabs":[{"id":11,"charge_account_id":126,"status":"processed","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11"},{"rel":"charge_account","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_accounts/126"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11/file"},{"rel":"charges","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11/charges"}]}]}'
+      string: '{"remittance_cnabs":[{"id":11,"charge_config_id":126,"status":"processed","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/126"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11/file"},{"rel":"charges","method":"GET","href":"https://sandbox.cobrato.com/api/v1/remittance_cnabs/11/charges"}]}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/remittance_cnabs

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.cobrato.com/api/v1/charge_accounts
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs
     body:
       encoding: UTF-8
       string: '{"bank_account_id":25,"portfolio_code":"17","agreement_code":"123456","agreement_code_digit":"1","name":"Conta
@@ -28,7 +28,7 @@ http_interactions:
       ETag:
       - W/"9ba5d99d5d08ddd9634e55cb51c81212"
       Location:
-      - https://sandbox.cobrato.com/api/v1/charge_accounts/123
+      - https://sandbox.cobrato.com/api/v1/charge_configs/123
       Server:
       - nginx/1.8.0
       Set-Cookie:
@@ -68,6 +68,6 @@ http_interactions:
         L2JhbmtfYWNjb3VudHMvMjUifV19
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs
   recorded_at: Tue, 05 Jan 2016 18:45:03 GMT
 recorded_with: VCR 2.9.3

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/charge_accounts/88
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/88
     body:
       encoding: US-ASCII
       string: ''
@@ -67,6 +67,6 @@ http_interactions:
         a19hY2NvdW50cy8yNSJ9XX0=
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts/88
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/88
   recorded_at: Tue, 05 Jan 2016 18:45:03 GMT
 recorded_with: VCR 2.9.3

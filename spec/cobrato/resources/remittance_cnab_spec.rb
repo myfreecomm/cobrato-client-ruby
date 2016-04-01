@@ -5,7 +5,7 @@ describe Cobrato::Resources::RemittanceCnab do
   let(:entity_klass)  { Cobrato::Entities::RemittanceCnab }
   let(:params) do
     {
-      'charge_account_id' => '126',
+      'charge_config_id' => '126',
       'charge_ids'        => [1011, 1328]
     }
   end
@@ -33,7 +33,7 @@ describe Cobrato::Resources::RemittanceCnab do
       VCR.use_cassette('remittance_cnabs/show/success') do
         remittance_cnab = subject.show(11)
         expect(remittance_cnab).to be_a(entity_klass)
-        expect(remittance_cnab.charge_account_id).to eq(126)
+        expect(remittance_cnab.charge_config_id).to eq(126)
       end
     end
   end
@@ -55,7 +55,7 @@ describe Cobrato::Resources::RemittanceCnab do
         remittance_cnabs.each do |e|
           expect(e).to be_a(entity_klass)
         end
-        expect(remittance_cnabs.first.charge_account_id).to eq(126)
+        expect(remittance_cnabs.first.charge_config_id).to eq(126)
       end
     end
   end

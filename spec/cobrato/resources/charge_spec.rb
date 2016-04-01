@@ -5,7 +5,7 @@ describe Cobrato::Resources::Charge do
   let(:entity_klass)  { Cobrato::Entities::Charge }
   let(:params) do
     {
-      "charge_account_id" => 88,
+      "charge_config_id" => 88,
       "due_date" => "2015-02-14",
       "document_kind" => "DV",
       "document_date" => nil,

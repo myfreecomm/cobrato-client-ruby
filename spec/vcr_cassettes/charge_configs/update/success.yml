@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://sandbox.cobrato.com/api/v1/charge_accounts/88
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/88
     body:
       encoding: UTF-8
       string: '{"end_number":1337}'
@@ -70,6 +70,6 @@ http_interactions:
         cy8yNSJ9XX0=
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_accounts/88
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/88
   recorded_at: Thu, 15 Oct 2015 17:39:26 GMT
 recorded_with: VCR 2.9.3

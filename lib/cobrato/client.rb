@@ -23,8 +23,8 @@ module Cobrato
       Resources::BankAccount.new(http)
     end
 
-    def charge_accounts
-      Resources::ChargeAccount.new(http)
+    def charge_configs
+      Resources::ChargeConfig.new(http)
     end
 
     def charges

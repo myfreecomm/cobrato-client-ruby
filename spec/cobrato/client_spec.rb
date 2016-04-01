@@ -36,9 +36,9 @@ describe Cobrato::Client do
     end
   end
 
-  describe "#charge_accounts" do
-    it "returns an instance of Cobrato::Resources::ChargeAccount" do
-      expect(subject.charge_accounts).to be_a(Cobrato::Resources::ChargeAccount)
+  describe "#charge_configs" do
+    it "returns an instance of Cobrato::Resources::ChargeConfig" do
+      expect(subject.charge_configs).to be_a(Cobrato::Resources::ChargeConfig)
     end
   end
 

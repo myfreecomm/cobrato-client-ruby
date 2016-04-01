@@ -4,7 +4,8 @@ describe Cobrato::Entities::Charge do
   let(:attributes) do
     {
       id: 1,
-      charge_account_id: 1,
+      type: "billet",
+      charge_config_id: 1,
       due_date: "2015-02-14",
       document_kind: "DV",
       document_date: nil,
@@ -39,5 +40,5 @@ describe Cobrato::Entities::Charge do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :charge_account_id, :due_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number, :our_number_digit, :total_amount, :instructions, :demonstrative, :payer_emails, :received, :received_amount, :received_at, :processing_date, :for_homologation, :payer_info, :registrable, :registration_status, :payer_national_identifier_type, :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood, :payer_zipcode, :payer_city, :payer_state]
+  it_behaves_like "entity_attributes", [:id, :type, :charge_config_id, :due_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number, :our_number_digit, :total_amount, :instructions, :demonstrative, :payer_emails, :received, :received_amount, :received_at, :processing_date, :for_homologation, :payer_info, :registrable, :registration_status, :payer_national_identifier_type, :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood, :payer_zipcode, :payer_city, :payer_state]
 end
