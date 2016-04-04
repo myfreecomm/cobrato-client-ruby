@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs/45
+    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs/117
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.5
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 13 Jan 2016 12:24:06 GMT
+      - Mon, 04 Apr 2016 20:35:48 GMT
       ETag:
-      - W/"f2597b47ba9b8390bc79f83ace306d3b"
+      - W/"c91652ec0845ea4000a18522c145d50d"
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains;
       Vary:
@@ -39,21 +39,20 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 4888264b-3123-4d60-b614-d41e5fa2b960
+      - 0cb0860e-c16f-4d18-a5cc-8444411f3be4
       X-Runtime:
-      - '0.076781'
+      - '0.020998'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '480'
+      - '236'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"id":45,"charge_config_id":124,"status":"processed","report":{"charge_config_id":124,"charges":{"not_found_amount":1,"found_amount":0,"found":[],"errors_amount":0,"successes_amount":0,"total":1},"charge_config":{"id":124,"bank_account_id":49,"portfolio_code":"11","agreement_code":"515151","name":"Banco
-        do Brasil","agreement_code_digit":"1","status":"pending","billet_file_name":null,"billet_content_type":null,"billet_file_size":null,"billet_updated_at":null,"initial_number":1,"current_number":1,"end_number":null,"registered_charges":false,"agreement_number":null,"initial_remittance_number":1,"current_remittance_number":1,"remittance_cnab_pattern":240,"interest_amount_per_month":null,"mulct_type":"nil","mulct_value":null},"received_charges":[],"registered_charges":[]},"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/124"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/45/file"}]}'
+      string: '{"id":117,"charge_config_id":124,"status":"processed","report":{"charges_not_found":0,"received_charges":[],"registered_charges":[]},"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/117"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/117"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/124"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/117/file"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs/45
-  recorded_at: Wed, 13 Jan 2016 12:24:06 GMT
-recorded_with: VCR 3.0.1
+      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs/117
+  recorded_at: Mon, 04 Apr 2016 20:35:48 GMT
+recorded_with: VCR 2.9.3

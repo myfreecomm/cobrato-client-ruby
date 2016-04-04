@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs/45
+    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs/117
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.5
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -21,9 +21,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       Date:
-      - Wed, 13 Jan 2016 12:36:54 GMT
+      - Mon, 04 Apr 2016 20:36:13 GMT
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
       Set-Cookie:
       - request_method=DELETE; path=/
       Strict-Transport-Security:
@@ -33,9 +33,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 18f79dd4-6a6e-4a97-99c0-340929b67ab5
+      - 6cec9a91-f35c-43c3-b7e0-5af487862732
       X-Runtime:
-      - '0.143939'
+      - '0.096794'
       X-XSS-Protection:
       - 1; mode=block
       Connection:
@@ -45,6 +45,6 @@ http_interactions:
       string: ''
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs/45
-  recorded_at: Wed, 13 Jan 2016 12:36:54 GMT
-recorded_with: VCR 3.0.1
+      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs/117
+  recorded_at: Mon, 04 Apr 2016 20:36:13 GMT
+recorded_with: VCR 2.9.3
