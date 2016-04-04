@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.1
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -25,11 +25,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 15 Oct 2015 15:07:27 GMT
+      - Mon, 04 Apr 2016 18:32:55 GMT
       ETag:
-      - W/"641ad5d437ed21f79186c7d8ce1efa73"
+      - W/"ec2a34417813138279f9b1bcccc650c1"
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains;
       Vary:
@@ -39,48 +39,53 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - c0fd3e11-24f8-415d-9062-5defe89770c5
+      - 79a1b751-a582-4c83-a90a-4096507823d6
       X-Runtime:
-      - '0.028047'
+      - '0.192382'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '500'
+      - '578'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6ODcsImNoYXJnZV9hY2NvdW50X2lkIjo4OCwiZHVlX2RhdGUiOiIy
-        MDE1LTAyLTE0IiwiZG9jdW1lbnRfa2luZCI6IkRWIiwiZG9jdW1lbnRfZGF0
-        ZSI6bnVsbCwiZG9jdW1lbnRfbnVtYmVyIjoiMTMzNyIsImN1c3RvbV9vdXJf
-        bnVtYmVyIjp0cnVlLCJvdXJfbnVtYmVyIjoiMTIxIiwib3VyX251bWJlcl9k
-        aWdpdCI6IiIsInRvdGFsX2Ftb3VudCI6MTAuMDcsImluc3RydWN0aW9ucyI6
-        IlBhZ8OhdmVsIGVtIHF1YWxxdWVyIGFnw6puY2lhIGF0w6kgZGF0YSBkbyB2
-        ZW5jaW1lbnRvIiwiZGVtb25zdHJhdGl2ZSI6IkRlbW9uc3RyYXRpdm8iLCJw
-        YXllcl9pbmZvIjoiRW1wcmVzYSBBIC0gQ05QSiBYIiwicGF5ZXJfZW1haWxz
-        IjpbIm15ZW1haWxAZ21haWwuY29tIl0sInJlY2VpdmVkIjpmYWxzZSwicmVj
-        ZWl2ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6bnVsbCwicHJvY2Vz
-        c2luZ19kYXRlIjpudWxsLCJmb3JfaG9tb2xvZ2F0aW9uIjpudWxsLCJoYXNf
-        Y25hYl9yZW1pdHRhbmNlIjpmYWxzZSwicGF5bWVudF9tZXRob2QiOiJiaWxs
-        ZXQiLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJo
+        eyJpZCI6ODcsInR5cGUiOiJiaWxsZXQiLCJjaGFyZ2VfY29uZmlnX2lkIjo4
+        OCwiZHVlX2RhdGUiOiIyMDE1LTAyLTE0IiwiZG9jdW1lbnRfa2luZCI6IkRW
+        IiwiZG9jdW1lbnRfZGF0ZSI6bnVsbCwiZG9jdW1lbnRfbnVtYmVyIjoiMTMz
+        NyIsImN1c3RvbV9vdXJfbnVtYmVyIjp0cnVlLCJvdXJfbnVtYmVyIjoiMTIx
+        Iiwib3VyX251bWJlcl9kaWdpdCI6IiIsInRvdGFsX2Ftb3VudCI6MTAuMDcs
+        Imluc3RydWN0aW9ucyI6IlBhZ8OhdmVsIGVtIHF1YWxxdWVyIGFnw6puY2lh
+        IGF0w6kgZGF0YSBkbyB2ZW5jaW1lbnRvIiwiZGVtb25zdHJhdGl2ZSI6IkRl
+        bW9uc3RyYXRpdm8iLCJwYXllcl9lbWFpbHMiOlsibXllbWFpbEBnbWFpbC5j
+        b20iXSwicmVjZWl2ZWQiOmZhbHNlLCJyZWNlaXZlZF9hbW91bnQiOm51bGws
+        InJlY2VpdmVkX2F0IjpudWxsLCJwcm9jZXNzaW5nX2RhdGUiOm51bGwsImZv
+        cl9ob21vbG9nYXRpb24iOm51bGwsInBheWVyX25hdGlvbmFsX2lkZW50aWZp
+        ZXJfdHlwZSI6ImNucGoiLCJwYXllcl9uYXRpb25hbF9pZGVudGlmaWVyIjoi
+        MDAwMDAwMDAwMDAwMDAiLCJwYXllcl9uYW1lIjoiRW1wcmVzYSBBICIsInBh
+        eWVyX251bWJlciI6bnVsbCwicGF5ZXJfY29tcGxlbWVudCI6bnVsbCwicGF5
+        ZXJfc3RyZWV0IjpudWxsLCJwYXllcl9uZWlnaGJvdXJob29kIjpudWxsLCJw
+        YXllcl96aXBjb2RlIjpudWxsLCJwYXllcl9jaXR5IjpudWxsLCJwYXllcl9z
+        dGF0ZSI6bnVsbCwicmVnaXN0cmFibGUiOmZhbHNlLCJyZWdpc3RyYXRpb25f
+        c3RhdHVzIjoid2l0aG91dF9yZW1pdHRhbmNlIiwiX2xpbmtzIjpbeyJyZWwi
+        OiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJv
+        eC5jb2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlcy84NyJ9LHsicmVsIjoidXBk
+        YXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5j
+        b2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlcy84NyJ9LHsicmVsIjoiZGVzdHJv
+        eSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwczovL3NhbmRib3gu
+        Y29icmF0by5jb20vYXBpL3YxL2NoYXJnZXMvODcifSx7InJlbCI6ImRlbGl2
+        ZXIiLCJtZXRob2QiOiJQT1NUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5j
+        b2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdlcy84Ny9kZWxpdmVyX2JpbGxldCJ9
+        LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIsIm1ldGhvZCI6IkdFVCIsImhyZWYi
+        OiJodHRwczovL3NhbmRib3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZV9j
+        b25maWdzLzg4In0seyJyZWwiOiJiaWxsZXQiLCJtZXRob2QiOiJHRVQiLCJo
         cmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFy
-        Z2VzLzg3In0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVm
-        IjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2Vz
-        Lzg3In0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJl
-        ZiI6Imh0dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkvdjEvY2hhcmdl
-        cy84NyJ9LHsicmVsIjoiZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVm
-        IjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2Vz
-        Lzg3L2RlbGl2ZXJfYmlsbGV0In0seyJyZWwiOiJjaGFyZ2VfYWNjb3VudCIs
-        Im1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwczovL3NhbmRib3guY29icmF0
-        by5jb20vYXBpL3YxL2NoYXJnZV9hY2NvdW50cy84OCJ9LHsicmVsIjoiYmls
-        bGV0IiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5j
-        b2JyYXRvLmNvbS9jaGFyZ2VzLzg3L2Rvd25sb2FkX2JpbGxldCJ9LHsicmVs
-        IjoicmVjZWl2ZSIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cHM6Ly9z
-        YW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2VzLzg3L3JlY2VpdmUi
-        fV19
+        Z2VzLzg3L2JpbGxldCJ9LHsicmVsIjoicmVjZWl2ZSIsIm1ldGhvZCI6IlBP
+        U1QiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92
+        MS9jaGFyZ2VzLzg3L3JlY2VpdmUifV19
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges/87
-  recorded_at: Thu, 15 Oct 2015 15:07:31 GMT
+  recorded_at: Mon, 04 Apr 2016 18:32:56 GMT
 recorded_with: VCR 2.9.3

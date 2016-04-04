@@ -11,16 +11,14 @@ describe Cobrato::Resources::Charge do
       "document_date" => nil,
       "document_number" => 'NA',
       "custom_our_number" => true,
-      "our_number" => "122",
+      "our_number" => "123",
       "our_number_digit" => nil,
       "total_amount" => "10.07",
       "instructions" => "Pagável em qualquer agência até data do vencimento",
       "demonstrative" => "Demonstrativo",
       "payer_emails" => ["myemail@gmail.com"],
-      "payer_info" => "Empresa A - CNPJ X",
       "processing_date" => "2015-01-30",
-      "for_homologation" => true,
-      "registered" => true,
+      "registrable" => false,
       "payer_national_identifier_type" => "cpf",
       "payer_national_identifier" => "12345678909",
       "payer_name" => "Jonh Doe",
@@ -72,7 +70,7 @@ describe Cobrato::Resources::Charge do
   describe "#update" do
     it "returns a Charge instance updated" do
       VCR.use_cassette("charges/update/success") do
-        charge = subject.update(87, {document_number: "1337"})
+        charge = subject.update(1913, {document_number: "1337"})
         expect(charge).to be_a(entity_klass)
         expect(charge.document_number).to eq("1337")
       end
@@ -82,7 +80,7 @@ describe Cobrato::Resources::Charge do
   describe "#destroy" do
     it "returns true" do
       VCR.use_cassette("charges/destroy/success") do
-        result = subject.destroy(88)
+        result = subject.destroy(1913)
         expect(result).to be_truthy
       end
     end
@@ -101,7 +99,7 @@ describe Cobrato::Resources::Charge do
   describe "#receive" do
     it "returns a Charge received charge" do
       VCR.use_cassette("charges/receive/success") do
-        charge = subject.receive(87, receive_params)
+        charge = subject.receive(1913, receive_params)
         expect(charge).to be_a(entity_klass)
         expect(charge.received_amount).to eq(10.07)
         expect(charge.received).to eq(true)
@@ -112,7 +110,7 @@ describe Cobrato::Resources::Charge do
   describe "#undo_receive" do
     it "returns a Charge not received charge" do
       VCR.use_cassette("charges/undo_receive/success") do
-        charge = subject.undo_receive(87)
+        charge = subject.undo_receive(1913)
         expect(charge).to be_a(entity_klass)
         expect(charge.received).to eq(false)
       end

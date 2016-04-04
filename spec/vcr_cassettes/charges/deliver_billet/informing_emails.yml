@@ -8,7 +8,7 @@ http_interactions:
       string: '{"to":["cobratoone@mailinator.com","cobratotest@mailinator.com"]}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.1.0
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -25,13 +25,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 29 Jun 2015 18:02:02 GMT
+      - Mon, 04 Apr 2016 19:25:59 GMT
       ETag:
-      - W/"47f03ee9ccf970b52f40c201d9e8b15e"
+      - W/"d1a82f8f8372b3681e81ab4bca4311c1"
       Location:
-      - https://sandbox.cobrato.com/charges/87/download_billet
+      - https://sandbox.cobrato.com/billet_charges/87/download_billet
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
+      Set-Cookie:
+      - request_method=POST; path=/
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains;
       Vary:
@@ -41,20 +43,20 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - dae5aa9b-cdf2-4ce3-8405-d5c389e98722
+      - 69d5887f-0232-4773-ac54-671a6bbe31da
       X-Runtime:
-      - '0.059481'
+      - '0.252298'
       X-XSS-Protection:
       - 1; mode=block
       Content-Length:
-      - '115'
+      - '117'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"to":["cobratoone@mailinator.com","cobratotest@mailinator.com"],"billet":"https://sandbox.cobrato.com/charges/87/download_billet"}'
+      string: '{"to":["cobratoone@mailinator.com","cobratotest@mailinator.com"],"billet":"https://sandbox.cobrato.com/billet_charges/87/download_billet"}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges/87/deliver_billet
-  recorded_at: Mon, 29 Jun 2015 18:02:02 GMT
+  recorded_at: Mon, 04 Apr 2016 19:25:59 GMT
 recorded_with: VCR 2.9.3

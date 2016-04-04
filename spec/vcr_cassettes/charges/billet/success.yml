@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.2.2
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -18,31 +18,41 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Content-Type:
-      - application/json; charset=utf-8
-      ETag:
-      - W/"c1fbc4003d6a3bd0943128053a4de9a3"
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 2987cab0-44e7-4c09-bb00-0468303cba56
-      X-Runtime:
-      - '0.330852'
-      Connection:
-      - close
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 04 Apr 2016 19:26:39 GMT
+      ETag:
+      - W/"438e7974316ff42d34ea59daaf784a90"
       Server:
-      - thin
+      - nginx/1.8.1
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains;
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 58ca2d25-f250-444c-b00a-5a97b02f8d68
+      X-Runtime:
+      - '0.069957'
+      X-XSS-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '207'
+      Connection:
+      - keep-alive
     body:
       encoding: UTF-8
-      string: '{"url":"https://cobrato-sandbox-uploads.s3.amazonaws.com/billets/87/6186_08033_1445001056.pdf?AWSAccessKeyId=AKIAIELCDRH5KRQG4V5Q&Expires=1445034829&Signature=WRY78A9Q4R6zmZuBYGEhTvR5VJ0%3D"}'
+      string: '{"url":"https://cobrato-sandbox-uploads.s3.amazonaws.com/billet_charges/billets/87/1606_91000_1444921513.pdf?AWSAccessKeyId=AKIAIZARHU6DDF42K47A&Expires=1459801599&Signature=Cc1oDWs8syse%2FLSCmBN%2F0BdNIQ8%3D"}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges/87/billet
-  recorded_at: Fri, 16 Oct 2015 21:33:49 GMT
+  recorded_at: Mon, 04 Apr 2016 19:26:39 GMT
 recorded_with: VCR 2.9.3
