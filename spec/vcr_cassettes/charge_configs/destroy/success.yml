@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://sandbox.cobrato.com/api/v1/charge_configs/89
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/132
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.1.0
+      - Cobrato Ruby Client v0.3.0
       Accept:
       - application/json
       Content-Type:
@@ -21,9 +21,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       Date:
-      - Mon, 29 Jun 2015 12:48:54 GMT
+      - Mon, 04 Apr 2016 20:21:56 GMT
       Server:
-      - nginx/1.8.0
+      - nginx/1.8.1
+      Set-Cookie:
+      - request_method=DELETE; path=/
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains;
       X-Content-Type-Options:
@@ -31,9 +33,9 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 89098331-4aeb-47fb-ad2c-890a287c86de
+      - b36dbd5c-f466-41a3-b5a7-13b9a558d57f
       X-Runtime:
-      - '0.051879'
+      - '0.111019'
       X-XSS-Protection:
       - 1; mode=block
       Connection:
@@ -43,6 +45,6 @@ http_interactions:
       string: ''
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/89
-  recorded_at: Mon, 29 Jun 2015 12:48:54 GMT
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/132
+  recorded_at: Mon, 04 Apr 2016 20:21:56 GMT
 recorded_with: VCR 2.9.3

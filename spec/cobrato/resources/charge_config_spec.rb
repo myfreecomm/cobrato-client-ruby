@@ -55,9 +55,9 @@ describe Cobrato::Resources::ChargeConfig do
   describe "#update" do
     it "returns a ChargeConfig instance updated" do
       VCR.use_cassette("charge_configs/update/success") do
-        charge_config = subject.update(88, {end_number: 1337})
+        charge_config = subject.update(88, {end_number: 1338})
         expect(charge_config).to be_a(entity_klass)
-        expect(charge_config.end_number).to eq(1337)
+        expect(charge_config.end_number).to eq(1338)
       end
     end
   end
@@ -65,7 +65,7 @@ describe Cobrato::Resources::ChargeConfig do
   describe "#destroy" do
     it "returns true" do
       VCR.use_cassette("charge_configs/destroy/success") do
-        result = subject.destroy(89)
+        result = subject.destroy(132)
         expect(result).to be_truthy
       end
     end
