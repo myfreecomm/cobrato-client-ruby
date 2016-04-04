@@ -6,7 +6,7 @@ describe Cobrato::Resources::RemittanceCnab do
   let(:params) do
     {
       'charge_config_id' => '126',
-      'charge_ids'        => [1011, 1328]
+      'charge_ids'        => [1914, 1915]
     }
   end
 
@@ -31,7 +31,7 @@ describe Cobrato::Resources::RemittanceCnab do
   describe '#show' do
     it 'returns an RemittanceCnab instance showd' do
       VCR.use_cassette('remittance_cnabs/show/success') do
-        remittance_cnab = subject.show(11)
+        remittance_cnab = subject.show(41)
         expect(remittance_cnab).to be_a(entity_klass)
         expect(remittance_cnab.charge_config_id).to eq(126)
       end
@@ -41,7 +41,7 @@ describe Cobrato::Resources::RemittanceCnab do
   describe '#destroy' do
     it 'returns true' do
       VCR.use_cassette('remittance_cnabs/destroy/success') do
-        result = subject.destroy(11)
+        result = subject.destroy(41)
         expect(result).to be_truthy
       end
     end
@@ -63,7 +63,7 @@ describe Cobrato::Resources::RemittanceCnab do
   describe '#file' do
     it 'returns a simple struct with the RemittanceCnab file url' do
       VCR.use_cassette('remittance_cnabs/file/success') do
-        file = subject.file(11)
+        file = subject.file(41)
         expect(file).to be_a(OpenStruct)
         expect(file.url).to match('https://.*s3.amazonaws.com')
       end
@@ -73,7 +73,7 @@ describe Cobrato::Resources::RemittanceCnab do
   describe '#charges' do
     it 'returns an array of Chage' do
       VCR.use_cassette('remittance_cnabs/charges/success') do
-        charges = subject.charges(11)
+        charges = subject.charges(41)
         expect(charges).to be_a(Array)
         charges.each do |e|
           expect(e).to be_a(Cobrato::Entities::Charge)
