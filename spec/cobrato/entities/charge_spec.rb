@@ -4,7 +4,8 @@ describe Cobrato::Entities::Charge do
   let(:attributes) do
     {
       id: 1,
-      charge_account_id: 1,
+      type: "billet",
+      charge_config_id: 1,
       due_date: "2015-02-14",
       document_kind: "DV",
       document_date: nil,
@@ -22,8 +23,7 @@ describe Cobrato::Entities::Charge do
       received_at: "2015-01-30",
       processing_date: "2015-01-30",
       for_homologation: true,
-      has_cnab_remittance: false,
-      registered: true,
+      registrable: true,
       payer_national_identifier_type: "cpf",
       payer_national_identifier: "12345678909",
       payer_name: "Jonh Doe",
@@ -33,11 +33,12 @@ describe Cobrato::Entities::Charge do
       payer_neighbourhood: "Centro",
       payer_zipcode: "22230062",
       payer_city: "Rio de Janeiro",
-      payer_state: "RJ"
+      payer_state: "RJ",
+      registration_status: "without_remittance"
     }
   end
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :charge_account_id, :due_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number, :our_number_digit, :total_amount, :instructions, :demonstrative, :payer_emails, :received, :received_amount, :received_at, :processing_date, :for_homologation, :payer_info, :has_cnab_remittance, :registered, :status, :payer_national_identifier_type, :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood, :payer_zipcode, :payer_city, :payer_state]
+  it_behaves_like "entity_attributes", [:id, :type, :charge_config_id, :due_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number, :our_number_digit, :total_amount, :instructions, :demonstrative, :payer_emails, :received, :received_amount, :received_at, :processing_date, :for_homologation, :payer_info, :registrable, :registration_status, :payer_national_identifier_type, :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood, :payer_zipcode, :payer_city, :payer_state]
 end

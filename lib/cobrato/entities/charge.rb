@@ -2,7 +2,8 @@ module Cobrato
   module Entities
     class Charge < Base
       attribute :id,                             Integer
-      attribute :charge_account_id,              Integer
+      attribute :type,                           String
+      attribute :charge_config_id,               Integer
       attribute :due_date,                       Date
       attribute :processing_date,                Date
       attribute :document_kind,                  String
@@ -21,9 +22,8 @@ module Cobrato
       attribute :received_at,                    Date
       attribute :processing_date,                Date
       attribute :for_homologation,               Boolean
-      attribute :has_cnab_remittance,            Boolean
-      attribute :registered,                     Boolean
-      attribute :status,                         String
+      attribute :registrable,                    Boolean
+      attribute :registration_status,            String
       attribute :payer_national_identifier_type, String
       attribute :payer_national_identifier,      String
       attribute :payer_name,                     String

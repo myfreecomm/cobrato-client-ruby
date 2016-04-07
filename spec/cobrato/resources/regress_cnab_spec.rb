@@ -5,7 +5,7 @@ describe Cobrato::Resources::RegressCnab do
   let(:entity_klass)  { Cobrato::Entities::RegressCnab }
   let(:params) do
     {
-      'charge_account_id' => '124',
+      'charge_config_id' => '124',
       'cnabs' => {
         'content'      => "MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAwMDAwMDAwMDAwMDAwNDg3NTA4\nMEZSRUUgQ09NTVVOSVRFUyBDT05TVUxUT1JJQSBFTTIzN0JSQURFU0NPICAg\nICAgIDIxMDExNjAxNjAwMDAwMDAwMDEgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgIDIxMDExNiAgICAgICAgIDAwMDAwMQ0KMTAy\nMDU3OTM4MzIwMDAxMjYwMDAwMDA5MDM0MjgwMDE3MjI1MSAgICAgICAgICAg\nICAgICAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAyMzAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDA5MDYyMTAxMTZBNzVBICAgICAgMDAwMDAwMDAwMDAw\nMDAyMTEyMzMyNTAxMTYwMDAwMDAwMDA1MDAwMjM3MDQxNTIgIDAwMDAwMDAw\nMDAyNTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAg\nMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMg0KOTIwMTIz\nNyAgICAgICAgICAwMDAwMDAwMzAwMDAwMDAwMDIwOTEzMDAwMDAwMDEgICAg\nICAgICAgMDAwMDMwMDAwMDAwMjA5MTMwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgIDAwMDAwNQ0K\n",
         'content_type' => 'text/plain',
@@ -35,9 +35,9 @@ describe Cobrato::Resources::RegressCnab do
   describe '#show' do
     it 'returns an RegressCnab instance showd' do
       VCR.use_cassette('regress_cnabs/show/success') do
-        regress_cnab = subject.show(45)
+        regress_cnab = subject.show(117)
         expect(regress_cnab).to be_a(entity_klass)
-        expect(regress_cnab.charge_account_id).to eq(124)
+        expect(regress_cnab.charge_config_id).to eq(124)
       end
     end
   end
@@ -45,7 +45,7 @@ describe Cobrato::Resources::RegressCnab do
   describe '#destroy' do
     it 'returns true' do
       VCR.use_cassette('regress_cnabs/destroy/success') do
-        result = subject.destroy(45)
+        result = subject.destroy(117)
         expect(result).to be_truthy
       end
     end
@@ -56,7 +56,7 @@ describe Cobrato::Resources::RegressCnab do
       VCR.use_cassette('regress_cnabs/create/success') do
         regress_cnab = subject.create(params)
         expect(regress_cnab).to be_a(entity_klass)
-        expect(regress_cnab.charge_account_id).to eq(124)
+        expect(regress_cnab.charge_config_id).to eq(124)
       end
     end
   end
@@ -64,7 +64,7 @@ describe Cobrato::Resources::RegressCnab do
   describe '#file' do
     it 'returns a simple struct with the RegressCnab file url' do
       VCR.use_cassette('regress_cnabs/file/success') do
-        file = subject.file(45)
+        file = subject.file(117)
         expect(file).to be_a(OpenStruct)
         expect(file.url).to match('https://.*s3.amazonaws.com')
       end

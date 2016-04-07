@@ -1,6 +1,6 @@
 module Cobrato
   module Resources
-    class ChargeAccount < Base
+    class ChargeConfig < Base
       crud :all
     end
   end

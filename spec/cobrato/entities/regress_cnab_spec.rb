@@ -4,10 +4,10 @@ describe Cobrato::Entities::RegressCnab do
   let(:attributes) do
     {
       'id' => 1,
-      'charge_account_id' => 1,
+      'charge_config_id' => 1,
       'status' => 'processed',
       'report' => {
-        'charge_account_id' => 1,
+        'charge_config_id' => 1,
         'charges' => {
           'not_found_amount' => 1,
           'found_amount' => 0,
@@ -16,7 +16,7 @@ describe Cobrato::Entities::RegressCnab do
           'successes_amount' => 0,
           'total' => 1
         },
-        'charge_account' => {
+        'charge_config' => {
           'id' => 1,
           'bank_account_id' => 1,
           'portfolio_code' => '11',
@@ -48,5 +48,5 @@ describe Cobrato::Entities::RegressCnab do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like 'entity_attributes', [:id, :charge_account_id, :status, :report]
+  it_behaves_like 'entity_attributes', [:id, :charge_config_id, :status, :report]
 end
