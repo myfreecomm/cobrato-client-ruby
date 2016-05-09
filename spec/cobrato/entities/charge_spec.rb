@@ -17,13 +17,13 @@ describe Cobrato::Entities::Charge do
       instructions: "Pagável em qualquer agência até data do vencimento",
       demonstrative: "Demonstrativo",
       payer_emails: ["myemail@gmail.com"],
-      payer_info: "Empresa A - CNPJ X",
       received: true,
       received_amount: "10.07",
       received_at: "2015-01-30",
       processing_date: "2015-01-30",
       for_homologation: true,
       registrable: true,
+      payer_id: 1,
       payer_national_identifier_type: "cpf",
       payer_national_identifier: "12345678909",
       payer_name: "Jonh Doe",
@@ -40,5 +40,17 @@ describe Cobrato::Entities::Charge do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :type, :charge_config_id, :due_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number, :our_number_digit, :total_amount, :instructions, :demonstrative, :payer_emails, :received, :received_amount, :received_at, :processing_date, :for_homologation, :payer_info, :registrable, :registration_status, :payer_national_identifier_type, :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood, :payer_zipcode, :payer_city, :payer_state]
+  it_behaves_like "entity_attributes", [
+    # common
+    :id, :type, :charge_config_id, :total_amount, :payer_emails, :payer_id, :payer_national_identifier_type,
+    :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood,
+    :payer_zipcode, :payer_city, :payer_state,
+    # billet specifics
+    :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
+    :our_number_digit, :instructions, :demonstrative, :received, :received_amount, :received_at, :for_homologation,
+    :registrable, :registration_status,
+    # payment gateway specifics
+    :credit_card_id, :description, :generate_token, :installments, :payment_gateway_status, :payment_method,
+    :soft_descriptor
+  ]
 end
