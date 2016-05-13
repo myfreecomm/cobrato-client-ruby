@@ -44,6 +44,7 @@ module Cobrato
       attribute :installments,                   Integer
       attribute :generate_token,                 Boolean
       attribute :payment_gateway_status,         String
+      attribute :payment_gateway_message,        String
     end
   end
 end

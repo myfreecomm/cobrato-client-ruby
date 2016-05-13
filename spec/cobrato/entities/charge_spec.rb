@@ -51,6 +51,6 @@ describe Cobrato::Entities::Charge do
     :registrable, :registration_status,
     # payment gateway specifics
     :credit_card_id, :description, :generate_token, :installments, :payment_gateway_status, :payment_method,
-    :soft_descriptor
+    :soft_descriptor, :payment_gateway_message
   ]
 end
