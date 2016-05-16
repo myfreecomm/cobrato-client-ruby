@@ -26,5 +26,13 @@ describe Cobrato::Entities::ChargeConfig do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :type, :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :name, :initial_number, :current_number, :end_number, :status, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number, :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value, :transmission_code, :gateway_id, :gateway_key, :gateway_name, :use_avs]
+  it_behaves_like "entity_attributes", [
+    # common
+    :id, :type, :name, :status,
+    # billet specifics
+    :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :current_number,
+    :end_number, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number,
+    :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value, :transmission_code,
+    # payment gateway specifics
+    :gateway_id, :gateway_key, :gateway_name, :use_avs]
 end

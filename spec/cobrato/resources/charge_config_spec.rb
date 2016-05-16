@@ -95,15 +95,10 @@ describe Cobrato::Resources::ChargeConfig do
 
       it "creates a charge config" do
         VCR.use_cassette("charge_configs/create/payment_gateway/success") do
-          begin
           charge_config = subject.create(params)
           expect(charge_config).to be_a(entity_klass)
           expect(charge_config.name).to eq("Cielo testing")
           expect(charge_config.type).to eq("payment_gateway")
-          rescue Exception => e
-            binding.pry
-          end
-
         end
       end
     end
