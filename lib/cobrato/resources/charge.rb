@@ -28,6 +28,12 @@ module Cobrato
         end
       end
 
+      def cancel(id)
+        http.post("#{resource_base_path}/#{id}/cancel") do |response|
+          response.code == 204
+        end
+      end
+
       notify :receive, :undo_receive
     end
   end

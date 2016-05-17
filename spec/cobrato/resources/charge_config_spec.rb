@@ -72,11 +72,34 @@ describe Cobrato::Resources::ChargeConfig do
   end
 
   describe "#create" do
-    it "creates a charge config" do
-      VCR.use_cassette("charge_configs/create/success") do
+    it "creates a billet config" do
+      VCR.use_cassette("charge_configs/create/billet/success") do
         charge_config = subject.create(params)
         expect(charge_config).to be_a(entity_klass)
         expect(charge_config.agreement_code).to eq(params['agreement_code'])
+      end
+    end
+
+    context "payment gateway config" do
+      let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+      let(:params) do
+        {
+          name:         "Cielo testing",
+          type:         "payment_gateway",
+          gateway_name: "cielo",
+          gateway_id:   "1006993069",
+          gateway_key:  "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3",
+          use_avs:      true
+        }
+      end
+
+      it "creates a charge config" do
+        VCR.use_cassette("charge_configs/create/payment_gateway/success") do
+          charge_config = subject.create(params)
+          expect(charge_config).to be_a(entity_klass)
+          expect(charge_config.name).to eq("Cielo testing")
+          expect(charge_config.type).to eq("payment_gateway")
+        end
       end
     end
   end

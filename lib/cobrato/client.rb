@@ -46,5 +46,9 @@ module Cobrato
     def remittance_cnabs
       Resources::RemittanceCnab.new(http)
     end
+
+    def credit_cards
+      Resources::CreditCard.new(http)
+    end
   end
 end

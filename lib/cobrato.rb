@@ -17,6 +17,7 @@ require "cobrato/entities/webhook"
 require "cobrato/entities/bank_billet"
 require "cobrato/entities/regress_cnab"
 require "cobrato/entities/remittance_cnab"
+require "cobrato/entities/credit_card"
 
 require "cobrato/resources/base"
 require "cobrato/resources/payee"
@@ -27,6 +28,7 @@ require "cobrato/resources/webhook"
 require "cobrato/resources/charging_type"
 require "cobrato/resources/regress_cnab"
 require "cobrato/resources/remittance_cnab"
+require "cobrato/resources/credit_card"
 
 module Cobrato
   def self.configuration

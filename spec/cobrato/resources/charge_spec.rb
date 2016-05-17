@@ -3,7 +3,7 @@ require "spec_helper"
 describe Cobrato::Resources::Charge do
   let(:http)          { Cobrato::Http.new("45d4e96c707f2a45f73ac9848ff8eeab") }
   let(:entity_klass)  { Cobrato::Entities::Charge }
-  let(:params) do
+  let(:billet_params) do
     {
       "charge_config_id" => 88,
       "due_date" => "2015-02-14",
@@ -19,16 +19,18 @@ describe Cobrato::Resources::Charge do
       "payer_emails" => ["myemail@gmail.com"],
       "processing_date" => "2015-01-30",
       "registrable" => false,
-      "payer_national_identifier_type" => "cpf",
-      "payer_national_identifier" => "12345678909",
-      "payer_name" => "Jonh Doe",
-      "payer_number" => "43",
-      "payer_complement" => "8 andar",
-      "payer_street" => "Rua do Carmo",
-      "payer_neighbourhood" => "Centro",
-      "payer_zipcode" => "22230062",
-      "payer_city" => "Rio de Janeiro",
-      "payer_state" => "RJ"
+      "payer_attributes" => {
+        "national_identifier_type" => "cpf",
+        "national_identifier" => "12345678909",
+        "name" => "Jonh Doe",
+        "number" => "43",
+        "complement" => "8 andar",
+        "street" => "Rua do Carmo",
+        "neighbourhood" => "Centro",
+        "zipcode" => "22230062",
+        "city" => "Rio de Janeiro",
+        "state" => "RJ"
+      }
     }
   end
 
@@ -87,11 +89,40 @@ describe Cobrato::Resources::Charge do
   end
 
   describe "#create" do
-    it "creates a charge" do
-      VCR.use_cassette("charges/create/success") do
-        charge = subject.create(params)
-        expect(charge).to be_a(entity_klass)
-        expect(charge.our_number).to eq(params['our_number'])
+    context "billet charge" do
+      it "creates a charge" do
+        VCR.use_cassette("charges/create/billet_charge/success") do
+          charge = subject.create(billet_params)
+          expect(charge).to be_a(entity_klass)
+          expect(charge.our_number).to eq(billet_params['our_number'])
+        end
+      end
+    end
+
+    context "payment gateway charge" do
+      let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+      let(:params) do
+        {
+          charge_config_id: 1,
+          total_amount: 721.0,
+          payment_method: "credit_card_financed",
+          installments: 3,
+          credit_card_id: 7,
+          payer_attributes: {
+            national_identifier_type: "cpf",
+            national_identifier: "12345678909",
+            name: "Jonh Doe",
+          }
+        }
+      end
+
+      it "creates a charge" do
+        VCR.use_cassette("charges/create/payment_gateway/success") do
+          charge = subject.create(params)
+          expect(charge).to be_a(entity_klass)
+          expect(charge.total_amount).to eq(721.0)
+          expect(charge.type).to eq("payment_gateway")
+        end
       end
     end
   end
@@ -143,6 +174,16 @@ describe Cobrato::Resources::Charge do
         billet = subject.billet(87)
         expect(billet).to be_a(OpenStruct)
         expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
+      end
+    end
+  end
+
+  describe "#cancel" do
+    let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+
+    it "queue the Charge for canceling" do
+      VCR.use_cassette("charges/cancel/success") do
+        expect(subject.cancel(12)).to eql(true)
       end
     end
   end
