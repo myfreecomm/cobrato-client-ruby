@@ -16,7 +16,7 @@ describe Cobrato::Resources::CreditCard do
         credit_card = subject.show(7)
         expect(credit_card).to be_a(entity_klass)
         expect(credit_card.holder_name).to eq("John Doe")
-        expect(credit_card.final_numbers).to eq("6167")
+        expect(credit_card.number).to eq("6167")
       end
     end
   end

@@ -2,7 +2,7 @@ module Cobrato
   module Entities
     class CreditCard < Base
       attribute :id,             Integer
-      attribute :final_numbers,  String
+      attribute :number,         String
       attribute :holder_name,    String
       attribute :unusable,       Boolean
       attribute :brand,          String
