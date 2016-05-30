@@ -206,6 +206,7 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
     - cobrato.charges.destroy
     - cobrato.charges.receive
     - cobrato.charges.undo_receive
+    - cobrato.charges.cancel
 * webhooks
     - cobrato.webhooks.create
     - cobrato.webhooks.destroy
