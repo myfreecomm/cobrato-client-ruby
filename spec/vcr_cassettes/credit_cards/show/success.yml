@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/credit_cards/7
+    uri: https://sandbox.cobrato.com/api/v1/credit_cards/14
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.3.0
+      - Cobrato Ruby Client v0.4.0.rc1
       Accept:
       - application/json
       Content-Type:
@@ -29,24 +29,22 @@ http_interactions:
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       X-Request-Id:
-      - c6b5216e-0427-4c59-89cc-cb034def7d2e
+      - baf218bf-e336-41cf-ac0e-25c9c1b95b24
       X-Runtime:
-      - '0.219752'
+      - '0.037740'
+      X-MiniProfiler-Ids:
+      - '["zdgx50ry371gka8mz46y","4n6ridiklz0ctsc9yc3z"]'
       Set-Cookie:
       - __profilin=p%3Dt; path=/
-      - __profilin=p%3Dt; path=/
-      - __profilin=p%3Dt; path=/
-      X-MiniProfiler-Ids:
-      - '["fkra1emgf06w5gnpxcbt"]'
       Connection:
       - close
       Server:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":7,"number":"6167","holder_name":"John Doe","unusable":false,"brand":"mastercard","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/7"}]}'
+      string: '{"id":14,"number":"545301******6167","holder_name":"Fulano de Tal","unusable":false,"brand":"mastercard","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"charge_config_id":8,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/14"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/8"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/credit_cards/7
-  recorded_at: Tue, 10 May 2016 12:55:08 GMT
+      effective_url: https://sandbox.cobrato.com/api/v1/credit_cards/14
+  recorded_at: Wed, 01 Jun 2016 18:16:29 GMT
 recorded_with: VCR 2.9.3

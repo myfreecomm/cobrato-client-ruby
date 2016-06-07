@@ -3,9 +3,9 @@ require "spec_helper"
 describe Cobrato::Entities::BankBillet do
   let(:attributes) do
     {
-      bank_code: '001',
-      bank_name: 'BancoDoBrasil',
-      portfolio_codes: ["11", "12", "16", "17", "18", "31", "51"],
+      bank_code: "001",
+      bank_name: "BancoDoBrasil",
+      portfolio_codes: %w[11 12 16 17 18 31 51],
       regress: true,
       remittance: false
     }
