@@ -34,6 +34,12 @@ module Cobrato
         end
       end
 
+      def retry(id)
+        http.put("#{resource_base_path}/#{id}/retry") do |response|
+          response.code == 204
+        end
+      end
+
       notify :receive, :undo_receive, :cancel
     end
   end

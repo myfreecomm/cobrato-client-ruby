@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/charges/46/retry
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.4.0.rc1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=PUT; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 30f62818-281f-479e-a8bb-301ce17d6dd1
+      X-Runtime:
+      - '0.194926'
+      X-MiniProfiler-Ids:
+      - '["pivaf78x08wnbfg9elxi","kxmvrpxm9nvmlp56esfw"]'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charges/46/retry
+  recorded_at: Tue, 07 Jun 2016 11:41:08 GMT
+recorded_with: VCR 2.9.3

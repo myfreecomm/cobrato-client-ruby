@@ -179,11 +179,21 @@ describe Cobrato::Resources::Charge do
   end
 
   describe "#cancel" do
-    let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+    let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
 
     it "queue the Charge for canceling" do
       VCR.use_cassette("charges/cancel/success") do
         expect(subject.cancel(12)).to eql(true)
+      end
+    end
+  end
+
+  describe "#retry" do
+    let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+
+    it "queue the Charge for retrying" do
+      VCR.use_cassette("charges/retry/success") do
+        expect(subject.retry(46)).to eql(true)
       end
     end
   end
