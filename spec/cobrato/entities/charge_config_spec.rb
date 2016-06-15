@@ -10,7 +10,7 @@ describe Cobrato::Entities::ChargeConfig do
       agreement_code_digit: "1",
       name: "Conta Cobrança",
       initial_number: 1,
-      current_number: 1,
+      next_number: 1,
       end_number: 1000,
       status: "pending",
       registered_charges: true,
@@ -30,7 +30,7 @@ describe Cobrato::Entities::ChargeConfig do
     # common
     :id, :type, :name, :status,
     # billet specifics
-    :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :current_number,
+    :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number,
     :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value, :transmission_code,
     # payment gateway specifics

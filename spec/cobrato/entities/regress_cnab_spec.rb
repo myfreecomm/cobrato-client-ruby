@@ -29,7 +29,7 @@ describe Cobrato::Entities::RegressCnab do
           'billet_file_size' => nil,
           'billet_updated_at' => nil,
           'initial_number' => 1,
-          'current_number' => 1,
+          'next_number' => 1,
           'end_number' => nil,
           'registered_charges' => true,
           'agreement_number' => 1,

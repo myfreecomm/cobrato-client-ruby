@@ -1,17 +1,18 @@
 require "spec_helper"
 
 describe Cobrato::Resources::ChargeConfig do
-  let(:http)          { Cobrato::Http.new("45d4e96c707f2a45f73ac9848ff8eeab") }
+  let(:token) { "45d4e96c707f2a45f73ac9848ff8eeab" }
+  let(:http)          { Cobrato::Http.new(token) }
   let(:entity_klass)  { Cobrato::Entities::ChargeConfig }
   let(:params) do
     {
-      "bank_account_id" => 25,
+      "bank_account_id" => 3,
       "portfolio_code" => "17",
       "agreement_code" => "123456",
       "agreement_code_digit" => "1",
       "name" => "Conta Cobrança",
       "initial_number" => 1,
-      "current_number" => 1,
+      "next_number" => 525,
       "end_number" => 1000,
       "status" => "pending",
       "registered_charges" => true,
@@ -72,16 +73,19 @@ describe Cobrato::Resources::ChargeConfig do
   end
 
   describe "#create" do
-    it "creates a billet config" do
-      VCR.use_cassette("charge_configs/create/billet/success") do
-        charge_config = subject.create(params)
-        expect(charge_config).to be_a(entity_klass)
-        expect(charge_config.agreement_code).to eq(params['agreement_code'])
+    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+
+    context "billet config" do
+      it "creates a charge config" do
+        VCR.use_cassette("charge_configs/create/billet/success") do
+          charge_config = subject.create(params)
+          expect(charge_config).to be_a(entity_klass)
+          expect(charge_config.agreement_code).to eq(params['agreement_code'])
+        end
       end
     end
 
     context "payment gateway config" do
-      let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
       let(:params) do
         {
           name:         "Cielo testing",
