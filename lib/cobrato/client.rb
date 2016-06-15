@@ -50,5 +50,9 @@ module Cobrato
     def credit_cards
       Resources::CreditCard.new(http)
     end
+
+    def payers
+      Resources::Payer.new(http)
+    end
   end
 end

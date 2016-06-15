@@ -49,6 +49,7 @@ end
 
 * [Payees API](http://docs.cobrato.com/#beneficiário)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
+* [Payers API](http://docs.cobrato.com/#pagador)
 * [Charge Configs API](http://docs.cobrato.com/#configuração-de-cobrança)
 * [Charges API](http://docs.cobrato.com/#cobrança)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
@@ -77,6 +78,15 @@ end
 | PUT         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#atualização-de-conta-bancária)     | client.bank_accounts.update          |
 | DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-bancária)        | client.bank_accounts.destroy         |
 | GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-disponíveis) | client.bank_accounts.portfolio_codes |
+
+#### [Payers](http://docs.cobrato.com/#pagador)
+
+| HTTP method | Endpoint                                                              | Client method         |
+| ----------- | --------------------------------------------------------------------- | --------------------- |
+| POST        | [api/v1/payers](http://docs.cobrato.com/#cria-o-de-pagador)           | client.payers.create  |
+| GET         | [api/v1/payers](http://docs.cobrato.com/#lista-de-todos-os-pagadores) | client.payers.list    |
+| GET         | [api/v1/payers/:id](http://docs.cobrato.com/#informa-es-do-pagador)   | client.payers.show    |
+| PUT         | [api/v1/payers/:id](http://docs.cobrato.com/#atualiza-o-de-pagador)   | client.payers.update  |
 
 #### [Charge Configs](http://docs.cobrato.com/#configuração-de-cobrança)
 
