@@ -12,7 +12,7 @@ module Cobrato
       attribute :agreement_code,            String
       attribute :agreement_code_digit,      String
       attribute :initial_number,            Integer
-      attribute :current_number,            Integer
+      attribute :next_number,               Integer
       attribute :end_number,                Integer
       attribute :registered_charges,        Boolean
       attribute :agreement_number,          Integer
