@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/payers/8
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.4.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - bb779c0a-8b64-4921-913d-f4d4a52bb2a8
+      X-Runtime:
+      - '0.038395'
+      X-MiniProfiler-Ids:
+      - '["rtfxkhd1d58dk3a8w7mv","855vzlm7oy7s1t04h5oy","qsbi5hayuu61yv134ekm","rc7pgyqtr2kc3d9k238m"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6OCwibmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwibmF0
+        aW9uYWxfaWRlbnRpZmllciI6IjM4MDMxMTcxNTEzIiwibmFtZSI6Ikpvw6Nv
+        IFNpbHZlaXJhIiwiemlwY29kZSI6Ijk5MDAwLTc1MCIsImNpdHkiOiJDYXJh
+        cGVidXMiLCJzdGF0ZSI6IlJKIiwibmVpZ2hib3VyaG9vZCI6IkNlbnRybyIs
+        InN0cmVldCI6IlJ1YSBKdWxpbyBkZSBDYXN0aWxob3MiLCJudW1iZXIiOiIx
+        MDAiLCJjb21wbGVtZW50IjoiQW8gbGFkbyBkYSBsb3TDqXJpY2EuIiwiX2xp
+        bmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0
+        dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5ZXJzLzgifSx7InJlbCI6
+        InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxo
+        b3N0OjMwMDAvYXBpL3YxL3BheWVycy84In1dfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payers/8
+  recorded_at: Wed, 15 Jun 2016 21:31:14 GMT
+recorded_with: VCR 2.9.3
