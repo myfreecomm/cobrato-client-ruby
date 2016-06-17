@@ -8,11 +8,11 @@ describe Cobrato::Entities::Base do
   end
 
   let(:links) do
-      [
-        { "rel" => "self", "method" => "GET", "href" => "http://test.local/api/v1/dummies/1" },
-        { "rel" => "update", "method" => "PUT", "href" => "http://test.local/api/v1/dummies/1" },
-        { "rel" => "destroy", "method" => "DELETE", "href" => "http://test.local/api/v1/dummies/1"}
-      ]
+    [
+      { "rel" => "self", "method" => "GET", "href" => "http://test.local/api/v1/dummies/1" },
+      { "rel" => "update", "method" => "PUT", "href" => "http://test.local/api/v1/dummies/1" },
+      { "rel" => "destroy", "method" => "DELETE", "href" => "http://test.local/api/v1/dummies/1" }
+    ]
   end
   let(:hash) { { property_1: "1", property_2: "2", _links: links } }
 
@@ -46,6 +46,12 @@ describe Cobrato::Entities::Base do
 
     context "non existent" do
       it { expect(subject.url("trash")).to eq("") }
+    end
+
+    context "_links attribute is not present" do
+      subject { DummyEntity.new({}) }
+
+      it { expect(subject.url("self")).to eq("") }
     end
   end
 end
