@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Cobrato::Resources::CreditCard do
-  let(:http)         { Cobrato::Http.new("7a5f7a1f9f449d142db4f36851be59f5") }
+  let(:http)         { Cobrato::Http.new("6a742533dca088fb557f801cdf35d5a0") }
   let(:entity_klass) { Cobrato::Entities::CreditCard }
   let(:params) do
     {
@@ -39,7 +39,7 @@ describe Cobrato::Resources::CreditCard do
       VCR.use_cassette("credit_cards/create/success") do
         credit_card = subject.create(params)
         expect(credit_card).to be_a(entity_klass)
-        expect(credit_card.id).to eql(14)
+        expect(credit_card.id).to eql(3)
         expect(credit_card.number).to eq("401200******1112")
         expect(credit_card.holder_name).to eq("JOÃO DAS COUVES")
         expect(credit_card.charge_config_id).to eq(1)
