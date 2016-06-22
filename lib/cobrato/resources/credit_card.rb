@@ -1,7 +1,7 @@
 module Cobrato
   module Resources
     class CreditCard < Base
-      crud :show
+      crud :show, :create
     end
   end
 end

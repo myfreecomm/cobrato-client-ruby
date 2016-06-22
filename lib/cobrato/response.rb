@@ -16,17 +16,17 @@ module Cobrato
     end
 
     private
-      def timeout!
-        raise RequestTimeout
-      end
 
-      def error!
-        raise RequestError.new(
-          code:    code,
-          message: status_message,
-          body:    (MultiJson.load(body) rescue {})
-        )
-      end
+    def timeout!
+      raise RequestTimeout
+    end
 
+    def error!
+      raise RequestError.new(
+        code:    code,
+        message: status_message,
+        body:    (MultiJson.load(body) rescue {})
+      )
+    end
   end
 end

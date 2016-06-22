@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/credit_cards
+    body:
+      encoding: UTF-8
+      string: '{"number":"4012001037141112","cvv":123,"holder_name":"JOÃO DAS COUVES","brand":"visa","expiration":"05/18","charge_config_id":1,"payer_id":1,"make_reusable":true}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.4.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - request_method=POST; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 1c62cd6d-97e7-4d1a-bb72-ddcd829a55a2
+      X-Runtime:
+      - '86.270796'
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":14,"number":"401200******1112","holder_name":"JOÃO DAS COUVES","reusable":true,"brand":"visa","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"charge_config_id":1,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/14"},{"rel":"charge_config","method":"POST","href":"https://sandbox.cobrato.com/api/v1/charge_configs"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/credit_cards
+  recorded_at: Wed, 22 Jun 2016 18:42:49 GMT
+recorded_with: VCR 2.9.3
