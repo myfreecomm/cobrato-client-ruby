@@ -4,7 +4,7 @@ module Cobrato
       attribute :id,               Integer
       attribute :number,           String
       attribute :holder_name,      String
-      attribute :unusable,         Boolean
+      attribute :reusable,         Boolean
       attribute :brand,            String
       attribute :expiration,       String
       attribute :avs_address,      String
