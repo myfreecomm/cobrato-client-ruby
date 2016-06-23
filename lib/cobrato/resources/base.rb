@@ -70,15 +70,15 @@ module Cobrato
       protected
 
       def crud_request
-        method = caller_locations(1,1)[0].label
+        method = caller_locations(1, 1)[0].label
         if self.class.crud.include?(:all) || self.class.crud.include?(method.to_sym)
           yield
         else
-          raise raise RuntimeError, "#{base_klass} do not implement the #{method} method"
+          raise RuntimeError, "#{base_klass} do not implement the #{method} method"
         end
       end
 
-      def respond_with_collection(response, class_name = nil)
+      def respond_with_collection(response, class_name=nil)
         class_name    ||= base_klass
         naked_klass     = entity_klass(class_name)
         hash            = parsed_body(response)
@@ -87,7 +87,7 @@ module Cobrato
         hash[collection_name].map { |item| naked_klass.new(item) }
       end
 
-      def respond_with_entity(response, naked_klass = entity_klass)
+      def respond_with_entity(response, naked_klass=entity_klass)
         item = parsed_body(response)
         naked_klass.new(item)
       end
@@ -101,16 +101,16 @@ module Cobrato
       end
 
       def base_klass
-        @base_klass ||= self.class.name.split('::').last
+        @base_klass ||= self.class.name.split("::").last
       end
 
-      def entity_klass(class_name = base_klass)
+      def entity_klass(class_name=base_klass)
         @entity_klass ||= Cobrato::Entities.const_get(class_name.to_sym)
       end
 
 
       def underscore_pluralized(str)
-        "#{str.gsub(/(.)([A-Z])/,'\1_\2').downcase}s"
+        "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
     end
   end
