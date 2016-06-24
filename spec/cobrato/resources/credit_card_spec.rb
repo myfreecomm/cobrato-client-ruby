@@ -8,12 +8,12 @@ describe Cobrato::Resources::CreditCard do
     {
       number: "4012001037141112",
       cvv: 123,
-      holder_name: "JOÃO DAS COUVES",
+      holder_name: "JONH DOE",
       brand: "visa",
       expiration: "05/18",
-      charge_config_id: 1,
+      charge_config_id: 7,
       payer_id: 1,
-      make_reusable: true
+      soft_descriptor: "MyCompany"
     }
   end
 
@@ -36,14 +36,15 @@ describe Cobrato::Resources::CreditCard do
   end
 
   describe "#create" do
+    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+
     it "creates a credit card" do
       VCR.use_cassette("credit_cards/create/success") do
         credit_card = subject.create(params)
         expect(credit_card).to be_a(entity_klass)
-        expect(credit_card.id).to eql(3)
         expect(credit_card.number).to eq("401200******1112")
-        expect(credit_card.holder_name).to eq("JOÃO DAS COUVES")
-        expect(credit_card.charge_config_id).to eq(1)
+        expect(credit_card.holder_name).to eq("JONH DOE")
+        expect(credit_card.charge_config_id).to eq(7)
         expect(credit_card.payer_id).to eq(1)
       end
     end
