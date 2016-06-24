@@ -54,6 +54,7 @@ end
 * [Charges API](http://docs.cobrato.com/#cobrança)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
 * [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
+* [CreditCards API](http://docs.cobrato.com/#cart-o-de-cr-dito)
 * [Webhooks API](http://docs.cobrato.com/#webhook)
 
 ## Endpoints
@@ -135,11 +136,13 @@ end
 | GET         | [api/v1/remittance_cnabs/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança-do-arquivo-de-remessa) | client.remittance_cnabs.charges |
 
 
-#### [Credit Card](http://docs.cobrato.com/#cartao-de-credito)
+#### [Credit Card](http://docs.cobrato.com/#cart-o-de-cr-dito)
 
-| HTTP method | Endpoint                                                                            | Client method            |
-| ----------- | ----------------------------------------------------------------------------------- | ------------------------ |
-| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informações-do-cartao-de-credit) | client.credit_cards.show |
+| HTTP method | Endpoint                                                                            | Client method              |
+| ----------- | ----------------------------------------------------------------------------------- | -------------------------- |
+| POST        | [api/v1/credit_cards](http://docs.cobrato.com/#cria-o-de-cart-o-de-cr-dito)         | client.credit_cards.create |
+| GET         | [api/v1/credit_cards](http://docs.cobrato.com/#lista-dos-cart-es-de-cr-dito)        | client.credit_cards.list   |
+| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informa-es-do-cart-o-de-cr-dito) | client.credit_cards.show   |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 

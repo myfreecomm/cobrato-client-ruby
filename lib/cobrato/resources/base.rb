@@ -41,9 +41,9 @@ module Cobrato
         end
       end
 
-      def list
+      def list(params={})
         crud_request do
-          http.get(resource_base_path) do |response|
+          http.get(resource_base_path, { params: params }) do |response|
             respond_with_collection(response)
           end
         end
