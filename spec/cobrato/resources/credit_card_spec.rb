@@ -93,7 +93,7 @@ describe Cobrato::Resources::CreditCard do
 
     it "returns an array of all charges from a credit card paginated" do
       VCR.use_cassette("credit_cards/charges/success-paginated") do
-        charges = subject.charges(13, { page: 2, per_page: 5 })
+        charges = subject.charges(13, page: 2, per_page: 5)
         expect(charges.count).to eql(5)
         expect(charges).to be_a(Array)
         charges.each do |c|

@@ -77,5 +77,4 @@ describe Cobrato::Client do
       expect(subject.payers).to be_a(Cobrato::Resources::Payer)
     end
   end
-
 end

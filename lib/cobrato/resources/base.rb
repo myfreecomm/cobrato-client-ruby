@@ -27,7 +27,7 @@ module Cobrato
 
       def create(params)
         crud_request do
-          http.post(resource_base_path, { body: params }) do |response|
+          http.post(resource_base_path, body: params) do |response|
             respond_with_entity(response)
           end
         end
@@ -43,7 +43,7 @@ module Cobrato
 
       def list(params={})
         crud_request do
-          http.get(resource_base_path, { params: params }) do |response|
+          http.get(resource_base_path, params: params) do |response|
             respond_with_collection(response)
           end
         end
@@ -59,7 +59,7 @@ module Cobrato
 
       def update(id, params)
         crud_request do
-          http.put("#{resource_base_path}/#{id}", { body: params }) do |response|
+          http.put("#{resource_base_path}/#{id}", body: params) do |response|
             respond_with_entity(response)
           end
         end
@@ -74,7 +74,7 @@ module Cobrato
         if self.class.crud.include?(:all) || self.class.crud.include?(method.to_sym)
           yield
         else
-          raise RuntimeError, "#{base_klass} do not implement the #{method} method"
+          raise "#{base_klass} do not implement the #{method} method"
         end
       end
 
