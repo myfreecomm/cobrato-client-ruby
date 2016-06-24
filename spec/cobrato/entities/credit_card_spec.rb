@@ -13,7 +13,10 @@ describe Cobrato::Entities::CreditCard do
       avs_complement: "",
       avs_district: "",
       avs_zipcode: "",
+      reusable: true,
       make_reusable: true,
+      reusability_status: "ok",
+      reusability_error_message: "",
       payer_id: 1,
       charge_config_id: 1
     }
@@ -22,6 +25,6 @@ describe Cobrato::Entities::CreditCard do
   subject { described_class.new(attributes) }
 
   it_behaves_like "entity_attributes", [
-    :id, :number, :holder_name, :reusable, :brand, :expiration, :avs_address, :avs_number,
-    :avs_complement, :avs_district, :avs_zipcode, :payer_id, :charge_config_id]
+    :id, :number, :holder_name, :reusable, :make_reusable, :reusability_status, :reusability_error_message, :brand,
+    :expiration, :avs_address, :avs_number, :avs_complement, :avs_district, :avs_zipcode, :payer_id, :charge_config_id]
 end
