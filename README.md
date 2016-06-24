@@ -138,11 +138,12 @@ end
 
 #### [Credit Card](http://docs.cobrato.com/#cart-o-de-cr-dito)
 
-| HTTP method | Endpoint                                                                            | Client method              |
-| ----------- | ----------------------------------------------------------------------------------- | -------------------------- |
-| POST        | [api/v1/credit_cards](http://docs.cobrato.com/#cria-o-de-cart-o-de-cr-dito)         | client.credit_cards.create |
-| GET         | [api/v1/credit_cards](http://docs.cobrato.com/#lista-dos-cart-es-de-cr-dito)        | client.credit_cards.list   |
-| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informa-es-do-cart-o-de-cr-dito) | client.credit_cards.show   |
+| HTTP method | Endpoint                                                                                                               | Client method               |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| POST        | [api/v1/credit_cards](http://docs.cobrato.com/#cria-o-de-cart-o-de-cr-dito)                                            | client.credit_cards.create  |
+| GET         | [api/v1/credit_cards](http://docs.cobrato.com/#lista-dos-cart-es-de-cr-dito)                                           | client.credit_cards.list    |
+| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informa-es-do-cart-o-de-cr-dito)                                    | client.credit_cards.show    |
+| GET         | [api/v1/credit_cards/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobran-as-feitas-com-o-cart-o-de-cr-dito) | client.credit_cards.charges |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 

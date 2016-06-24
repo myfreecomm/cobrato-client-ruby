@@ -76,4 +76,30 @@ describe Cobrato::Resources::CreditCard do
       end
     end
   end
+
+  describe "#charges" do
+    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+
+    it "returns an array of all charges from a credit card" do
+      VCR.use_cassette("credit_cards/charges/success") do
+        charges = subject.charges(13)
+        expect(charges.count).to eql(15)
+        expect(charges).to be_a(Array)
+        charges.each do |c|
+          expect(c).to be_a(Cobrato::Entities::Charge)
+        end
+      end
+    end
+
+    it "returns an array of all charges from a credit card paginated" do
+      VCR.use_cassette("credit_cards/charges/success-paginated") do
+        charges = subject.charges(13, { page: 2, per_page: 5 })
+        expect(charges.count).to eql(5)
+        expect(charges).to be_a(Array)
+        charges.each do |c|
+          expect(c).to be_a(Cobrato::Entities::Charge)
+        end
+      end
+    end
+  end
 end
