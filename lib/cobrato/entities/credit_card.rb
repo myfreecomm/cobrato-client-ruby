@@ -5,7 +5,6 @@ module Cobrato
       attribute :number,                    String
       attribute :holder_name,               String
       attribute :reusable,                  Boolean
-      attribute :make_reusable,             Boolean
       attribute :reusability_status,        String
       attribute :reusability_error_message, String
       attribute :brand,                     String
