@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.4.3
+
+- The `Charge#generate_token ` was removed and `CreditCard#created_as_reusable` was added with the same goal.
+- Add credit_cards#create endpoint
+- Add credit_cards#list endpoint
+- Add credit_cards#charges endpoint
+
 ## v0.3.0
 
 ### Structural changes

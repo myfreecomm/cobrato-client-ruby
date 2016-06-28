@@ -44,13 +44,13 @@ describe Cobrato::Entities::Charge do
     # common
     :id, :type, :charge_config_id, :total_amount, :payer_emails, :payer_id, :payer_national_identifier_type,
     :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood,
-    :payer_zipcode, :payer_city, :payer_state,
+    :payer_zipcode, :payer_city, :payer_state, :for_homologation,
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
-    :our_number_digit, :instructions, :demonstrative, :received, :received_amount, :received_at, :for_homologation,
-    :registrable, :registration_status,
+    :our_number_digit, :instructions, :demonstrative, :received, :received_amount, :received_at, :registrable,
+    :registration_status,
     # payment gateway specifics
-    :credit_card_id, :description, :generate_token, :installments, :payment_gateway_status, :payment_method,
-    :soft_descriptor, :payment_gateway_message
+    :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
+    :payment_gateway_message
   ]
 end
