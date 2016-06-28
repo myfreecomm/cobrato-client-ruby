@@ -1,5 +1,9 @@
 # Changelog
 
+## Next version
+
+- Attributes `interest_amount_per_month`, `mulct_type`, `mulct_value` ware moved from ChargeConfig to Charge.
+
 ## v0.5.0
 
 - The `Charge#generate_token ` was removed and `CreditCard#created_as_reusable` was added with the same goal.

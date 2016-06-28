@@ -17,9 +17,6 @@ describe Cobrato::Entities::ChargeConfig do
       agreement_number: 4576361,
       initial_remittance_number: 1,
       remittance_cnab_pattern: 240,
-      interest_amount_per_month: 1.02,
-      mulct_type: 'percentage',
-      mulct_value: 10.12,
       transmission_code: "1234567"
     }
   end
@@ -32,7 +29,7 @@ describe Cobrato::Entities::ChargeConfig do
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :agreement_number, :initial_remittance_number, :current_remittance_number,
-    :remittance_cnab_pattern, :interest_amount_per_month, :mulct_type, :mulct_value, :transmission_code,
+    :remittance_cnab_pattern, :transmission_code,
     # payment gateway specifics
     :gateway_id, :gateway_key, :gateway_name, :use_avs]
 end

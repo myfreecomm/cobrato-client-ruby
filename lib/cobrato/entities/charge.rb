@@ -35,6 +35,9 @@ module Cobrato
       attribute :received_at,                    Date
       attribute :registrable,                    Boolean
       attribute :registration_status,            String
+      attribute :interest_amount_per_month,      Decimal
+      attribute :mulct_type,                     String
+      attribute :mulct_value,                    Decimal
 
       # payment gateway specifics
       attribute :credit_card_id,                 Integer
