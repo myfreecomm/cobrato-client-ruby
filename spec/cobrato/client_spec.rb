@@ -60,10 +60,21 @@ describe Cobrato::Client do
     end
   end
 
-  describe "#regress_cnabs" do
+  describe "#remittance_cnabs" do
     it "returns an instance of Cobrato::Resources::RemittanceCnab" do
       expect(subject.remittance_cnabs).to be_a(Cobrato::Resources::RemittanceCnab)
     end
   end
 
+  describe "#credit_cards" do
+    it "returns an instance of Cobrato::Resources::CreditCard" do
+      expect(subject.credit_cards).to be_a(Cobrato::Resources::CreditCard)
+    end
+  end
+
+  describe "#payers" do
+    it "returns an instance of Cobrato::Resources::Payer" do
+      expect(subject.payers).to be_a(Cobrato::Resources::Payer)
+    end
+  end
 end

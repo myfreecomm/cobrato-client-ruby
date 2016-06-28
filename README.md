@@ -18,15 +18,18 @@ gem 'cobrato-client'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
-
-    $ gem install cobrato-client
+```
+$ gem install cobrato-client
+```
 
 ## Configuration
 
-##### Use Cobrato.configure to setup your environment:
+Use `Cobrato.configure` to setup your environment:
 
 ```ruby
 require "cobrato"
@@ -39,13 +42,13 @@ end
 
 ## Usage
 
-##### Given your token, create an instance of Cobrato::Client, as below:
+Given your token, create an instance of `Cobrato::Client`, as below:
 
 ```ruby
-    client = Cobrato.client("YOUR_TOKEN_HERE")
+client = Cobrato.client("YOUR_TOKEN_HERE")
 ```
 
-##### Now you have acess to every API endpoint:
+Now you have acess to every API endpoint:
 
 * [Payees API](http://docs.cobrato.com/#beneficiário)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
@@ -54,6 +57,7 @@ end
 * [Charges API](http://docs.cobrato.com/#cobrança)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
 * [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
+* [CreditCards API](http://docs.cobrato.com/#cart-o-de-cr-dito)
 * [Webhooks API](http://docs.cobrato.com/#webhook)
 
 ## Endpoints
@@ -135,11 +139,14 @@ end
 | GET         | [api/v1/remittance_cnabs/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança-do-arquivo-de-remessa) | client.remittance_cnabs.charges |
 
 
-#### [Credit Card](http://docs.cobrato.com/#cartao-de-credito)
+#### [Credit Card](http://docs.cobrato.com/#cart-o-de-cr-dito)
 
-| HTTP method | Endpoint                                                                            | Client method            |
-| ----------- | ----------------------------------------------------------------------------------- | ------------------------ |
-| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informações-do-cartao-de-credit) | client.credit_cards.show |
+| HTTP method | Endpoint                                                                                                               | Client method               |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| POST        | [api/v1/credit_cards](http://docs.cobrato.com/#cria-o-de-cart-o-de-cr-dito)                                            | client.credit_cards.create  |
+| GET         | [api/v1/credit_cards](http://docs.cobrato.com/#lista-dos-cart-es-de-cr-dito)                                           | client.credit_cards.list    |
+| GET         | [api/v1/credit_cards/:id](http://docs.cobrato.com/#informa-es-do-cart-o-de-cr-dito)                                    | client.credit_cards.show    |
+| GET         | [api/v1/credit_cards/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobran-as-feitas-com-o-cart-o-de-cr-dito) | client.credit_cards.charges |
 
 #### [Webhooks](http://docs.cobrato.com/#webhook)
 

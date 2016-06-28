@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/credit_cards
+    body:
+      encoding: UTF-8
+      string: '{"number":"4012001037141112","cvv":123,"holder_name":"JONH DOE","brand":"visa","expiration":"05/18","charge_config_id":7,"payer_id":1,"soft_descriptor":"MyCompany"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.4.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 14d542b0-275c-4ce5-aa06-0e92c919ddb3
+      X-Runtime:
+      - '0.640591'
+      X-MiniProfiler-Ids:
+      - '["f2d5th3coeqij8rr34wl","n3lh8pgfgdrdgoyrzhpd","a2pfni1kx2iry3ump7es"]'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: UTF-8
+      string: '{"id":23,"number":"401200******1112","holder_name":"JONH DOE","brand":"visa","expiration":"05/18","avs_address":null,"avs_number":null,"avs_complement":null,"avs_district":null,"avs_zipcode":null,"payer_id":1,"reusable":false,"reusability_status":"pending","reusability_error_message":null,"charge_config_id":7,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/23"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/7"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/credit_cards
+  recorded_at: Fri, 24 Jun 2016 15:29:50 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/credit_cards/13/charges?page=2&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.4.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - ee205ecd-da97-4ffe-9d32-92ad0bed3417
+      X-Runtime:
+      - '0.066414'
+      X-MiniProfiler-Ids:
+      - '["mfb7e5ugiq0tfvau5jix","t872ld2a09rk0r17vmvr","j1jryol8zh7rnq0plopk","pkod4vhnd3mgrtc6m4ef","5b1gm9y2wcm1e6wln0cj","d95mr7ocim56cu6nctob","mg0lzdinm7n7t2npze7t"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Server:
+      - thin
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaGFyZ2VzIjpbeyJpZCI6NTksInR5cGUiOiJwYXltZW50X2dhdGV3YXki
+        LCJjcmVkaXRfY2FyZF9pZCI6MTMsInBheWVyX2VtYWlscyI6W10sInRvdGFs
+        X2Ftb3VudCI6OC41NSwiY3VycmVuY3lfY29kZSI6bnVsbCwiZGVzY3JpcHRp
+        b24iOiIiLCJzb2Z0X2Rlc2NyaXB0b3IiOiIiLCJwYXltZW50X21ldGhvZCI6
+        ImNyZWRpdF9jYXJkX2luX2Nhc2giLCJpbnN0YWxsbWVudHMiOjEsInBheW1l
+        bnRfZ2F0ZXdheV9zdGF0dXMiOiJhdXRob3JpemVfZXJyb3IiLCJwYXltZW50
+        X2dhdGV3YXlfbWVzc2FnZSI6IkVycm8gaW5lc3BlcmFkbyIsInJlY2VpdmVk
+        IjpmYWxzZSwicmVjZWl2ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6
+        bnVsbCwiZm9yX2hvbW9sb2dhdGlvbiI6dHJ1ZSwiX2xpbmtzIjpbeyJyZWwi
+        OiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhv
+        c3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy81OSJ9LHsicmVsIjoiZGVzdHJveSIs
+        Im1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMw
+        MDAvYXBpL3YxL2NoYXJnZXMvNTkifSx7InJlbCI6ImNoYXJnZV9jb25maWci
+        LCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAw
+        L2FwaS92MS9jaGFyZ2VfY29uZmlncy83In1dfSx7ImlkIjo2MiwidHlwZSI6
+        InBheW1lbnRfZ2F0ZXdheSIsImNyZWRpdF9jYXJkX2lkIjoxMywicGF5ZXJf
+        ZW1haWxzIjpbXSwidG90YWxfYW1vdW50Ijo0LjAsImN1cnJlbmN5X2NvZGUi
+        Om51bGwsImRlc2NyaXB0aW9uIjoiIiwic29mdF9kZXNjcmlwdG9yIjoiIiwi
+        cGF5bWVudF9tZXRob2QiOiJjcmVkaXRfY2FyZF9pbl9jYXNoIiwiaW5zdGFs
+        bG1lbnRzIjoxLCJwYXltZW50X2dhdGV3YXlfc3RhdHVzIjoiY2FuY2VsZWQi
+        LCJwYXltZW50X2dhdGV3YXlfbWVzc2FnZSI6IlRyYW5zYWNhbyBjYW5jZWxh
+        ZGEgY29tIHN1Y2Vzc28iLCJyZWNlaXZlZCI6ZmFsc2UsInJlY2VpdmVkX2Ft
+        b3VudCI6bnVsbCwicmVjZWl2ZWRfYXQiOm51bGwsImZvcl9ob21vbG9nYXRp
+        b24iOnRydWUsIl9saW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdF
+        VCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJn
+        ZXMvNjIifSx7InJlbCI6ImRlc3Ryb3kiLCJtZXRob2QiOiJERUxFVEUiLCJo
+        cmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzYy
+        In0seyJyZWwiOiJjaGFyZ2VfY29uZmlnIiwibWV0aG9kIjoiR0VUIiwiaHJl
+        ZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlX2NvbmZp
+        Z3MvNyJ9XX0seyJpZCI6NjYsInR5cGUiOiJwYXltZW50X2dhdGV3YXkiLCJj
+        cmVkaXRfY2FyZF9pZCI6MTMsInBheWVyX2VtYWlscyI6W10sInRvdGFsX2Ft
+        b3VudCI6MTAuMCwiY3VycmVuY3lfY29kZSI6bnVsbCwiZGVzY3JpcHRpb24i
+        OiIiLCJzb2Z0X2Rlc2NyaXB0b3IiOiIiLCJwYXltZW50X21ldGhvZCI6ImNy
+        ZWRpdF9jYXJkX2luX2Nhc2giLCJpbnN0YWxsbWVudHMiOjEsInBheW1lbnRf
+        Z2F0ZXdheV9zdGF0dXMiOiJjYXB0dXJlZCIsInBheW1lbnRfZ2F0ZXdheV9t
+        ZXNzYWdlIjoiVHJhbnNhw6fDo28gYXByb3ZhZGEgY29tIHN1Y2Vzc28uIiwi
+        cmVjZWl2ZWQiOnRydWUsInJlY2VpdmVkX2Ftb3VudCI6MTAuMCwicmVjZWl2
+        ZWRfYXQiOiIyMDE2LTA2LTEwVDExOjI2OjQwLjE0MC0wMzowMCIsImZvcl9o
+        b21vbG9nYXRpb24iOmZhbHNlLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJt
+        ZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2Fw
+        aS92MS9jaGFyZ2VzLzY2In0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoi
+        REVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEv
+        Y2hhcmdlcy82NiJ9LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIsIm1ldGhvZCI6
+        IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2No
+        YXJnZV9jb25maWdzLzcifV19LHsiaWQiOjY3LCJ0eXBlIjoicGF5bWVudF9n
+        YXRld2F5IiwiY3JlZGl0X2NhcmRfaWQiOjEzLCJwYXllcl9lbWFpbHMiOltd
+        LCJ0b3RhbF9hbW91bnQiOjEwMC4wLCJjdXJyZW5jeV9jb2RlIjpudWxsLCJk
+        ZXNjcmlwdGlvbiI6IiIsInNvZnRfZGVzY3JpcHRvciI6IiIsInBheW1lbnRf
+        bWV0aG9kIjoiY3JlZGl0X2NhcmRfaW5fY2FzaCIsImluc3RhbGxtZW50cyI6
+        MSwicGF5bWVudF9nYXRld2F5X3N0YXR1cyI6ImNhbmNlbGVkIiwicGF5bWVu
+        dF9nYXRld2F5X21lc3NhZ2UiOiJUcmFuc2FjYW8gY2FuY2VsYWRhIGNvbSBz
+        dWNlc3NvIiwicmVjZWl2ZWQiOmZhbHNlLCJyZWNlaXZlZF9hbW91bnQiOm51
+        bGwsInJlY2VpdmVkX2F0IjpudWxsLCJmb3JfaG9tb2xvZ2F0aW9uIjpmYWxz
+        ZSwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJl
+        ZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy82NyJ9
+        LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJo
+        dHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNjcifSx7InJl
+        bCI6ImNoYXJnZV9jb25maWciLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0
+        cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VfY29uZmlncy83In1d
+        fSx7ImlkIjo2OCwidHlwZSI6InBheW1lbnRfZ2F0ZXdheSIsImNyZWRpdF9j
+        YXJkX2lkIjoxMywicGF5ZXJfZW1haWxzIjpbXSwidG90YWxfYW1vdW50Ijo0
+        LjAsImN1cnJlbmN5X2NvZGUiOm51bGwsImRlc2NyaXB0aW9uIjoiIiwic29m
+        dF9kZXNjcmlwdG9yIjoiIiwicGF5bWVudF9tZXRob2QiOiJjcmVkaXRfY2Fy
+        ZF9pbl9jYXNoIiwiaW5zdGFsbG1lbnRzIjoxLCJwYXltZW50X2dhdGV3YXlf
+        c3RhdHVzIjoiY2FuY2VsZWQiLCJwYXltZW50X2dhdGV3YXlfbWVzc2FnZSI6
+        IlRyYW5zYWNhbyBjYW5jZWxhZGEgY29tIHN1Y2Vzc28iLCJyZWNlaXZlZCI6
+        ZmFsc2UsInJlY2VpdmVkX2Ftb3VudCI6bnVsbCwicmVjZWl2ZWRfYXQiOm51
+        bGwsImZvcl9ob21vbG9nYXRpb24iOmZhbHNlLCJfbGlua3MiOlt7InJlbCI6
+        InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9z
+        dDozMDAwL2FwaS92MS9jaGFyZ2VzLzY4In0seyJyZWwiOiJkZXN0cm95Iiwi
+        bWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAw
+        MC9hcGkvdjEvY2hhcmdlcy82OCJ9LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIs
+        Im1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAv
+        YXBpL3YxL2NoYXJnZV9jb25maWdzLzcifV19XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/credit_cards/13/charges?page=2&per_page=5
+  recorded_at: Fri, 24 Jun 2016 14:49:14 GMT
+recorded_with: VCR 2.9.3
