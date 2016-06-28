@@ -18,15 +18,18 @@ gem 'cobrato-client'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
-
-    $ gem install cobrato-client
+```
+$ gem install cobrato-client
+```
 
 ## Configuration
 
-##### Use Cobrato.configure to setup your environment:
+Use `Cobrato.configure` to setup your environment:
 
 ```ruby
 require "cobrato"
@@ -39,13 +42,13 @@ end
 
 ## Usage
 
-##### Given your token, create an instance of Cobrato::Client, as below:
+Given your token, create an instance of `Cobrato::Client`, as below:
 
 ```ruby
-    client = Cobrato.client("YOUR_TOKEN_HERE")
+client = Cobrato.client("YOUR_TOKEN_HERE")
 ```
 
-##### Now you have acess to every API endpoint:
+Now you have acess to every API endpoint:
 
 * [Payees API](http://docs.cobrato.com/#beneficiário)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
