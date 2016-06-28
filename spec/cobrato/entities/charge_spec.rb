@@ -23,6 +23,9 @@ describe Cobrato::Entities::Charge do
       processing_date: "2015-01-30",
       for_homologation: true,
       registrable: true,
+      interest_amount_per_month: 1.02,
+      mulct_type: 'percentage',
+      mulct_value: 10.12,
       payer_id: 1,
       payer_national_identifier_type: "cpf",
       payer_national_identifier: "12345678909",
@@ -48,7 +51,7 @@ describe Cobrato::Entities::Charge do
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
     :our_number_digit, :instructions, :demonstrative, :received, :received_amount, :received_at, :for_homologation,
-    :registrable, :registration_status,
+    :registrable, :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value,
     # payment gateway specifics
     :credit_card_id, :description, :generate_token, :installments, :payment_gateway_status, :payment_method,
     :soft_descriptor, :payment_gateway_message

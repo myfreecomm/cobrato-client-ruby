@@ -19,9 +19,6 @@ module Cobrato
       attribute :initial_remittance_number, Integer
       attribute :current_remittance_number, Integer
       attribute :remittance_cnab_pattern,   Integer
-      attribute :interest_amount_per_month, Decimal
-      attribute :mulct_type,                String
-      attribute :mulct_value,               Decimal
       attribute :transmission_code,         String
 
       # payment gateway specifics
