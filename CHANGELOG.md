@@ -1,8 +1,8 @@
 # Changelog
 
-## Next version
+## v0.6.0
 
-- Attributes `interest_amount_per_month`, `mulct_type`, `mulct_value` ware moved from ChargeConfig to Charge.
+- Attributes `interest_amount_per_month`, `mulct_type`, `mulct_value` were moved from ChargeConfig to Charge.
 
 ## v0.5.0
 
