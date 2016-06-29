@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"bank_account_id":3,"portfolio_code":"17","agreement_code":"123456","agreement_code_digit":"1","name":"Conta
-        Cobrança","initial_number":1,"next_number":525,"end_number":1000,"status":"pending","registered_charges":true,"agreement_number":4576361,"initial_remittance_number":1,"remittance_cnab_pattern":240,"interest_amount_per_month":1.02,"mulct_type":"percentage","mulct_value":10.12}'
+        Cobrança","initial_number":1,"next_number":525,"end_number":1000,"status":"pending","registered_charges":true,"remittance_agreement_code":4576361,"initial_remittance_number":1,"remittance_cnab_pattern":240,"interest_amount_per_month":1.02,"mulct_type":"percentage","mulct_value":10.12}'
     headers:
       User-Agent:
       - Cobrato Ruby Client v0.4.0
