@@ -1,9 +1,8 @@
 # Changelog
 
-## Next release
+## v0.7.0
 
 - Attribute `agreement_number` from `ChargeConfig` renamed to `remittance_agreement_code`.
-
 
 ## v0.6.0
 
