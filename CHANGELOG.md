@@ -1,5 +1,10 @@
 # Changelog
 
+## Next release
+
+- Attribute `agreement_number` from `ChargeConfig` renamed to `remittance_agreement_code`.
+
+
 ## v0.6.0
 
 - Attributes `interest_amount_per_month`, `mulct_type`, `mulct_value` were moved from ChargeConfig to Charge.

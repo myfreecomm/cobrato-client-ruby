@@ -32,7 +32,7 @@ describe Cobrato::Entities::RegressCnab do
           'next_number' => 1,
           'end_number' => nil,
           'registered_charges' => true,
-          'agreement_number' => 1,
+          'remittance_agreement_code' => 1,
           'initial_remittance_number' => 1,
           'current_remittance_number' => nil,
           'remittance_cnab_pattern' => 240,

@@ -16,7 +16,7 @@ describe Cobrato::Resources::ChargeConfig do
       "end_number" => 1000,
       "status" => "pending",
       "registered_charges" => true,
-      "agreement_number" => 4576361,
+      "remittance_agreement_code" => 4576361,
       "initial_remittance_number" => 1,
       "remittance_cnab_pattern" => 240,
       "interest_amount_per_month" => 1.02,
