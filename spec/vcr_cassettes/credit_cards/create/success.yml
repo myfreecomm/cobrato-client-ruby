@@ -45,7 +45,7 @@ http_interactions:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":23,"number":"401200******1112","holder_name":"JONH DOE","brand":"visa","expiration":"05/18","avs_address":null,"avs_number":null,"avs_complement":null,"avs_district":null,"avs_zipcode":null,"payer_id":1,"reusable":false,"reusability_status":"pending","reusability_error_message":null,"charge_config_id":7,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/23"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/7"}]}'
+      string: '{"id":23,"number":"401200******1112","holder_name":"JONH DOE","brand":"visa","expiration":"05/18","avs_address":null,"avs_number":null,"avs_complement":null,"avs_district":null,"avs_zipcode":null,"payer_id":1,"reusability_status":"pending","reusability_error_message":null,"charge_config_id":7,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/23"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/7"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/credit_cards
