@@ -1,5 +1,9 @@
 # Changelog
 
+## Next release
+
+- Remove `CreditCard#reusable`
+
 ## v0.7.0
 
 - Attribute `agreement_number` from `ChargeConfig` renamed to `remittance_agreement_code`.

@@ -44,7 +44,7 @@ http_interactions:
       - thin
     body:
       encoding: UTF-8
-      string: '{"credit_cards":[{"id":7,"number":"6167","holder_name":"John Doe","brand":"mastercard","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"reusable":true,"reusability_status":"ok","reusability_error_message":null,"charge_config_id":1,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/7"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1"}]}]}'
+      string: '{"credit_cards":[{"id":7,"number":"6167","holder_name":"John Doe","brand":"mastercard","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"reusability_status":"ok","reusability_error_message":null,"charge_config_id":1,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/7"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1"}]}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/credit_cards?brand=mastercard&charge_config_id=1
