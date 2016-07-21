@@ -1,5 +1,9 @@
 # Changelog
 
+## Next release
+
+- Attribute `payer_emails` from `Charge` renamed to  `notification_emails`
+
 ## v0.8.0
 
 - Remove `CreditCard#reusable`
