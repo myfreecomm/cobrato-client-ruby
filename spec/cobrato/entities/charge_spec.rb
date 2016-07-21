@@ -16,7 +16,7 @@ describe Cobrato::Entities::Charge do
       total_amount: "10.07",
       instructions: "Pagável em qualquer agência até data do vencimento",
       demonstrative: "Demonstrativo",
-      payer_emails: ["myemail@gmail.com"],
+      notification_emails: ["myemail@gmail.com"],
       received: true,
       received_amount: "10.07",
       received_at: "2015-01-30",
@@ -45,7 +45,7 @@ describe Cobrato::Entities::Charge do
 
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :charge_config_id, :total_amount, :payer_emails, :payer_id, :payer_national_identifier_type,
+    :id, :type, :charge_config_id, :total_amount, :notification_emails, :payer_id, :payer_national_identifier_type,
     :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood,
     :payer_zipcode, :payer_city, :payer_state, :for_homologation,
     # billet specifics

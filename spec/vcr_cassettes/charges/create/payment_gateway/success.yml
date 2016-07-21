@@ -46,7 +46,7 @@ http_interactions:
       - thin
     body:
       encoding: UTF-8
-      string: '{"id":12,"type":"payment_gateway","credit_card_id":7,"payer_emails":[],"total_amount":721.0,"currency_code":null,"description":null,"soft_descriptor":null,"payment_method":"credit_card_financed","installments":3,"generate_token":false,"payment_gateway_status":"payment_captured","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/12"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charges/12"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1"}]}'
+      string: '{"id":12,"type":"payment_gateway","credit_card_id":7,"notification_emails":[],"total_amount":721.0,"currency_code":null,"description":null,"soft_descriptor":null,"payment_method":"credit_card_financed","installments":3,"generate_token":false,"payment_gateway_status":"payment_captured","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/12"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charges/12"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges
