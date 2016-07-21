@@ -16,7 +16,7 @@ describe Cobrato::Resources::Charge do
       "total_amount" => "10.07",
       "instructions" => "Pagável em qualquer agência até data do vencimento",
       "demonstrative" => "Demonstrativo",
-      "payer_emails" => ["myemail@gmail.com"],
+      "notification_emails" => ["myemail@gmail.com"],
       "processing_date" => "2015-01-30",
       "registrable" => false,
       "payer_attributes" => {

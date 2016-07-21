@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"charge_config_id":88,"due_date":"2015-02-14","document_kind":"DV","document_date":null,"document_number":"NA","custom_our_number":true,"our_number":"123","our_number_digit":null,"total_amount":"10.07","instructions":"Pagável
-        em qualquer agência até data do vencimento","demonstrative":"Demonstrativo","payer_emails":["myemail@gmail.com"],"processing_date":"2015-01-30","registrable":false,"payer_national_identifier_type":"cpf","payer_national_identifier":"12345678909","payer_name":"Jonh
+        em qualquer agência até data do vencimento","demonstrative":"Demonstrativo","notification_emails":["myemail@gmail.com"],"processing_date":"2015-01-30","registrable":false,"payer_national_identifier_type":"cpf","payer_national_identifier":"12345678909","payer_name":"Jonh
         Doe","payer_number":"43","payer_complement":"8 andar","payer_street":"Rua
         do Carmo","payer_neighbourhood":"Centro","payer_zipcode":"22230062","payer_city":"Rio
         de Janeiro","payer_state":"RJ"}'

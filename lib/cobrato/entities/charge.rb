@@ -5,7 +5,7 @@ module Cobrato
       attribute :type,                           String
       attribute :charge_config_id,               Integer
       attribute :total_amount,                   Decimal
-      attribute :payer_emails,                   String
+      attribute :notification_emails,            String
       attribute :payer_id,                       Integer
       attribute :payer_national_identifier_type, String
       attribute :payer_national_identifier,      String
