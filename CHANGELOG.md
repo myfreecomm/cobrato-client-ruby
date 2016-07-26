@@ -1,6 +1,6 @@
 # Changelog
 
-## Next release
+## v0.9.0
 
 - Attribute `payer_emails` from `Charge` renamed to  `notification_emails`
 
