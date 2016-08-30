@@ -18,6 +18,8 @@ module Cobrato
       attribute :payer_city,                     String
       attribute :payer_state,                    String
       attribute :for_homologation,               Boolean
+      attribute :for_homologation,               Boolean
+      attribute :canceled_at,                    DateTime
 
       # billet specifics
       attribute :due_date,                       Date
