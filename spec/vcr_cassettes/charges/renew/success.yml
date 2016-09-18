@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/charges/73/renew
+    body:
+      encoding: UTF-8
+      string: '{"new_due_date":"20/01/2017"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 06 Sep 2016 18:43:48 GMT
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - request_method=PUT; path=/
+      X-Request-Id:
+      - 82b44104-df9e-4138-9cbf-87e8200a19dd
+      X-Runtime:
+      - '0.003674'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTkxMywidHlwZSI6ImJpbGxldCIsImNoYXJnZV9jb25maWdfaWQi
+        Ojg4LCJkdWVfZGF0ZSI6IjIwMTUtMDItMTQiLCJkb2N1bWVudF9raW5kIjoi
+        RFYiLCJkb2N1bWVudF9kYXRlIjpudWxsLCJkb2N1bWVudF9udW1iZXIiOiIx
+        MzM3IiwiY3VzdG9tX291cl9udW1iZXIiOmZhbHNlLCJvdXJfbnVtYmVyIjoi
+        MTIzIiwib3VyX251bWJlcl9kaWdpdCI6bnVsbCwidG90YWxfYW1vdW50Ijox
+        MC4wNywiaW5zdHJ1Y3Rpb25zIjoiUGFnw6F2ZWwgZW0gcXVhbHF1ZXIgYWfD
+        qm5jaWEgYXTDqSBkYXRhIGRvIHZlbmNpbWVudG8iLCJkZW1vbnN0cmF0aXZl
+        IjoiRGVtb25zdHJhdGl2byIsInBheWVyX2VtYWlscyI6WyJteWVtYWlsQGdt
+        YWlsLmNvbSJdLCJyZWNlaXZlZCI6dHJ1ZSwicmVjZWl2ZWRfYW1vdW50Ijox
+        MC4wNywicmVjZWl2ZWRfYXQiOiIyMDE1LTAxLTMwIiwicHJvY2Vzc2luZ19k
+        YXRlIjpudWxsLCJmb3JfaG9tb2xvZ2F0aW9uIjpudWxsLCJwYXllcl9uYXRp
+        b25hbF9pZGVudGlmaWVyX3R5cGUiOiJjcGYiLCJwYXllcl9uYXRpb25hbF9p
+        ZGVudGlmaWVyIjoiMTIzNDU2Nzg5MDkiLCJwYXllcl9uYW1lIjoiSm9uaCBE
+        b2UiLCJwYXllcl9udW1iZXIiOiI0MyIsInBheWVyX2NvbXBsZW1lbnQiOiI4
+        IGFuZGFyIiwicGF5ZXJfc3RyZWV0IjoiUnVhIGRvIENhcm1vIiwicGF5ZXJf
+        bmVpZ2hib3VyaG9vZCI6IkNlbnRybyIsInBheWVyX3ppcGNvZGUiOiIyMjIz
+        MDA2MiIsInBheWVyX2NpdHkiOiJSaW8gZGUgSmFuZWlybyIsInBheWVyX3N0
+        YXRlIjoiUkoiLCJyZWdpc3RyYWJsZSI6ZmFsc2UsInJlZ2lzdHJhdGlvbl9z
+        dGF0dXMiOiJ3aXRob3V0X3JlbWl0dGFuY2UiLCJfbGlua3MiOlt7InJlbCI6
+        InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94
+        LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2VzLzE5MTMifSx7InJlbCI6InVw
+        ZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwczovL3NhbmRib3gu
+        Y29icmF0by5jb20vYXBpL3YxL2NoYXJnZXMvMTkxMyJ9LHsicmVsIjoiZGVz
+        dHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwczovL3NhbmRi
+        b3guY29icmF0by5jb20vYXBpL3YxL2NoYXJnZXMvMTkxMyJ9LHsicmVsIjoi
+        ZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cHM6Ly9zYW5k
+        Ym94LmNvYnJhdG8uY29tL2FwaS92MS9jaGFyZ2VzLzE5MTMvZGVsaXZlcl9i
+        aWxsZXQifSx7InJlbCI6ImNoYXJnZV9jb25maWciLCJtZXRob2QiOiJHRVQi
+        LCJocmVmIjoiaHR0cHM6Ly9zYW5kYm94LmNvYnJhdG8uY29tL2FwaS92MS9j
+        aGFyZ2VfY29uZmlncy84OCJ9LHsicmVsIjoiYmlsbGV0IiwibWV0aG9kIjoi
+        R0VUIiwiaHJlZiI6Imh0dHBzOi8vc2FuZGJveC5jb2JyYXRvLmNvbS9hcGkv
+        djEvY2hhcmdlcy8xOTEzL2JpbGxldCJ9LHsicmVsIjoidW5kb19yZWNlaXZl
+        IiwibWV0aG9kIjoiUE9TVCIsImhyZWYiOiJodHRwczovL3NhbmRib3guY29i
+        cmF0by5jb20vYXBpL3YxL2NoYXJnZXMvMTkxMy91bmRvX3JlY2VpdmUifV19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charges/73/renew
+  recorded_at: Tue, 06 Sep 2016 18:43:49 GMT
+recorded_with: VCR 2.9.3

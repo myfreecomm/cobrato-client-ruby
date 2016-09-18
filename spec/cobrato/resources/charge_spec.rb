@@ -197,4 +197,19 @@ describe Cobrato::Resources::Charge do
       end
     end
   end
+
+  describe "#renew" do
+    let(:renewal_params) do
+      {
+        "new_due_date" => "20/01/2017"
+      }
+    end
+
+    it "returns a Charge renewed charge" do
+      VCR.use_cassette("charges/renew/success") do
+        charge = subject.renew(73, renewal_params)
+        expect(charge).to be_a(entity_klass)
+      end
+    end
+  end
 end

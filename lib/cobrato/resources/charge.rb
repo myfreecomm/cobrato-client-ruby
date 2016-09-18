@@ -40,6 +40,12 @@ module Cobrato
         end
       end
 
+      def renew(id, params)
+        http.put("#{resource_base_path}/#{id}/renew", { body: params }) do |response|
+          respond_with_entity(response)
+        end
+      end
+
       notify :receive, :undo_receive, :cancel
     end
   end
