@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.10.0
+
+- Add charges#renew endpoint
+
+## v0.9.1
+
+- Add `canceled_at` to `Charge`
+
 ## v0.9.0
 
 - Attribute `payer_emails` from `Charge` renamed to  `notification_emails`
