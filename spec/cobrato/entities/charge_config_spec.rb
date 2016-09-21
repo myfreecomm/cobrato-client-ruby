@@ -17,7 +17,8 @@ describe Cobrato::Entities::ChargeConfig do
       remittance_agreement_code: 4576361,
       initial_remittance_number: 1,
       remittance_cnab_pattern: 240,
-      transmission_code: "1234567"
+      transmission_code: "1234567",
+      pre_released_billet: false
     }
   end
 
@@ -29,7 +30,7 @@ describe Cobrato::Entities::ChargeConfig do
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
-    :remittance_cnab_pattern, :transmission_code,
+    :remittance_cnab_pattern, :transmission_code, :pre_released_billet,
     # payment gateway specifics
     :gateway_id, :gateway_key, :gateway_name, :use_avs]
 end

@@ -1,10 +1,10 @@
 require "spec_helper"
 
 describe Cobrato::Resources::ChargeConfig do
-  let(:token) { "45d4e96c707f2a45f73ac9848ff8eeab" }
-  let(:http)          { Cobrato::Http.new(token) }
-  let(:entity_klass)  { Cobrato::Entities::ChargeConfig }
-  let(:params) do
+  let(:token)        { "45d4e96c707f2a45f73ac9848ff8eeab" }
+  let(:http)         { Cobrato::Http.new(token) }
+  let(:entity_klass) { Cobrato::Entities::ChargeConfig }
+  let(:billet_params) do
     {
       "bank_account_id" => 3,
       "portfolio_code" => "17",
@@ -19,9 +19,8 @@ describe Cobrato::Resources::ChargeConfig do
       "remittance_agreement_code" => 4576361,
       "initial_remittance_number" => 1,
       "remittance_cnab_pattern" => 240,
-      "interest_amount_per_month" => 1.02,
-      "mulct_type" => "percentage",
-      "mulct_value" => 10.12
+      "transmission_code" => "1234567",
+      "pre_released_billet" => true
     }
   end
 
@@ -44,11 +43,14 @@ describe Cobrato::Resources::ChargeConfig do
   end
 
   describe "#show" do
+    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+
     it "returns an ChargeConfig instance showd" do
       VCR.use_cassette("charge_configs/show/success") do
-        charge_config = subject.show(88)
+        charge_config = subject.show(22)
         expect(charge_config).to be_a(entity_klass)
         expect(charge_config.agreement_code).to eq("123456")
+        expect(charge_config.pre_released_billet).to eq(true)
       end
     end
   end
@@ -78,15 +80,15 @@ describe Cobrato::Resources::ChargeConfig do
     context "billet config" do
       it "creates a charge config" do
         VCR.use_cassette("charge_configs/create/billet/success") do
-          charge_config = subject.create(params)
+          charge_config = subject.create(billet_params)
           expect(charge_config).to be_a(entity_klass)
-          expect(charge_config.agreement_code).to eq(params['agreement_code'])
+          expect(charge_config.agreement_code).to eq(billet_params['agreement_code'])
         end
       end
     end
 
     context "payment gateway config" do
-      let(:params) do
+      let(:pgtw_params) do
         {
           name:         "Cielo testing",
           type:         "payment_gateway",
@@ -99,7 +101,7 @@ describe Cobrato::Resources::ChargeConfig do
 
       it "creates a charge config" do
         VCR.use_cassette("charge_configs/create/payment_gateway/success") do
-          charge_config = subject.create(params)
+          charge_config = subject.create(pgtw_params)
           expect(charge_config).to be_a(entity_klass)
           expect(charge_config.name).to eq("Cielo testing")
           expect(charge_config.type).to eq("payment_gateway")
