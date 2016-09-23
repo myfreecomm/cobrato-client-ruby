@@ -20,6 +20,7 @@ module Cobrato
       attribute :current_remittance_number, Integer
       attribute :remittance_cnab_pattern,   Integer
       attribute :transmission_code,         String
+      attribute :pre_released_billet,       Boolean
 
       # payment gateway specifics
       attribute :gateway_name,              String

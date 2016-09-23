@@ -1,5 +1,9 @@
 # Changelog
 
+## Next version
+
+- Add charge_config#pre_released_billet
+
 ## v0.10.0
 
 - Add charges#renew endpoint
