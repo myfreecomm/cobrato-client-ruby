@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/charges/518/receive
     body:
       encoding: UTF-8
-      string: '{"paid_amount":"10.07","paid_at":"2015-01-30"}'
+      string: '{"paid_amount":"10.07","paid_at":"2015-01-30","payment_tax":"2.50"}'
     headers:
       User-Agent:
       - Cobrato Ruby Client v0.11.0
@@ -34,21 +34,21 @@ http_interactions:
       - request_method=POST; path=/
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 947d6b28-0a90-4b91-aa7c-94f60e41a674
+      - dc590910-bd79-4938-8bbd-caf882432871
       X-Runtime:
-      - '0.428131'
+      - '0.147833'
       X-MiniProfiler-Ids:
-      - '["f7zhhi7xdwx0ijvr10bo","zycz1vcoo1hrzwl898uh"]'
+      - '["yh5r62lwpyw3rxxvgvcx"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":518,"type":"billet","charge_config_id":11,"due_date":"2016-10-08","document_kind":"DS","document_date":null,"document_number":"500","custom_our_number":false,"our_number":"410","our_number_digit":null,"charged_amount":500.0,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"instructions":"","demonstrative":"","notification_emails":["hugo@mail.com"],"paid_amount":10.07,"paid_at":"2015-01-30T00:00:00.000Z","payment_tax":0.0,"processing_date":null,"for_homologation":false,"registrable":false,"registration_status":"without_remittance","payer_national_identifier_type":"cpf","payer_national_identifier":"12345678909","payer_name":"Test
+      string: '{"id":518,"type":"billet","charge_config_id":11,"due_date":"2016-10-08","document_kind":"DS","document_date":null,"document_number":"500","custom_our_number":false,"our_number":"410","our_number_digit":null,"charged_amount":500.0,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"instructions":"","demonstrative":"","notification_emails":["hugo@mail.com"],"paid_amount":10.07,"paid_at":"2015-01-30T00:00:00.000-02:00","payment_tax":2.5,"processing_date":null,"for_homologation":false,"registrable":false,"registration_status":"without_remittance","payer_national_identifier_type":"cpf","payer_national_identifier":"12345678909","payer_name":"Test
         Payee Person","payer_number":"1568","payer_complement":"8 andar","payer_street":"Rua
         Avenida","payer_neighbourhood":"Centro","payer_zipcode":"111111111","payer_city":"Rio
-        de Janeiro","payer_state":"RJ","canceled_at":null,"total_amount":500.0,"received_amount":10.07,"received_at":"2015-01-30T00:00:00.000Z","received":true,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"deliver","method":"POST","href":"https://sandbox.cobrato.com/api/v1/charges/518/deliver_billet"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/11"},{"rel":"billet","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/518/billet"},{"rel":"undo_receive","method":"POST","href":"https://sandbox.cobrato.com/api/v1/charges/518/undo_receive"}]}'
+        de Janeiro","payer_state":"RJ","canceled_at":null,"total_amount":500.0,"received_amount":10.07,"received_at":"2015-01-30T00:00:00.000-02:00","received":true,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charges/518"},{"rel":"deliver","method":"POST","href":"https://sandbox.cobrato.com/api/v1/charges/518/deliver_billet"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/11"},{"rel":"billet","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/518/billet"},{"rel":"undo_receive","method":"POST","href":"https://sandbox.cobrato.com/api/v1/charges/518/undo_receive"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges/518/receive
-  recorded_at: Wed, 28 Sep 2016 13:09:13 GMT
+  recorded_at: Wed, 28 Sep 2016 14:10:03 GMT
 recorded_with: VCR 3.0.3

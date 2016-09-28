@@ -126,14 +126,10 @@ describe Cobrato::Resources::Charge do
 
       it "creates a charge" do
         VCR.use_cassette("charges/create/payment_gateway/success") do
-          begin
           charge = subject.create(params)
           expect(charge).to be_a(entity_klass)
           expect(charge.charged_amount).to eq(721.0)
           expect(charge.type).to eq("payment_gateway")
-        rescue Exception => e
-          binding.pry
-        end
         end
       end
 
@@ -158,7 +154,8 @@ describe Cobrato::Resources::Charge do
     let(:receive_params) do
       {
         "paid_amount" => "10.07",
-        "paid_at" => "2015-01-30"
+        "paid_at" => "2015-01-30",
+        "payment_tax" => "2.50"
       }
     end
 
@@ -167,6 +164,7 @@ describe Cobrato::Resources::Charge do
         charge = subject.receive(518, receive_params)
         expect(charge).to be_a(entity_klass)
         expect(charge.paid_amount).to eq(10.07)
+        expect(charge.payment_tax).to eq(2.5)
       end
     end
 
