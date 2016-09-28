@@ -26,6 +26,7 @@ describe Cobrato::Entities::Charge do
       interest_amount_per_month: 1.02,
       mulct_type: 'percentage',
       mulct_value: 10.12,
+      payment_tax: 2.50,
       payer_id: 1,
       payer_national_identifier_type: "cpf",
       payer_national_identifier: "12345678909",
@@ -52,7 +53,7 @@ describe Cobrato::Entities::Charge do
     :total_amount, :received, :received_amount, :received_at, # deprecated
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
-    :our_number_digit, :instructions, :demonstrative, :registrable,
+    :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
     :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,

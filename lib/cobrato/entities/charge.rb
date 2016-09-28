@@ -44,6 +44,7 @@ module Cobrato
       attribute :interest_amount_per_month,      Decimal
       attribute :mulct_type,                     String
       attribute :mulct_value,                    Decimal
+      attribute :payment_tax,                    Decimal
 
       # payment gateway specifics
       attribute :credit_card_id,                 Integer
