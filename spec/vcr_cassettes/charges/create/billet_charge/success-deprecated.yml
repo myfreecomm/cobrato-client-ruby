@@ -8,7 +8,7 @@ http_interactions:
       string: '{"charge_config_id":11,"due_date":"2015-02-14","document_kind":"DV","document_date":null,"document_number":"NA","charged_amount":"10.07","instructions":"Pagável
         em qualquer agência até data do vencimento","demonstrative":"Demonstrativo","notification_emails":["myemail@gmail.com"],"processing_date":"2015-01-30","registrable":false,"payer_attributes":{"national_identifier_type":"cpf","national_identifier":"12345678909","name":"Jonh
         Doe","number":"43","complement":"8 andar","street":"Rua do Carmo","neighbourhood":"Centro","zipcode":"22230062","city":"Rio
-        de Janeiro","state":"RJ"}}'
+        de Janeiro","state":"RJ"},"total_amount":null}'
     headers:
       User-Agent:
       - Cobrato Ruby Client v0.11.0
@@ -37,20 +37,20 @@ http_interactions:
       - request_method=POST; path=/
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - b7b047b1-e4f1-46c7-9751-00ee78e1e69d
+      - f59325ab-7383-4570-af64-1fd4ab4e8076
       X-Runtime:
-      - '0.186788'
+      - '0.169193'
       X-MiniProfiler-Ids:
-      - '["owja6c25ugimcf7zae8w","43j463a4tbc6uazqozbz"]'
+      - '["wmrmksv48ac514jczsz0","43j463a4tbc6uazqozbz","owja6c25ugimcf7zae8w"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6NTIwLCJ0eXBlIjoiYmlsbGV0IiwiY2hhcmdlX2NvbmZpZ19pZCI6
+        eyJpZCI6NTIxLCJ0eXBlIjoiYmlsbGV0IiwiY2hhcmdlX2NvbmZpZ19pZCI6
         MTEsImR1ZV9kYXRlIjoiMjAxNS0wMi0xNCIsImRvY3VtZW50X2tpbmQiOiJE
         ViIsImRvY3VtZW50X2RhdGUiOm51bGwsImRvY3VtZW50X251bWJlciI6Ik5B
-        IiwiY3VzdG9tX291cl9udW1iZXIiOmZhbHNlLCJvdXJfbnVtYmVyIjoiNDEx
+        IiwiY3VzdG9tX291cl9udW1iZXIiOmZhbHNlLCJvdXJfbnVtYmVyIjoiNDEy
         Iiwib3VyX251bWJlcl9kaWdpdCI6bnVsbCwiY2hhcmdlZF9hbW91bnQiOjEw
         LjA3LCJpbnRlcmVzdF9hbW91bnRfcGVyX21vbnRoIjpudWxsLCJtdWxjdF90
         eXBlIjpudWxsLCJtdWxjdF92YWx1ZSI6bnVsbCwiaW5zdHJ1Y3Rpb25zIjoi
@@ -71,23 +71,23 @@ http_interactions:
         aXZlZF9hbW91bnQiOm51bGwsInJlY2VpdmVkX2F0IjpudWxsLCJyZWNlaXZl
         ZCI6ZmFsc2UsIl9saW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdF
         VCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJn
-        ZXMvNTIwIn0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVm
-        IjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzUyMCJ9
+        ZXMvNTIxIn0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVm
+        IjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzUyMSJ9
         LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJo
-        dHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIwIn0seyJy
+        dHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIxIn0seyJy
         ZWwiOiJkZWxpdmVyIiwibWV0aG9kIjoiUE9TVCIsImhyZWYiOiJodHRwOi8v
-        bG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIwL2RlbGl2ZXJfYmls
+        bG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIxL2RlbGl2ZXJfYmls
         bGV0In0seyJyZWwiOiJjaGFyZ2VfY29uZmlnIiwibWV0aG9kIjoiR0VUIiwi
         aHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlX2Nv
         bmZpZ3MvMTEifSx7InJlbCI6ImJpbGxldCIsIm1ldGhvZCI6IkdFVCIsImhy
-        ZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIw
+        ZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNTIx
         L2JpbGxldCJ9LHsicmVsIjoicmVjZWl2ZSIsIm1ldGhvZCI6IlBPU1QiLCJo
         cmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzUy
-        MC9yZWNlaXZlIn0seyJyZWwiOiJjYW5jZWwiLCJtZXRob2QiOiJQT1NUIiwi
+        MS9yZWNlaXZlIn0seyJyZWwiOiJjYW5jZWwiLCJtZXRob2QiOiJQT1NUIiwi
         aHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy81
-        MjAvY2FuY2VsIn1dfQ==
+        MjEvY2FuY2VsIn1dfQ==
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges
-  recorded_at: Wed, 28 Sep 2016 13:45:40 GMT
+  recorded_at: Wed, 28 Sep 2016 13:46:46 GMT
 recorded_with: VCR 3.0.3

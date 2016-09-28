@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/charges/518/receive
     body:
       encoding: UTF-8
-      string: '{"paid_amount":"10.07","paid_at":"2015-01-30"}'
+      string: '{"received_amount":"10.07","received_at":"2015-01-30"}'
     headers:
       User-Agent:
       - Cobrato Ruby Client v0.11.0
@@ -34,11 +34,11 @@ http_interactions:
       - request_method=POST; path=/
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 947d6b28-0a90-4b91-aa7c-94f60e41a674
+      - ac7f86b4-205a-483d-b203-b8b6404bd9de
       X-Runtime:
-      - '0.428131'
+      - '0.149806'
       X-MiniProfiler-Ids:
-      - '["f7zhhi7xdwx0ijvr10bo","zycz1vcoo1hrzwl898uh"]'
+      - '["8w3y1eec1ledby9lc5dr"]'
       Transfer-Encoding:
       - chunked
     body:
@@ -50,5 +50,5 @@ http_interactions:
     http_version: '1.1'
     adapter_metadata:
       effective_url: https://sandbox.cobrato.com/api/v1/charges/518/receive
-  recorded_at: Wed, 28 Sep 2016 13:09:13 GMT
+  recorded_at: Wed, 28 Sep 2016 13:34:00 GMT
 recorded_with: VCR 3.0.3

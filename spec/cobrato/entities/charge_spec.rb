@@ -46,12 +46,13 @@ describe Cobrato::Entities::Charge do
 
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :charge_config_id, :total_amount, :notification_emails, :payer_id, :payer_national_identifier_type,
+    :id, :type, :charge_config_id, :charged_amount, :notification_emails, :payer_id, :payer_national_identifier_type,
     :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood,
-    :payer_zipcode, :payer_city, :payer_state, :for_homologation, :canceled_at,
+    :payer_zipcode, :payer_city, :payer_state, :for_homologation, :canceled_at, :paid_amount, :paid_at,
+    :total_amount, :received, :received_amount, :received_at, # deprecated
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
-    :our_number_digit, :instructions, :demonstrative, :received, :received_amount, :received_at, :registrable,
+    :our_number_digit, :instructions, :demonstrative, :registrable,
     :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,

@@ -4,7 +4,7 @@ module Cobrato
       attribute :id,                             Integer
       attribute :type,                           String
       attribute :charge_config_id,               Integer
-      attribute :total_amount,                   Decimal
+      attribute :charged_amount,                 Decimal
       attribute :notification_emails,            String
       attribute :payer_id,                       Integer
       attribute :payer_national_identifier_type, String
@@ -20,6 +20,13 @@ module Cobrato
       attribute :for_homologation,               Boolean
       attribute :for_homologation,               Boolean
       attribute :canceled_at,                    DateTime
+      attribute :paid_amount,                    Decimal
+      attribute :paid_at,                        Date
+
+      attribute :total_amount,                   Decimal  # deprecated
+      attribute :received,                       Boolean  # deprecated
+      attribute :received_amount,                Decimal  # deprecated
+      attribute :received_at,                    Date     # deprecated
 
       # billet specifics
       attribute :due_date,                       Date
@@ -32,9 +39,6 @@ module Cobrato
       attribute :our_number_digit,               String
       attribute :instructions,                   String
       attribute :demonstrative,                  String
-      attribute :received,                       Boolean
-      attribute :received_amount,                Decimal
-      attribute :received_at,                    Date
       attribute :registrable,                    Boolean
       attribute :registration_status,            String
       attribute :interest_amount_per_month,      Decimal

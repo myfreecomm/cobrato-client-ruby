@@ -2,7 +2,11 @@
 
 ## Next version
 
--
+- Add `Charge#payment_tax`
+- Remove `Charge#received` # but still there as deprecated
+- Rename `Charge#total_amount` to `Charge#charged_amount` # but still there as deprecated
+- Rename `Charge#received_amount` to `Charge#paid_amount` # but still there as deprecated
+- Rename `Charge#received_at` to `Charge#paid_at` # but still there as deprecated
 
 ## v0.11.0
 

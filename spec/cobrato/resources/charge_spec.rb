@@ -3,43 +3,6 @@ require "spec_helper"
 describe Cobrato::Resources::Charge do
   let(:http)          { Cobrato::Http.new("45d4e96c707f2a45f73ac9848ff8eeab") }
   let(:entity_klass)  { Cobrato::Entities::Charge }
-  let(:billet_params) do
-    {
-      "charge_config_id" => 88,
-      "due_date" => "2015-02-14",
-      "document_kind" => "DV",
-      "document_date" => nil,
-      "document_number" => 'NA',
-      "custom_our_number" => true,
-      "our_number" => "123",
-      "our_number_digit" => nil,
-      "total_amount" => "10.07",
-      "instructions" => "Pagável em qualquer agência até data do vencimento",
-      "demonstrative" => "Demonstrativo",
-      "notification_emails" => ["myemail@gmail.com"],
-      "processing_date" => "2015-01-30",
-      "registrable" => false,
-      "payer_attributes" => {
-        "national_identifier_type" => "cpf",
-        "national_identifier" => "12345678909",
-        "name" => "Jonh Doe",
-        "number" => "43",
-        "complement" => "8 andar",
-        "street" => "Rua do Carmo",
-        "neighbourhood" => "Centro",
-        "zipcode" => "22230062",
-        "city" => "Rio de Janeiro",
-        "state" => "RJ"
-      }
-    }
-  end
-
-  let(:receive_params) do
-    {
-      "received_amount" => "10.07",
-      "received_at" => "2015-01-30"
-    }
-  end
 
   subject { described_class.new(http) }
 
@@ -89,25 +52,70 @@ describe Cobrato::Resources::Charge do
   end
 
   describe "#create" do
+    let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+
     context "billet charge" do
+      let(:params) do
+        {
+          "charge_config_id" => 11,
+          "due_date" => "2015-02-14",
+          "document_kind" => "DV",
+          "document_date" => nil,
+          "document_number" => 'NA',
+          "charged_amount" => "10.07",
+          "instructions" => "Pagável em qualquer agência até data do vencimento",
+          "demonstrative" => "Demonstrativo",
+          "notification_emails" => ["myemail@gmail.com"],
+          "processing_date" => "2015-01-30",
+          "registrable" => false,
+          "payer_attributes" => {
+            "national_identifier_type" => "cpf",
+            "national_identifier" => "12345678909",
+            "name" => "Jonh Doe",
+            "number" => "43",
+            "complement" => "8 andar",
+            "street" => "Rua do Carmo",
+            "neighbourhood" => "Centro",
+            "zipcode" => "22230062",
+            "city" => "Rio de Janeiro",
+            "state" => "RJ"
+          }
+        }
+      end
+
       it "creates a charge" do
         VCR.use_cassette("charges/create/billet_charge/success") do
-          charge = subject.create(billet_params)
+          charge = subject.create(params)
           expect(charge).to be_a(entity_klass)
-          expect(charge.our_number).to eq(billet_params['our_number'])
+          expect(charge.our_number).to eq("411")
+          expect(charge.charged_amount).to eq(10.07)
+        end
+      end
+
+      context "with deprecated total_amount" do
+        before { params[:total_amount] = params.delete(:charged_amount) }
+
+        it "creates a charge" do
+          VCR.use_cassette("charges/create/billet_charge/success-deprecated") do
+            charge = subject.create(params)
+            expect(charge).to be_a(entity_klass)
+            expect(charge.our_number).to eq("412")
+            expect(charge.total_amount).to eq(10.07)
+            expect(charge.charged_amount).to eq(10.07)
+          end
         end
       end
     end
 
     context "payment gateway charge" do
-      let(:http)   { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+      let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
       let(:params) do
         {
-          charge_config_id: 1,
-          total_amount: 721.0,
+          charge_config_id: 7,
+          charged_amount: 721.0,
           payment_method: "credit_card_financed",
           installments: 3,
-          credit_card_id: 7,
+          credit_card_id: 13,
           payer_attributes: {
             national_identifier_type: "cpf",
             national_identifier: "12345678909",
@@ -118,32 +126,87 @@ describe Cobrato::Resources::Charge do
 
       it "creates a charge" do
         VCR.use_cassette("charges/create/payment_gateway/success") do
+          begin
           charge = subject.create(params)
           expect(charge).to be_a(entity_klass)
-          expect(charge.total_amount).to eq(721.0)
+          expect(charge.charged_amount).to eq(721.0)
           expect(charge.type).to eq("payment_gateway")
+        rescue Exception => e
+          binding.pry
+        end
+        end
+      end
+
+      context "with deprecated total_amount" do
+        before { params[:total_amount] = params.delete(:charged_amount) }
+
+        it "creates a charge" do
+          VCR.use_cassette("charges/create/payment_gateway/success-deprecated") do
+            charge = subject.create(params)
+            expect(charge).to be_a(entity_klass)
+            expect(charge.charged_amount).to eq(721.0)
+            expect(charge.total_amount).to eq(721.0)
+            expect(charge.type).to eq("payment_gateway")
+          end
         end
       end
     end
   end
 
   describe "#receive" do
+    let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+    let(:receive_params) do
+      {
+        "paid_amount" => "10.07",
+        "paid_at" => "2015-01-30"
+      }
+    end
+
     it "returns a Charge received charge" do
       VCR.use_cassette("charges/receive/success") do
-        charge = subject.receive(1913, receive_params)
+        charge = subject.receive(518, receive_params)
         expect(charge).to be_a(entity_klass)
-        expect(charge.received_amount).to eq(10.07)
-        expect(charge.received).to eq(true)
+        expect(charge.paid_amount).to eq(10.07)
+      end
+    end
+
+    context "receive with DEPRECATED" do
+      let(:receive_params) do
+        {
+          "received_amount" => "10.07",
+          "received_at" => "2015-01-30"
+        }
+      end
+
+      it "returns a Charge received charge" do
+        VCR.use_cassette("charges/receive/success-deprecated") do
+          charge = subject.receive(518, receive_params)
+          expect(charge).to be_a(entity_klass)
+          expect(charge.received_amount).to eq(10.07)
+          expect(charge.received).to eq(true)
+        end
       end
     end
   end
 
   describe "#undo_receive" do
+    let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+
     it "returns a Charge not received charge" do
       VCR.use_cassette("charges/undo_receive/success") do
-        charge = subject.undo_receive(1913)
+        charge = subject.undo_receive(518)
         expect(charge).to be_a(entity_klass)
-        expect(charge.received).to eq(false)
+        expect(charge.received_at).to eq(nil)
+      end
+    end
+
+    context "undo with DEPRECATED" do
+      it "returns a Charge not received charge" do
+        VCR.use_cassette("charges/undo_receive/success-deprecated") do
+          charge = subject.undo_receive(518)
+          expect(charge).to be_a(entity_klass)
+          expect(charge.received).to eq(false)
+        end
       end
     end
   end

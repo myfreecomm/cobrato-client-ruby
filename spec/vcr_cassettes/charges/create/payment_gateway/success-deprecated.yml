@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/charges
+    body:
+      encoding: UTF-8
+      string: '{"charge_config_id":7,"payment_method":"credit_card_financed","installments":3,"credit_card_id":13,"payer_attributes":{"national_identifier_type":"cpf","national_identifier":"12345678909","name":"Jonh
+        Doe"},"total_amount":721.0}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.11.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 04db78d3-5ee1-4601-9701-2692f9e5acd8
+      X-Runtime:
+      - '0.154574'
+      X-MiniProfiler-Ids:
+      - '["j3sn9hsl6jwuvf45nbri","q7e5yeqe2i8fapu3l7n"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":523,"type":"payment_gateway","credit_card_id":13,"notification_emails":[],"charged_amount":721.0,"currency_code":null,"description":null,"soft_descriptor":null,"payment_method":"credit_card_financed","installments":3,"payment_gateway_status":"pending","payment_gateway_message":null,"paid_amount":null,"paid_at":null,"for_homologation":false,"payer_national_identifier_type":"cpf","payer_national_identifier":"12345678909","payer_name":"Jonh
+        Doe","payer_number":"43","payer_complement":"8 andar","payer_street":"Rua
+        do Carmo","payer_neighbourhood":"Centro","payer_zipcode":"22230062","payer_city":"Rio
+        de Janeiro","payer_state":"RJ","canceled_at":null,"total_amount":721.0,"received_amount":null,"received_at":null,"received":false,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charges/523"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charges/523"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/7"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charges
+  recorded_at: Wed, 28 Sep 2016 13:52:58 GMT
+recorded_with: VCR 3.0.3
