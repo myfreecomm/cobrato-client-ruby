@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.12.0
+
 - Add `Charge#payment_tax`
 - Remove `Charge#received` # but still there as deprecated
 - Rename `Charge#total_amount` to `Charge#charged_amount` # but still there as deprecated
