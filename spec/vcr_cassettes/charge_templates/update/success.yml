@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1
+    body:
+      encoding: UTF-8
+      string: '{"name":"Template atualizado"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.12.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=PUT; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 2d0eaa80-b063-4a8c-aea0-3ef5380012ce
+      X-Runtime:
+      - '0.174496'
+      X-MiniProfiler-Ids:
+      - '["cau566q1gj32yxh8kjqr","3cyza44k63kozxlqhqbu","ozt611bj7ouz19m2okfg","xkyjb43cdw9v5w3fxixt","43pjwghhjq9togrymfiz","zqx4ezpuwf2pd2av6m7a","mxb0c8werdjk4amkjvi6","z35rtp9d3kjo5dx24i2u"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"name":"Template atualizado","notification_emails":"","charged_amount":null,"due_date":null,"document_date":"2016-11-30","document_number":"12345","document_kind":"DM","charge_config_id":1,"instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1
+  recorded_at: Wed, 23 Nov 2016 20:14:59 GMT
+recorded_with: VCR 2.9.3
