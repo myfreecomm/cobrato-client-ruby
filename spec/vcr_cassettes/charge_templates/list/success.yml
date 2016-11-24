@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates?charge_config_id=1
+    uri: https://sandbox.cobrato.com/api/v1/charge_templates
     body:
       encoding: US-ASCII
       string: ''
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Expect:
+      - ''
   response:
     status:
       code: 200
@@ -29,22 +31,23 @@ http_interactions:
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       X-Request-Id:
-      - a89c71b7-4397-44c6-aa54-f6723f85709b
+      - 71ae6a6f-013f-443b-95b5-622b435e24db
       X-Runtime:
-      - '0.161749'
+      - '0.043048'
       X-MiniProfiler-Ids:
-      - '["ozt611bj7ouz19m2okfg","3cyza44k63kozxlqhqbu"]'
+      - '["w52x537a9al2nq2gohrx","5ux1zxgwg9x5u7nb5usi"]'
       Set-Cookie:
       - __profilin=p%3Dt; path=/
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"charge_templates":[{"id":1,"name":"Template 1","notification_emails":"","charged_amount":null,"due_date":null,"document_date":"2016-11-30","document_number":"12345","document_kind":"DM","charge_config_id":1,"instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"}]},{"id":2,"name":"Template
-        novo","notification_emails":"fulano@teste.com","charged_amount":456.0,"due_date":"2016-11-30","document_date":"2016-11-30","document_number":"45ty67","document_kind":"DM","charge_config_id":1,"instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/2"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/2"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/2"}]},{"id":3,"name":"Template
-        Fulano","notification_emails":"fulano@teste.com","charged_amount":456.0,"due_date":"2016-11-30","document_date":"2016-11-30","document_number":"45ty67","document_kind":"DM","charge_config_id":1,"instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/3"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/3"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/3"}]}]}'
+      string: '{"charge_templates":[{"id":1,"name":"Cliente especial","charged_amount":5.0,"document_kind":"DM","instructions":"Mais
+        algumas coisas","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"currency","mulct_value":null,"charge_config_id":3,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_templates/1"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_templates/1"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_templates/1"}]},{"id":3,"name":"Special
+        Customer","charged_amount":456.0,"document_kind":"DM","instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"charge_config_id":11,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"}]},{"id":2,"name":"Template
+        atualizado","charged_amount":456.0,"document_kind":"DM","instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"charge_config_id":11,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"}]}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates?charge_config_id=1
-  recorded_at: Wed, 23 Nov 2016 20:02:09 GMT
-recorded_with: VCR 2.9.3
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_templates
+  recorded_at: Thu, 24 Nov 2016 22:24:07 GMT
+recorded_with: VCR 3.0.3

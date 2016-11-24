@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1
+    uri: https://sandbox.cobrato.com/api/v1/charge_templates/2
     body:
       encoding: UTF-8
       string: '{"name":"Template atualizado"}'
@@ -13,6 +13,8 @@ http_interactions:
       - application/json
       Content-Type:
       - application/json
+      Expect:
+      - ''
   response:
     status:
       code: 200
@@ -32,18 +34,18 @@ http_interactions:
       - request_method=PUT; path=/
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 2d0eaa80-b063-4a8c-aea0-3ef5380012ce
+      - 3ce40f6b-0269-4d01-a784-6f007c2105a7
       X-Runtime:
-      - '0.174496'
+      - '0.054143'
       X-MiniProfiler-Ids:
-      - '["cau566q1gj32yxh8kjqr","3cyza44k63kozxlqhqbu","ozt611bj7ouz19m2okfg","xkyjb43cdw9v5w3fxixt","43pjwghhjq9togrymfiz","zqx4ezpuwf2pd2av6m7a","mxb0c8werdjk4amkjvi6","z35rtp9d3kjo5dx24i2u"]'
+      - '["2nm07bh97hh2jhaeago3"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":1,"name":"Template atualizado","notification_emails":"","charged_amount":null,"due_date":null,"document_date":"2016-11-30","document_number":"12345","document_kind":"DM","charge_config_id":1,"instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1"}]}'
+      string: '{"id":2,"name":"Template atualizado","charged_amount":456.0,"document_kind":"DM","instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"charge_config_id":11,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_templates/2"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/1/charge_templates/1
-  recorded_at: Wed, 23 Nov 2016 20:14:59 GMT
-recorded_with: VCR 2.9.3
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_templates/2
+  recorded_at: Thu, 24 Nov 2016 22:23:12 GMT
+recorded_with: VCR 3.0.3

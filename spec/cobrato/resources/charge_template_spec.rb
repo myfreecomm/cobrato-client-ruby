@@ -1,16 +1,13 @@
 require "spec_helper"
 
 describe Cobrato::Resources::ChargeTemplate do
-  let(:http)          { Cobrato::Http.new("9a5457e291da4dc9409437061814a9db") }
-  let(:entity_klass)  { Cobrato::Entities::ChargeTemplate }
+  let(:token)        { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+  let(:http)         { Cobrato::Http.new(token) }
+  let(:entity_klass) { Cobrato::Entities::ChargeTemplate }
   let(:params) do
     {
-      name: "Template Novo fulano",
-      notification_emails: "fulano@teste.com",
+      name: "Special Customer",
       charged_amount: 456.0,
-      due_date: "2016-11-30",
-      document_date: "2016-11-30",
-      document_number: "45ty67",
       document_kind: "DM",
       instructions: "",
       demonstrative: "",
@@ -18,7 +15,8 @@ describe Cobrato::Resources::ChargeTemplate do
       auto_send_billet: false,
       interest_amount_per_month: "",
       mulct_type: "",
-      mulct_value: ""
+      mulct_value: "",
+      charge_config_id: 11
     }
   end
 
@@ -31,21 +29,30 @@ describe Cobrato::Resources::ChargeTemplate do
   describe "#list" do
     it "returns an array of charge templates" do
       VCR.use_cassette("charge_templates/list/success") do
-        charge_templates = subject.list(charge_config_id: "1")
+        charge_templates = subject.list
         expect(charge_templates).to be_a(Array)
         charge_templates.each do |e|
           expect(e).to be_a(entity_klass)
         end
+        expect(charge_templates.size).to eql(3)
+      end
+    end
+
+    it "list filtering by charge_config_id" do
+      VCR.use_cassette("charge_templates/list/success-filtering") do
+        charge_templates = subject.list(charge_config_id: 11)
+        expect(charge_templates.size).to eql(2)
+        charge_config_ids = charge_templates.map(&:charge_config_id).uniq
+        expect(charge_config_ids.size).to eql(1)
+        expect(charge_config_ids.first).to eql(11)
       end
     end
   end
 
   describe "#show" do
-    let(:token) { "9a5457e291da4dc9409437061814a9db" }
-
     it "returns an ChargeTemplate instance show" do
       VCR.use_cassette("charge_templates/show/success") do
-        charge_template = subject.show(1, charge_config_id: 1)
+        charge_template = subject.show(3)
         expect(charge_template).to be_a(entity_klass)
       end
     end
@@ -54,7 +61,7 @@ describe Cobrato::Resources::ChargeTemplate do
   describe "#update" do
     it "returns a ChargeConfig instance updated" do
       VCR.use_cassette("charge_templates/update/success") do
-        charge_template = subject.update(1, { name: "Template atualizado" }, charge_config_id: 1)
+        charge_template = subject.update(2, { name: "Template atualizado" })
         expect(charge_template).to be_a(entity_klass)
         expect(charge_template.name).to eq("Template atualizado")
       end
@@ -64,19 +71,17 @@ describe Cobrato::Resources::ChargeTemplate do
   describe "#destroy" do
     it "returns true" do
       VCR.use_cassette("charge_templates/destroy/success") do
-        result = subject.destroy(2, charge_config_id: 1)
+        result = subject.destroy(1)
         expect(result).to be_truthy
       end
     end
   end
 
   describe "#create" do
-    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
-
     context "billet config" do
       it "creates a charge config" do
         VCR.use_cassette("charge_templates/create/billet/success") do
-          charge_template = subject.create(params, charge_config_id: 1)
+          charge_template = subject.create(params)
           expect(charge_template).to be_a(entity_klass)
         end
       end
