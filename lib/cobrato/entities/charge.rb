@@ -22,6 +22,7 @@ module Cobrato
       attribute :canceled_at,                    DateTime
       attribute :paid_amount,                    Decimal
       attribute :paid_at,                        Date
+      attribute :charge_template_id,             Integer
 
       attribute :total_amount,                   Decimal  # deprecated
       attribute :received,                       Boolean  # deprecated

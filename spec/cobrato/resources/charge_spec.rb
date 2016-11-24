@@ -92,6 +92,40 @@ describe Cobrato::Resources::Charge do
         end
       end
 
+      context "when using charge template" do
+        let(:http) { Cobrato::Http.new("9a5457e291da4dc9409437061814a9db") }
+        let(:params) do
+          {
+            "charge_config_id" => 1,
+            "charge_template_id" => 1,
+            "processing_date" => "2015-01-30",
+            "registrable" => false,
+            "charged_amount" => 10.07,
+            "due_date" => "2016-11-9",
+            "payer_attributes" => {
+              "national_identifier_type" => "cpf",
+              "national_identifier" => "12345678909",
+              "name" => "Jonh Doe",
+              "number" => "43",
+              "complement" => "8 andar",
+              "street" => "Rua do Carmo",
+              "neighbourhood" => "Centro",
+              "zipcode" => "22230062",
+              "city" => "Rio de Janeiro",
+              "state" => "RJ"
+            }
+          }
+        end
+
+        it "creates a charge" do
+          VCR.use_cassette("charges/create/billet_charge/with_template/success") do
+            charge = subject.create(params)
+            expect(charge).to be_a(entity_klass)
+            expect(charge.charged_amount).to eq(10.07)
+          end
+        end
+      end
+
       context "with deprecated total_amount" do
         before { params[:total_amount] = params.delete(:charged_amount) }
 
