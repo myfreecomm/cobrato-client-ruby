@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.13.0
+
 - Add `charge_template_id` to `Charge`
 - Add `ChargeTemplate` API
 
