@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/charge_templates/3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.12.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - ec79559b-cfb5-4efb-a165-7bc98adf4d30
+      X-Runtime:
+      - '0.046469'
+      X-MiniProfiler-Ids:
+      - '["5ux1zxgwg9x5u7nb5usi"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":3,"name":"Special Customer","charged_amount":456.0,"document_kind":"DM","instructions":"","demonstrative":"","registrable":false,"auto_send_billet":false,"interest_amount_per_month":null,"mulct_type":"","mulct_value":null,"charge_config_id":11,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_templates/3"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_templates/3
+  recorded_at: Thu, 24 Nov 2016 22:23:48 GMT
+recorded_with: VCR 3.0.3

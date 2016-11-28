@@ -164,6 +164,17 @@ Now you have acess to every API endpoint:
 | ----------- | ------------------------------------------------------------------------------------- | -------------------------- |
 | GET         | [api/v1/charging_types](http://docs.cobrato.com/#lista-de-todos-os-tipos-de-cobrança) | client.changing_types.list |
 
+#### [Charge Template](http://docs.cobrato.com/#modelo-de-cobran-a)
+
+| HTTP method | Endpoint                                                                                  | Client method                   |
+| ----------- | ----------------------------------------------------------------------------------------- | ------------------------------- |
+| POST        | [api/v1/charge_templates](http://docs.cobrato.com/#cria-o-de-modelo-de-cobran-a)          | client.charge_templates.create  |
+| GET         | [api/v1/charge_templates](http://docs.cobrato.com/#lista-de-todos-os-modelos-de-cobran-a) | client.charge_templates.list    |
+| GET         | [api/v1/charge_templates/:id](http://docs.cobrato.com/#informa-es-do-modelo-de-cobran-a)  | client.charge_templates.show    |
+| PUT         | [api/v1/charge_templates/:id](http://docs.cobrato.com/#atualiza-o-de-modelo-de-cobran-a)  | client.charge_templates.update  |
+| DELETE      | [api/v1/charge_templates/:id](http://docs.cobrato.com/#exclus-o-de-modelo-de-cobran-a)    | client.charge_templates.destroy |
+
+
 ## Payload signature check
 
 You can check the [Cobrato signature](http://docs.cobrato.com/#assinatura-do-payload) on the payload request:
@@ -227,6 +238,9 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
 * webhooks
     - cobrato.webhooks.create
     - cobrato.webhooks.destroy
+* charge_templates
+    - cobrato.charge_templates.create
+    - cobrato.charge_templates.destroy
 
 ## Contributing
 

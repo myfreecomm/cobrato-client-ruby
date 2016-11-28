@@ -54,5 +54,9 @@ module Cobrato
     def payers
       Resources::Payer.new(http)
     end
+
+    def charge_templates
+      Resources::ChargeTemplate.new(http)
+    end
   end
 end
