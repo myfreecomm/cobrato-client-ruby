@@ -2,6 +2,9 @@
 
 ## Next version
 
+- Add `charge_template_id` to `Charge`
+- Add `ChargeTemplate` API
+
 ## v0.12.0
 
 - Add `Charge#payment_tax`
