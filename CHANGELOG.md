@@ -2,6 +2,10 @@
 
 ## Next version
 
+## v0.14.0
+
+- Remove `charge_template_id` from `Charge`. It is a parameter only used on `Charge` create API.
+
 ## v0.13.0
 
 - Add `charge_template_id` to `Charge`
