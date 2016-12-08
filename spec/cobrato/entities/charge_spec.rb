@@ -40,7 +40,10 @@ describe Cobrato::Entities::Charge do
       payer_state: "RJ",
       registration_status: "without_remittance",
       canceled_at: "2015-01-31T17:46:01.253Z",
-      charge_template_id: "1"
+      charge_template_id: "1",
+      email_sender_name: "John",
+      email_subject: "Email subject",
+      email_text: "Text for email body"
     }
   end
 
@@ -55,7 +58,8 @@ describe Cobrato::Entities::Charge do
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
     :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
-    :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value,
+    :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :auto_send_billet, :email_sender_name,
+    :email_subject, :email_text,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
     :payment_gateway_message

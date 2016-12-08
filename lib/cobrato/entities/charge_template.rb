@@ -13,6 +13,9 @@ module Cobrato
       attribute :interest_amount_per_month, Decimal
       attribute :mulct_type,                String
       attribute :mulct_value,               Decimal
+      attribute :email_sender_name,           String
+      attribute :email_subject,             String
+      attribute :email_text,                String
     end
   end
 end
