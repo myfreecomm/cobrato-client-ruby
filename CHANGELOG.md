@@ -2,6 +2,17 @@
 
 ## Next version
 
+## v0.15.0
+
+- Add `auto_send_billet` to Charge entity
+- Add `email_sender_name` to Charge entity
+- Add `email_subject` to Charge entity
+- Add `email_text` to Charge entity
+
+- Add `email_sender_name` to ChargeTemplate entity
+- Add `email_subject` to ChargeTemplate entity
+- Add `email_text` to ChargeTemplate entity
+
 ## v0.14.0
 
 - Remove `charge_template_id` from `Charge`. It is a parameter only used on `Charge` create API.
