@@ -2,6 +2,10 @@
 
 ## Next version
 
+## v.15.0
+
+- Add `url` method to Entities.
+
 ## v0.14.0
 
 - Remove `charge_template_id` from `Charge`. It is a parameter only used on `Charge` create API.
