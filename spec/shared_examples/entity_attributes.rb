@@ -4,6 +4,7 @@ shared_examples "entity_attributes" do |attrs|
   end
 
   it "expect to cover all attributes" do
+    attrs.unshift(:_links)
     expect(subject.attributes.keys).to match_array(attrs)
   end
 end
