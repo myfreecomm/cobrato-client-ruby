@@ -49,6 +49,7 @@ module Cobrato
       attribute :email_sender_name,              String
       attribute :email_subject,                  String
       attribute :email_text,                     String
+      attribute :charge_template_id,             Integer
 
       # payment gateway specifics
       attribute :credit_card_id,                 Integer
