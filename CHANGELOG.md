@@ -2,6 +2,18 @@
 
 ## Next version
 
+## v0.16.0
+
+- Add `auto_send_billet` to Charge entity
+- Add `email_sender_name` to Charge entity
+- Add `email_subject` to Charge entity
+- Add `email_text` to Charge entity
+- Add `charge_template_id` to Charge entity
+
+- Add `email_sender_name` to ChargeTemplate entity
+- Add `email_subject` to ChargeTemplate entity
+- Add `email_text` to ChargeTemplate entity
+
 ## v.15.0
 
 - Add `url` method to Entities.
