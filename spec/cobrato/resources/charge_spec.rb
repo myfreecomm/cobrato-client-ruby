@@ -68,6 +68,10 @@ describe Cobrato::Resources::Charge do
           "notification_emails" => ["myemail@gmail.com"],
           "processing_date" => "2015-01-30",
           "registrable" => false,
+          "discount_amount" => "4.56",
+          "inretest_amount" => "0.5",
+          "mulct_amount" => "3.56",
+          "rabete_amount" => "0",
           "payer_attributes" => {
             "national_identifier_type" => "cpf",
             "national_identifier" => "12345678909",
