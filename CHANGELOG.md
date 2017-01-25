@@ -2,7 +2,7 @@
 
 ## Next version
 
-- Add `paid_discount`, `paid_inretest`, `paid_mulct`, `paid_rebate` to Charge entity
+- Add `paid_discount`, `paid_addition`, `paid_rebate` to Charge entity
 - Add `paid_difference` (vitual attribute) to Charge entity
 
 ## v0.16.0
