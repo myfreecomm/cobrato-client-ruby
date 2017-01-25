@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.17.0
+
 - Add `paid_discount`, `paid_addition`, `paid_rebate` to Charge entity
 - Add `paid_difference` (vitual attribute) to Charge entity
 
