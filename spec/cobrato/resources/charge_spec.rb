@@ -202,6 +202,7 @@ describe Cobrato::Resources::Charge do
         expect(charge).to be_a(entity_klass)
         expect(charge.paid_amount).to eq(10.07)
         expect(charge.payment_tax).to eq(2.5)
+        expect(charge.paid_additions).to eq(0.5)
       end
     end
 
