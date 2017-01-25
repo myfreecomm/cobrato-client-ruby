@@ -59,7 +59,8 @@ describe Cobrato::Entities::Charge do
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
     :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
     :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :auto_send_billet, :email_sender_name,
-    :email_subject, :email_text, :charge_template_id, :discount_amount, :interest_amount, :mulct_amount, :rebate_amount,
+    :email_subject, :email_text, :charge_template_id, :paid_discount, :paid_interest, :paid_mulct, :paid_rebate,
+    :paid_difference,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
     :payment_gateway_message

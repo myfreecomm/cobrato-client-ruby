@@ -68,10 +68,6 @@ describe Cobrato::Resources::Charge do
           "notification_emails" => ["myemail@gmail.com"],
           "processing_date" => "2015-01-30",
           "registrable" => false,
-          "discount_amount" => "4.56",
-          "inretest_amount" => "0.5",
-          "mulct_amount" => "3.56",
-          "rabete_amount" => "0",
           "payer_attributes" => {
             "national_identifier_type" => "cpf",
             "national_identifier" => "12345678909",
@@ -193,16 +189,21 @@ describe Cobrato::Resources::Charge do
       {
         "paid_amount" => "10.07",
         "paid_at" => "2015-01-30",
-        "payment_tax" => "2.50"
+        "payment_tax" => "2.50",
+        "paid_discount" => "4.56",
+        "paid_inretest" => "0.50",
+        "paid_mulct" => "3.56",
+        "paid_rebate" => "0.30"
       }
     end
 
     it "returns a Charge received charge" do
       VCR.use_cassette("charges/receive/success") do
-        charge = subject.receive(518, receive_params)
+        charge = subject.receive(607, receive_params)
         expect(charge).to be_a(entity_klass)
         expect(charge.paid_amount).to eq(10.07)
         expect(charge.payment_tax).to eq(2.5)
+        expect(charge.paid_mulct).to eq(3.56)
       end
     end
 

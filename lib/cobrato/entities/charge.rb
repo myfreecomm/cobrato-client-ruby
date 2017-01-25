@@ -50,10 +50,11 @@ module Cobrato
       attribute :email_subject,                  String
       attribute :email_text,                     String
       attribute :charge_template_id,             Integer
-      attribute :discount_amount,                Decimal
-      attribute :interest_amount,                Decimal
-      attribute :mulct_amount,                   Decimal
-      attribute :rebate_amount,                  Decimal
+      attribute :paid_discount,                  Decimal
+      attribute :paid_interest,                  Decimal
+      attribute :paid_mulct,                     Decimal
+      attribute :paid_rebate,                    Decimal
+      attribute :paid_difference,                Decimal
 
       # payment gateway specifics
       attribute :credit_card_id,                 Integer
