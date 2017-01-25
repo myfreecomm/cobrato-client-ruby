@@ -191,8 +191,7 @@ describe Cobrato::Resources::Charge do
         "paid_at" => "2015-01-30",
         "payment_tax" => "2.50",
         "paid_discount" => "4.56",
-        "paid_inretest" => "0.50",
-        "paid_mulct" => "3.56",
+        "paid_additions" => "0.50",
         "paid_rebate" => "0.30"
       }
     end
@@ -203,7 +202,6 @@ describe Cobrato::Resources::Charge do
         expect(charge).to be_a(entity_klass)
         expect(charge.paid_amount).to eq(10.07)
         expect(charge.payment_tax).to eq(2.5)
-        expect(charge.paid_mulct).to eq(3.56)
       end
     end
 

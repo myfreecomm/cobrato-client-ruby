@@ -51,8 +51,7 @@ module Cobrato
       attribute :email_text,                     String
       attribute :charge_template_id,             Integer
       attribute :paid_discount,                  Decimal
-      attribute :paid_interest,                  Decimal
-      attribute :paid_mulct,                     Decimal
+      attribute :paid_additions,                 Decimal
       attribute :paid_rebate,                    Decimal
       attribute :paid_difference,                Decimal
 
