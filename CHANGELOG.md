@@ -2,6 +2,9 @@
 
 ## Next version
 
+## v0.18.0
+- Add charges#destroy_or_cancel endpoint
+
 ## v0.17.0
 
 - Add `paid_discount`, `paid_addition`, `paid_rebate` to Charge entity
