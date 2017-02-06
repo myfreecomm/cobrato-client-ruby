@@ -30,13 +30,17 @@ module Cobrato
 
       def cancel(id)
         http.post("#{resource_base_path}/#{id}/cancel") do |response|
-          response.code == 204
+          respond_with_entity response
         end
       end
 
-      def destroy_or_cancel(id)
-        http.post("#{resource_base_path}/#{id}/destroy_or_cancel") do |response|
-          [200, 204].include?(response.code)
+      def revoke(id)
+        http.post("#{resource_base_path}/#{id}/revoke") do |response|
+          if response.code == 200
+            respond_with_entity response
+          else
+            response.code == 204
+          end
         end
       end
 

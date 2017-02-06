@@ -1,7 +1,8 @@
 # Changelog
 
 ## Next version
-- Add charges#destroy_or_cancel endpoint
+- Add `charges#revoke` endpoint
+- Change the `charges#cancel` endpoint to return a `Charge` entity intead of a boolean
 
 ## v0.17.0
 

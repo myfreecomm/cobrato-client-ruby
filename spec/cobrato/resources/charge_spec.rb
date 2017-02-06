@@ -280,19 +280,39 @@ describe Cobrato::Resources::Charge do
   describe "#cancel" do
     let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
 
-    it "queue the Charge for canceling" do
+    it "returns the charge" do
       VCR.use_cassette("charges/cancel/success") do
-        expect(subject.cancel(12)).to eql(true)
+        charge = subject.cancel(612)
+        expect(charge).to be_a(entity_klass)
       end
     end
   end
 
-  describe "#destroy_or_cancel" do
+  describe "#revoke" do
     let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
 
-    it "queue the Charge for destroy or canceling" do
-      VCR.use_cassette("charges/destroy_or_cancel/success") do
-        expect(subject.destroy_or_cancel(12)).to eql(true)
+    context "when the charge is destroyed" do
+      it "returns true" do
+        VCR.use_cassette("charges/revoke/destroy_success") do
+          expect(subject.revoke(619)).to eql(true)
+        end
+      end
+    end
+
+    context "when the charge is canceled" do
+      it "returns the charge" do
+        VCR.use_cassette("charges/revoke/cancel_success") do
+          charge = subject.revoke(525)
+          expect(charge).to be_a(entity_klass)
+        end
+      end
+    end
+
+    context "when cannot be canceled nor destroyed" do
+      it "returns false" do
+        VCR.use_cassette("charges/revoke/fail") do
+          expect{ subject.revoke(611) }.to raise_error(Cobrato::RequestError)
+        end
       end
     end
   end

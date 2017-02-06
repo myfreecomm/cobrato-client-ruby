@@ -2,21 +2,21 @@
 http_interactions:
 - request:
     method: post
-    uri: https://sandbox.cobrato.com/api/v1/charges/12/cancel
+    uri: https://sandbox.cobrato.com/api/v1/charges/612/cancel
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.3.0
+      - Cobrato Ruby Client v0.17.0
       Accept:
       - application/json
       Content-Type:
       - application/json
   response:
     status:
-      code: 204
-      message: No Content
+      code: 200
+      message: OK
     headers:
       X-Frame-Options:
       - SAMEORIGIN
@@ -24,28 +24,74 @@ http_interactions:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-02-06T17:52:00Z'
+      X-RateLimit-Remaining:
+      - '59'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       Set-Cookie:
       - request_method=POST; path=/
       - __profilin=p%3Dt; path=/
-      - __profilin=p%3Dt; path=/
-      - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 439b718b-709c-43aa-9ef0-2fa26e1b5aca
+      - 51f70194-0773-40be-be56-8a5f71b8edba
       X-Runtime:
-      - '14.757382'
+      - '0.251210'
       X-MiniProfiler-Ids:
-      - '["okt2tlefwjweawfqgrxt","6lnen3za40t03rlxmj7f"]'
-      Connection:
-      - close
-      Server:
-      - thin
+      - '["f4d4cz90q14oxtfel7ay","y4qbse5o69tbrq0tnv29","96s6knmad4mv3yz823mp"]'
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
-      string: ''
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NjEyLCJ0eXBlIjoiYmlsbGV0IiwiY2hhcmdlX2NvbmZpZ19pZCI6
+        MTEsImR1ZV9kYXRlIjoiMjAxNy0wMS0yOSIsImRvY3VtZW50X2tpbmQiOiJE
+        TSIsImRvY3VtZW50X2RhdGUiOiIyMDE3LTAxLTI2IiwiZG9jdW1lbnRfbnVt
+        YmVyIjoiMjI2NkpMUjhaSiIsImN1c3RvbV9vdXJfbnVtYmVyIjpmYWxzZSwi
+        b3VyX251bWJlciI6IjUxMDMiLCJvdXJfbnVtYmVyX2RpZ2l0IjpudWxsLCJj
+        aGFyZ2VkX2Ftb3VudCI6NDkuOSwiaW50ZXJlc3RfYW1vdW50X3Blcl9tb250
+        aCI6bnVsbCwibXVsY3RfdHlwZSI6bnVsbCwibXVsY3RfdmFsdWUiOm51bGws
+        Imluc3RydWN0aW9ucyI6bnVsbCwiZGVtb25zdHJhdGl2ZSI6bnVsbCwibm90
+        aWZpY2F0aW9uX2VtYWlscyI6WyJ0aGlhZ29wZXRlcnNlbkBwZXRhbmpvLmNv
+        bSJdLCJwYWlkX2Ftb3VudCI6bnVsbCwicGFpZF9hdCI6bnVsbCwicGFpZF9k
+        aWZmZXJlbmNlIjowLCJwYWlkX2Rpc2NvdW50IjowLjAsInBhaWRfYWRkaXRp
+        b25zIjowLjAsInBhaWRfcmViYXRlIjowLjAsInBheW1lbnRfdGF4IjowLjAs
+        InByb2Nlc3NpbmdfZGF0ZSI6bnVsbCwiZm9yX2hvbW9sb2dhdGlvbiI6ZmFs
+        c2UsInJlZ2lzdHJhYmxlIjpmYWxzZSwicmVnaXN0cmF0aW9uX3N0YXR1cyI6
+        IndpdGhvdXRfcmVtaXR0YW5jZSIsInBheWVyX25hdGlvbmFsX2lkZW50aWZp
+        ZXJfdHlwZSI6ImNucGoiLCJwYXllcl9uYXRpb25hbF9pZGVudGlmaWVyIjoi
+        MTk4NzgyMDIwMDAxNjkiLCJwYXllcl9uYW1lIjoiUGV0IEFuam8gU2VydmnD
+        p29zIHBhcmEgQW5pbWFpcyBkZSBlc3RpbWHDp8OjbyIsInBheWVyX251bWJl
+        ciI6IjIzOTMiLCJwYXllcl9jb21wbGVtZW50IjoiNjEiLCJwYXllcl9zdHJl
+        ZXQiOiJBdmVuaWRhIEJyaWdhZGVpcm8gTHXDrXMgQW50w7RuaW8iLCJwYXll
+        cl9uZWlnaGJvdXJob29kIjoiSmFyZGltIFBhdWxpc3RhIiwicGF5ZXJfemlw
+        Y29kZSI6IjAxNDAxMDAwIiwicGF5ZXJfY2l0eSI6IlPDo28gUGF1bG8iLCJw
+        YXllcl9zdGF0ZSI6IlNQIiwiY2FuY2VsZWRfYXQiOiIyMDE3LTAyLTA2VDE1
+        OjUxOjEwLjY3MS0wMjowMCIsInRvdGFsX2Ftb3VudCI6NDkuOSwicmVjZWl2
+        ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6bnVsbCwicmVjZWl2ZWQi
+        OmZhbHNlLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQi
+        LCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2Vz
+        LzYxMiJ9LHsicmVsIjoidXBkYXRlIiwibWV0aG9kIjoiUFVUIiwiaHJlZiI6
+        Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy82MTIifSx7
+        InJlbCI6ImRlc3Ryb3kiLCJtZXRob2QiOiJERUxFVEUiLCJocmVmIjoiaHR0
+        cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzYxMiJ9LHsicmVs
+        IjoiZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cDovL2xv
+        Y2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzYxMi9kZWxpdmVyX2JpbGxl
+        dCJ9LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIsIm1ldGhvZCI6IkdFVCIsImhy
+        ZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZV9jb25m
+        aWdzLzExIn0seyJyZWwiOiJiaWxsZXQiLCJtZXRob2QiOiJHRVQiLCJocmVm
+        IjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzYxMi9i
+        aWxsZXQifSx7InJlbCI6InJlY2VpdmUiLCJtZXRob2QiOiJQT1NUIiwiaHJl
+        ZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy82MTIv
+        cmVjZWl2ZSJ9LHsicmVsIjoiY2FuY2VsIiwibWV0aG9kIjoiUE9TVCIsImhy
+        ZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZXMvNjEy
+        L2NhbmNlbCJ9XX0=
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charges/12/cancel
-  recorded_at: Mon, 09 May 2016 18:28:35 GMT
+      effective_url: https://sandbox.cobrato.com/api/v1/charges/612/cancel
+  recorded_at: Mon, 06 Feb 2017 17:51:10 GMT
 recorded_with: VCR 2.9.3
