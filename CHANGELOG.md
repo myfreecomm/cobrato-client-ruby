@@ -1,8 +1,6 @@
 # Changelog
 
 ## Next version
-
-## v0.18.0
 - Add charges#destroy_or_cancel endpoint
 
 ## v0.17.0

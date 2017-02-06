@@ -36,7 +36,7 @@ module Cobrato
 
       def destroy_or_cancel(id)
         http.post("#{resource_base_path}/#{id}/destroy_or_cancel") do |response|
-          response.code == 204
+          [200, 204].include?(response.code)
         end
       end
 
