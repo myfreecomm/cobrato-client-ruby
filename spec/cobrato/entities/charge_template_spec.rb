@@ -18,13 +18,14 @@ describe Cobrato::Entities::ChargeTemplate do
       mulct_value: "",
       email_sender_name: "",
       email_subject: "",
-      email_text: ""
+      email_text: "",
+      email_reply_to: "email@company.com"
     }
   end
 
   subject { described_class.new(attributes) }
 
   it_behaves_like "entity_attributes", [:id, :name, :charged_amount, :document_kind, :charge_config_id, :instructions,
-    :demonstrative, :registrable, :auto_send_billet, :interest_amount_per_month, :mulct_type, :mulct_value, :email_sender_name,
-    :email_subject, :email_text]
+    :demonstrative, :registrable, :auto_send_billet, :interest_amount_per_month, :mulct_type, :mulct_value,
+    :email_sender_name, :email_subject, :email_text, :email_reply_to]
 end
