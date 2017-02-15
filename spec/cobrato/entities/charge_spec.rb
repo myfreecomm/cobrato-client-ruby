@@ -60,6 +60,7 @@ describe Cobrato::Entities::Charge do
     :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
     :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :auto_send_billet, :email_sender_name,
     :email_subject, :email_text, :charge_template_id, :paid_discount, :paid_additions, :paid_rebate, :paid_difference,
+    :available_billet,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
     :payment_gateway_message

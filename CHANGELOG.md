@@ -1,6 +1,8 @@
 # Changelog
 
 ## Next version
+- Treat error at billet endpoint
+- Add `available_billet` to Charge entity
 
 ## v0.21.0
 

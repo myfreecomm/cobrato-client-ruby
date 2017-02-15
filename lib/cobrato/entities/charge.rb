@@ -54,6 +54,7 @@ module Cobrato
       attribute :paid_additions,                 Decimal
       attribute :paid_rebate,                    Decimal
       attribute :paid_difference,                Decimal
+      attribute :available_billet,               Boolean
 
       # payment gateway specifics
       attribute :credit_card_id,                 Integer
