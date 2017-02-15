@@ -283,11 +283,23 @@ describe Cobrato::Resources::Charge do
   end
 
   describe "#billet" do
-    it "returns a simple struct with the Charge billet url" do
-      VCR.use_cassette("charges/billet/success") do
-        billet = subject.billet(87)
-        expect(billet).to be_a(OpenStruct)
-        expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
+    context "when the billet is available" do
+      it "returns a simple struct with the Charge billet url" do
+        VCR.use_cassette("charges/billet/success") do
+          billet = subject.billet(87)
+          expect(billet).to be_a(OpenStruct)
+          expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
+        end
+      end
+    end
+
+    context "when the billet is not available" do
+      let(:http) { Cobrato::Http.new("00b245e9fc1d8149b76e916e6d38b4be") }
+
+      it "returns false" do
+        VCR.use_cassette("charges/billet/fail") do
+          expect{ subject.billet(54) }.to raise_error(Cobrato::RequestError)
+        end
       end
     end
   end

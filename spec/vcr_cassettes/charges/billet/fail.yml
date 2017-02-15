@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/charges/54/billet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.18.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-02-15T19:02:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - fb5c8057-a3b3-4307-8dec-36facf375807
+      X-Runtime:
+      - '0.060738'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvcnMiOnsibWVzc2FnZSI6Ik8gYm9sZXRvIGJhbmPDoXJpbyBwYXJh
+        IGVzdGEgY29icmFuw6dhIGFpbmRhIG7Do28gZXN0w6EgZGlzcG9uw612ZWwu
+        IFZvY8OqIHByZWNpc2EgcmVnaXN0cmFyIGVzc2EgY29icmFuw6dhIGVudmlh
+        bmRvIG8gYXJxdWl2byBkZSByZW1lc3NhIHBhcmEgc2V1IGJhbmNvLiJ9fQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/charges/54/billet
+  recorded_at: Wed, 15 Feb 2017 19:01:34 GMT
+recorded_with: VCR 2.9.3
