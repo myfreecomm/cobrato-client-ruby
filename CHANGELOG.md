@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add `payee_id` to `ChargeConfig` and it is a mandatory attribute.
+
 ## v0.18.0
 
 - Add `charges#revoke` endpoint

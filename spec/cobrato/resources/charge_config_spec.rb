@@ -6,6 +6,7 @@ describe Cobrato::Resources::ChargeConfig do
   let(:entity_klass) { Cobrato::Entities::ChargeConfig }
   let(:billet_params) do
     {
+      "payee_id" => 1,
       "bank_account_id" => 3,
       "portfolio_code" => "17",
       "agreement_code" => "123456",
@@ -13,7 +14,7 @@ describe Cobrato::Resources::ChargeConfig do
       "name" => "Conta Cobrança",
       "initial_number" => 1,
       "next_number" => 525,
-      "end_number" => 1000,
+      "end_number" => 5000,
       "status" => "pending",
       "registered_charges" => true,
       "remittance_agreement_code" => 4576361,
@@ -92,7 +93,8 @@ describe Cobrato::Resources::ChargeConfig do
         {
           name:         "Cielo testing",
           type:         "payment_gateway",
-          gateway_name: "cielo",
+          payee_id:     1,
+          gateway_name: "cielo-ws15",
           gateway_id:   "1006993069",
           gateway_key:  "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3",
           use_avs:      true

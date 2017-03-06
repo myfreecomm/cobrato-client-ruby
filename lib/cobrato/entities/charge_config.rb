@@ -5,6 +5,7 @@ module Cobrato
       attribute :name,                      String
       attribute :type,                      String
       attribute :status,                    String
+      attribute :payee_id,                  String
 
       # billet specifics
       attribute :bank_account_id,           Integer

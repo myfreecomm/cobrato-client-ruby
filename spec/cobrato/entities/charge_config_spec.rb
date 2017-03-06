@@ -3,6 +3,7 @@ require "spec_helper"
 describe Cobrato::Entities::ChargeConfig do
   let(:attributes) do
     {
+      payee_id: 1,
       bank_account_id: 1,
       type: "billet",
       portfolio_code: "17",
@@ -26,7 +27,7 @@ describe Cobrato::Entities::ChargeConfig do
 
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :name, :status,
+    :id, :type, :name, :status, :payee_id,
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
