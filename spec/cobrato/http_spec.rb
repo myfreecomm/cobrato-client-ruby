@@ -27,6 +27,7 @@ describe Cobrato::Http do
              method: verb,
              userpwd: "#{token}:x",
              accept_encoding: "gzip",
+             params_encoding: :rack,
              headers:  {
                 "Accept"      => "application/json",
                 "Content-Type"  => "application/json",
