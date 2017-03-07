@@ -1,7 +1,7 @@
 module Cobrato
   module Resources
     class CreditCard < Base
-      crud :show, :create, :list
+      crud :show, :create, :list, :update
 
       def charges(id, params={})
         http.get("#{resource_base_path}/#{id}/charges", params: params) do |response|

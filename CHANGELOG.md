@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add `credit_cards#update` endpoint
+
 ## v0.20.0
 
 - Add `payee_id` to `ChargeConfig` entity and it is a mandatory attribute.

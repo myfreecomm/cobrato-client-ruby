@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sandbox.cobrato.com/api/v1/credit_cards/912
+    body:
+      encoding: UTF-8
+      string: '{"payer_id":1}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.20.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-03-07T20:07:00Z'
+      X-RateLimit-Remaining:
+      - '58'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=PUT; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - d5692e21-cdf1-499d-9f1a-619b03113065
+      X-Runtime:
+      - '0.091349'
+      X-MiniProfiler-Ids:
+      - '["qvkz3kqh2mhpr247k8z8"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":912,"number":"000000******0001","holder_name":"Hugo","brand":"visa","expiration":"05/18","avs_address":"","avs_number":"","avs_complement":"","avs_district":"","avs_zipcode":"","payer_id":1,"reusability_status":"reusable","reusability_error_message":null,"charge_config_id":28,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/credit_cards/912"},{"rel":"payer","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payers/1"},{"rel":"charge_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/28"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/credit_cards/912
+  recorded_at: Tue, 07 Mar 2017 20:06:58 GMT
+recorded_with: VCR 2.9.3

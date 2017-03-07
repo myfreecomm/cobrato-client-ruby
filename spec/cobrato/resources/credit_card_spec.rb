@@ -50,6 +50,18 @@ describe Cobrato::Resources::CreditCard do
     end
   end
 
+  describe "#update" do
+    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+
+    it "updates a credit card" do
+      VCR.use_cassette("credit_cards/update/success") do
+        credit_card = subject.update(912, payer_id: 1)
+        expect(credit_card).to be_a(entity_klass)
+        expect(credit_card.payer_id).to eq(1)
+      end
+    end
+  end
+
   describe "#list" do
     let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
 
