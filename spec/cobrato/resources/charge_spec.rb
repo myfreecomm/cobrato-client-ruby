@@ -20,6 +20,21 @@ describe Cobrato::Resources::Charge do
         end
       end
     end
+
+    context "filtering" do
+      let(:http) { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+
+      it "returns an array of charges" do
+        VCR.use_cassette("charges/list/filtering-success") do
+          charges = subject.list(charge_config_ids: [10, 31])
+          expect(charges).to be_a(Array)
+          expect(charges.size).to eql(3)
+          charges.each do |e|
+            expect(e).to be_a(entity_klass)
+          end
+        end
+      end
+    end
   end
 
   describe "#show" do

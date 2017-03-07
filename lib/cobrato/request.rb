@@ -24,7 +24,7 @@ module Cobrato
           headers:          headers,
           userpwd:          token,
           accept_encoding:  "gzip",
-          params_encoding:  :rack   # this is important for filtering with array parameter
+          params_encoding:  :rack # this is important for filtering with array parameter
         }.reject {|k,v| v.nil?}
       end
 
