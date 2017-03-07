@@ -2,7 +2,14 @@
 
 ## Next version
 
-- Add `payee_id` to `ChargeConfig` and it is a mandatory attribute.
+## v0.20.0
+
+- Add `payee_id` to `ChargeConfig` entity and it is a mandatory attribute.
+- Use rack style for pair params encoding.
+
+## v0.19.0
+
+- Add `email_reply_to` to `ChargeTemplate` entity.
 
 ## v0.18.0
 
