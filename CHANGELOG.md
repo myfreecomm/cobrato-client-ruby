@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.21.0
+
 - Add `credit_cards#update` endpoint
 
 ## v0.20.0
