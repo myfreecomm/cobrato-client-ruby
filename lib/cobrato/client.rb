@@ -27,6 +27,10 @@ module Cobrato
       Resources::ChargeConfig.new(http)
     end
 
+    def payment_configs
+      Resources::payment_configsConfig.new(http)
+    end
+
     def charges
       Resources::Charge.new(http)
     end

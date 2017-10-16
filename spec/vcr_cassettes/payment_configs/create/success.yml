@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payment_configs
+    body:
+      encoding: UTF-8
+      string: '{"name":"Nova Configuração de Pagamento","bank_account_id":155}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.22.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-10-16T20:03:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - b30faf4b-7e0e-40d7-8dfd-71ff4cffef30
+      X-Runtime:
+      - '4.847656'
+      X-MiniProfiler-Ids:
+      - '["pv6hnokmuru4nvcozsf0","5bb8z0s8aeh1uzjl1hi9","2bdyeb5gs91bj4do21c","9uiw7umb5j8xxpe8onjw"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NCwibmFtZSI6Ik5vdmEgQ29uZmlndXJhw6fDo28gZGUgUGFnYW1lbnRvIiwiYmFua19hY2NvdW50X2lkIjoxNTUsIl9saW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheW1lbnRfY29uZmlncy80In0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9wYXltZW50X2NvbmZpZ3MvNCJ9LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheW1lbnRfY29uZmlncy80In0seyJyZWwiOiJiYW5rX2FjY291bnQiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9iYW5rX2FjY291bnRzLzE1NSJ9XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payment_configs
+  recorded_at: Mon, 16 Oct 2017 20:02:56 GMT
+recorded_with: VCR 2.9.3
