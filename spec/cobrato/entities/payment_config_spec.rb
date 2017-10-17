@@ -11,5 +11,5 @@ describe Cobrato::Entities::PaymentConfig do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :name, :payee_id, :bank_account_id]
+  it_behaves_like "entity_attributes", [:id, :name, :bank_account_id]
 end

@@ -4,13 +4,6 @@ describe Cobrato::Resources::PaymentConfig do
   let(:token)        { "3fa5e9ecc23e477fd7ba3a41063a9fab" }
   let(:http)         { Cobrato::Http.new(token) }
   let(:entity_klass) { Cobrato::Entities::PaymentConfig }
-  let(:billet_params) do
-    {
-      "payee_id" => 1,
-      "bank_account_id" => 3,
-      "name" => "Configuração de Pagamento"
-    }
-  end
 
   subject { described_class.new(http) }
 
@@ -60,7 +53,7 @@ describe Cobrato::Resources::PaymentConfig do
   end
 
   describe "#create" do
-    context "billet config" do
+    context "payment config" do
       it "creates a charge config" do
         VCR.use_cassette("payment_configs/create/success") do
           charge_config = subject.create({ name: "Nova Configuração de Pagamento", bank_account_id: 155 })
