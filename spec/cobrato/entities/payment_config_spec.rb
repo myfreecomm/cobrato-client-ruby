@@ -3,7 +3,7 @@ require "spec_helper"
 describe Cobrato::Entities::PaymentConfig do
   let(:attributes) do
     {
-      payee_id: 1,
+      id: 1,
       bank_account_id: 1,
       name: "Configuração de pagamento"
     }
