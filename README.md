@@ -174,6 +174,16 @@ Now you have acess to every API endpoint:
 | PUT         | [api/v1/charge_templates/:id](http://docs.cobrato.com/#atualiza-o-de-modelo-de-cobran-a)  | client.charge_templates.update  |
 | DELETE      | [api/v1/charge_templates/:id](http://docs.cobrato.com/#exclus-o-de-modelo-de-cobran-a)    | client.charge_templates.destroy |
 
+#### [Payment Config](http://docs.cobrato.com/#configura-o-de-pagamento) **(BETA)**
+
+| HTTP method | Endpoint                                                                                       | Client method                  |
+| ----------- | ---------------------------------------------------------------------------------------------- | ------------------------------ |
+| POST        | [api/v1/payment_configs](http://docs.cobrato.com/#cria-o-de-configura-o-de-pagamento)          | client.payment_configs.create  |
+| GET         | [api/v1/payment_configs](http://docs.cobrato.com/#lista-de-todas-as-configura-es-de-pagamento) | client.payment_configs.list    |
+| GET         | [api/v1/payment_configs/:id](http://docs.cobrato.com/#informa-es-da-configura-o-de-pagamento)  | client.payment_configs.show    |
+| PUT         | [api/v1/payment_configs/:id](http://docs.cobrato.com/#atualiza-o-de-configura-o-de-pagamento)  | client.payment_configs.update  |
+| DELETE      | [api/v1/payment_configs/:id](http://docs.cobrato.com/#exclus-o-de-configura-o-de-pagamento)    | client.payment_configs.destroy |
+
 
 ## Payload signature check
 
