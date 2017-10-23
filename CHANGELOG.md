@@ -2,6 +2,10 @@
 
 ## Next version
 
+## v0.23.0.beta1
+
+- Add PaymentConfig API suppport
+
 ## v0.22.0
 
 - Treat error at billet endpoint

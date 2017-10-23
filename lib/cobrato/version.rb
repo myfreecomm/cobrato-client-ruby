@@ -1,3 +1,3 @@
 module Cobrato
-  VERSION = '0.22.0'
+  VERSION = '0.23.0.beta1'
 end
