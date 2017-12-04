@@ -2,6 +2,12 @@
 
 ## Next version
 
+- Add Payment API support.
+- Add changes on RemittanceCnab API:
+  - `remittance_cnabs#charges` is now DEPRECATED. Use `remittance_cnabs#items` instead.
+  - The use of `charge_config_ids` and `charge_ids` for RemittanceCnab creation is now DEPRECATED. Use `config_ids` and `item_ids` instead.
+  - `RemittanceCnab#charge_config_id` is DEPRECATED. Use `RemittanceCnab#config_id` instead.
+
 ## v0.23.0.beta1
 
 - Add PaymentConfig API suppport

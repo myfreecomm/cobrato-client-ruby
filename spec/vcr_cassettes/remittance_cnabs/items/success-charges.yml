@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/remittance_cnabs/488/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-12-04T14:30:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 8989a5c1-238b-4ebf-a768-38ed08a73a1a
+      X-Runtime:
+      - '0.065167'
+      X-MiniProfiler-Ids:
+      - '["uzo57qfg17hf0vt288jt","5c3snn4t38e9jnevmbdk","rox87c6rjefss6aqmxop","id0621wugfcg1erdik5t","cnbks4ciblp2wvzeuzcu","gra3xnslc23ofbah0k62","2dq9idhym3go3iq9hrfm"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjaGFyZ2VzIjpbeyJpZCI6MTQ4MzEsInR5cGUiOiJiaWxsZXQiLCJjaGFyZ2VfY29uZmlnX2lkIjoyNzcsImR1ZV9kYXRlIjoiMjAxNy0xMS0yMCIsImRvY3VtZW50X2tpbmQiOiJEUyIsImRvY3VtZW50X2RhdGUiOm51bGwsImRvY3VtZW50X251bWJlciI6IjQ1OUJTUTZBNTciLCJjdXN0b21fb3VyX251bWJlciI6ZmFsc2UsIm91cl9udW1iZXIiOiIxIiwib3VyX251bWJlcl9kaWdpdCI6bnVsbCwiY2hhcmdlZF9hbW91bnQiOiI5Ljk2IiwiaW50ZXJlc3RfYW1vdW50X3Blcl9tb250aCI6bnVsbCwibXVsY3RfdHlwZSI6IiIsIm11bGN0X3ZhbHVlIjpudWxsLCJpbnN0cnVjdGlvbnMiOiJQYWfDoXZlbCBlbSBxdWFscXVlciBhZ8OqbmNpYSBhdMOpIGRhdGEgZG8gdmVuY2ltZW50by4iLCJkZW1vbnN0cmF0aXZlIjoiQm9sZXRvIHBhcmEgaG9tb2xvZ2HDp8Ojby4iLCJub3RpZmljYXRpb25fZW1haWxzIjpbXSwicGFpZF9hbW91bnQiOm51bGwsInBhaWRfYXQiOm51bGwsInBhaWRfZGlmZmVyZW5jZSI6MCwicGFpZF9kaXNjb3VudCI6IjAuMCIsInBhaWRfYWRkaXRpb25zIjoiMC4wIiwicGFpZF9yZWJhdGUiOiIwLjAiLCJwYXltZW50X3RheCI6IjAuMCIsInByb2Nlc3NpbmdfZGF0ZSI6IjIwMTctMTEtMDUiLCJmb3JfaG9tb2xvZ2F0aW9uIjp0cnVlLCJyZWdpc3RyYWJsZSI6dHJ1ZSwicmVnaXN0cmF0aW9uX3N0YXR1cyI6InJlbWl0dGVkIiwicGF5ZXJfaWQiOjM2MjMsInBheWVyX25hdGlvbmFsX2lkZW50aWZpZXJfdHlwZSI6ImNwZiIsInBheWVyX25hdGlvbmFsX2lkZW50aWZpZXIiOiIxMjM0NTY3ODkwOSIsInBheWVyX25hbWUiOiJGdWxhbm8gZGEgU2lsdmEiLCJwYXllcl9udW1iZXIiOiI3NCIsInBheWVyX2NvbXBsZW1lbnQiOiIiLCJwYXllcl9zdHJlZXQiOiJSdWEgR3VtZXJjaW5kbyBkZSBGcmVpdGFzIiwicGF5ZXJfbmVpZ2hib3VyaG9vZCI6IlBhcnF1ZSBTw6NvIENhZXRhbm8iLCJwYXllcl96aXBjb2RlIjoiMjgwMzAyOTUiLCJwYXllcl9jaXR5IjoiQ2FtcG9zIGRvcyBHb3l0YWNhemVzIiwicGF5ZXJfc3RhdGUiOiJSSiIsImNhbmNlbGVkX2F0IjpudWxsLCJhdmFpbGFibGVfYmlsbGV0Ijp0cnVlLCJ0b3RhbF9hbW91bnQiOiI5Ljk2IiwicmVjZWl2ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6bnVsbCwicmVjZWl2ZWQiOmZhbHNlLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE0ODMxIn0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE0ODMxIn0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy8xNDgzMSJ9LHsicmVsIjoiZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE0ODMxL2RlbGl2ZXJfYmlsbGV0In0seyJyZWwiOiJjaGFyZ2VfY29uZmlnIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlX2NvbmZpZ3MvMjc3In0seyJyZWwiOiJiaWxsZXQiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE0ODMxL2JpbGxldCJ9LHsicmVsIjoicmVjZWl2ZSIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE0ODMxL3JlY2VpdmUifV19XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/remittance_cnabs/488/items
+  recorded_at: Mon, 04 Dec 2017 14:29:34 GMT
+recorded_with: VCR 2.9.3

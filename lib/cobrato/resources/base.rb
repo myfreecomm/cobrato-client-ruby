@@ -112,6 +112,12 @@ module Cobrato
       def underscore_pluralized(str)
         "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
+
+      def deprecate(params, deprecated)
+        (params.keys.map(&:to_s) & deprecated).each do |a|
+          puts "Warning: The '#{a}' param is deprecated. See Cobrato API docs for more info."
+        end
+      end
     end
   end
 end

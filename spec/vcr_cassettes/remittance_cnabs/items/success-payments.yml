@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/remittance_cnabs/492/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2017-12-04T14:31:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - e6a3c2f2-dea6-4150-9c1b-af4f0dfd1970
+      X-Runtime:
+      - '0.037464'
+      X-MiniProfiler-Ids:
+      - '["5u26ttlp2kdktt0td8ar","5c3snn4t38e9jnevmbdk","rox87c6rjefss6aqmxop","id0621wugfcg1erdik5t","cnbks4ciblp2wvzeuzcu","gra3xnslc23ofbah0k62","2dq9idhym3go3iq9hrfm","uzo57qfg17hf0vt288jt"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"payments":[{"id":15,"amount":"78.97","date":"2017-12-29","our_number":null,"payment_method":"doc_same_ownership","payment_type":"other","account":"1234","account_digit":"4","agency":"123","bank_code":"208","payee_document":"123.456.789-09","payee_name":"Hugo","doc_goal":"01","ted_goal":null,"registration_status":"remitted","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/15"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/15"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/15"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]},{"id":16,"amount":"255.99","date":"2017-10-22","our_number":null,"payment_method":"ted_other_ownership","payment_type":"provider","account":"21500","account_digit":"3","agency":"9358","bank_code":"341","payee_document":"123.456.789-09","payee_name":"Jane
+        Doe","doc_goal":null,"ted_goal":null,"registration_status":"remitted","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/16"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/16"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/16"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/remittance_cnabs/492/items
+  recorded_at: Mon, 04 Dec 2017 14:30:36 GMT
+recorded_with: VCR 2.9.3

@@ -50,38 +50,40 @@ client = Cobrato.client("YOUR_TOKEN_HERE")
 
 Now you have acess to every API endpoint:
 
-* [Payees API](http://docs.cobrato.com/#beneficiário)
-* [Bank Accounts API](http://docs.cobrato.com/#conta-bancária)
+* [Payees API](http://docs.cobrato.com/#benefici-rio)
+* [Bank Accounts API](http://docs.cobrato.com/#conta-banc-ria)
 * [Payers API](http://docs.cobrato.com/#pagador)
-* [Charge Configs API](http://docs.cobrato.com/#configuração-de-cobrança)
-* [Charges API](http://docs.cobrato.com/#cobrança)
+* [Charge Configs API](http://docs.cobrato.com/#configura-o-de-cobran-a)
+* [Charges API](http://docs.cobrato.com/#cobran-a)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
 * [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
 * [CreditCards API](http://docs.cobrato.com/#cart-o-de-cr-dito)
 * [Webhooks API](http://docs.cobrato.com/#webhook)
+* [Payment Config](http://docs.cobrato.com/#configura-o-de-pagamento) **(BETA)**
+* [Payment](http://docs.cobrato.com/#pagamento) **(BETA)**
 
 ## Endpoints
 
-#### [Payees](http://docs.cobrato.com/#beneficiário)
+#### [Payees](http://docs.cobrato.com/#benefici-rio)
 
 | HTTP method | Endpoint                                                                  | Client method         |
 | ----------- | ------------------------------------------------------------------------- | --------------------- |
-| POST        | [api/v1/payees](http://docs.cobrato.com/#criação-de-beneficiário)         | client.payees.create  |
-| GET         | [api/v1/payees](http://docs.cobrato.com/#lista-de-todos-os-beneficiários) | client.payees.list    |
-| GET         | [api/v1/payees/:id](http://docs.cobrato.com/#informações-do-beneficiário) | client.payees.show    |
-| PUT         | [api/v1/payees/:id](http://docs.cobrato.com/#atualização-de-beneficiário) | client.payees.update  |
-| DELETE      | [api/v1/payees/:id](http://docs.cobrato.com/#exclusão-de-beneficiário)    | client.payees.destroy |
+| POST        | [api/v1/payees](http://docs.cobrato.com/#cria-o-de-benefici-rio)          | client.payees.create  |
+| GET         | [api/v1/payees](http://docs.cobrato.com/#lista-de-todos-os-benefici-rios) | client.payees.list    |
+| GET         | [api/v1/payees/:id](http://docs.cobrato.com/#informa-es-do-benefici-rio)  | client.payees.show    |
+| PUT         | [api/v1/payees/:id](http://docs.cobrato.com/#atualiza-o-de-benefici-rio)  | client.payees.update  |
+| DELETE      | [api/v1/payees/:id](http://docs.cobrato.com/#exclus-o-de-benefici-rio)    | client.payees.destroy |
 
-#### [Bank Accounts](http://docs.cobrato.com/#conta-bancária)
+#### [Bank Accounts](http://docs.cobrato.com/#conta-banc-ria)
 
 | HTTP method | Endpoint                                                                               | Client method                        |
 | ----------- | -------------------------------------------------------------------------------------- | ------------------------------------ |
-| POST        | [api/v1/bank_accounts](http://docs.cobrato.com/#criação-de-conta-bancária)             | client.bank_accounts.create          |
-| GET         | [api/v1/bank_accounts](http://docs.cobrato.com/#lista-de-todas-as-contas-bancárias)    | client.bank_accounts.list            |
-| GET         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#informações-da-conta-bancária)     | client.bank_accounts.show            |
-| PUT         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#atualização-de-conta-bancária)     | client.bank_accounts.update          |
-| DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclusão-de-conta-bancária)        | client.bank_accounts.destroy         |
-| GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-disponíveis) | client.bank_accounts.portfolio_codes |
+| POST        | [api/v1/bank_accounts](http://docs.cobrato.com/#cria-o-de-conta-banc-ria)              | client.bank_accounts.create          |
+| GET         | [api/v1/bank_accounts](http://docs.cobrato.com/#lista-de-todas-as-contas-banc-rias)    | client.bank_accounts.list            |
+| GET         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#informa-es-da-conta-banc-ria)      | client.bank_accounts.show            |
+| PUT         | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#atualiza-o-de-conta-banc-ria)      | client.bank_accounts.update          |
+| DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclus-o-de-conta-banc-ria)        | client.bank_accounts.destroy         |
+| GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-dispon-veis) | client.bank_accounts.portfolio_codes |
 
 #### [Payers](http://docs.cobrato.com/#pagador)
 
@@ -92,51 +94,52 @@ Now you have acess to every API endpoint:
 | GET         | [api/v1/payers/:id](http://docs.cobrato.com/#informa-es-do-pagador)   | client.payers.show    |
 | PUT         | [api/v1/payers/:id](http://docs.cobrato.com/#atualiza-o-de-pagador)   | client.payers.update  |
 
-#### [Charge Configs](http://docs.cobrato.com/#configuração-de-cobrança)
+#### [Charge Configs](http://docs.cobrato.com/#configura-o-de-cobran-a)
 
-| HTTP method | Endpoint                                                                                      | Client method                  |
-| ----------- | --------------------------------------------------------------------------------------------- | ------------------------------ |
-| POST        | [api/v1/charge_configs](http://docs.cobrato.com/#criação-de-configuração-de-cobrança)         | client.charge_configs.create  |
-| GET         | [api/v1/charge_configs](http://docs.cobrato.com/#lista-de-todas-as-configurações-de-cobrança) | client.charge_configs.list    |
-| GET         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#informações-de-configuração-de-cobrança) | client.charge_configs.show    |
-| PUT         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#atualização-de-configuração-de-cobrança) | client.charge_configs.update  |
-| DELETE      | [api/v1/charge_configs/:id](http://docs.cobrato.com/#exclusão-de-configuração-de-cobrança)    | client.charge_configs.destroy |
+| HTTP method | Endpoint                                                                                     | Client method                  |
+| ----------- | -------------------------------------------------------------------------------------------- | ------------------------------ |
+| POST        | [api/v1/charge_configs](http://docs.cobrato.com/#cria-o-de-configura-o-de-cobran-a)          | client.charge_configs.create  |
+| GET         | [api/v1/charge_configs](http://docs.cobrato.com/#lista-de-todas-as-configura-es-de-cobran-a) | client.charge_configs.list    |
+| GET         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#informa-es-de-configura-o-de-cobran-a)  | client.charge_configs.show    |
+| PUT         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#atualiza-o-de-configura-o-de-cobran-a)  | client.charge_configs.update  |
+| DELETE      | [api/v1/charge_configs/:id](http://docs.cobrato.com/#exclus-o-de-configura-o-de-cobran-a)    | client.charge_configs.destroy |
 
-#### [Charges](http://docs.cobrato.com/#cobrança)
+#### [Charges](http://docs.cobrato.com/#cobran-a)
 
 | HTTP method | Endpoint                                                                                     | Client method                 |
 | ----------- | -------------------------------------------------------------------------------------------- | ----------------------------- |
-| POST        | [api/v1/charges](http://docs.cobrato.com/#criação-de-cobrança)                               | client.charges.create         |
-| GET         | [api/v1/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança)                        | client.charges.list           |
-| GET         | [api/v1/charges/:id](http://docs.cobrato.com/#informações-da-cobrança)                       | client.charges.show           |
-| PUT         | [api/v1/charges/:id](http://docs.cobrato.com/#atualização-de-cobrança)                       | client.charges.update         |
-| DELETE      | [api/v1/charges/:id](http://docs.cobrato.com/#exclusão-de-cobrança)                          | client.charges.destroy        |
-| POST        | [api/v1/charges/:id/receive](http://docs.cobrato.com/#recebimento-de-cobrança)               | client.charges.receive        |
-| POST        | [api/v1/charges/:id/undo_receive](http://docs.cobrato.com/#desfazer-recebimento-de-cobrança) | client.charges.undo_receive   |
-| POST        | [api/v1/charges/:id/deliver_billet](http://docs.cobrato.com/#envio-de-boleto-da-cobrança)    | client.charges.deliver_billet |
-| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/#boleto-da-cobrança)                     | client.charges.billet         |
-| POST        | [api/v1/charges/:id/cancel](http://docs.cobrato.com/#cancelar-cobrança)                      | client.charges.cancel         |
+| POST        | [api/v1/charges](http://docs.cobrato.com/#cria-o-de-cobran-a)                                | client.charges.create         |
+| GET         | [api/v1/charges](http://docs.cobrato.com/#lista-de-todas-as-cobran-a)                        | client.charges.list           |
+| GET         | [api/v1/charges/:id](http://docs.cobrato.com/#informa-es-da-cobran-a)                        | client.charges.show           |
+| PUT         | [api/v1/charges/:id](http://docs.cobrato.com/#atualiza-o-de-cobran-a)                        | client.charges.update         |
+| DELETE      | [api/v1/charges/:id](http://docs.cobrato.com/#exclus-o-de-cobran-a)                          | client.charges.destroy        |
+| POST        | [api/v1/charges/:id/receive](http://docs.cobrato.com/#recebimento-de-cobran-a)               | client.charges.receive        |
+| POST        | [api/v1/charges/:id/undo_receive](http://docs.cobrato.com/#desfazer-recebimento-de-cobran-a) | client.charges.undo_receive   |
+| POST        | [api/v1/charges/:id/deliver_billet](http://docs.cobrato.com/#envio-de-boleto-da-cobran-a)    | client.charges.deliver_billet |
+| GET         | [api/v1/charges/:id/billet](http://docs.cobrato.com/#boleto-da-cobran-a)                     | client.charges.billet         |
+| POST        | [api/v1/charges/:id/cancel](http://docs.cobrato.com/#cancelar-cobran-a)                      | client.charges.cancel         |
 
 #### [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
 
 | HTTP method | Endpoint                                                                             | Client method                |
 | ----------- | ------------------------------------------------------------------------------------ | ---------------------------- |
-| POST        | [api/v1/regress_cnabs](http://docs.cobrato.com/#criação-de-cnab-de-retorno)          | client.regress_cnabs.create  |
+| POST        | [api/v1/regress_cnabs](http://docs.cobrato.com/#cria-o-de-cnab-de-retorno)           | client.regress_cnabs.create  |
 | GET         | [api/v1/regress_cnabs](http://docs.cobrato.com/#lista-de-todas-as-cnabs-de-retorno)  | client.regress_cnabs.list    |
-| GET         | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#informações-do-cnab-de-retorno)  | client.regress_cnabs.show    |
-| DELETE      | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#exclusão-de-cnab-de-retorno)     | client.regress_cnabs.destroy |
+| GET         | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#informa-es-do-cnab-de-retorno)   | client.regress_cnabs.show    |
+| DELETE      | [api/v1/regress_cnabs/:id](http://docs.cobrato.com/#exclus-o-de-cnab-de-retorno)     | client.regress_cnabs.destroy |
 | GET         | [api/v1/regress_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-retorno) | client.regress_cnabs.file    |
 
 #### [Remittance Cnab](http://docs.cobrato.com/#cnab-de-remessa)
 
-| HTTP method | Endpoint                                                                                                         | Client method                   |
-| ----------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| POST        | [api/v1/remittance_cnabs](http://docs.cobrato.com/##criação-de-arquivo-cnab-de-remessa)                          | client.remittance_cnabs.create  |
-| GET         | [api/v1/remittance_cnabs](http://docs.cobrato.com/#lista-de-todas-as-cnabs-de-remessa)                           | client.remittance_cnabs.list    |
-| GET         | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#informações-do-cnab-de-remessa)                           | client.remittance_cnabs.show    |
-| DELETE      | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#exclusão-de-cnab-de-remessa)                              | client.remittance_cnabs.destroy |
-| GET         | [api/v1/remittance_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-remessa)                          | client.remittance_cnabs.file    |
-| GET         | [api/v1/remittance_cnabs/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobrança-do-arquivo-de-remessa) | client.remittance_cnabs.charges |
+| HTTP method | Endpoint                                                                                                         | Client method                                |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| POST        | [api/v1/remittance_cnabs](http://docs.cobrato.com/cria-o-de-arquivo-cnab-de-remessa)                             | client.remittance_cnabs.create               |
+| GET         | [api/v1/remittance_cnabs](http://docs.cobrato.com/#lista-de-todas-as-cnabs-de-remessa)                           | client.remittance_cnabs.list                 |
+| GET         | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#informa-es-do-cnab-de-remessa)                            | client.remittance_cnabs.show                 |
+| DELETE      | [api/v1/remittance_cnabs/:id](http://docs.cobrato.com/#exclus-o-de-cnab-de-remessa)                              | client.remittance_cnabs.destroy              |
+| GET         | [api/v1/remittance_cnabs/:id/file](http://docs.cobrato.com/#arquivo-do-cnab-de-remessa)                          | client.remittance_cnabs.file                 |
+| GET         | [api/v1/remittance_cnabs/:id/charges](http://docs.cobrato.com/#lista-de-todas-as-cobran-a-do-arquivo-de-remessa) | client.remittance_cnabs.charges (DEPRECATED) |
+| GET         | [api/v1/remittance_cnabs/:id/items](http://docs.cobrato.com/#lista-de-todos-os-items-do-arquivo-de-remessa)      | client.remittance_cnabs.items                |
 
 
 #### [Credit Card](http://docs.cobrato.com/#cart-o-de-cr-dito)
@@ -152,17 +155,17 @@ Now you have acess to every API endpoint:
 
 | HTTP method | Endpoint                                                               | Client method           |
 | ----------- | ---------------------------------------------------------------------- | ----------------------- |
-| POST        | [api/v1/webhooks](http://docs.cobrato.com/#criação-de-webhook)         | client.webhooks.create  |
+| POST        | [api/v1/webhooks](http://docs.cobrato.com/#cria-o-de-webhook)          | client.webhooks.create  |
 | GET         | [api/v1/webhooks](http://docs.cobrato.com/#lista-de-todos-os-webhooks) | client.webhooks.list    |
-| GET         | [api/v1/webhooks/:id](http://docs.cobrato.com/#informações-do-webhook) | client.webhooks.show    |
-| PUT         | [api/v1/webhooks/:id](http://docs.cobrato.com/#atualização-de-webhook) | client.webhooks.update  |
-| DELETE      | [api/v1/webhooks/:id](http://docs.cobrato.com/#exclusão-de-webhook)    | client.webhooks.destroy |
+| GET         | [api/v1/webhooks/:id](http://docs.cobrato.com/#informa-es-do-webhook)  | client.webhooks.show    |
+| PUT         | [api/v1/webhooks/:id](http://docs.cobrato.com/#atualiza-o-de-webhook)  | client.webhooks.update  |
+| DELETE      | [api/v1/webhooks/:id](http://docs.cobrato.com/#exclus-o-de-webhook)    | client.webhooks.destroy |
 
-#### [Charging types](http://docs.cobrato.com/#tipos-de-cobrança)
+#### [Charging types](http://docs.cobrato.com/#tipos-de-cobran-a)
 
 | HTTP method | Endpoint                                                                              | Client method              |
 | ----------- | ------------------------------------------------------------------------------------- | -------------------------- |
-| GET         | [api/v1/charging_types](http://docs.cobrato.com/#lista-de-todos-os-tipos-de-cobrança) | client.changing_types.list |
+| GET         | [api/v1/charging_types](http://docs.cobrato.com/#lista-de-todos-os-tipos-de-cobran-a) | client.changing_types.list |
 
 #### [Charge Template](http://docs.cobrato.com/#modelo-de-cobran-a)
 
@@ -183,6 +186,16 @@ Now you have acess to every API endpoint:
 | GET         | [api/v1/payment_configs/:id](http://docs.cobrato.com/#informa-es-da-configura-o-de-pagamento)  | client.payment_configs.show    |
 | PUT         | [api/v1/payment_configs/:id](http://docs.cobrato.com/#atualiza-o-de-configura-o-de-pagamento)  | client.payment_configs.update  |
 | DELETE      | [api/v1/payment_configs/:id](http://docs.cobrato.com/#exclus-o-de-configura-o-de-pagamento)    | client.payment_configs.destroy |
+
+#### [Payment](http://docs.cobrato.com/#pagamento) **(BETA)**
+
+| HTTP method | Endpoint                                                                 | Client method           |
+| ----------- | ------------------------------------------------------------------------ | ----------------------- |
+| POST        | [api/v1/payments](http://docs.cobrato.com/#cria-o-de-pagamento)          | client.payments.create  |
+| GET         | [api/v1/payments](http://docs.cobrato.com/#lista-de-todos-os-pagamentos) | client.payments.list    |
+| GET         | [api/v1/payments/:id](http://docs.cobrato.com/#informa-es-do-pagamento)  | client.payments.show    |
+| PUT         | [api/v1/payments/:id](http://docs.cobrato.com/#atualiza-o-de-pagamento)  | client.payments.update  |
+| DELETE      | [api/v1/payments/:id](http://docs.cobrato.com/#exclus-o-de-pagamento)    | client.payments.destroy |
 
 
 ## Payload signature check
