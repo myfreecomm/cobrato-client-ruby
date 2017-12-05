@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta2
+
 - Add Payment API support.
 - Add changes on RemittanceCnab API:
   - `remittance_cnabs#charges` is now DEPRECATED. Use `remittance_cnabs#items` instead.
