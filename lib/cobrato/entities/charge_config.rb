@@ -22,6 +22,7 @@ module Cobrato
       attribute :remittance_cnab_pattern,   Integer
       attribute :transmission_code,         String
       attribute :pre_released_billet,       Boolean
+      attribute :writing_off_deadline,      Integer
 
       # payment gateway specifics
       attribute :gateway_name,              String

@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add `writing_off_deadline` to `ChargeConfig` entity.
+
 ## v0.23.0.beta2
 
 - Add Payment API support.
