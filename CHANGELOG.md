@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta3
+
 - Add `writing_off_deadline` to `ChargeConfig` entity.
 
 ## v0.23.0.beta2
