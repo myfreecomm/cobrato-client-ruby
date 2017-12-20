@@ -2,6 +2,13 @@
 
 ## Next version
 
+- Add changes on RegressCnab API:
+  - The use of `charge_config_id` for RemittanceCnab creation is now DEPRECATED. Use `config_id` instead.
+  - `RegressCnab#charge_config_id` is DEPRECATED. Use `RegressCnab#config_id` instead.
+  - Add `RegressCnab#type`.
+  - Remove `RegressCnab#report`.
+- Add `RemittanceCnab#type`
+
 ## v0.23.0.beta3
 
 - Add `writing_off_deadline` to `ChargeConfig` entity.

@@ -9,6 +9,7 @@ require "cobrato/http"
 require "cobrato/signature"
 
 require "cobrato/entities/base"
+require "cobrato/entities/cnab"
 require "cobrato/entities/payee"
 require "cobrato/entities/payer"
 require "cobrato/entities/bank_account"
