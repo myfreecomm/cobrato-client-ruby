@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta4
+
 - Add changes on RegressCnab API:
   - The use of `charge_config_id` for RemittanceCnab creation is now DEPRECATED. Use `config_id` instead.
   - `RegressCnab#charge_config_id` is DEPRECATED. Use `RegressCnab#config_id` instead.
