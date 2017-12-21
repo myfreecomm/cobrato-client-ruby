@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/regress_cnabs
+    body:
+      encoding: UTF-8
+      string: '{"charge_config_id":"226","cnabs":{"content":"MDJSRVRPUk5PMDFDT0JSQU5DQSAgICAgICAwMDAwMDAwMDAwMDAwNDg3NTA4\nMEZSRUUgQ09NTVVOSVRFUyBDT05TVUxUT1JJQSBFTTIzN0JSQURFU0NPICAg\nICAgIDIxMDExNjAxNjAwMDAwMDAwMDEgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgIDIxMDExNiAgICAgICAgIDAwMDAwMQ0KMTAy\nMDU3OTM4MzIwMDAxMjYwMDAwMDA5MDM0MjgwMDE3MjI1MSAgICAgICAgICAg\nICAgICAgICAgICAgICAwMDAwMDAwMDAwMDAwMDAwMDAyMzAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDA5MDYyMTAxMTZBNzVBICAgICAgMDAwMDAwMDAwMDAw\nMDAyMTEyMzMyNTAxMTYwMDAwMDAwMDA1MDAwMjM3MDQxNTIgIDAwMDAwMDAw\nMDAyNTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDUwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAg\nMDAwMDAwMDAwMCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDAwMDAwMg0KOTIwMTIz\nNyAgICAgICAgICAwMDAwMDAwMzAwMDAwMDAwMDIwOTEzMDAwMDAwMDEgICAg\nICAgICAgMDAwMDMwMDAwMDAwMjA5MTMwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAw\nMDAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\nICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwMDAw\nMDAwMDAwMDAwMDAwMDAwMDAwMCAgICAgICAgIDAwMDAwNQ0K\n","content_type":"text/plain","filename":"exemplo.RET"}}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta3
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 21 Dec 2017 19:02:36 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Reset:
+      - '2017-12-21T19:03:00Z'
+      X-Ratelimit-Remaining:
+      - '59'
+      Etag:
+      - W/"3e24c4a8e0dda6585eb3a2c26bee2c97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=POST; path=/; secure; HttpOnly; SameSite=Lax
+      X-Request-Id:
+      - 11ed6b13-7ede-49b1-a0c3-1ab41c36a703
+      X-Runtime:
+      - '0.843690'
+      Strict-Transport-Security:
+      - max-age=631152000; includeSubdomains
+      Content-Security-Policy:
+      - 'default-src https: ''self''; base-uri ''self''; block-all-mixed-content;
+        child-src ''self'' *.s3.amazonaws.com; connect-src ''self'' *.s3.amazonaws.com;
+        font-src ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com
+        sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        data:; form-action ''self''; frame-ancestors ''self'' *.s3.amazonaws.com;
+        img-src *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com sandbox.app.passaporteweb.com.br
+        cobrato-sandbox-uploads.s3.amazonaws.com cdnjs.cloudflare.com res.cloudinary.com
+        s3.amazonaws.com *.google-analytics.com data:; media-src ''self'' *.cobrato.com
+        d16gop6riufroi.cloudfront.net *.rollbar.com sandbox.app.passaporteweb.com.br
+        cobrato-sandbox-uploads.s3.amazonaws.com cdnjs.cloudflare.com res.cloudinary.com
+        s3.amazonaws.com *.google-analytics.com; object-src ''self'' *.cobrato.com
+        d16gop6riufroi.cloudfront.net *.rollbar.com sandbox.app.passaporteweb.com.br
+        cobrato-sandbox-uploads.s3.amazonaws.com cdnjs.cloudflare.com res.cloudinary.com
+        s3.amazonaws.com *.google-analytics.com; plugin-types application/pdf application/xml
+        text/xml; script-src ''unsafe-inline'' ''unsafe-eval'' ''self'' *.cobrato.com
+        d16gop6riufroi.cloudfront.net *.rollbar.com sandbox.app.passaporteweb.com.br
+        cobrato-sandbox-uploads.s3.amazonaws.com cdnjs.cloudflare.com res.cloudinary.com
+        s3.amazonaws.com *.google-analytics.com; style-src ''unsafe-inline'' ''self''
+        *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com sandbox.app.passaporteweb.com.br
+        cobrato-sandbox-uploads.s3.amazonaws.com cdnjs.cloudflare.com res.cloudinary.com
+        s3.amazonaws.com *.google-analytics.com; upgrade-insecure-requests'
+      Referrer-Policy:
+      - origin-when-cross-origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '1'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"id":229,"config_id":226,"status":"processing","type":"charge","charge_config_id":226,"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/229"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/229"},{"rel":"file","method":"GET","href":"https://sandbox.cobrato.com/api/v1/regress_cnabs/229/file"},{"rel":"config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/226"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/regress_cnabs
+  recorded_at: Thu, 21 Dec 2017 19:02:37 GMT
+recorded_with: VCR 2.9.3
