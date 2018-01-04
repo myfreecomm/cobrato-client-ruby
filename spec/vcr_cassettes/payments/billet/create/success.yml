@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments
+    body:
+      encoding: UTF-8
+      string: '{"payment_config_id":1,"payment_type":"other","payment_method":"billet_other_bank","barcode":"00190.00009
+        03055.582005 00000.002121 4 73840000001401","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
+        Doe","date":"2017-12-26"}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta4
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-01-04T13:13:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 8fb336a8-68e3-4e7c-ad30-2581201c2e52
+      X-Runtime:
+      - '0.065881'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["726cewnjtum1ikqdk1b7","mlzhvu577jhfhomi8b4h","mbk1234ikkymv35vo8hy"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":25,"amount":"14.01","payment_config_id":1,"discount_amount":null,"extra_amount":null,"date":"2017-12-26","due_date":"2017-12-25","payment_method":"billet_other_bank","payment_type":"other","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
+        Doe","registration_status":"without_remittance","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payments
+  recorded_at: Thu, 04 Jan 2018 13:12:15 GMT
+recorded_with: VCR 2.9.3

@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add billet payment support
+
 ## v0.23.0.beta4
 
 - Add changes on RegressCnab API:
