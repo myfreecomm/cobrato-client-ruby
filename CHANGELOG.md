@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta5
+
 - Add Billet payment support
 - Add GPS payment support
 - Add DARF payment support
