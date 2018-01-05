@@ -130,5 +130,30 @@ describe Cobrato::Resources::Payment do
         end
       end
     end
+
+    context "when darf" do
+      let(:params) do
+        {
+          payment_config_id: 1,
+          payment_method: "darf",
+          amount: 1567.85,
+          date: Date.new(2017, 10, 31),
+          due_date: Date.new(2017, 10, 31),
+          calculation_period: Date.new(2017, 9, 30),
+          receita_federal_code: "0571",
+        }
+      end
+
+      it "creates payment" do
+        VCR.use_cassette("payments/darf/create/success") do
+          payment = subject.create(params)
+          expect(payment).to be_a(entity_klass)
+          expect(payment.amount).to eq(1567.85)
+          expect(payment.due_date).to eq(Date.new(2017, 10, 31))
+          expect(payment.payment_method).to eq("darf")
+          expect(payment.payment_type).to eq("tribute")
+        end
+      end
+    end
   end
 end

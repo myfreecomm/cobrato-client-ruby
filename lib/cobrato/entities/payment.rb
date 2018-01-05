@@ -1,6 +1,7 @@
 module Cobrato
   module Entities
     class Payment < Base
+      # Shared with all
       attribute :id,                    Integer
       attribute :payment_config_id,     Integer
       attribute :amount,                Decimal
@@ -9,6 +10,9 @@ module Cobrato
       attribute :payment_method,        String
       attribute :payment_type,          String
       attribute :registration_status,   String
+
+      # Shared with some
+      attribute :due_date,              Date
 
       # Transfer specific
       attribute :account,               String
@@ -24,7 +28,6 @@ module Cobrato
       # Billet specific
       attribute :discount_amount,       Decimal
       attribute :extra_amount,          Decimal
-      attribute :due_date,              Date
       attribute :barcode,               String
 
       # GPS specific
@@ -33,6 +36,13 @@ module Cobrato
       attribute :competency_year,       String
       attribute :other_entities_amount, Decimal
       attribute :monetary_update,       Decimal
+
+      # DARF specific
+      attribute :calculation_period,    Date
+      attribute :receita_federal_code,  String
+      attribute :reference_number,      String
+      attribute :mulct_amount,          Decimal
+      attribute :interest_amount,       Decimal
     end
   end
 end

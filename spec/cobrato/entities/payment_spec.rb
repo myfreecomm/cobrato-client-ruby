@@ -32,7 +32,13 @@ describe Cobrato::Entities::Payment do
       competency_month: "05",
       competency_year: "2018",
       other_entities_amount: 12.31,
-      monetary_update: 8.33
+      monetary_update: 8.33,
+
+      calculation_period: Date.new(2017, 11, 30),
+      receita_federal_code: "0571",
+      reference_number: "12",
+      mulct_amount: 12.6,
+      interest_amount: 22.8
     }
   end
 
@@ -40,16 +46,23 @@ describe Cobrato::Entities::Payment do
 
   it_behaves_like "entity_attributes",
     [
+      # Shared with all
       :id, :payment_config_id, :payment_type, :payment_method, :amount, :date, :registration_status, :our_number, :bank_code,
       :payee_document_type, :payee_document, :payee_name,
+
+      # Shared with some
+      :due_date,
 
       # Transfer specific
       :agency, :account, :account_digit, :doc_goal, :ted_goal,
 
       # Billet specific
-      :discount_amount, :extra_amount, :due_date, :barcode,
+      :discount_amount, :extra_amount, :barcode,
 
       # GPS specific
-      :gps_payment_code, :competency_month, :competency_year, :other_entities_amount, :monetary_update
+      :gps_payment_code, :competency_month, :competency_year, :other_entities_amount, :monetary_update,
+
+      # DARF specific
+      :calculation_period, :receita_federal_code, :reference_number, :mulct_amount, :interest_amount
     ]
 end
