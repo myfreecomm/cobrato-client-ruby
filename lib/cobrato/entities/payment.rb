@@ -26,6 +26,13 @@ module Cobrato
       attribute :extra_amount,          Decimal
       attribute :due_date,              Date
       attribute :barcode,               String
+
+      # GPS specific
+      attribute :gps_payment_code,      String
+      attribute :competency_month,      String
+      attribute :competency_year,       String
+      attribute :other_entities_amount, Decimal
+      attribute :monetary_update,       Decimal
     end
   end
 end

@@ -3,6 +3,7 @@
 ## Next version
 
 - Add billet payment support
+- Add GPS payment support
 
 ## v0.23.0.beta4
 
