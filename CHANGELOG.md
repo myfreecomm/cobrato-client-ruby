@@ -2,6 +2,8 @@
 
 ## Next version
 
+-Add DAS payment Support
+
 ## v0.23.0.beta5
 
 - Add Billet payment support

@@ -38,7 +38,10 @@ describe Cobrato::Entities::Payment do
       receita_federal_code: "0571",
       reference_number: "12",
       mulct_amount: 12.6,
-      interest_amount: 22.8
+      interest_amount: 22.8,
+
+      gross_revenue: 450.2,
+      gross_revenue_percentage: 0.02
     }
   end
 
@@ -51,7 +54,7 @@ describe Cobrato::Entities::Payment do
       :payee_document_type, :payee_document, :payee_name,
 
       # Shared with some
-      :due_date,
+      :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount,
 
       # Transfer specific
       :agency, :account, :account_digit, :doc_goal, :ted_goal,
@@ -63,6 +66,9 @@ describe Cobrato::Entities::Payment do
       :gps_payment_code, :competency_month, :competency_year, :other_entities_amount, :monetary_update,
 
       # DARF specific
-      :calculation_period, :receita_federal_code, :reference_number, :mulct_amount, :interest_amount
+      :reference_number,
+
+      # DAS specific
+      :gross_revenue, :gross_revenue_percentage
     ]
 end
