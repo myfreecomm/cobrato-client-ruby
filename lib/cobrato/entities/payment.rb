@@ -17,6 +17,8 @@ module Cobrato
       attribute :receita_federal_code,     String
       attribute :mulct_amount,             Decimal
       attribute :interest_amount,          Decimal
+      attribute :discount_amount,          Decimal
+      attribute :competency_year,          String
 
       # Transfer specific
       attribute :account,                  String
@@ -30,14 +32,12 @@ module Cobrato
       attribute :ted_goal,                 String
 
       # Billet specific
-      attribute :discount_amount,          Decimal
       attribute :extra_amount,             Decimal
       attribute :barcode,                  String
 
       # GPS specific
       attribute :gps_payment_code,         String
       attribute :competency_month,         String
-      attribute :competency_year,          String
       attribute :other_entities_amount,    Decimal
       attribute :monetary_update,          Decimal
 
@@ -47,6 +47,13 @@ module Cobrato
       # DAS specific
       attribute :gross_revenue,            Decimal
       attribute :gross_revenue_percentage, Decimal
+
+      # IPVA specific
+      attribute :city_code,                Integer
+      attribute :license_plate,            String
+      attribute :payment_option,           String
+      attribute :renavam,                  String
+      attribute :uf,                       String
     end
   end
 end

@@ -41,7 +41,13 @@ describe Cobrato::Entities::Payment do
       interest_amount: 22.8,
 
       gross_revenue: 450.2,
-      gross_revenue_percentage: 0.02
+      gross_revenue_percentage: 0.02,
+
+      city_code: 56,
+      license_plate: "KQT7890",
+      payment_option: "single_with_discount",
+      renavam: "345352",
+      uf: "rj",
     }
   end
 
@@ -50,25 +56,29 @@ describe Cobrato::Entities::Payment do
   it_behaves_like "entity_attributes",
     [
       # Shared with all
-      :id, :payment_config_id, :payment_type, :payment_method, :amount, :date, :registration_status, :our_number, :bank_code,
-      :payee_document_type, :payee_document, :payee_name,
+      :id, :payment_config_id, :payment_type, :payment_method, :amount, :date, :registration_status, :our_number,
+      :bank_code, :payee_document_type, :payee_document, :payee_name,
 
       # Shared with some
-      :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount,
+      :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount, :competency_year,
+      :discount_amount,
 
       # Transfer specific
       :agency, :account, :account_digit, :doc_goal, :ted_goal,
 
       # Billet specific
-      :discount_amount, :extra_amount, :barcode,
+      :extra_amount, :barcode,
 
       # GPS specific
-      :gps_payment_code, :competency_month, :competency_year, :other_entities_amount, :monetary_update,
+      :gps_payment_code, :competency_month, :other_entities_amount, :monetary_update,
 
       # DARF specific
       :reference_number,
 
       # DAS specific
-      :gross_revenue, :gross_revenue_percentage
+      :gross_revenue, :gross_revenue_percentage,
+
+      # IPVA specific
+      :city_code, :license_plate, :payment_option, :renavam, :uf
     ]
 end
