@@ -241,5 +241,34 @@ describe Cobrato::Resources::Payment do
         end
       end
     end
+
+    context "when dpvat" do
+      let(:params) do
+        {
+          payment_config_id: 7,
+          payment_method: "dpvat",
+          amount: 1567.85,
+          date: Date.new(2017, 10, 31),
+          due_date: Date.new(2017, 10, 31),
+          city_code: 56,
+          discount_amount: 0.03,
+          competency_year: "2018",
+          license_plate: "KQT7890",
+          renavam: "345352",
+          uf: "rj",
+        }
+      end
+
+      it "creates payment" do
+        VCR.use_cassette("payments/dpvat/create/success") do
+          payment = subject.create(params)
+          expect(payment).to be_a(entity_klass)
+          expect(payment.amount).to eq(1567.85)
+          expect(payment.due_date).to eq(Date.new(2017, 10, 31))
+          expect(payment.payment_method).to eq("dpvat")
+          expect(payment.payment_type).to eq("tribute")
+        end
+      end
+    end
   end
 end

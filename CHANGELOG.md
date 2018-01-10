@@ -7,6 +7,7 @@
 - Add DAS payment Support
 - Add IPVA payment Support
 - Add ICMS-SP payment Support
+- Add DPVAT payment Support
 
 ## v0.23.0.beta5
 

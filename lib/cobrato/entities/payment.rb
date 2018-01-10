@@ -20,6 +20,10 @@ module Cobrato
       attribute :discount_amount,          Decimal
       attribute :competency_year,          String
       attribute :competency_month,         String
+      attribute :city_code,                Integer
+      attribute :license_plate,            String
+      attribute :renavam,                  String
+      attribute :uf,                       String
 
       # Transfer specific
       attribute :account,                  String
@@ -49,16 +53,15 @@ module Cobrato
       attribute :gross_revenue_percentage, Decimal
 
       # IPVA specific
-      attribute :city_code,                Integer
-      attribute :license_plate,            String
       attribute :payment_option,           String
-      attribute :renavam,                  String
-      attribute :uf,                       String
 
       # ICMS-SP specific
       attribute :state_registration,       String
       attribute :active_debt_registration, String
       attribute :installment_number,       Integer
+
+      # DPVAT specific
+      # --
     end
   end
 end
