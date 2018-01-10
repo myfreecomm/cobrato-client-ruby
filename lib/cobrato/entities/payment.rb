@@ -19,6 +19,7 @@ module Cobrato
       attribute :interest_amount,          Decimal
       attribute :discount_amount,          Decimal
       attribute :competency_year,          String
+      attribute :competency_month,         String
 
       # Transfer specific
       attribute :account,                  String
@@ -37,7 +38,6 @@ module Cobrato
 
       # GPS specific
       attribute :gps_payment_code,         String
-      attribute :competency_month,         String
       attribute :other_entities_amount,    Decimal
       attribute :monetary_update,          Decimal
 
@@ -54,6 +54,11 @@ module Cobrato
       attribute :payment_option,           String
       attribute :renavam,                  String
       attribute :uf,                       String
+
+      # ICMS-SP specific
+      attribute :state_registration,       String
+      attribute :active_debt_registration, String
+      attribute :installment_number,       Integer
     end
   end
 end

@@ -211,5 +211,35 @@ describe Cobrato::Resources::Payment do
         end
       end
     end
+
+    context "when icms_sp" do
+      let(:params) do
+        {
+          payment_config_id: 7,
+          payment_method: "icms_sp",
+          amount: 1567.85,
+          date: Date.new(2017, 10, 31),
+          due_date: Date.new(2017, 10, 31),
+          receita_federal_code: "4531",
+          competency_month: "05",
+          competency_year: "2018",
+          state_registration: "423",
+          active_debt_registration: "3421",
+          installment_number: "3",
+          mulct_amount: 0.4,
+          interest_amount: 0.02,
+        }
+      end
+      it "creates payment" do
+        VCR.use_cassette("payments/icms_sp/create/success") do
+          payment = subject.create(params)
+          expect(payment).to be_a(entity_klass)
+          expect(payment.amount).to eq(1567.85)
+          expect(payment.due_date).to eq(Date.new(2017, 10, 31))
+          expect(payment.payment_method).to eq("icms_sp")
+          expect(payment.payment_type).to eq("tribute")
+        end
+      end
+    end
   end
 end

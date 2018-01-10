@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments
+    body:
+      encoding: UTF-8
+      string: '{"payment_config_id":7,"payment_method":"icms_sp","amount":1567.85,"date":"2017-10-31","due_date":"2017-10-31","receita_federal_code":"4531","competency_month":"05","competency_year":"2018","state_registration":"423","active_debt_registration":"3421","installment_number":"3","mulct_amount":0.4,"interest_amount":0.02}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta6
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-01-10T14:58:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - b89c845c-1157-4177-b8ae-d8e570a752be
+      X-Runtime:
+      - '2.319061'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["vofzkic3d9jdgqvou2s8","qg7xedurj54n4a61yhbc","qgiblzrep7252fydqqyn","cnkxd87cfl8jql3rctch"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":71,"payment_config_id":7,"payment_method":"icms_sp","payment_type":"tribute","amount":"1567.85","date":"2017-10-31","due_date":"2017-10-31","receita_federal_code":"4531","competency_month":"05","competency_year":"2018","state_registration":"423","active_debt_registration":"3421","installment_number":"3","mulct_amount":"0.4","interest_amount":"0.02","_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/payments/71"},{"rel":"update","method":"PUT","href":"http://localhost:3000/api/v1/payments/71"},{"rel":"destroy","method":"DELETE","href":"http://localhost:3000/api/v1/payments/71"},{"rel":"payment_config","method":"GET","href":"http://localhost:3000/api/v1/payment_configs/7"}]}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments
+  recorded_at: Wed, 10 Jan 2018 14:57:49 GMT
+recorded_with: VCR 2.9.3
