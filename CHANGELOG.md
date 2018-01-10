@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta6
+
 - Add DAS payment Support
 - Add IPVA payment Support
 
