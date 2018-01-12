@@ -62,6 +62,11 @@ module Cobrato
 
       # DPVAT specific
       # --
+
+      # FGTS specific
+      attribute :fgts_identifier,          String
+      attribute :connectivity_seal,        String
+      attribute :connectivity_seal_digit,  String
     end
   end
 end

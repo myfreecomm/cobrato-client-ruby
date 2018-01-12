@@ -51,7 +51,11 @@ describe Cobrato::Entities::Payment do
 
       state_registration: "2313",
       active_debt_registration: "423413",
-      installment_number: 5
+      installment_number: 5,
+
+      fgts_identifier: "2342",
+      connectivity_seal: "3424",
+      connectivity_seal_digit: "1",
     }
   end
 
@@ -86,6 +90,12 @@ describe Cobrato::Entities::Payment do
       :city_code, :license_plate, :payment_option, :renavam, :uf,
 
       # ICMS-SP specific
-      :state_registration, :active_debt_registration, :installment_number
+      :state_registration, :active_debt_registration, :installment_number,
+
+      # DPVAT specific
+      # --
+
+      # FGTS specific
+      :fgts_identifier, :connectivity_seal, :connectivity_seal_digit
     ]
 end
