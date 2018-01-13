@@ -2,12 +2,16 @@
 
 ## Next version
 
+## v0.23.0.beta7
+
+- Add ICMS-SP payment Support
+- Add DPVAT payment Support
+- Add FGTS payment Support
+
 ## v0.23.0.beta6
 
 - Add DAS payment Support
 - Add IPVA payment Support
-- Add ICMS-SP payment Support
-- Add DPVAT payment Support
 
 ## v0.23.0.beta5
 
