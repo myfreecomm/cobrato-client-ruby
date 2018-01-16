@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta8
+
 - Add support to cancel payment
 
 ## v0.23.0.beta7
