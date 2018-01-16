@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add support to cancel payment
+
 ## v0.23.0.beta7
 
 - Add ICMS-SP payment Support

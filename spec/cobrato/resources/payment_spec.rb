@@ -298,4 +298,23 @@ describe Cobrato::Resources::Payment do
       end
     end
   end
+
+  describe "#cancel" do
+    it "returns ok" do
+      VCR.use_cassette("payments/cancel/success") do
+        charge = subject.cancel(63)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.id).to eql(63)
+        expect(charge.registration_status).to eql("cancelation_started")
+      end
+    end
+
+    context "when the payment is not cancelable" do
+      it "returns false" do
+        VCR.use_cassette("payments/cancel/fail") do
+          expect{ subject.cancel(65) }.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+  end
 end

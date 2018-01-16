@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments/65/cancel
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta6
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-01-12T20:02:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - e278cb00-2ebe-4585-9429-151ad6d7e79b
+      X-Runtime:
+      - '0.093411'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvcnMiOnsicmVnaXN0cmF0aW9uX3N0YXR1cyI6WyJuw6NvIHBlcm1pdGUgY2FuY2VsYW1lbnRvLiBTb21lbnRlIHBhZ2FtZW50b3MgY29tIHN0YXR1cyBcIlBhZ2FtZW50byByZWdpc3RyYWRvXCIgcG9kZW0gc2VyIGNhbmNlbGFkb3MiXX19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments/65/cancel
+  recorded_at: Fri, 12 Jan 2018 20:01:55 GMT
+recorded_with: VCR 2.9.3
