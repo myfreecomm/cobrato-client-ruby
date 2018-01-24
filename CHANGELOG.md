@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Remove extra_amount from payment
+
 ## v0.23.0.beta8
 
 - Add support to cancel payment

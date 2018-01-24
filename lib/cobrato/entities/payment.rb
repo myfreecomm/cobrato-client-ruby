@@ -37,7 +37,6 @@ module Cobrato
       attribute :ted_goal,                 String
 
       # Billet specific
-      attribute :extra_amount,             Decimal
       attribute :barcode,                  String
 
       # GPS specific

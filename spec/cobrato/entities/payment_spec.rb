@@ -24,7 +24,6 @@ describe Cobrato::Entities::Payment do
       ted_goal: "00016",
 
       discount_amount: 0.5,
-      extra_amount: 0.2,
       due_date: Date.new(2017, 12, 29),
       barcode: "83630000000 4 25530100000 6 00005094828 0 09112017110 2",
 
@@ -75,7 +74,7 @@ describe Cobrato::Entities::Payment do
       :agency, :account, :account_digit, :doc_goal, :ted_goal,
 
       # Billet specific
-      :extra_amount, :barcode,
+      :barcode,
 
       # GPS specific
       :gps_payment_code, :competency_month, :other_entities_amount, :monetary_update,

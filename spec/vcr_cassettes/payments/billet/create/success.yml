@@ -53,7 +53,7 @@ http_interactions:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":25,"amount":"14.01","payment_config_id":1,"discount_amount":null,"extra_amount":null,"date":"2017-12-26","due_date":"2017-12-25","payment_method":"billet_other_bank","payment_type":"other","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
+      string: '{"id":25,"amount":"14.01","payment_config_id":1,"discount_amount":null,"date":"2017-12-26","due_date":"2017-12-25","payment_method":"billet_other_bank","payment_type":"other","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
         Doe","registration_status":"without_remittance","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]}'
     http_version: '1.1'
     adapter_metadata:
