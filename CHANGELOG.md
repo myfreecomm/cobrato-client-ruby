@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta9
+
 - Remove extra_amount from payment
 
 ## v0.23.0.beta8
