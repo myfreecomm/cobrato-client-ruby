@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta10
+
 - Add `taxpayer_document` and `taxpayer_document_type` to payment
 - Remove `connectivity_seal`, `connectivity_seal_digit` and `fgts_identifier` from payment
 
