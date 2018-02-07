@@ -59,13 +59,9 @@ module Cobrato
       attribute :active_debt_registration, String
       attribute :installment_number,       Integer
 
-      # DPVAT specific
-      # --
-
       # FGTS specific
-      attribute :fgts_identifier,          String
-      attribute :connectivity_seal,        String
-      attribute :connectivity_seal_digit,  String
+      attribute :taxpayer_document,        String
+      attribute :taxpayer_document_type,   String
     end
   end
 end

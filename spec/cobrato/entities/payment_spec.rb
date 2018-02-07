@@ -52,9 +52,8 @@ describe Cobrato::Entities::Payment do
       active_debt_registration: "423413",
       installment_number: 5,
 
-      fgts_identifier: "2342",
-      connectivity_seal: "3424",
-      connectivity_seal_digit: "1",
+      taxpayer_document: "14610600000186",
+      taxpayer_document_type: "cnpj",
     }
   end
 
@@ -91,10 +90,7 @@ describe Cobrato::Entities::Payment do
       # ICMS-SP specific
       :state_registration, :active_debt_registration, :installment_number,
 
-      # DPVAT specific
-      # --
-
       # FGTS specific
-      :fgts_identifier, :connectivity_seal, :connectivity_seal_digit
+      :taxpayer_document, :taxpayer_document_type,
     ]
 end

@@ -274,15 +274,13 @@ describe Cobrato::Resources::Payment do
     context "when fgts" do
       let(:params) do
         {
-          payment_config_id: 7,
+          payment_config_id: 1,
           payment_method: "fgts",
           amount: 1567.85,
           date: Date.new(2017, 10, 31),
-          receita_federal_code: "9876",
           barcode: "858000001573 106501791804 107612050819 779937700010",
-          fgts_identifier: "3242",
-          connectivity_seal: "768768",
-          connectivity_seal_digit: "3",
+          taxpayer_document: "14610600000186",
+          taxpayer_document_type: "cnpj"
         }
       end
 
