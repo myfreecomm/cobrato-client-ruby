@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add payments/schema endpoing support
+
 ## v0.23.0.beta10
 
 - Add `taxpayer_document` and `taxpayer_document_type` to payment

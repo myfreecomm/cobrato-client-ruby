@@ -315,4 +315,42 @@ describe Cobrato::Resources::Payment do
       end
     end
   end
+
+  describe "#schema" do
+    context "when success" do
+      context "when billet" do
+        it "returns the json schema as a hash" do
+          VCR.use_cassette("payments/schema/success/billet") do
+            schema = subject.schema(payment_config_id: 1, barcode: "00190.00009 03055.582005 00000.001115 1 73770000000711")
+            expect(schema).to be_a(Hash)
+            expect(schema.dig("schema", "properties", "barcode", "default")).to eql("00190.00009 03055.582005 00000.001115 1 73770000000711")
+            expect(schema.dig("schema", "properties", "payment_config_id", "default")).to eql(1)
+            expect(schema.dig("schema", "properties", "payment_method", "default")).to eql("billet_other_bank")
+            expect(schema.dig("form", "payee_document_type", "tag")).to eql("select")
+          end
+        end
+      end
+
+      context "when ted_other_ownership" do
+        it "returns the json schema as a hash" do
+          VCR.use_cassette("payments/schema/success/ted_other_ownership") do
+            schema = subject.schema(payment_config_id: 1, payment_method: "ted_other_ownership")
+            expect(schema).to be_a(Hash)
+            expect(schema.dig("schema", "properties", "payment_config_id", "default")).to eql(1)
+            expect(schema.dig("schema", "properties", "payment_method", "default")).to eql("ted_other_ownership")
+            expect(schema.dig("schema", "properties", "ted_goal", "enum")).to be_an(Array)
+            expect(schema.dig("form", "payee_document_type", "tag")).to eql("select")
+          end
+        end
+      end
+    end
+
+    context "when failure" do
+      it "raises an error" do
+        VCR.use_cassette("payments/schema/fail") do
+          expect{ subject.schema(payment_config_id: 1) }.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+  end
 end

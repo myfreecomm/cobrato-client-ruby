@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/payments/schema?payment_config_id=1&barcode=00190.00009%2003055.582005%2000000.001115%201%2073770000000711
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta10
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-02-13T21:27:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 9fe2e435-1434-4ae4-95ec-8c04c8ccdcea
+      X-Runtime:
+      - '0.065750'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["4a6bodsloxnhgxrij26w"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJzY2hlbWEiOnsidGl0bGUiOiJQYXltZW50IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsicGF5bWVudF9jb25maWdfaWQiOnsidGl0bGUiOiJDb25maWd1cmHDp8OjbyBkZSBQYWdhbWVudG8iLCJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOjF9LCJwYXltZW50X21ldGhvZCI6eyJ0aXRsZSI6IkZvcm1hIGRlIFBhZ2FtZW50byIsInR5cGUiOiJzdHJpbmciLCJkZWZhdWx0IjoiYmlsbGV0X290aGVyX2JhbmsifSwiYW1vdW50Ijp7InRpdGxlIjoiVmFsb3IiLCJ0eXBlIjoibnVtYmVyIiwiZGVmYXVsdCI6IjcuMTEiLCJmb3JtYXQiOiJjdXJyZW5jeSJ9LCJkYXRlIjp7InRpdGxlIjoiRGF0YSBkbyBQYWdhbWVudG8iLCJ0eXBlIjoic3RyaW5nIiwiZm9ybWF0IjoiZGF0ZSJ9LCJiYXJjb2RlIjp7InRpdGxlIjoiQ8OzZGlnbyBkZSBiYXJyYXMiLCJ0eXBlIjoic3RyaW5nIiwiZGVmYXVsdCI6IjAwMTkwLjAwMDA5IDAzMDU1LjU4MjAwNSAwMDAwMC4wMDExMTUgMSA3Mzc3MDAwMDAwMDcxMSJ9LCJkdWVfZGF0ZSI6eyJ0aXRsZSI6IkRhdGEgZGUgVmVuY2ltZW50byIsInR5cGUiOiJzdHJpbmciLCJmb3JtYXQiOiJkYXRlIiwiZGVmYXVsdCI6IjIwMTctMTItMTgifSwiZGlzY291bnRfYW1vdW50Ijp7InRpdGxlIjoiRGVzY29udG8iLCJ0eXBlIjoibnVtYmVyIiwiZm9ybWF0IjoiY3VycmVuY3kifSwicGF5ZWVfZG9jdW1lbnQiOnsidGl0bGUiOiJEb2N1bWVudG8gZG8gQmVuZWZpY2nDoXJpbyIsInR5cGUiOiJzdHJpbmcifSwicGF5ZWVfZG9jdW1lbnRfdHlwZSI6eyJ0aXRsZSI6IkNQRiBvdSBDTlBKPyIsInR5cGUiOiJzdHJpbmciLCJlbnVtIjpbImNwZiIsImNucGoiXX0sInBheWVlX25hbWUiOnsidGl0bGUiOiJOb21lIGRvIEJlbmVmaWNpw6FyaW8iLCJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJwYXltZW50X2NvbmZpZ19pZCIsInBheW1lbnRfbWV0aG9kIiwiZGF0ZSIsImFtb3VudCIsImJhcmNvZGUiLCJkdWVfZGF0ZSIsInBheWVlX2RvY3VtZW50IiwicGF5ZWVfZG9jdW1lbnRfdHlwZSIsInBheWVlX25hbWUiXX0sImZvcm0iOnsicGF5ZWVfZG9jdW1lbnRfdHlwZSI6eyJ0YWciOiJzZWxlY3QiLCJvcHRpb25zIjp7ImNwZiI6IkNQRiIsImNucGoiOiJDTlBKIn19LCJwYXllZV9kb2N1bWVudCI6eyJkZXBlbmRlbmN5Ijp7ImtleSI6InBheWVlX2RvY3VtZW50X3R5cGUiLCJlbnVtIjp7ImNucGoiOnsibWFzayI6Ijk5Ljk5OS45OTkvOTk5OS05OSJ9LCJjcGYiOnsibWFzayI6Ijk5OS45OTkuOTk5LTk5In19fX19fQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/payments/schema?payment_config_id=1&barcode=00190.00009%2003055.582005%2000000.001115%201%2073770000000711
+  recorded_at: Tue, 13 Feb 2018 21:26:05 GMT
+recorded_with: VCR 2.9.3

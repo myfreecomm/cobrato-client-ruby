@@ -8,6 +8,12 @@ module Cobrato
           respond_with_entity response
         end
       end
+
+      def schema(params)
+        http.get("#{resource_base_path}/schema", params: params) do |response|
+          parsed_body(response)
+        end
+      end
     end
   end
 end
