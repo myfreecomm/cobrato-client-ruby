@@ -2,6 +2,7 @@
 
 ## Next version
 
+- Add `note` do payment
 - Add payments/schema endpoing support
 
 ## v0.23.0.beta10

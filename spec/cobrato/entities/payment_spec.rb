@@ -11,6 +11,7 @@ describe Cobrato::Entities::Payment do
       date: Date.new(2017, 12, 3),
       our_number: "456789",
       registration_status: "without_remittance",
+      note: "Pagamento para Fulano de tal",
 
       bank_code: "341",
       payee_document_type: "cpf",
@@ -63,7 +64,7 @@ describe Cobrato::Entities::Payment do
     [
       # Shared with all
       :id, :payment_config_id, :payment_type, :payment_method, :amount, :date, :registration_status, :our_number,
-      :bank_code, :payee_document_type, :payee_document, :payee_name,
+      :bank_code, :payee_document_type, :payee_document, :payee_name, :note,
 
       # Shared with some
       :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount, :competency_year,

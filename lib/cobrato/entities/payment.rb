@@ -10,6 +10,7 @@ module Cobrato
       attribute :payment_method,           String
       attribute :payment_type,             String
       attribute :registration_status,      String
+      attribute :note,                     String
 
       # Shared with some
       attribute :due_date,                 Date
