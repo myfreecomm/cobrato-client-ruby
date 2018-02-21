@@ -353,4 +353,23 @@ describe Cobrato::Resources::Payment do
       end
     end
   end
+
+  describe "#unauthorize" do
+    it "returns ok" do
+      VCR.use_cassette("payments/unauthorize/success") do
+        charge = subject.unauthorize(49)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.id).to eql(49)
+        expect(charge.registration_status).to eql("unauthorized")
+      end
+    end
+
+    context "when the payment is not unauthorizable" do
+      it "returns false" do
+        VCR.use_cassette("payments/unauthorize/fail") do
+          expect{ subject.unauthorize(77) }.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+  end
 end

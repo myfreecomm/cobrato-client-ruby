@@ -14,6 +14,12 @@ module Cobrato
           parsed_body(response)
         end
       end
+
+      def unauthorize(id)
+        http.post("#{resource_base_path}/#{id}/unauthorize") do |response|
+          respond_with_entity response
+        end
+      end
     end
   end
 end

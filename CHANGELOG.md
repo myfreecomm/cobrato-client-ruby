@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add support to unauthorize payment
+
 ## v0.23.0.beta11
 
 - Add `note` do payment
