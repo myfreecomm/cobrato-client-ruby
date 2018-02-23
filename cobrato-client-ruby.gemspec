@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "typhoeus", "~> 0.8.0"
-  spec.add_dependency "multi_json", "~> 1.11.2"
+  spec.add_dependency "multi_json", "~> 1.11"
   spec.add_dependency "virtus", "~> 1.0.5"
   spec.add_dependency "wisper", "~> 1.6.1"
 

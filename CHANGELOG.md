@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.23.0.beta12
+
 - Add support to unauthorize payment
 - Add support for register error
 
