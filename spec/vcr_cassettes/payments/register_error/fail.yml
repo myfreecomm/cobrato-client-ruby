@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments/53/register_error
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta11
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-02-20T19:53:00Z'
+      X-RateLimit-Remaining:
+      - '58'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 38d3f3bd-89f9-494b-bbcd-39d42615f6a4
+      X-Runtime:
+      - '0.102535'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvcnMiOnsicmVnaXN0cmF0aW9uX3N0YXR1cyI6WyJuw6NvIHBlcm1pdGUgUmVnaXN0cmFyIGNvbSBFcnJvIl19fQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments/53/register_error
+  recorded_at: Tue, 20 Feb 2018 19:52:25 GMT
+recorded_with: VCR 2.9.3

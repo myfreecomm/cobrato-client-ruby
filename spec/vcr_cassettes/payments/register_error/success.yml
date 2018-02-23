@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments/53/register_error
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta11
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-02-20T19:53:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - f7319a1f-3b66-4c7b-b36a-b8205f825d37
+      X-Runtime:
+      - '4.451936'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["sdnu44q9ompblh6ty5t6"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NTMsImFtb3VudCI6IjQ1LjAiLCJwYXltZW50X2NvbmZpZ19pZCI6NywiZGF0ZSI6IjIwMTgtMDItMDkiLCJvdXJfbnVtYmVyIjpudWxsLCJwYXltZW50X21ldGhvZCI6ImNyZWRpdF9zYW1lX293bmVyc2hpcCIsInBheW1lbnRfdHlwZSI6Im90aGVyIiwiYWNjb3VudCI6IjIxNTAwIiwiYWNjb3VudF9kaWdpdCI6IjMiLCJhZ2VuY3kiOiI5MzU4IiwiYmFua19jb2RlIjoiMzQxIiwicGF5ZWVfZG9jdW1lbnQiOiIxMjMuNDU2Ljc4OS0wOSIsInBheWVlX25hbWUiOiJKb8Ojb3ppbmhvIiwiZG9jX2dvYWwiOm51bGwsInRlZF9nb2FsIjpudWxsLCJyZWdpc3RyYXRpb25fc3RhdHVzIjoicmVnaXN0ZXJlZF93aXRoX2Vycm9yIiwibm90ZSI6bnVsbCwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5bWVudHMvNTMifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheW1lbnRzLzUzIn0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5bWVudHMvNTMifSx7InJlbCI6InBheW1lbnRfY29uZmlnIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5bWVudF9jb25maWdzLzcifV19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments/53/register_error
+  recorded_at: Tue, 20 Feb 2018 19:52:14 GMT
+recorded_with: VCR 2.9.3

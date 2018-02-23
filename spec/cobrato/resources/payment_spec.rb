@@ -372,4 +372,23 @@ describe Cobrato::Resources::Payment do
       end
     end
   end
+
+  describe "#register_error" do
+    it "returns ok" do
+      VCR.use_cassette("payments/register_error/success") do
+        charge = subject.register_error(53)
+        expect(charge).to be_a(entity_klass)
+        expect(charge.id).to eql(53)
+        expect(charge.registration_status).to eql("registered_with_error")
+      end
+    end
+
+    context "when the payment is can not register error" do
+      it "returns false" do
+        VCR.use_cassette("payments/register_error/fail") do
+          expect{ subject.register_error(53) }.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+  end
 end

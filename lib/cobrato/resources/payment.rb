@@ -20,6 +20,12 @@ module Cobrato
           respond_with_entity response
         end
       end
+
+      def register_error(id)
+        http.post("#{resource_base_path}/#{id}/register_error") do |response|
+          respond_with_entity response
+        end
+      end
     end
   end
 end
