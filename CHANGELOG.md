@@ -2,6 +2,10 @@
 
 ## Next version
 
+## v0.23.0
+
+- All good for Payment feature
+
 ## v0.23.0.beta12
 
 - Add support to unauthorize payment
