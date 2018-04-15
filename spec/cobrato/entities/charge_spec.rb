@@ -43,7 +43,11 @@ describe Cobrato::Entities::Charge do
       charge_template_id: "1",
       email_sender_name: "John",
       email_subject: "Email subject",
-      email_text: "Text for email body"
+      email_text: "Text for email body",
+      gateway_id: "4569",
+      billet_link: "http://billet_link.com.br/billet_link",
+      barcode: "00190.00009 03055.582005 00000.002121 4 73840000001401",
+      discount_amount: 0.0
     }
   end
 
@@ -54,15 +58,15 @@ describe Cobrato::Entities::Charge do
     :id, :type, :charge_config_id, :charged_amount, :notification_emails, :payer_id, :payer_national_identifier_type,
     :payer_national_identifier, :payer_name, :payer_number, :payer_complement, :payer_street, :payer_neighbourhood,
     :payer_zipcode, :payer_city, :payer_state, :for_homologation, :canceled_at, :paid_amount, :paid_at,
-    :total_amount, :received, :received_amount, :received_at, # deprecated
+    :total_amount, :received, :received_amount, :payment_gateway_message,:auto_send_billet, :email_sender_name,
+    :email_subject, :email_text, :available_billet, :received_at, # deprecated
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
     :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
-    :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :auto_send_billet, :email_sender_name,
-    :email_subject, :email_text, :charge_template_id, :paid_discount, :paid_additions, :paid_rebate, :paid_difference,
-    :available_billet,
+    :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :charge_template_id, :paid_discount,
+    :paid_additions, :paid_rebate, :paid_difference,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
-    :payment_gateway_message
-  ]
+    # gateway billet specifics
+    :discount_amount]
 end

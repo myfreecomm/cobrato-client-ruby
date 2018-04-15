@@ -6,6 +6,7 @@ module Cobrato
       attribute :type,                      String
       attribute :status,                    String
       attribute :payee_id,                  String
+      attribute :available_charge_types,    Array
 
       # billet specifics
       attribute :bank_account_id,           Integer
@@ -28,6 +29,9 @@ module Cobrato
       attribute :gateway_name,              String
       attribute :gateway_id,                String
       attribute :gateway_key,               String
+      attribute :billet_gateway_id,         String
+      attribute :billet_gateway_key,        String
+      attribute :account_holder,            Boolean
       attribute :use_avs,                   Boolean
     end
   end

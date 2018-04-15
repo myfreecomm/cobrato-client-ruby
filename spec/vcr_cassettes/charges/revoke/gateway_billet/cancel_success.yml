@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/charges/15521/revoke
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta9
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-04-09T00:36:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 3f73d000-b7b3-4e91-8aaa-9a2d05eeefbd
+      X-Runtime:
+      - '0.227805'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["n3ci5k2e4qmpl2jrtc0r","x1jdf3x275dcmv8d4au6","gq1d5zk520wjvy2c2ov","d4vyfkiid30i1turps52","d2t1y6wwquueh1xw9cx2","ftyn5fdfs83c4kj68log","1sr6dxczqwyol8tiwml2","t86ncqm3cffy6t4kcrxz","8hs9d48vlbgpgfoi4tk0","ix0m8eyn2gd7bx7dwtcs","j8dhslk1xuw0xc1s6dv9","jcb7meg8vgmpy4ftgvbo","zgvb0lwxgfhtscokal98","qrhpwcdhsdlzqkhxqws2","q80jx2i8cacwz2ua95g2","3x6mabhv4ces1r70pfmt","zpf6b08ybc0ei7cbovwm","xwodkhym7xogjt32x1hg","1rr55ojtc42wba4709ct","xagqq0ansl2jzfnjls8a"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0eXBlIjoiYmlsbGV0IiwiaWQiOjE1NTIxLCJjaGFyZ2VkX2Ftb3VudCI6IjQ1LjAiLCJjaGFyZ2VfY29uZmlnX2lkIjoyODYsImR1ZV9kYXRlIjoiMjAxOC0wNC0yOCIsInBheWVyX2lkIjozNjIzLCJwYXllcl9uYXRpb25hbF9pZGVudGlmaWVyX3R5cGUiOiJjcGYiLCJwYXllcl9uYXRpb25hbF9pZGVudGlmaWVyIjoiMTIzNDU2Nzg5MDkiLCJwYXllcl9uYW1lIjoiSm9uaCBEb2UiLCJwYXllcl9udW1iZXIiOiI3NCIsInBheWVyX2NvbXBsZW1lbnQiOiIiLCJwYXllcl9zdHJlZXQiOiJSdWEgR3VtZXJjaW5kbyBkZSBGcmVpdGFzIiwicGF5ZXJfbmVpZ2hib3VyaG9vZCI6IlBhcnF1ZSBTw6NvIENhZXRhbm8iLCJwYXllcl96aXBjb2RlIjoiMjgwMzAtMjk1IiwicGF5ZXJfY2l0eSI6IkNhbXBvcyBkb3MgR295dGFjYXplcyIsInBheWVyX3N0YXRlIjoiUkoiLCJub3RpZmljYXRpb25fZW1haWxzIjpbImpvYW8ubWVsbG9AbWFpbGluYXRvci5jb20iXSwiZG9jdW1lbnRfa2luZCI6IiIsImJhcmNvZGUiOiIwMzM5OS42OTkyNSA1ODczNy44MDAwMDEgOTgzMTQuMzAxMDE1IDEgNzUxMDAwMDAwMDQ1MDAiLCJtb250aGx5X2ludGVyZXN0IjoiMC4wIiwibXVsY3QiOiIwLjAiLCJkaXNjb3VudCI6IjAuMCIsImVtYWlsX3NlbmRlcl9uYW1lIjoiIiwiZW1haWxfc3ViamVjdCI6IkFxdWkgZXN0w6Egc2V1IGJvbGV0byEiLCJlbWFpbF90ZXh0IjoiPGRpdj57e3BhZ2Fkb3J9fSw8YnI+PGJyPjwvZGl2PjxkaXY+Vm9jw6ogZXN0w6EgcmVjZWJlbmRvIHVtIGJvbGV0byBkZSBjb2JyYW7Dp2EuPGJyPjxicj48L2Rpdj48ZGl2PkRhZG9zIGRhIGNvYnJhbsOnYTo8YnI+PGJyPjwvZGl2Pjx1bD48bGk+VmFsb3IgQ29icmFkbzoge3t2YWxvcn19PC9saT48bGk+VmVuY2ltZW50bzoge3t2ZW5jaW1lbnRvfX08L2xpPjxsaT5Dw7NkaWdvIGRlIGJhcnJhczoge3tjb2RpZ29fZGVfYmFycmFzfX08L2xpPjxsaT5Cb2xldG86IHt7bGlua19wYXJhX2JvbGV0b319PC9saT48L3VsPjxkaXY+QXRlbmNpb3NhbWVudGUsPGJyPkVxdWlwZSB7e2JlbmVmaWNpYXJpb319PGJyPjxicj48L2Rpdj4iLCJlbWFpbF9yZXBseV90byI6IiIsImF1dG9fc2VuZF9iaWxsZXQiOnRydWUsImNhbmNlbGVkX2F0IjpudWxsLCJwYXltZW50X2dhdGV3YXlfc3RhdHVzIjoicGVuZGluZ19jYW5jZWxhdGlvbiIsInBheW1lbnRfZ2F0ZXdheV9tZXNzYWdlIjoiU3VjZXNzby4iLCJ0b3RhbF9hbW91bnQiOiI0NS4wIiwicmVjZWl2ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6bnVsbCwicmVjZWl2ZWQiOmZhbHNlLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIxIn0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy8xNTUyMSJ9LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZV9jb25maWdzLzI4NiJ9LHsicmVsIjoiZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIxL2RlbGl2ZXJfYmlsbGV0In0seyJyZWwiOiJiaWxsZXQiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIxL2JpbGxldCJ9XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/charges/15521/revoke
+  recorded_at: Mon, 09 Apr 2018 00:35:41 GMT
+recorded_with: VCR 2.9.3

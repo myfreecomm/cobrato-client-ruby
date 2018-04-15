@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/charges
+    body:
+      encoding: UTF-8
+      string: '{"charge_config_id":286,"charged_amount":721.0,"due_date":"06/05/2018","type":"billet","payer_attributes":{"national_identifier_type":"cpf","national_identifier":"12345678909","name":"Jonh
+        Doe"}}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta9
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-04-08T23:31:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 1de6fb20-a1c5-407e-a3ca-91e067aa9c99
+      X-Runtime:
+      - '0.119828'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["zgvb0lwxgfhtscokal98","ftyn5fdfs83c4kj68log","1sr6dxczqwyol8tiwml2","t86ncqm3cffy6t4kcrxz","8hs9d48vlbgpgfoi4tk0","ix0m8eyn2gd7bx7dwtcs","j8dhslk1xuw0xc1s6dv9","jcb7meg8vgmpy4ftgvbo"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0eXBlIjoiYmlsbGV0IiwiaWQiOjE1NTIwLCJjaGFyZ2VkX2Ftb3VudCI6IjcyMS4wIiwiY2hhcmdlX2NvbmZpZ19pZCI6Mjg2LCJkdWVfZGF0ZSI6IjIwMTgtMDUtMDYiLCJwYXllcl9pZCI6MzYyMywicGF5ZXJfbmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwicGF5ZXJfbmF0aW9uYWxfaWRlbnRpZmllciI6IjEyMzQ1Njc4OTA5IiwicGF5ZXJfbmFtZSI6IkpvbmggRG9lIiwicGF5ZXJfbnVtYmVyIjoiNzQiLCJwYXllcl9jb21wbGVtZW50IjoiIiwicGF5ZXJfc3RyZWV0IjoiUnVhIEd1bWVyY2luZG8gZGUgRnJlaXRhcyIsInBheWVyX25laWdoYm91cmhvb2QiOiJQYXJxdWUgU8OjbyBDYWV0YW5vIiwicGF5ZXJfemlwY29kZSI6IjI4MDMwLTI5NSIsInBheWVyX2NpdHkiOiJDYW1wb3MgZG9zIEdveXRhY2F6ZXMiLCJwYXllcl9zdGF0ZSI6IlJKIiwibm90aWZpY2F0aW9uX2VtYWlscyI6W10sImRvY3VtZW50X2tpbmQiOm51bGwsImJhcmNvZGUiOm51bGwsIm1vbnRobHlfaW50ZXJlc3QiOiIwLjAiLCJtdWxjdCI6IjAuMCIsImRpc2NvdW50IjoiMC4wIiwiZW1haWxfc2VuZGVyX25hbWUiOm51bGwsImVtYWlsX3N1YmplY3QiOm51bGwsImVtYWlsX3RleHQiOm51bGwsImVtYWlsX3JlcGx5X3RvIjpudWxsLCJhdXRvX3NlbmRfYmlsbGV0IjpmYWxzZSwiY2FuY2VsZWRfYXQiOm51bGwsInBheW1lbnRfZ2F0ZXdheV9zdGF0dXMiOiJwZW5kaW5nIiwicGF5bWVudF9nYXRld2F5X21lc3NhZ2UiOm51bGwsInRvdGFsX2Ftb3VudCI6IjcyMS4wIiwicmVjZWl2ZWRfYW1vdW50IjpudWxsLCJyZWNlaXZlZF9hdCI6bnVsbCwicmVjZWl2ZWQiOmZhbHNlLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIwIn0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY2hhcmdlcy8xNTUyMCJ9LHsicmVsIjoiY2hhcmdlX2NvbmZpZyIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZV9jb25maWdzLzI4NiJ9LHsicmVsIjoiZGVsaXZlciIsIm1ldGhvZCI6IlBPU1QiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIwL2RlbGl2ZXJfYmlsbGV0In0seyJyZWwiOiJiaWxsZXQiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VzLzE1NTIwL2JpbGxldCJ9XX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/charges
+  recorded_at: Sun, 08 Apr 2018 23:30:10 GMT
+recorded_with: VCR 2.9.3

@@ -2,65 +2,57 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sandbox.cobrato.com/api/v1/charge_configs/22
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/280
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.10.0
+      - Cobrato Ruby Client v0.23.0.beta9
       Accept:
       - application/json
       Content-Type:
       - application/json
-      Expect:
-      - ''
   response:
     status:
       code: 200
       message: OK
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
       Content-Type:
       - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-04-10T18:30:00Z'
+      X-RateLimit-Remaining:
+      - '59'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       X-Request-Id:
-      - 9b1abfa2-7662-4e96-b64a-9de8b8fcedfd
+      - c48b8f99-c96b-44cb-a41f-4cb1ef3ce97e
       X-Runtime:
-      - '0.045116'
+      - '0.103750'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
       X-MiniProfiler-Ids:
-      - '["c60ayvvnovnd2i4i5445","tcgk17ny4bz3gxv9m6u6"]'
+      - '["6ghuecluhhua4y5cl9ma","uedb3eu7uayj0ctspb61","f0usbc5i3725uo192wk8"]'
       Set-Cookie:
       - __profilin=p%3Dt; path=/
       Transfer-Encoding:
       - chunked
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJpZCI6MjIsInR5cGUiOiJiaWxsZXQiLCJiYW5rX2FjY291bnRfaWQiOjMs
-        InBvcnRmb2xpb19jb2RlIjoiMTciLCJhZ3JlZW1lbnRfY29kZSI6IjEyMzQ1
-        NiIsImFncmVlbWVudF9jb2RlX2RpZ2l0IjoiMSIsIm5hbWUiOiJDb250YSBD
-        b2JyYW7Dp2EiLCJpbml0aWFsX251bWJlciI6MSwibmV4dF9udW1iZXIiOjUy
-        NiwiZW5kX251bWJlciI6MTAwMCwic3RhdHVzIjoicGVuZGluZyIsInJlbWl0
-        dGFuY2VfYWdyZWVtZW50X2NvZGUiOjQ1NzYzNjEsInRyYW5zbWlzc2lvbl9j
-        b2RlIjoiMTIzNDU2NyIsInByZV9yZWxlYXNlZF9iaWxsZXQiOnRydWUsIl9s
-        aW5rcyI6W3sicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJo
-        dHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZV9jb25maWdzLzIy
-        In0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0
-        cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jaGFyZ2VfY29uZmlncy8yMiJ9
-        LHsicmVsIjoiZGVzdHJveSIsIm1ldGhvZCI6IkRFTEVURSIsImhyZWYiOiJo
-        dHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL2NoYXJnZV9jb25maWdzLzIy
-        In0seyJyZWwiOiJiYW5rX2FjY291bnQiLCJtZXRob2QiOiJHRVQiLCJocmVm
-        IjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9iYW5rX2FjY291bnRz
-        LzMifV19
+      encoding: UTF-8
+      string: '{"id":280,"type":"payment_gateway","name":"Taxweb pjbank","status":"ok","payee_id":26,"gateway_name":"pjbank","gateway_key":"25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3","gateway_id":"1006993069","billet_gateway_key":"bc170f4d722d0abe178c7f83960c4bcfc49678e7","billet_gateway_id":"c7a323bcbca670b9bcff6d841f7b98d5530e83e7","account_holder":false,"use_avs":null,"available_charge_types":["billet","credit_card"],"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/charge_configs/280"},{"rel":"update","method":"PUT","href":"http://localhost:3000/api/v1/charge_configs/280"},{"rel":"destroy","method":"DELETE","href":"http://localhost:3000/api/v1/charge_configs/280"},{"rel":"payee","method":"GET","href":"http://localhost:3000/api/v1/payees/26"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs/22
-  recorded_at: Wed, 21 Sep 2016 14:47:34 GMT
-recorded_with: VCR 3.0.3
+      effective_url: http://localhost:3000/api/v1/charge_configs/280
+  recorded_at: Tue, 10 Apr 2018 18:29:40 GMT
+recorded_with: VCR 2.9.3

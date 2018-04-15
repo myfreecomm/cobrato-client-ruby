@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/charges/15521/billet
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v0.23.0.beta9
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-04-09T00:19:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 4956cf80-3917-4d01-9562-de9879ddb8c6
+      X-Runtime:
+      - '0.920174'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["d2t1y6wwquueh1xw9cx2","ftyn5fdfs83c4kj68log","1sr6dxczqwyol8tiwml2","t86ncqm3cffy6t4kcrxz","8hs9d48vlbgpgfoi4tk0","ix0m8eyn2gd7bx7dwtcs","j8dhslk1xuw0xc1s6dv9","jcb7meg8vgmpy4ftgvbo","zgvb0lwxgfhtscokal98","qrhpwcdhsdlzqkhxqws2","q80jx2i8cacwz2ua95g2","3x6mabhv4ces1r70pfmt","zpf6b08ybc0ei7cbovwm","xwodkhym7xogjt32x1hg","1rr55ojtc42wba4709ct","xagqq0ansl2jzfnjls8a","mm3leyunn3tw1tj7ov5x","vf6pagglanuz9masx3u9","97x29kiqubsfyh91a5j8","mhtvpblwuci6skryagyz"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://sandbox.pjbank.com.br/boletos/61a0e5a3b8f4fbbbdd5300e2fb8ca0b89486cefa"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/charges/15521/billet
+  recorded_at: Mon, 09 Apr 2018 00:18:50 GMT
+recorded_with: VCR 2.9.3

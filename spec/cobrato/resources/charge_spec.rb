@@ -55,6 +55,18 @@ describe Cobrato::Resources::Charge do
         expect(charge.document_number).to eq("1337")
       end
     end
+
+    context "gateway billet charge" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+
+      it "returns a Charge instance updated" do
+        VCR.use_cassette("charges/update/gateway_billet/success") do
+          charge = subject.update(14073, {charged_amount: "1337"})
+          expect(charge).to be_a(entity_klass)
+          expect(charge.charged_amount).to eq(1337.0)
+        end
+      end
+    end
   end
 
   describe "#destroy" do
@@ -196,6 +208,32 @@ describe Cobrato::Resources::Charge do
         end
       end
     end
+
+    context "gateway billet charge" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+      let(:params) do
+        {
+          charge_config_id: 286,
+          charged_amount: 721.0,
+          due_date: "06/05/2018",
+          type: "billet",
+          payer_attributes: {
+            national_identifier_type: "cpf",
+            national_identifier: "12345678909",
+            name: "Jonh Doe",
+          }
+        }
+      end
+
+      it "creates a charge" do
+        VCR.use_cassette("charges/create/gateway_billet/success") do
+          charge = subject.create(params)
+          expect(charge).to be_a(entity_klass)
+          expect(charge.charged_amount).to eq(721.0)
+          expect(charge.type).to eq("billet")
+        end
+      end
+    end
   end
 
   describe "#receive" do
@@ -263,42 +301,89 @@ describe Cobrato::Resources::Charge do
   end
 
   describe "#deliver_billet" do
-    context "without informing emails" do
-      it "returns true" do
-        VCR.use_cassette("charges/deliver_billet/success") do
-          result = subject.deliver_billet(87)
-          expect(result).to be_truthy
+    context "billet charges" do
+      context "without informing emails" do
+        it "returns true" do
+          VCR.use_cassette("charges/deliver_billet/billet/success") do
+            result = subject.deliver_billet(87)
+            expect(result).to be_truthy
+          end
+        end
+      end
+
+      context "informing emails" do
+        it "returns true" do
+          VCR.use_cassette("charges/deliver_billet/billet/informing_emails") do
+            result = subject.deliver_billet(87, ["cobratoone@mailinator.com", "cobratotest@mailinator.com"])
+            expect(result).to be_truthy
+          end
         end
       end
     end
 
-    context "informing emails" do
-      it "returns true" do
-        VCR.use_cassette("charges/deliver_billet/informing_emails") do
-          result = subject.deliver_billet(87, ["cobratoone@mailinator.com", "cobratotest@mailinator.com"])
-          expect(result).to be_truthy
+    context "gateway billet" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+
+      context "without informing emails" do
+        it "returns true" do
+          VCR.use_cassette("charges/deliver_billet/gateway_billet/success") do
+            result = subject.deliver_billet(15521)
+            expect(result).to be_truthy
+          end
+        end
+      end
+
+      context "informing emails" do
+        it "returns true" do
+          VCR.use_cassette("charges/deliver_billet/gateway_billet/informing_emails") do
+            result = subject.deliver_billet(15520, ["cobratoone@mailinator.com", "cobratotest@mailinator.com"])
+            expect(result).to be_truthy
+          end
         end
       end
     end
   end
 
   describe "#billet" do
-    context "when the billet is available" do
-      it "returns a simple struct with the Charge billet url" do
-        VCR.use_cassette("charges/billet/success") do
-          billet = subject.billet(87)
-          expect(billet).to be_a(OpenStruct)
-          expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
+    context "billet" do
+      context "when the billet is available" do
+        it "returns a simple struct with the Charge billet url" do
+          VCR.use_cassette("charges/billet/billet/success") do
+            billet = subject.billet(87)
+            expect(billet).to be_a(OpenStruct)
+            expect(billet.url).to match("https://.*s3.amazonaws.com.*\.pdf")
+          end
+        end
+      end
+
+      context "when the billet is not available" do
+        let(:http) { Cobrato::Http.new("00b245e9fc1d8149b76e916e6d38b4be") }
+
+        it "returns false" do
+          VCR.use_cassette("charges/billet/billet/fail") do
+            expect{ subject.billet(54) }.to raise_error(Cobrato::RequestError)
+          end
         end
       end
     end
 
-    context "when the billet is not available" do
-      let(:http) { Cobrato::Http.new("00b245e9fc1d8149b76e916e6d38b4be") }
+    context "gateway billet" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+      context "when the billet is available" do
+        it "returns a simple struct with the Charge billet url" do
+          VCR.use_cassette("charges/billet/gateway_billet/success") do
+            billet = subject.billet(15521)
+            expect(billet).to be_a(OpenStruct)
+            expect(billet.url).to match("https://sandbox.pjbank.com.br/boletos/61a0e5a3b8f4fbbbdd5300e2fb8ca0b89486cefa")
+          end
+        end
+      end
 
-      it "returns false" do
-        VCR.use_cassette("charges/billet/fail") do
-          expect{ subject.billet(54) }.to raise_error(Cobrato::RequestError)
+      context "when the billet is not available" do
+        it "returns false" do
+          VCR.use_cassette("charges/billet/gateway_billet/fail") do
+            expect{ subject.billet(15522) }.to raise_error(Cobrato::RequestError)
+          end
         end
       end
     end
@@ -311,6 +396,17 @@ describe Cobrato::Resources::Charge do
       VCR.use_cassette("charges/cancel/success") do
         charge = subject.cancel(612)
         expect(charge).to be_a(entity_klass)
+      end
+    end
+
+    context "gateway billet" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+
+      it "returns the charge" do
+        VCR.use_cassette("charges/cancel/gateway_billet/success") do
+          charge = subject.cancel(15519)
+          expect(charge).to be_a(entity_klass)
+        end
       end
     end
   end
@@ -339,6 +435,35 @@ describe Cobrato::Resources::Charge do
       it "returns false" do
         VCR.use_cassette("charges/revoke/fail") do
           expect{ subject.revoke(611) }.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+
+    context "gateway billet" do
+      let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
+
+      context "when the charge is destroyed" do
+        it "returns true" do
+          VCR.use_cassette("charges/revoke/gateway_billet/destroy_success") do
+            expect(subject.revoke(15522)).to eql(true)
+          end
+        end
+      end
+
+      context "when the charge is canceled" do
+        it "returns the charge" do
+          VCR.use_cassette("charges/revoke/gateway_billet/cancel_success") do
+            charge = subject.revoke(15521)
+            expect(charge).to be_a(entity_klass)
+          end
+        end
+      end
+
+      context "when cannot be canceled nor destroyed" do
+        it "returns false" do
+          VCR.use_cassette("charges/revoke/gateway_billet/fail") do
+            expect{ subject.revoke(15521) }.to raise_error(Cobrato::RequestError)
+          end
         end
       end
     end

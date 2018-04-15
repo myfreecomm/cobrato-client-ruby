@@ -44,14 +44,13 @@ describe Cobrato::Resources::ChargeConfig do
   end
 
   describe "#show" do
-    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+    let(:token) { "3fa5e9ecc23e477fd7ba3a41063a9fab" }
 
-    it "returns an ChargeConfig instance showd" do
+    it "returns a ChargeConfig instance showed" do
       VCR.use_cassette("charge_configs/show/success") do
-        charge_config = subject.show(22)
+        charge_config = subject.show(280)
         expect(charge_config).to be_a(entity_klass)
-        expect(charge_config.agreement_code).to eq("123456")
-        expect(charge_config.pre_released_billet).to eq(true)
+        expect(charge_config.available_charge_types).to contain_exactly("billet", "credit_card")
       end
     end
   end
@@ -89,24 +88,51 @@ describe Cobrato::Resources::ChargeConfig do
     end
 
     context "payment gateway config" do
-      let(:pgtw_params) do
-        {
-          name:         "Cielo testing",
-          type:         "payment_gateway",
-          payee_id:     1,
-          gateway_name: "cielo-ws15",
-          gateway_id:   "1006993069",
-          gateway_key:  "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3",
-          use_avs:      true
-        }
+      context "when gateway is 'cielo'" do
+        let(:pgtw_params) do
+          {
+            name:         "Cielo testing",
+            type:         "payment_gateway",
+            payee_id:     1,
+            gateway_name: "cielo-ws15",
+            gateway_id:   "1006993069",
+            gateway_key:  "25fbb99741c739dd84d7b06ec78c9bac718838630f30b112d033ce2e621b34f3",
+            use_avs:      true
+          }
+        end
+
+        it "creates a charge config" do
+          VCR.use_cassette("charge_configs/create/payment_gateway/cielo/success") do
+            charge_config = subject.create(pgtw_params)
+            expect(charge_config).to be_a(entity_klass)
+            expect(charge_config.name).to eq("Cielo testing")
+            expect(charge_config.type).to eq("payment_gateway")
+          end
+        end
       end
 
-      it "creates a charge config" do
-        VCR.use_cassette("charge_configs/create/payment_gateway/success") do
-          charge_config = subject.create(pgtw_params)
-          expect(charge_config).to be_a(entity_klass)
-          expect(charge_config.name).to eq("Cielo testing")
-          expect(charge_config.type).to eq("payment_gateway")
+      context "when gateway is 'PJBank'" do
+        let(:token) { "3fa5e9ecc23e477fd7ba3a41063a9fab" }
+        let(:pgtw_params) do
+          {
+            name:               "PJBank testing",
+            type:               "payment_gateway",
+            payee_id:           1,
+            gateway_name:       "pjbank",
+            gateway_id:         "5c2887642b3acc1604b94baedb972746014ca22b",
+            gateway_key:        "6368019b797add1becdb526681019fa82b9de92c",
+            billet_gateway_id:  "d3418668b85cea70aa28965eafaf927cd34d004c",
+            billet_gateway_key: "46e79d6d5161336afa7b98f01236efacf5d0f24b"
+          }
+        end
+
+        it "creates a charge config" do
+          VCR.use_cassette("charge_configs/create/payment_gateway/pjbank/success") do
+            charge_config = subject.create(pgtw_params)
+            expect(charge_config).to be_a(entity_klass)
+            expect(charge_config.name).to eq("PJBank testing")
+            expect(charge_config.type).to eq("payment_gateway")
+          end
         end
       end
     end
