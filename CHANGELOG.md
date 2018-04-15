@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.24.0
+
 - Add new attributes for payment gateway config from PJBank
 - Add new attributes for billet Charge from payment gateway
 
