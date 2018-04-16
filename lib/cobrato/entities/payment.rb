@@ -11,6 +11,7 @@ module Cobrato
       attribute :payment_type,             String
       attribute :registration_status,      String
       attribute :note,                     String
+      attribute :payee_name,               String
 
       # Shared with some
       attribute :due_date,                 Date
@@ -31,7 +32,6 @@ module Cobrato
       attribute :account_digit,            String
       attribute :agency,                   String
       attribute :bank_code,                String
-      attribute :payee_name,               String
       attribute :payee_document_type,      String
       attribute :payee_document,           String
       attribute :doc_goal,                 String
