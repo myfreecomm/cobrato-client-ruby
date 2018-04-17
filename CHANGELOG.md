@@ -2,6 +2,10 @@
 
 ## Next version
 
+## v0.24.1
+
+- Tiny change for code organization
+
 ## v0.24.0
 
 - Add new attributes for payment gateway config from PJBank
