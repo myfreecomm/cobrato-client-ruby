@@ -3,15 +3,15 @@ shared_examples "cnab" do |attrs|
     {
       'id' => 1,
       'type' => 'charge',
+      'file_name' => 'FILE.TXT',
       'config_id' => 1,
       'charge_config_id' => 1,
-      'status' => 'processed'
     }
   end
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like 'entity_attributes', [:id, :type, :config_id, :charge_config_id, :status]
+  it_behaves_like 'entity_attributes', [:id, :type, :file_name, :config_id, :charge_config_id, :status]
 
   describe '#charge_config_id' do
     it 'print a deprecation warning' do
