@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Fix changing the RegressCnab and RemittaceCnab attribute `file_name` to `filename`
+
 ## v0.25.0
 
 - Add `file_name` attribute to RegressCnab and RemittaceCnab

@@ -3,7 +3,7 @@ module Cobrato
     class Cnab < Base
       attribute :id,               Integer
       attribute :type,             String
-      attribute :file_name,        String
+      attribute :filename,         String
       attribute :status,           String
       attribute :config_id,        Integer
       attribute :charge_config_id, Integer # DEPRECATED
