@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v0.26.0
+
 - Fix changing the RegressCnab and RemittaceCnab attribute `file_name` to `filename`
 
 ## v0.25.0
