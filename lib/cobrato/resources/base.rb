@@ -110,7 +110,7 @@ module Cobrato
 
 
       def underscore_pluralized(str)
-        class_plural || "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
+        irregular_resource_name || "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
 
       def deprecate(params, deprecated)
@@ -119,8 +119,8 @@ module Cobrato
         end
       end
 
-      # Define at child class when plural is irregular
-      def class_plural; end
+      # Define at child class when is irregular
+      def irregular_resource_name; end
     end
   end
 end

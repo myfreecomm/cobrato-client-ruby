@@ -1,12 +1,12 @@
 require "spec_helper"
 
 describe Cobrato::Resources::Payer do
-  let(:http)          { Cobrato::Http.new("3ef651d88bbaaa5e77ee4768bc793fd4") }
+  let(:http)          { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
   let(:entity_klass)  { Cobrato::Entities::Payer }
   let(:params) do
     {
       "national_identifier_type" => "cpf",
-      "national_identifier" => "38031171513",
+      "national_identifier" => "77120350242",
       "name" => "João Silveira",
       "zipcode" => "99000-750",
       "city" => "Carapebus",
@@ -25,11 +25,11 @@ describe Cobrato::Resources::Payer do
   end
 
   describe "#list" do
-    it "returns an array of payers" do
+    it "returns an array of people" do
       VCR.use_cassette("payers/list/success") do
-        payers = subject.list
-        expect(payers).to be_a(Array)
-        payers.each do |e|
+        people = subject.list
+        expect(people).to be_a(Array)
+        people.each do |e|
           expect(e).to be_a(entity_klass)
         end
       end
@@ -39,7 +39,7 @@ describe Cobrato::Resources::Payer do
   describe "#show" do
     it "returns a Payer instance showd" do
       VCR.use_cassette("payers/show/success") do
-        payer = subject.show(8)
+        payer = subject.show(4016)
         expect(payer).to be_a(entity_klass)
         expect(payer.name).to eq("João Silveira")
       end
@@ -49,7 +49,7 @@ describe Cobrato::Resources::Payer do
   describe "#update" do
     it "returns a Payer instance updated" do
       VCR.use_cassette("payers/update/success") do
-        payer = subject.update(8, {name: "John Doe"})
+        payer = subject.update(4016, {name: "John Doe"})
         expect(payer).to be_a(entity_klass)
         expect(payer.name).to eq("John Doe")
       end
@@ -62,7 +62,7 @@ describe Cobrato::Resources::Payer do
         payer = subject.create(params)
         expect(payer).to be_a(entity_klass)
         expect(payer.name).to eq(params['name'])
-        expect(payer.id).to eq(8)
+        expect(payer.id).to eq(4016)
       end
     end
   end

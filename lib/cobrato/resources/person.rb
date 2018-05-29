@@ -5,7 +5,7 @@ module Cobrato
 
       protected
 
-      def class_plural
+      def irregular_resource_name
         "people"
       end
     end
