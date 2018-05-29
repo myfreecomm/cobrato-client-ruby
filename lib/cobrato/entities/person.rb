@@ -1,6 +1,6 @@
 module Cobrato
   module Entities
-    class Payer < Base
+    class Person < Base
       attribute :id,                       Integer
       attribute :national_identifier_type, String
       attribute :national_identifier,      String

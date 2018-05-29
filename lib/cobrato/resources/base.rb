@@ -110,7 +110,7 @@ module Cobrato
 
 
       def underscore_pluralized(str)
-        "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
+        class_plural || "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
 
       def deprecate(params, deprecated)
@@ -118,6 +118,9 @@ module Cobrato
           puts "Warning: The '#{a}' param is deprecated. See Cobrato API docs for more info."
         end
       end
+
+      # Define at child class when plural is irregular
+      def class_plural; end
     end
   end
 end
