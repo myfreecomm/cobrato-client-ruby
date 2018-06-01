@@ -1,8 +1,6 @@
 module Cobrato
   module Entities
     class Payer < Base
-      puts "Warning: Payer entity is deprecated. Please use Person entity instead."
-
       attribute :id,                       Integer
       attribute :national_identifier_type, String
       attribute :national_identifier,      String
@@ -14,6 +12,14 @@ module Cobrato
       attribute :number,                   String
       attribute :complement,               String
       attribute :street,                   String
+
+      %i[id national_identifier_type national_identifier
+      name zipcode city state neighbourhood number complement street].each do |method|
+        define_method method do |*args|
+          puts "Warning: '#{self.class.name}##{method}' is deprecated. See API docs for more info."
+          super(*args)
+        end
+      end
     end
   end
 end

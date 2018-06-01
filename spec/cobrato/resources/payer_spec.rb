@@ -37,32 +37,32 @@ describe Cobrato::Resources::Payer do
   end
 
   describe "#show" do
-    it "returns a Payer instance showd" do
+    it "returns a Person instance showed" do
       VCR.use_cassette("payers/show/success") do
-        payer = subject.show(4016)
-        expect(payer).to be_a(entity_klass)
-        expect(payer.name).to eq("João Silveira")
+        person = subject.show(4016)
+        expect(person).to be_a(entity_klass)
+        expect(person.name).to eq("João Silveira")
       end
     end
   end
 
   describe "#update" do
-    it "returns a Payer instance updated" do
+    it "returns a Person instance updated" do
       VCR.use_cassette("payers/update/success") do
-        payer = subject.update(4016, {name: "John Doe"})
-        expect(payer).to be_a(entity_klass)
-        expect(payer.name).to eq("John Doe")
+        person = subject.update(4016, {name: "John Doe"})
+        expect(person).to be_a(entity_klass)
+        expect(person.name).to eq("John Doe")
       end
     end
   end
 
   describe "#create" do
-    it "creates a payer" do
+    it "creates a person" do
       VCR.use_cassette("payers/create/success") do
-        payer = subject.create(params)
-        expect(payer).to be_a(entity_klass)
-        expect(payer.name).to eq(params['name'])
-        expect(payer.id).to eq(4016)
+        person = subject.create(params)
+        expect(person).to be_a(entity_klass)
+        expect(person.name).to eq(params["name"])
+        expect(person.id).to eq(4016)
       end
     end
   end
