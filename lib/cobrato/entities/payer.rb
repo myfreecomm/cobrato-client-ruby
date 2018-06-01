@@ -13,8 +13,7 @@ module Cobrato
       attribute :complement,               String
       attribute :street,                   String
 
-      %i[id national_identifier_type national_identifier
-      name zipcode city state neighbourhood number complement street].each do |method|
+      %i[national_identifier name].each do |method|
         define_method method do |*args|
           puts "Warning: '#{self.class.name}##{method}' is deprecated. See API docs for more info."
           super(*args)
