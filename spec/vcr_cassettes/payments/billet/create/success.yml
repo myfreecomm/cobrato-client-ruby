@@ -6,11 +6,11 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"payment_config_id":1,"payment_type":"other","payment_method":"billet_other_bank","barcode":"00190.00009
-        03055.582005 00000.002121 4 73840000001401","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
-        Doe","date":"2017-12-26"}'
+        03055.582005 00000.002121 4 73840000001401","date":"2017-12-26","due_date":"2018-12-26","agency":"3456","account":"23400","account_digit":"1","payee_attributes":{"national_identifier_type":"cpf","national_identifier":"123.456.789-09","name":"John
+        Doe"}}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.23.0.beta4
+      - Cobrato Ruby Client v0.26.0
       Accept:
       - application/json
       Content-Type:
@@ -25,18 +25,18 @@ http_interactions:
       X-RateLimit-Limit:
       - '60'
       X-RateLimit-Reset:
-      - '2018-01-04T13:13:00Z'
+      - '2018-06-08T20:55:00Z'
       X-RateLimit-Remaining:
-      - '59'
+      - '58'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       Set-Cookie:
       - request_method=POST; path=/; HttpOnly; SameSite=Lax
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 8fb336a8-68e3-4e7c-ad30-2581201c2e52
+      - 8f24fe91-36da-4360-b5d0-a2fb377fbe70
       X-Runtime:
-      - '0.065881'
+      - '0.200912'
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -48,15 +48,15 @@ http_interactions:
       X-XSS-Protection:
       - 1; mode=block
       X-MiniProfiler-Ids:
-      - '["726cewnjtum1ikqdk1b7","mlzhvu577jhfhomi8b4h","mbk1234ikkymv35vo8hy"]'
+      - '["jhw9bspr7ckq15pl3str","qon218tac5f09ug0i7na","6d0m297alf4fptymyn6k","g43a0fr5vl7838b4dcdm","qf3jzcuq7xxrxx78f3gl","q4ldsk1bdjkblyqearq0","9yluo7ojfxie97bxc2dx","zjulvihw7rmttmj5ani7","ur4t7qztdr0166jmijow","dzxk5pmleqzgyx2lsddj","ratbb947b1rsb12lw02h","86ee371ywcfqxn4uw0gw","yzg7gi5km54a3e8lw6od"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":25,"amount":"14.01","payment_config_id":1,"discount_amount":null,"date":"2017-12-26","due_date":"2017-12-25","payment_method":"billet_other_bank","payment_type":"other","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
-        Doe","registration_status":"without_remittance","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/25"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]}'
+      string: '{"id":106,"amount":"14.01","payment_config_id":1,"discount_amount":null,"date":"2017-12-26","due_date":"2018-12-26","payment_method":"billet_other_bank","payment_type":"other","payee_document_type":"cpf","payee_document":"12345678909","payee_name":"John
+        Doe","registration_status":"without_remittance","note":null,"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/payments/106"},{"rel":"update","method":"PUT","href":"http://localhost:3000/api/v1/payments/106"},{"rel":"destroy","method":"DELETE","href":"http://localhost:3000/api/v1/payments/106"},{"rel":"payment_config","method":"GET","href":"http://localhost:3000/api/v1/payment_configs/1"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/payments
-  recorded_at: Thu, 04 Jan 2018 13:12:15 GMT
+      effective_url: http://localhost:3000/api/v1/payments
+  recorded_at: Fri, 08 Jun 2018 20:54:44 GMT
 recorded_with: VCR 2.9.3

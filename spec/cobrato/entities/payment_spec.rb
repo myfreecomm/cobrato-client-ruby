@@ -17,6 +17,7 @@ describe Cobrato::Entities::Payment do
       payee_document_type: "cpf",
       payee_document: "123.456.789-09",
       payee_name: "John Doe",
+      payee_id: 7,
 
       agency: "9358",
       account: "21500",
@@ -68,7 +69,7 @@ describe Cobrato::Entities::Payment do
 
       # Shared with some
       :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount, :competency_year,
-      :discount_amount,
+      :discount_amount, :payee_id,
 
       # Transfer specific
       :agency, :account, :account_digit, :doc_goal, :ted_goal,

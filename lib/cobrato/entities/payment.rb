@@ -32,6 +32,7 @@ module Cobrato
       attribute :account_digit,            String
       attribute :agency,                   String
       attribute :bank_code,                String
+      attribute :payee_id,                 Integer
       attribute :payee_document_type,      String
       attribute :payee_document,           String
       attribute :doc_goal,                 String
