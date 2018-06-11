@@ -68,7 +68,7 @@ describe Cobrato::Resources::Payment do
           account: '21500',
           account_digit: '3',
           ted_goal: '00016',
-          payee_attributes: {
+          payee: {
             national_identifier_type: 'cpf',
             national_identifier: '123.456.789-09',
             name: 'John Doe',
@@ -97,7 +97,7 @@ describe Cobrato::Resources::Payment do
           agency: "3456",
           account: "23400",
           account_digit: "1",
-          payee_attributes: {
+          payee: {
             national_identifier_type: 'cpf',
             national_identifier: '123.456.789-09',
             name: 'John Doe',
