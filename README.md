@@ -85,6 +85,15 @@ Now you have acess to every API endpoint:
 | DELETE      | [api/v1/bank_accounts/:id](http://docs.cobrato.com/#exclus-o-de-conta-banc-ria)        | client.bank_accounts.destroy         |
 | GET         | [api/v1/bank_accounts/portfolio_codes](http://docs.cobrato.com/#carteiras-dispon-veis) | client.bank_accounts.portfolio_codes |
 
+#### [People](http://docs.cobrato.com/#pessoa)
+
+| HTTP method | Endpoint                                                            | Client method         |
+| ----------- | --------------------------------------------------------------------| --------------------- |
+| POST        | [api/v1/people](http://docs.cobrato.com/#cria-o-de-pessoa)          | client.people.create  |
+| GET         | [api/v1/people](http://docs.cobrato.com/#lista-de-todos-as-pessoas) | client.people.list    |
+| GET         | [api/v1/people/:id](http://docs.cobrato.com/#informa-es-da-pessoa)  | client.people.show    |
+| PUT         | [api/v1/people/:id](http://docs.cobrato.com/#atualiza-o-de-pessoa)  | client.people.update  |
+
 #### [Payers](http://docs.cobrato.com/#pagador)
 
 | HTTP method | Endpoint                                                              | Client method         |
