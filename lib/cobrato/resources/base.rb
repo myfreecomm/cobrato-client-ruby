@@ -110,7 +110,7 @@ module Cobrato
 
 
       def underscore_pluralized(str)
-        "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
+        irregular_resource_name || "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
 
       def deprecate(params, deprecated)
@@ -118,6 +118,9 @@ module Cobrato
           puts "Warning: The '#{a}' param is deprecated. See Cobrato API docs for more info."
         end
       end
+
+      # Define at child class when is irregular
+      def irregular_resource_name; end
     end
   end
 end

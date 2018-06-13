@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/people
     body:
       encoding: UTF-8
-      string: '{"national_identifier_type":"cpf","national_identifier":"77120350242","name":"João
+      string: '{"national_identifier_type":"cpf","national_identifier":"38031171513","name":"João
         Silveira","zipcode":"99000-750","city":"Carapebus","state":"RJ","neighbourhood":"Centro","street":"Rua
         Julio de Castilhos","number":"100","complement":"Ao lado da lotérica."}'
     headers:
@@ -25,7 +25,7 @@ http_interactions:
       X-RateLimit-Limit:
       - '60'
       X-RateLimit-Reset:
-      - '2018-05-29T21:03:00Z'
+      - '2018-05-29T19:49:00Z'
       X-RateLimit-Remaining:
       - '59'
       Cache-Control:
@@ -34,9 +34,9 @@ http_interactions:
       - request_method=POST; path=/; HttpOnly; SameSite=Lax
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - a5efbfb0-ad67-4e3b-b2a6-b5286822f42d
+      - faa700f7-16ef-4bd4-9e40-5efeca020d4f
       X-Runtime:
-      - '1.828243'
+      - '0.251877'
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -48,15 +48,15 @@ http_interactions:
       X-XSS-Protection:
       - 1; mode=block
       X-MiniProfiler-Ids:
-      - '["8xonc7zl4kqjtzma0gbm","72vwubvfrvf5q59y7vci","py3xoigej9vr4omdemo4","t3uzefqqaftc5l6j2trv","ppn8aj3wv3ewbamb54i8","vfkhbu1x85jrzrms1xq4","hnpzbdntitzfhnyw751d","rldauvq5wl8izdtxg4tz","jivo5cju2qn4wlfgz2yj","wgx8jvdr6u7hcgy28n8m","i9g0f7fj1ai59lnv29jz","nyhr1yg1msqf74kxjzor","9r1f37k2vn2w8fctxzxf","2cav75jeyqs1bnac7bcj","45gyhzwg0gecqut1oyxe","syz1glzdiw39sb9l6pif","wy8t8y4k59yj4gdsyeti","hjib450k5pysj3ik3ets","7afrc8jyqy96tfinuocc","t1vwamirqn5ycz9z79lc"]'
+      - '["t1vwamirqn5ycz9z79lc","vfkhbu1x85jrzrms1xq4","hnpzbdntitzfhnyw751d","rldauvq5wl8izdtxg4tz","jivo5cju2qn4wlfgz2yj","wgx8jvdr6u7hcgy28n8m","i9g0f7fj1ai59lnv29jz","nyhr1yg1msqf74kxjzor","9r1f37k2vn2w8fctxzxf","2cav75jeyqs1bnac7bcj","45gyhzwg0gecqut1oyxe","syz1glzdiw39sb9l6pif","wy8t8y4k59yj4gdsyeti","hjib450k5pysj3ik3ets","7afrc8jyqy96tfinuocc"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6NDAxNiwibmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwibmF0aW9uYWxfaWRlbnRpZmllciI6Ijc3MTIwMzUwMjQyIiwibmFtZSI6Ikpvw6NvIFNpbHZlaXJhIiwiemlwY29kZSI6Ijk5MDAwLTc1MCIsImNpdHkiOiJDYXJhcGVidXMiLCJzdGF0ZSI6IlJKIiwibmVpZ2hib3VyaG9vZCI6IkNlbnRybyIsInN0cmVldCI6IlJ1YSBKdWxpbyBkZSBDYXN0aWxob3MiLCJudW1iZXIiOiIxMDAiLCJjb21wbGVtZW50IjoiQW8gbGFkbyBkYSBsb3TDqXJpY2EuIiwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGVvcGxlLzQwMTYifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3Blb3BsZS80MDE2In1dfQ==
+        eyJpZCI6NDAxNSwibmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwibmF0aW9uYWxfaWRlbnRpZmllciI6IjM4MDMxMTcxNTEzIiwibmFtZSI6Ikpvw6NvIFNpbHZlaXJhIiwiemlwY29kZSI6Ijk5MDAwLTc1MCIsImNpdHkiOiJDYXJhcGVidXMiLCJzdGF0ZSI6IlJKIiwibmVpZ2hib3VyaG9vZCI6IkNlbnRybyIsInN0cmVldCI6IlJ1YSBKdWxpbyBkZSBDYXN0aWxob3MiLCJudW1iZXIiOiIxMDAiLCJjb21wbGVtZW50IjoiQW8gbGFkbyBkYSBsb3TDqXJpY2EuIiwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGVvcGxlLzQwMTUifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3Blb3BsZS80MDE1In1dfQ==
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://localhost:3000/api/v1/people
-  recorded_at: Tue, 29 May 2018 21:02:42 GMT
+  recorded_at: Tue, 29 May 2018 19:48:21 GMT
 recorded_with: VCR 2.9.3

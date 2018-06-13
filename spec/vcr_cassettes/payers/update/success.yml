@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: put
-    uri: https://sandbox.cobrato.com/api/v1/payers/8
+    uri: https://sandbox.cobrato.com/api/v1/people/4016
     body:
       encoding: UTF-8
       string: '{"name":"John Doe"}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.4.1
+      - Cobrato Ruby Client v0.26.0
       Accept:
       - application/json
       Content-Type:
@@ -18,46 +18,43 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
       Content-Type:
       - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-05-29T21:05:00Z'
+      X-RateLimit-Remaining:
+      - '59'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       Set-Cookie:
-      - request_method=PUT; path=/
+      - request_method=PUT; path=/; HttpOnly; SameSite=Lax
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - 27d03516-7c72-4110-90e3-4f16aab7cdee
+      - e940eeb8-3d2b-468f-a3c6-a24ae67eeba4
       X-Runtime:
-      - '0.099025'
+      - '0.096432'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
       X-MiniProfiler-Ids:
-      - '["owcmirevrn94gm6ft054","855vzlm7oy7s1t04h5oy","qsbi5hayuu61yv134ekm","rc7pgyqtr2kc3d9k238m","rtfxkhd1d58dk3a8w7mv"]'
+      - '["xhsxnkf8q4abzkmx1gvx","tsnhb08fd6p0rjwufb4f","8xonc7zl4kqjtzma0gbm","72vwubvfrvf5q59y7vci","py3xoigej9vr4omdemo4","t3uzefqqaftc5l6j2trv","ppn8aj3wv3ewbamb54i8","vfkhbu1x85jrzrms1xq4","hnpzbdntitzfhnyw751d","rldauvq5wl8izdtxg4tz","jivo5cju2qn4wlfgz2yj","wgx8jvdr6u7hcgy28n8m","i9g0f7fj1ai59lnv29jz","nyhr1yg1msqf74kxjzor","9r1f37k2vn2w8fctxzxf","2cav75jeyqs1bnac7bcj","45gyhzwg0gecqut1oyxe","syz1glzdiw39sb9l6pif","wy8t8y4k59yj4gdsyeti","hjib450k5pysj3ik3ets"]'
       Transfer-Encoding:
       - chunked
-      Connection:
-      - close
-      Server:
-      - thin
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJpZCI6OCwibmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwibmF0
-        aW9uYWxfaWRlbnRpZmllciI6IjM4MDMxMTcxNTEzIiwibmFtZSI6IkpvaG4g
-        RG9lIiwiemlwY29kZSI6Ijk5MDAwLTc1MCIsImNpdHkiOiJDYXJhcGVidXMi
-        LCJzdGF0ZSI6IlJKIiwibmVpZ2hib3VyaG9vZCI6IkNlbnRybyIsInN0cmVl
-        dCI6IlJ1YSBKdWxpbyBkZSBDYXN0aWxob3MiLCJudW1iZXIiOiIxMDAiLCJj
-        b21wbGVtZW50IjoiQW8gbGFkbyBkYSBsb3TDqXJpY2EuIiwiX2xpbmtzIjpb
-        eyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9s
-        b2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5ZXJzLzgifSx7InJlbCI6InVwZGF0
-        ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMw
-        MDAvYXBpL3YxL3BheWVycy84In1dfQ==
+        eyJpZCI6NDAxNiwibmF0aW9uYWxfaWRlbnRpZmllcl90eXBlIjoiY3BmIiwibmF0aW9uYWxfaWRlbnRpZmllciI6Ijc3MTIwMzUwMjQyIiwibmFtZSI6IkpvaG4gRG9lIiwiemlwY29kZSI6Ijk5MDAwLTc1MCIsImNpdHkiOiJDYXJhcGVidXMiLCJzdGF0ZSI6IlJKIiwibmVpZ2hib3VyaG9vZCI6IkNlbnRybyIsInN0cmVldCI6IlJ1YSBKdWxpbyBkZSBDYXN0aWxob3MiLCJudW1iZXIiOiIxMDAiLCJjb21wbGVtZW50IjoiQW8gbGFkbyBkYSBsb3TDqXJpY2EuIiwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGVvcGxlLzQwMTYifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3Blb3BsZS80MDE2In1dfQ==
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/payers/8
-  recorded_at: Wed, 15 Jun 2016 21:31:15 GMT
+      effective_url: http://localhost:3000/api/v1/people/4016
+  recorded_at: Tue, 29 May 2018 21:04:07 GMT
 recorded_with: VCR 2.9.3

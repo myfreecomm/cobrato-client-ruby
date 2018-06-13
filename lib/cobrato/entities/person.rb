@@ -1,6 +1,6 @@
 module Cobrato
   module Entities
-    class Payer < Base
+    class Person < Base
       attribute :id,                       Integer
       attribute :national_identifier_type, String
       attribute :national_identifier,      String
@@ -12,13 +12,6 @@ module Cobrato
       attribute :number,                   String
       attribute :complement,               String
       attribute :street,                   String
-
-      %i[national_identifier name].each do |method|
-        define_method method do |*args|
-          puts "Warning: '#{self.class.name}##{method}' is deprecated. See API docs for more info."
-          super(*args)
-        end
-      end
     end
   end
 end
