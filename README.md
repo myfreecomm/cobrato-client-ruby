@@ -53,7 +53,7 @@ Now you have acess to every API endpoint:
 * [Payees API](http://docs.cobrato.com/#benefici-rio)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-banc-ria)
 * [People API](http://docs.cobrato.com/#pessoa)
-* [Payers API (DEPRECATED)](http://docs.cobrato.com/#pagador)
+* [Payers API](http://docs.cobrato.com/#pagador) (DEPRECATED)
 * [Charge Configs API](http://docs.cobrato.com/#configura-o-de-cobran-a)
 * [Charges API](http://docs.cobrato.com/#cobran-a)
 * [Regress Cnab](http://docs.cobrato.com/#cnab-de-retorno)
@@ -95,7 +95,7 @@ Now you have acess to every API endpoint:
 | GET         | [api/v1/people/:id](http://docs.cobrato.com/#informa-es-da-pessoa)  | client.people.show    |
 | PUT         | [api/v1/people/:id](http://docs.cobrato.com/#atualiza-o-de-pessoa)  | client.people.update  |
 
-#### [Payers (DEPRECATED)](http://docs.cobrato.com/#pagador)
+#### [Payers](http://docs.cobrato.com/#pagador) (DEPRECATED)
 
 | HTTP method | Endpoint                                                              | Client method         |
 | ----------- | --------------------------------------------------------------------- | --------------------- |
