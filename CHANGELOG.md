@@ -2,6 +2,14 @@
 
 ## Next version
 
+## v0.27.0
+
+- Add `people` endpoints
+  - `payers#create` is now DEPRECATED. Use `people#create` instead
+  - `payers#list` is now DEPRECATED. Use `people#list` instead
+  - `payers#show` is now DEPRECATED. Use `people#show` instead
+  - `payers#update` is now DEPRECATED. Use `people#update` instead
+
 ## v0.26.0
 
 - Fix changing the RegressCnab and RemittaceCnab attribute `file_name` to `filename`
