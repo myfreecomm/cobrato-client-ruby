@@ -84,6 +84,12 @@ describe Cobrato::Client do
     end
   end
 
+  describe "#people" do
+    it "returns an instance of Cobrato::Resources::Person" do
+      expect(subject.people).to be_a(Cobrato::Resources::Person)
+    end
+  end
+
   describe "#charge_templates" do
     it "returns an instance of Cobrato::Resources::ChargeTempalte" do
       expect(subject.charge_templates).to be_a(Cobrato::Resources::ChargeTemplate)
