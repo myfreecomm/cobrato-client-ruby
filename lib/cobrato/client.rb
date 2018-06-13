@@ -63,6 +63,10 @@ module Cobrato
       Resources::Payer.new(http)
     end
 
+    def people
+      Resources::Person.new(http)
+    end
+
     def charge_templates
       Resources::ChargeTemplate.new(http)
     end
