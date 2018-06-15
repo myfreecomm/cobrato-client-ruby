@@ -5,11 +5,11 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/payments
     body:
       encoding: UTF-8
-      string: '{"payment_config_id":1,"payment_type":"provider","payment_method":"ted_other_ownership","amount":69.55,"date":"2017-12-24","our_number":"456789","bank_code":"341","agency":"9358","payee_document_type":"cpf","payee_document":"123.456.789-09","payee_name":"John
-        Doe","account":"21500","account_digit":"3","ted_goal":"00016"}'
+      string: '{"payment_config_id":1,"payment_type":"provider","payment_method":"ted_other_ownership","amount":69.55,"date":"2017-12-24","our_number":"456789","bank_code":"341","agency":"9358","account":"21500","account_digit":"3","ted_goal":"00016","payee":{"national_identifier_type":"cpf","national_identifier":"123.456.789-09","name":"John
+        Doe"}}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.23.0.beta1
+      - Cobrato Ruby Client v0.26.0
       Accept:
       - application/json
       Content-Type:
@@ -19,39 +19,43 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
       Content-Type:
       - application/json; charset=utf-8
       X-RateLimit-Limit:
       - '60'
       X-RateLimit-Reset:
-      - '2017-12-04T16:30:00Z'
+      - '2018-06-11T20:06:00Z'
       X-RateLimit-Remaining:
       - '59'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       Set-Cookie:
-      - request_method=POST; path=/
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
       - __profilin=p%3Dt; path=/
       X-Request-Id:
-      - aad715c3-0ef1-49bd-a8a3-0cf480539bf8
+      - a59ba761-f0c2-437b-bf24-68abba54a543
       X-Runtime:
-      - '0.049925'
+      - '1.289164'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
       X-MiniProfiler-Ids:
-      - '["s6zcobvoep69nb1rutoj"]'
+      - '["blxdttifx6tgyt3v7nqk"]'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":17,"amount":"69.55","date":"2017-12-24","our_number":null,"payment_method":"ted_other_ownership","payment_type":"provider","account":"21500","account_digit":"3","agency":"9358","bank_code":"341","payee_document":"123.456.789-09","payee_name":"John
-        Doe","doc_goal":null,"ted_goal":"00016","registration_status":"without_remittance","_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payments/17"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/payments/17"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/payments/17"},{"rel":"payment_config","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payment_configs/1"}]}'
+      string: '{"id":108,"amount":"69.55","payment_config_id":1,"date":"2017-12-24","our_number":null,"payment_method":"ted_other_ownership","payment_type":"provider","account":"21500","account_digit":"3","agency":"9358","bank_code":"341","payee_document":"12345678909","payee_name":"John
+        Doe","doc_goal":null,"ted_goal":"00016","registration_status":"without_remittance","note":null,"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/payments/108"},{"rel":"update","method":"PUT","href":"http://localhost:3000/api/v1/payments/108"},{"rel":"destroy","method":"DELETE","href":"http://localhost:3000/api/v1/payments/108"},{"rel":"payment_config","method":"GET","href":"http://localhost:3000/api/v1/payment_configs/1"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: https://sandbox.cobrato.com/api/v1/payments
-  recorded_at: Mon, 04 Dec 2017 16:29:48 GMT
+      effective_url: http://localhost:3000/api/v1/payments
+  recorded_at: Mon, 11 Jun 2018 20:05:11 GMT
 recorded_with: VCR 2.9.3

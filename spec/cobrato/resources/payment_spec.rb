@@ -65,12 +65,14 @@ describe Cobrato::Resources::Payment do
           our_number: '456789',
           bank_code: '341',
           agency: '9358',
-          payee_document_type: 'cpf',
-          payee_document: '123.456.789-09',
-          payee_name: 'John Doe',
           account: '21500',
           account_digit: '3',
           ted_goal: '00016',
+          payee: {
+            national_identifier_type: 'cpf',
+            national_identifier: '123.456.789-09',
+            name: 'John Doe',
+          }
         }
       end
 
@@ -90,10 +92,16 @@ describe Cobrato::Resources::Payment do
           payment_type: 'other',
           payment_method: 'billet_other_bank',
           barcode: '00190.00009 03055.582005 00000.002121 4 73840000001401',
-          payee_document_type: 'cpf',
-          payee_document: '123.456.789-09',
-          payee_name: 'John Doe',
-          date: Date.new(2017, 12, 26)
+          date: Date.new(2017, 12, 26),
+          due_date: Date.new(2018, 12, 26),
+          agency: "3456",
+          account: "23400",
+          account_digit: "1",
+          payee: {
+            national_identifier_type: 'cpf',
+            national_identifier: '123.456.789-09',
+            name: 'John Doe',
+          }
         }
       end
 
@@ -102,7 +110,7 @@ describe Cobrato::Resources::Payment do
           payment = subject.create(params)
           expect(payment).to be_a(entity_klass)
           expect(payment.amount).to eq(14.01)
-          expect(payment.due_date).to eq(Date.new(2017, 12, 25))
+          expect(payment.due_date).to eq(Date.new(2018, 12, 26))
           expect(payment.payment_method).to eq('billet_other_bank')
         end
       end
