@@ -2,6 +2,11 @@
 
 ## Next version
 
+## v1.0.0
+
+- Remove `payee_name`, `payee_document` and `payee_document_type` from transfer and billet payments
+- Add `payee` to transfer and billet payments
+
 ## v0.27.0
 
 - Add `people` endpoints
