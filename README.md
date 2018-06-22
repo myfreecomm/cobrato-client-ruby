@@ -8,6 +8,10 @@ This is the official Ruby client for the [Cobrato](https://app.cobrato.com) API.
 [![Code Climate Grade](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby/badges/gpa.svg)](https://codeclimate.com/github/myfreecomm/cobrato-client-ruby)
 [![Inline docs](http://inch-ci.org/github/myfreecomm/cobrato-client-ruby.svg?branch=master)](http://inch-ci.org/github/myfreecomm/cobrato-client-ruby)
 
+## Compatibility
+
+The Cobrato Ruby Client is compatible with Ruby 2.4.3 or higher.
+
 ## Installation
 
 Add this line to your application's Gemfile:
