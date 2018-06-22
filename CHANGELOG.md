@@ -2,6 +2,11 @@
 
 ## Next version
 
+## v1.1.0
+
+- Add `charge_configs#deactivate` endpoint
+- Add compatibilty to README.md
+
 ## v1.0.0
 
 - Remove `payee_name`, `payee_document` and `payee_document_type` from transfer and billet payments
