@@ -106,13 +106,15 @@ Now you have acess to every API endpoint:
 
 #### [Charge Configs](http://docs.cobrato.com/#configura-o-de-cobran-a)
 
-| HTTP method | Endpoint                                                                                     | Client method                  |
-| ----------- | -------------------------------------------------------------------------------------------- | ------------------------------ |
-| POST        | [api/v1/charge_configs](http://docs.cobrato.com/#cria-o-de-configura-o-de-cobran-a)          | client.charge_configs.create  |
-| GET         | [api/v1/charge_configs](http://docs.cobrato.com/#lista-de-todas-as-configura-es-de-cobran-a) | client.charge_configs.list    |
-| GET         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#informa-es-de-configura-o-de-cobran-a)  | client.charge_configs.show    |
-| PUT         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#atualiza-o-de-configura-o-de-cobran-a)  | client.charge_configs.update  |
-| DELETE      | [api/v1/charge_configs/:id](http://docs.cobrato.com/#exclus-o-de-configura-o-de-cobran-a)    | client.charge_configs.destroy |
+| HTTP method | Endpoint                                                                                               | Client method                    |
+| ----------- | ------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| POST        | [api/v1/charge_configs](http://docs.cobrato.com/#cria-o-de-configura-o-de-cobran-a)                    | client.charge_configs.create     |
+| GET         | [api/v1/charge_configs](http://docs.cobrato.com/#lista-de-todas-as-configura-es-de-cobran-a)           | client.charge_configs.list       |
+| GET         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#informa-es-de-configura-o-de-cobran-a)            | client.charge_configs.show       |
+| PUT         | [api/v1/charge_configs/:id](http://docs.cobrato.com/#atualiza-o-de-configura-o-de-cobran-a)            | client.charge_configs.update     |
+| DELETE      | [api/v1/charge_configs/:id](http://docs.cobrato.com/#exclus-o-de-configura-o-de-cobran-a)              | client.charge_configs.destroy    |
+| POST        | [api/v1/charge_configs/:id/deactivate](http://docs.cobrato.com/#desativa-o-de-configura-o-de-cobran-a) | client.charge_configs.deactivate |
+
 
 #### [Charges](http://docs.cobrato.com/#cobran-a)
 

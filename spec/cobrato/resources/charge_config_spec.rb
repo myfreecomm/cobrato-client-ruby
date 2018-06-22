@@ -55,6 +55,17 @@ describe Cobrato::Resources::ChargeConfig do
     end
   end
 
+  describe "#deactivate" do
+    let(:token) { "3fa5e9ecc23e477fd7ba3a41063a9fab" }
+    
+    it "returns true" do
+      VCR.use_cassette("charge_configs/deactivate/success") do
+        result = subject.deactivate(222)
+        expect(result).to be_truthy
+      end
+    end
+  end
+
   describe "#update" do
     it "returns a ChargeConfig instance updated" do
       VCR.use_cassette("charge_configs/update/success") do

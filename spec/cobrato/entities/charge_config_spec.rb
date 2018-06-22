@@ -22,6 +22,7 @@ describe Cobrato::Entities::ChargeConfig do
       pre_released_billet: false,
       writing_off_deadline: 60,
       available_charge_types: ["billet", "credit_card"],
+      deactivated_at: "2018-06-18T17:46:01.253Z",
     }
   end
 
@@ -29,7 +30,7 @@ describe Cobrato::Entities::ChargeConfig do
 
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :name, :status, :payee_id, :available_charge_types,
+    :id, :type, :name, :status, :payee_id, :available_charge_types, :deactivated_at,
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,

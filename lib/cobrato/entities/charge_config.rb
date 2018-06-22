@@ -7,6 +7,7 @@ module Cobrato
       attribute :status,                    String
       attribute :payee_id,                  String
       attribute :available_charge_types,    Array
+      attribute :deactivated_at,            DateTime
 
       # billet specifics
       attribute :bank_account_id,           Integer

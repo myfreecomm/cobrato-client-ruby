@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/charge_configs/222/deactivate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v1.0.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-06-19T17:29:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 82d4642f-b08d-48c2-8340-f60f3ccaec7e
+      X-Runtime:
+      - '0.602723'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["u6kutqo5s867g7dv2r42"]'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/charge_configs/222/deactivate
+  recorded_at: Tue, 19 Jun 2018 17:28:17 GMT
+recorded_with: VCR 2.9.3
