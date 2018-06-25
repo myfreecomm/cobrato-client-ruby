@@ -5,7 +5,7 @@
 ## v1.1.0
 
 - Add `charge_configs#deactivate` endpoint
-- Add compatibilty to README.md
+- Add compatibility to README.md
 
 ## v1.0.0
 
