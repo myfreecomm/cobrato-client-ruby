@@ -47,6 +47,7 @@ describe Cobrato::Entities::Charge do
       gateway_id: "4569",
       billet_link: "http://billet_link.com.br/billet_link",
       barcode: "00190.00009 03055.582005 00000.002121 4 73840000001401",
+      paid_at: "2018-07-13T00:55:38.961Z",
       discount_amount: 0.0
     }
   end

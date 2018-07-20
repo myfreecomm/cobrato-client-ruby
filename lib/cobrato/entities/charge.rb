@@ -21,7 +21,7 @@ module Cobrato
       attribute :for_homologation,               Boolean
       attribute :canceled_at,                    DateTime
       attribute :paid_amount,                    Decimal
-      attribute :paid_at,                        Date
+      attribute :paid_at,                        DateTime
       attribute :due_date,                       Date
 
       attribute :total_amount,                   Decimal  # deprecated
