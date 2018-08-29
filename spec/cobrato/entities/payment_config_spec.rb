@@ -5,11 +5,12 @@ describe Cobrato::Entities::PaymentConfig do
     {
       id: 1,
       bank_account_id: 1,
-      name: "Configuração de pagamento"
+      name: "Configuração de pagamento",
+      timezone: "Brasilia"
     }
   end
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :name, :bank_account_id]
+  it_behaves_like "entity_attributes", [:id, :name, :bank_account_id, :timezone]
 end

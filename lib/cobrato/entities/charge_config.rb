@@ -8,6 +8,7 @@ module Cobrato
       attribute :payee_id,                  String
       attribute :available_charge_types,    Array
       attribute :deactivated_at,            DateTime
+      attribute :timezone,                  String
 
       # billet specifics
       attribute :bank_account_id,           Integer

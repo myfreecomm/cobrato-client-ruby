@@ -23,6 +23,7 @@ describe Cobrato::Entities::ChargeConfig do
       writing_off_deadline: 60,
       available_charge_types: ["billet", "credit_card"],
       deactivated_at: "2018-06-18T17:46:01.253Z",
+      timezone: "Brasilia",
     }
   end
 
@@ -30,7 +31,7 @@ describe Cobrato::Entities::ChargeConfig do
 
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :name, :status, :payee_id, :available_charge_types, :deactivated_at,
+    :id, :type, :name, :status, :payee_id, :available_charge_types, :deactivated_at, :timezone,
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
