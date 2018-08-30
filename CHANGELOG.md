@@ -2,6 +2,11 @@
 
 ## Next version
 
+## v1.1.2
+
+- Add `timezone` to charge config
+- Add `timezone` to payment config
+
 ## v1.1.1
 
 - Change `paid_at` attribute of Charge from Date to DateTime
