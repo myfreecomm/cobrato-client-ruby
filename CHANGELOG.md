@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add support for register error
+
 ## v1.1.2
 
 - Add `timezone` to charge config

@@ -381,6 +381,27 @@ describe Cobrato::Resources::Payment do
     end
   end
 
+  describe "#reschedule" do
+    it "returns ok" do
+      VCR.use_cassette("payments/reschedule/success") do
+        charge = subject.reschedule(100, { date: Date.new(2018, 10, 2) })
+        expect(charge).to be_a(entity_klass)
+        expect(charge.id).to eql(100)
+        expect(charge.registration_status).to eql("reschedule_started")
+      end
+    end
+
+    context "when the payment can not be rescheduled" do
+      it "returns false" do
+        VCR.use_cassette("payments/reschedule/fail") do
+          expect do
+            charge = subject.reschedule(49, { date: Date.new(2018, 10, 2) })
+          end.to raise_error(Cobrato::RequestError)
+        end
+      end
+    end
+  end
+
   describe "#register_error" do
     it "returns ok" do
       VCR.use_cassette("payments/register_error/success") do

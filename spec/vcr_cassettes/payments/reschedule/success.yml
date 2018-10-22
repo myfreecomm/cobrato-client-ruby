@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments/100/reschedule?date=2018-10-02
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v1.1.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-10-02T15:21:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - a9191c37-d1c8-40ac-a5f1-e6f464bc1314
+      X-Runtime:
+      - '3.175451'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      X-MiniProfiler-Ids:
+      - '["by41k0rp08kxr1kh2qhn"]'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MTAwLCJhbW91bnQiOiI1Ni4wIiwicGF5bWVudF9jb25maWdfaWQiOjcsImRhdGUiOiIyMDE4LTEwLTAyIiwib3VyX251bWJlciI6bnVsbCwicGF5bWVudF9tZXRob2QiOiJjcmVkaXRfb3RoZXJfb3duZXJzaGlwIiwicGF5bWVudF90eXBlIjoicHJvdmlkZXIiLCJhY2NvdW50IjoiMjE1MDAiLCJhY2NvdW50X2RpZ2l0IjoiMyIsImFnZW5jeSI6IjkzNTgiLCJiYW5rX2NvZGUiOiIzNDEiLCJwYXllZV9kb2N1bWVudCI6IjEyNDA2OTg5NzYzIiwicGF5ZWVfbmFtZSI6Ikpvw6NvemluaG8gQ2FycmVpcmEgZGUgT2xpdmVpcmEiLCJkb2NfZ29hbCI6bnVsbCwidGVkX2dvYWwiOm51bGwsInJlZ2lzdHJhdGlvbl9zdGF0dXMiOiJyZXNjaGVkdWxlX3N0YXJ0ZWQiLCJub3RlIjoiIiwiX2xpbmtzIjpbeyJyZWwiOiJzZWxmIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5bWVudHMvMTAwIn0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9wYXltZW50cy8xMDAifSx7InJlbCI6ImRlc3Ryb3kiLCJtZXRob2QiOiJERUxFVEUiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9wYXltZW50cy8xMDAifSx7InJlbCI6InBheW1lbnRfY29uZmlnIiwibWV0aG9kIjoiR0VUIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvcGF5bWVudF9jb25maWdzLzcifV19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments/100/reschedule?date=2018-10-02
+  recorded_at: Tue, 02 Oct 2018 15:20:14 GMT
+recorded_with: VCR 2.9.3

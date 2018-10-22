@@ -205,13 +205,18 @@ Now you have acess to every API endpoint:
 
 #### [Payment](http://docs.cobrato.com/#pagamento) **(BETA)**
 
-| HTTP method | Endpoint                                                                 | Client method           |
-| ----------- | ------------------------------------------------------------------------ | ----------------------- |
-| POST        | [api/v1/payments](http://docs.cobrato.com/#cria-o-de-pagamento)          | client.payments.create  |
-| GET         | [api/v1/payments](http://docs.cobrato.com/#lista-de-todos-os-pagamentos) | client.payments.list    |
-| GET         | [api/v1/payments/:id](http://docs.cobrato.com/#informa-es-do-pagamento)  | client.payments.show    |
-| PUT         | [api/v1/payments/:id](http://docs.cobrato.com/#atualiza-o-de-pagamento)  | client.payments.update  |
-| DELETE      | [api/v1/payments/:id](http://docs.cobrato.com/#exclus-o-de-pagamento)    | client.payments.destroy |
+| HTTP method | Endpoint                                                                                            | Client method                  |
+| ----------- | --------------------------------------------------------------------------------------------------- | ------------------------------ |
+| POST        | [api/v1/payments](http://docs.cobrato.com/#cria-o-de-pagamento)                                     | client.payments.create         |
+| GET         | [api/v1/payments](http://docs.cobrato.com/#lista-de-todos-os-pagamentos)                            | client.payments.list           |
+| GET         | [api/v1/payments/:id](http://docs.cobrato.com/#informa-es-do-pagamento)                             | client.payments.show           |
+| PUT         | [api/v1/payments/:id](http://docs.cobrato.com/#atualiza-o-de-pagamento)                             | client.payments.update         |
+| DELETE      | [api/v1/payments/:id](http://docs.cobrato.com/#exclus-o-de-pagamento)                               | client.payments.destroy        |
+| POST        | [api/v1/payments/:id/cancel](http://docs.cobrato.com/#cancelamento-de-pagamento)                    | client.payments.cancel         |
+| GET         | [api/v1/payments/schema](http://docs.cobrato.com/#schema-de-pagamento)                              | client.payments.schema         |
+| POST        | [api/v1/payments/:id/unauthorize](http://docs.cobrato.com/#marcar-pagamento-como-n-o-autorizado)    | client.payments.unauthorize    |
+| POST        | [api/v1/payments/:id/register_error](http://docs.cobrato.com/#marcar-pagamento-como-n-o-autorizado) | client.payments.register_error |
+| POST        | [api/v1/payments/:id/reschedule](http://docs.cobrato.com/#reagendar-pagamento)                      | client.payments.reschedule     |
 
 
 ## Payload signature check

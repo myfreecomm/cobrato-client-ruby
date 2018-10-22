@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/payments/49/reschedule?date=2018-10-02
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v1.1.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2018-10-02T15:21:00Z'
+      X-RateLimit-Remaining:
+      - '58'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - request_method=POST; path=/; HttpOnly; SameSite=Lax
+      - __profilin=p%3Dt; path=/
+      X-Request-Id:
+      - 30ddb978-6e41-4f98-ba22-a7947912bf15
+      X-Runtime:
+      - '0.092260'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - sameorigin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-XSS-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvcnMiOnsicmVnaXN0cmF0aW9uX3N0YXR1cyI6WyJuw6NvIHBlcm1pdGUgcmVhZ2VuZGFyIHBhZ2FtZW50by4gU29tZW50ZSBwYWdhbWVudG9zIGNvbSBzdGF0dXMgXCJQYWdhbWVudG8gcmVnaXN0cmFkb1wiLCBwb2RlbSBzZXIgcmVhZ2VuZGFkb3MiXX19
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:3000/api/v1/payments/49/reschedule?date=2018-10-02
+  recorded_at: Tue, 02 Oct 2018 15:20:40 GMT
+recorded_with: VCR 2.9.3
