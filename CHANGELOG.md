@@ -4,7 +4,7 @@
 
 ## v1.1.3
 
-- Add support for register error
+- Add `payments#reschedule` endpoint
 
 ## v1.1.2
 
