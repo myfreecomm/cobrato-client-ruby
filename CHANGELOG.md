@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v1.1.3
+
 - Add support for register error
 
 ## v1.1.2
