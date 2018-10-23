@@ -22,7 +22,6 @@ describe Cobrato::Entities::Charge do
       received_at: "2015-01-30",
       processing_date: "2015-01-30",
       for_homologation: true,
-      registrable: true,
       interest_amount_per_month: 1.02,
       mulct_type: 'percentage',
       mulct_value: 10.12,
@@ -63,9 +62,8 @@ describe Cobrato::Entities::Charge do
     :email_subject, :email_text, :available_billet, :received_at, # deprecated
     # billet specifics
     :due_date, :processing_date, :document_kind, :document_date, :document_number, :custom_our_number, :our_number,
-    :our_number_digit, :instructions, :demonstrative, :registrable, :payment_tax,
-    :registration_status, :interest_amount_per_month, :mulct_type, :mulct_value, :charge_template_id, :paid_discount,
-    :paid_additions, :paid_rebate, :paid_difference,
+    :our_number_digit, :instructions, :demonstrative, :payment_tax, :registration_status, :interest_amount_per_month,
+    :mulct_type, :mulct_value, :charge_template_id, :paid_discount, :paid_additions, :paid_rebate, :paid_difference,
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
     # gateway billet specifics

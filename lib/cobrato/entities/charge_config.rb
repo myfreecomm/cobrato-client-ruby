@@ -18,7 +18,6 @@ module Cobrato
       attribute :initial_number,            Integer
       attribute :next_number,               Integer
       attribute :end_number,                Integer
-      attribute :registered_charges,        Boolean
       attribute :remittance_agreement_code, Integer
       attribute :initial_remittance_number, Integer
       attribute :current_remittance_number, Integer

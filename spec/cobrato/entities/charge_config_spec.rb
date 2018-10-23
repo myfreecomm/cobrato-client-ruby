@@ -14,7 +14,6 @@ describe Cobrato::Entities::ChargeConfig do
       next_number: 1,
       end_number: 1000,
       status: "pending",
-      registered_charges: true,
       remittance_agreement_code: 4576361,
       initial_remittance_number: 1,
       remittance_cnab_pattern: 240,
@@ -34,7 +33,7 @@ describe Cobrato::Entities::ChargeConfig do
     :id, :type, :name, :status, :payee_id, :available_charge_types, :deactivated_at, :timezone,
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
-    :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
+    :end_number, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
     :remittance_cnab_pattern, :transmission_code, :pre_released_billet, :writing_off_deadline,
     # payment gateway specifics
     :gateway_id, :gateway_key, :gateway_name, :billet_gateway_key, :billet_gateway_id, :account_holder, :use_avs]

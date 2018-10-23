@@ -2,6 +2,9 @@
 
 ## Next version
 
+- Remove registered_charges field from ChargeConfig entity
+- Remove registrable field from Charge entity
+
 ## v1.1.3
 
 - Add `payments#reschedule` endpoint
