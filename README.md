@@ -219,6 +219,13 @@ Now you have acess to every API endpoint:
 | POST        | [api/v1/payments/:id/reschedule](http://docs.cobrato.com/#reagendar-pagamento)                      | client.payments.reschedule     |
 
 
+#### [PaymentMethod](http://docs.cobrato.com/#m-todo-de-pagamento)
+
+| HTTP method | Endpoint                                                                                            | Client method                  |
+| ----------- | --------------------------------------------------------------------------------------------------- | ------------------------------ |
+| GET         | [api/v1/payment_methods](http://docs.cobrato.com/#lista-de-todos-os-m-todos-de-pagamento)           | client.payment_methods.list    |
+
+
 ## Payload signature check
 
 You can check the [Cobrato signature](http://docs.cobrato.com/#assinatura-do-payload) on the payload request:
