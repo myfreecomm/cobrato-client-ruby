@@ -108,7 +108,6 @@ module Cobrato
         @entity_klass ||= Cobrato::Entities.const_get(class_name.to_sym)
       end
 
-
       def underscore_pluralized(str)
         irregular_resource_name || "#{str.gsub(/(.)([A-Z])/, '\1_\2').downcase}s"
       end
