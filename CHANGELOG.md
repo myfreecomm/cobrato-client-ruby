@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v1.1.4
+
 - Add `payment_methods#list` endpoint
 
 ## v1.1.3
