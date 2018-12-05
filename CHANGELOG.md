@@ -2,7 +2,9 @@
 
 ## Next version
 
-- Add lacking `payment_methods` method from Client class
+## v1.1.5
+
+- Add `payment_methods` method from Client class
 
 ## v1.1.4
 
