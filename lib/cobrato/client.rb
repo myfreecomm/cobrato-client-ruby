@@ -70,5 +70,9 @@ module Cobrato
     def charge_templates
       Resources::ChargeTemplate.new(http)
     end
+
+    def payment_methods
+      Resources::PaymentMethod.new(http)
+    end
   end
 end

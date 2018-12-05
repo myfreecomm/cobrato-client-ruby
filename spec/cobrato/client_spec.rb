@@ -95,4 +95,10 @@ describe Cobrato::Client do
       expect(subject.charge_templates).to be_a(Cobrato::Resources::ChargeTemplate)
     end
   end
+
+  describe "#payment_methods" do
+    it "returns an instance of Cobrato::Resources::PaymentMethod" do
+      expect(subject.payment_methods).to be_a(Cobrato::Resources::PaymentMethod)
+    end
+  end
 end

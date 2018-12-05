@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Add lacking `payment_methods` method from Client class
+
 ## v1.1.4
 
 - Add `payment_methods#list` endpoint
