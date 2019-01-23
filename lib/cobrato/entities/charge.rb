@@ -58,6 +58,7 @@ module Cobrato
       attribute :instructions,                   String
       attribute :demonstrative,                  String
       attribute :registrable,                    Boolean
+      attribute :automatic_registration,         Boolean
       attribute :registration_status,            String
       attribute :mulct_type,                     String
       attribute :payment_tax,                    Decimal
