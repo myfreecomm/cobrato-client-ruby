@@ -37,5 +37,6 @@ describe Cobrato::Entities::ChargeConfig do
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,
     :remittance_cnab_pattern, :transmission_code, :pre_released_billet, :writing_off_deadline,
     # payment gateway specifics
-    :gateway_id, :gateway_key, :gateway_name, :billet_gateway_key, :billet_gateway_id, :account_holder, :use_avs]
+    :gateway_id, :gateway_key, :gateway_name, :billet_gateway_key, :billet_gateway_id, :account_holder, :use_avs,
+    :logo, :logo_url]
 end

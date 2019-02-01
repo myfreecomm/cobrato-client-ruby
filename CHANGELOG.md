@@ -1,6 +1,7 @@
 # Changelog
 
 ## Next version
+- Add `logo` and `logo_url` attributes to PaymentGatewayConfig
 
 ## v1.1.5
 
