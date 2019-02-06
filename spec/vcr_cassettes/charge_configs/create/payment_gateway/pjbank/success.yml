@@ -5,10 +5,10 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/charge_configs
     body:
       encoding: UTF-8
-      string: '{"name":"PJBank testing","type":"payment_gateway","payee_id":1,"gateway_name":"pjbank","gateway_id":"5c2887642b3acc1604b94baedb972746014ca22b","gateway_key":"6368019b797add1becdb526681019fa82b9de92c","billet_gateway_id":"d3418668b85cea70aa28965eafaf927cd34d004c","billet_gateway_key":"46e79d6d5161336afa7b98f01236efacf5d0f24b"}'
+      string: '{"name":"PJBank testing","type":"payment_gateway","payee_id":1,"gateway_name":"pjbank","gateway_id":"5c2887642b3acc1604b94baedb972746014ca22b","gateway_key":"6368019b797add1becdb526681019fa82b9de92c","billet_gateway_id":"d3418668b85cea70aa28965eafaf927cd34d004c","billet_gateway_key":"46e79d6d5161336afa7b98f01236efacf5d0f24b","logo":{"content":"iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAMGmlDQ1BJQ0MgUHJvZmlsZQAASImVVwdUU0kXnldSCEkogQhICb0J0qv0GkBAOtgISSChxBAIKmJDFxVcu4hiRVdFbGsBZK2IYmER7H1RREVZFwtYUPknCaDr/uX895x573t37r3z3Tsz78wAoOLEEYuzUVUAckT5kpgQf1ZScgqL1AkQgAIyMAVjOdw8sV90dASAMvz+u/TfhNZQrtnIYv2z/7+KGo+fxwUAiYY4jZfHzYH4CAC4DlcsyQeA0Ab1xtPzxTL8DmINCSQIAJEswxkKrCvDaQpsJ7eJiwmAOBAAMpXDkWQAQJfFZxVwM2AcuhhiOxFPKIJ4K8TeXAGHB3EHxGNycqZBrEKF2CLtuzgZf4uZNhKTw8kYwYpc5EIOFOaJszkz/89y/G/JyZYOj2EEG1UgCY2R5QzrtjtrWrgMQ+7IcVFaZBTE6hBfEPLk9jJ8VyANjR+y7+HmBcCaASaAk83jBIZDDGuJMqVZ8X5D2IEjkftCezRSmM+OG8JpkmkxQ/HRAlF2ZMRQnMUCPnsYb+bnBcUO26QLg9kQw5WGHikUxCUqeKJNBcKESIjpELflZcWGD/k+LBQERA7bSKQxMs4mEL9LlwTHKGwwrZy84bwwWy5HPpYWxL75grhQhS+WxM9LihjmwOMHBik4YDy+KH6IGwZXl3/MkG+JODt6yB7bzM8OiVHUGTuYVxA77Hs1Hy4wRR2wx5mcsGgFf6xfnB8dp+CG4yACBIBAwAJS2NLANJAJhK09dT3wS9ETDDhAAjIAH9gMaYY9EuU9IviMBYXgT4j4IG/Ez1/eywcFUP9lRKt42oB0eW+B3CMLPIU4B9fBvXFPPAI+fWFzwN1w92E/lsrwqMQgYiAxlBhMtBzhwYWss2GTAOG/0YXDNx9mJ+MiGs7hWzzCU0I74THhBqGDcAckgCfyKENWU4XFkh+Ys8B40AGjBQ9llwZjdg/b4GaQtTPuj3tB/pA7zsR1gA3uBDPxw31gbs5Q+z1D6Qi3b7X8cTwZ6+/zGdLTrejOQyzSRmYmYMTqxygB39WIB9/hP1pii7HDWDN2BruIHcfqAAs7hdVjLdgJGR5ZCU/kK2F4tBg5tywYRzhsY1dj1233+R+jc4YYSOTzDfL5M/JlGyJgmnimRJghyGf5wT8yn8UWcW3HsBzs7N0BkP3fFb+Pt0z5fxthXvqmyz0NgHspVGZ803GMATj2FABG/zed8Ru4vVYAcKKNK5UUKHS47EEAFKACd4Y20AfGwALm5ABcgCfwBUEgDESBOJAMpsCqC0AOZD0dFIH5oASUgRVgLdgAtoDtYDfYBw6BOnAcnAHnwWXQBm6Ae3BtdIGXoBf0gwEEQUgIDWEg2ogBYopYIw6IG+KNBCERSAySjKQiGYgIkSJFyAKkDFmFbEC2IdXIr8gx5AxyEWlH7iCPkG7kDfIJxVAqqoHqoWboWNQN9UPD0Th0MpqB5qKF6EJ0GVqBVqF70Vr0DHoZvYF2oC/RPgxgyhgTM8RsMDcsAIvCUrB0TILNwUqxcqwK2481wLm+hnVgPdhHnIgzcBZuA9dnKB6Pc/FcfA6+FN+A78Zr8Sb8Gv4I78W/EmgEXYI1wYPAJiQRMgjTCSWEcsJOwlHCObh3ugj9RCKRSTQnusK9mUzMJM4iLiVuIh4gnia2EzuJfSQSSZtkTfIiRZE4pHxSCWk9aS/pFOkqqYv0gaxMNiA7kIPJKWQRuZhcTt5DPkm+Sn5GHlBSVTJV8lCKUuIpzVRarrRDqUHpilKX0gBFjWJO8aLEUTIp8ykVlP2Uc5T7lLfKyspGyu7KE5SFyvOUK5QPKl9QfqT8kapOtaIGUCdRpdRl1F3U09Q71Lc0Gs2M5ktLoeXTltGqaWdpD2kf6Ay6LZ1N59Hn0ivptfSr9FcqSiqmKn4qU1QKVcpVDqtcUelRVVI1Uw1Q5ajOUa1UPaZ6S7VPjaFmrxallqO2VG2P2kW15+okdTP1IHWe+kL17epn1TsZGMOYEcDgMhYwdjDOMbo0iBrmGmyNTI0yjX0arRq9muqaTpoJmjM0KzVPaHYwMaYZk83MZi5nHmLeZH4apTfKbxR/1JJR+0ddHfVea7SWrxZfq1TrgNYNrU/aLO0g7Sztldp12g90cB0rnQk603U265zT6RmtMdpzNHd06ehDo+/qorpWujG6s3S367bo9unp64XoifXW653V69Fn6vvqZ+qv0T+p323AMPA2EBqsMThl8IKlyfJjZbMqWE2sXkNdw1BDqeE2w1bDASNzo3ijYqMDRg+MKcZuxunGa4wbjXtNDEzGmxSZ1JjcNVUydTMVmK4zbTZ9b2Zulmi2yKzO7Lm5ljnbvNC8xvy+Bc3CxyLXosriuiXR0s0yy3KTZZsVauVsJbCqtLpijVq7WAutN1m3jyGMcR8jGlM15pYN1cbPpsCmxuaRLdM2wrbYts721ViTsSljV45tHvvVztku226H3T17dfsw+2L7Bvs3DlYOXIdKh+uONMdgx7mO9Y6vnayd+E6bnW47M5zHOy9ybnT+4uLqInHZ79LtauKa6rrR9Zabhlu021K3C+4Ed3/3ue7H3T96uHjkexzy+MvTxjPLc4/n83Hm4/jjdozr9DLy4nht8+rwZnmnem/17vAx9OH4VPk89jX25fnu9H3mZ+mX6bfX75W/nb/E/6j/+wCPgNkBpwOxwJDA0sDWIPWg+KANQQ+DjYIzgmuCe0OcQ2aFnA4lhIaHrgy9xdZjc9nV7N4w17DZYU3h1PDY8A3hjyOsIiQRDePR8WHjV4+/H2kaKYqsiwJR7KjVUQ+izaNzo3+bQJwQPaFywtMY+5iimOZYRuzU2D2x/XH+ccvj7sVbxEvjGxNUEiYlVCe8TwxMXJXYkTQ2aXbS5WSdZGFyfQopJSFlZ0rfxKCJayd2TXKeVDLp5mTzyTMmX5yiMyV7yompKlM5Uw+nElITU/ekfuZEcao4fWnstI1pvdwA7jruS54vbw2vm+/FX8V/lu6Vvir9eYZXxuqMboGPoFzQIwwQbhC+zgzN3JL5Pisqa1fWYHZi9oEcck5qzjGRuihL1DRNf9qMae1ia3GJuCPXI3dtbq8kXLIzD8mbnFefrwGPOi1SC+lP0kcF3gWVBR+mJ0w/PENthmhGy0yrmUtmPisMLvxlFj6LO6uxyLBoftGj2X6zt81B5qTNaZxrPHfh3K55IfN2z6fMz5r/e7Fd8aridwsSFzQs1Fs4b2HnTyE/1ZTQSyQltxZ5LtqyGF8sXNy6xHHJ+iVfS3mll8rsysrLPi/lLr30s/3PFT8PLktf1rrcZfnmFcQVohU3V/qs3L1KbVXhqs7V41fXrmGtKV3zbu3UtRfLncq3rKOsk67rqIioqF9vsn7F+s8bBBtuVPpXHtiou3HJxvebeJuubvbdvH+L3payLZ+2Crfe3hayrbbKrKp8O3F7wfanOxJ2NP/i9kv1Tp2dZTu/7BLt6tgds7up2rW6eo/unuU1aI20pnvvpL1t+wL31e+32b/tAPNA2UFwUHrwxa+pv948FH6o8bDb4f1HTI9sPMo4WlqL1M6s7a0T1HXUJ9e3Hws71tjg2XD0N9vfdh03PF55QvPE8pOUkwtPDp4qPNV3Wny650zGmc7GqY33ziadvd40oan1XPi5C+eDz59t9ms+dcHrwvGLHhePXXK7VHfZ5XJti3PL0d+dfz/a6tJae8X1Sn2be1tD+7j2k1d9rp65Fnjt/HX29cs3Im+034y/efvWpFsdt3m3n9/JvvP6bsHdgXvz7hPulz5QfVD+UPdh1R+WfxzocOk48SjwUcvj2Mf3OrmdL5/kPfnctfAp7Wn5M4Nn1c8dnh/vDu5uezHxRddL8cuBnpI/1f7c+Mri1ZG/fP9q6U3q7XoteT34Zulb7be73jm9a+yL7nvYn9M/8L70g/aH3R/dPjZ/Svz0bGD6Z9Lnii+WXxq+hn+9P5gzOCjmSDjyowAGG5qeDsCbXQDQkuHZAd7jKHTF/UsuiOLOKEfgP2HFHU0uLgDs8gUgfh4AEfCMshk2U4ip8C07fsf5AtTRcaQNSV66o4MiFhXeYggfBgff6gFAagDgi2RwcGDT4OCXHZDsHQBO5yrufTIhwjP+Vi0ZarlFLwI/yL8AyN9s6wM067UAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGbaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA1LjQuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjIwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjIwPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CnbkikQAAAAcaURPVAAAAAIAAAAAAAAACgAAACgAAAAKAAAACgAAAHCGuotPAAAAPElEQVQ4EWL8+fXrfwYqAsZRAykOTZxh+J/MqMJq4H+gaVQzEGQQyEAgSZb3MVxIfQNB7gKaCnEl6Y4EAAAA//8k95ofAAAAO0lEQVRj/Pn1638GNPD/P4YQmgrcXMahaiDIS+R5G6uXcYcQYZlRA6FhxMjIwEg4uLCqwBqGjEADyQUAHn9ynk8w7+YAAAAASUVORK5CYII=","content_type":"image/png","filename":"logo.png"}}'
     headers:
       User-Agent:
-      - Cobrato Ruby Client v0.23.0.beta9
+      - Cobrato Ruby Client v1.1.5
       Accept:
       - application/json
       Content-Type:
@@ -18,42 +18,81 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Feb 2019 20:00:44 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      X-RateLimit-Limit:
+      X-Ratelimit-Limit:
       - '60'
-      X-RateLimit-Reset:
-      - '2018-02-05T18:43:00Z'
-      X-RateLimit-Remaining:
+      X-Ratelimit-Reset:
+      - '2019-02-01T20:01:00Z'
+      X-Ratelimit-Remaining:
       - '59'
+      Etag:
+      - W/"c6f66e86c42e211c6c2fa5108b2559b6"
       Cache-Control:
-      - no-store, must-revalidate, private, max-age=0
-      Set-Cookie:
-      - request_method=POST; path=/; HttpOnly; SameSite=Lax
-      - __profilin=p%3Dt; path=/
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 14bc5b97-9427-489a-b5be-206af04fbb79
+      - 56c36deb-b607-4adf-96c3-fd631fea71e7
       X-Runtime:
-      - '0.392991'
+      - '1.200359'
+      Strict-Transport-Security:
+      - max-age=631139040; includeSubdomains
+      Content-Security-Policy:
+      - 'default-src https: ''self''; base-uri ''self''; block-all-mixed-content;
+        child-src ''self'' *.s3.amazonaws.com; connect-src ''self'' *.s3.amazonaws.com
+        sandbox.pjbank.com.br api.pjbank.com.br; font-src ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net
+        *.rollbar.com sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br
+        data:; form-action ''self'' *.passaporteweb.com.br; frame-ancestors ''self''
+        *.s3.amazonaws.com; img-src *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com
+        sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br
+        data:; media-src ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com
+        sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br;
+        object-src ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com
+        sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br;
+        plugin-types application/pdf application/xml text/xml; script-src ''unsafe-inline''
+        ''unsafe-eval'' ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net *.rollbar.com
+        sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br;
+        style-src ''unsafe-inline'' ''self'' *.cobrato.com d16gop6riufroi.cloudfront.net
+        *.rollbar.com sandbox.app.passaporteweb.com.br cobrato-sandbox-uploads.s3.amazonaws.com
+        cdnjs.cloudflare.com res.cloudinary.com s3.amazonaws.com *.google-analytics.com
+        fonts.googleapis.com fonts.gstatic.com sandbox.pjbank.com.br api.pjbank.com.br;
+        upgrade-insecure-requests'
+      Referrer-Policy:
+      - origin-when-cross-origin
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
       - noopen
       X-Frame-Options:
-      - sameorigin
+      - SAMEORIGIN
       X-Permitted-Cross-Domain-Policies:
       - none
-      X-XSS-Protection:
-      - 1; mode=block
-      X-MiniProfiler-Ids:
-      - '["gkrue7eueqpk0fwxs1gm"]'
+      X-Xss-Protection:
+      - '1'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"id":281,"type":"payment_gateway","name":"PJBank testing","status":"pending","payee_id":1,"gateway_name":"pjbank","gateway_key":"6368019b797add1becdb526681019fa82b9de92c","gateway_id":"5c2887642b3acc1604b94baedb972746014ca22b","billet_gateway_key":"46e79d6d5161336afa7b98f01236efacf5d0f24b","billet_gateway_id":"d3418668b85cea70aa28965eafaf927cd34d004c","account_holder":false,"use_avs":null,"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/charge_configs/281"},{"rel":"update","method":"PUT","href":"http://localhost:3000/api/v1/charge_configs/281"},{"rel":"destroy","method":"DELETE","href":"http://localhost:3000/api/v1/charge_configs/281"},{"rel":"payee","method":"GET","href":"http://localhost:3000/api/v1/payees/1"}]}'
+      string: '{"id":373,"type":"payment_gateway","name":"PJBank testing","status":"ok","payee_id":1,"gateway_name":"pjbank","gateway_key":"6368019b797add1becdb526681019fa82b9de92c","gateway_id":"5c2887642b3acc1604b94baedb972746014ca22b","billet_gateway_key":"46e79d6d5161336afa7b98f01236efacf5d0f24b","billet_gateway_id":"d3418668b85cea70aa28965eafaf927cd34d004c","account_holder":false,"use_avs":null,"timezone":"Brasilia","logo_url":"https://cobrato-sandbox-uploads.s3.amazonaws.com/payment_gateway_configs/logos/114/logo.png?1549051243","available_charge_types":["billet"],"_links":[{"rel":"self","method":"GET","href":"https://sandbox.cobrato.com/api/v1/charge_configs/373"},{"rel":"update","method":"PUT","href":"https://sandbox.cobrato.com/api/v1/charge_configs/373"},{"rel":"destroy","method":"DELETE","href":"https://sandbox.cobrato.com/api/v1/charge_configs/373"},{"rel":"payee","method":"GET","href":"https://sandbox.cobrato.com/api/v1/payees/1"}]}'
     http_version: '1.1'
     adapter_metadata:
-      effective_url: http://localhost:3000/api/v1/charge_configs
-  recorded_at: Mon, 05 Feb 2018 18:42:38 GMT
+      effective_url: https://sandbox.cobrato.com/api/v1/charge_configs
+  recorded_at: Fri, 01 Feb 2019 20:00:44 GMT
 recorded_with: VCR 2.9.3

@@ -35,6 +35,8 @@ module Cobrato
       attribute :billet_gateway_key,        String
       attribute :account_holder,            Boolean
       attribute :use_avs,                   Boolean
+      attribute :logo,                      Hash
+      attribute :logo_url,                  String
     end
   end
 end
