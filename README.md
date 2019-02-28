@@ -293,6 +293,19 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
     - cobrato.charge_templates.create
     - cobrato.charge_templates.destroy
 
+## Release 
+To release a new version, update the version number in `lib/cobrato/version.rb`, add the version in `CHANGELOG.md`, run `bundle install` and commit & push the changes to the repository.
+
+If this is your first time publishing a RubyGem in your local device, you will have to download your credentials. To do this, follow the instructions in your [profile page in RubyGems](https://rubygems.org/profile/edit) or just type the following in your command line, replacing `$username` with your RubyGems username.
+
+```bash
+$ curl -u $username https://rubygems.org/api/v1/api_key.yaml > ~/.gem/credentials; chmod 0600 ~/.gem/credentials
+```
+
+Then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Make sure you have publishing rights for the gem on RubyGems beforehand, though.
+
+After publishing the new version, add a `released` label to each pull request included in the release.
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/cobrato-client-ruby/fork )
