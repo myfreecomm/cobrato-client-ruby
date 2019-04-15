@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sandbox.cobrato.com/api/v1/credit_cards
     body:
       encoding: UTF-8
-      string: '{"number":"547999******6055","holder_name":"JONH DOE","brand":"visa","expiration":"02/21","charge_config_id":319,"payer_id":7296,"soft_descriptor":"MyCompany","token":"b156fb5003b1adc2270d1c923c9f83e457d46d4c","national_identifier":"98857339068","cvv":"954"}'
+      string: '{"number":"543950******9013","holder_name":"JONH DOE","brand":"mastercard","expiration":"03/21","charge_config_id":319,"payer_id":7296,"soft_descriptor":"MyCompany","token":"b156fb5003b1adc2270d1c923c9f83e457d46d4c","national_identifier":"98857339068","cvv":"475"}'
     headers:
       User-Agent:
       - Cobrato Ruby Client v1.1.6
@@ -23,15 +23,15 @@ http_interactions:
       X-RateLimit-Limit:
       - '60'
       X-RateLimit-Reset:
-      - '2019-04-15T14:09:00Z'
+      - '2019-04-15T17:17:00Z'
       X-RateLimit-Remaining:
       - '59'
       Cache-Control:
       - no-store, must-revalidate, private, max-age=0
       X-Request-Id:
-      - d5a02ece-f44a-4423-a501-4c3bb4af34ea
+      - 6a9e0c9f-2aa8-4119-b68d-96f71eecdea2
       X-Runtime:
-      - '1.665567'
+      - '1.159274'
       X-Content-Type-Options:
       - nosniff
       X-Download-Options:
@@ -45,16 +45,16 @@ http_interactions:
       X-MiniProfiler-Original-Cache-Control:
       - max-age=0, private, must-revalidate
       X-MiniProfiler-Ids:
-      - '["7ozm9ww776ypu2dcp0lc"]'
+      - '["heow803xaqdwyoka9x2z","ymh5ht9yy9xq0cy84sc7"]'
       Set-Cookie:
       - __profilin=p%3Dt; path=/
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"id":6150,"number":"547999******6055","holder_name":"JONH DOE","brand":"visa","expiration":"02/21","avs_address":null,"avs_number":null,"avs_complement":null,"avs_district":null,"avs_zipcode":null,"payer_id":7296,"reusability_status":"reusable","reusability_error_message":null,"charge_config_id":319,"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/credit_cards/6150"},{"rel":"payer","method":"GET","href":"http://localhost:3000/api/v1/people/7296"},{"rel":"charge_config","method":"GET","href":"http://localhost:3000/api/v1/charge_configs/319"}]}'
+      string: '{"id":6152,"number":"543950******9013","holder_name":"JONH DOE","brand":"mastercard","expiration":"03/21","avs_address":null,"avs_number":null,"avs_complement":null,"avs_district":null,"avs_zipcode":null,"payer_id":7296,"reusability_status":"reusable","reusability_error_message":null,"charge_config_id":319,"_links":[{"rel":"self","method":"GET","href":"http://localhost:3000/api/v1/credit_cards/6152"},{"rel":"payer","method":"GET","href":"http://localhost:3000/api/v1/people/7296"},{"rel":"charge_config","method":"GET","href":"http://localhost:3000/api/v1/charge_configs/319"}]}'
     http_version: '1.1'
     adapter_metadata:
       effective_url: http://localhost:3000/api/v1/credit_cards
-  recorded_at: Mon, 15 Apr 2019 14:08:51 GMT
+  recorded_at: Mon, 15 Apr 2019 17:16:26 GMT
 recorded_with: VCR 2.9.3

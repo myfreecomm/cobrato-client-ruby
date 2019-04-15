@@ -55,16 +55,16 @@ describe Cobrato::Resources::CreditCard do
     context "when charge config is PJBank" do
       let(:params) do
         {
-          number: "547999******6055",
+          number: "543950******9013",
           holder_name: "JONH DOE",
-          brand: "visa",
-          expiration: "02/21",
+          brand: "mastercard",
+          expiration: "03/21",
           charge_config_id: 319,
           payer_id: 7296,
           soft_descriptor: "MyCompany",
           token: "b156fb5003b1adc2270d1c923c9f83e457d46d4c",
           national_identifier: "98857339068",
-          cvv: "954"
+          cvv: "475"
         }
       end
 
@@ -72,7 +72,7 @@ describe Cobrato::Resources::CreditCard do
         VCR.use_cassette("credit_cards/create/pjbank/success") do
           credit_card = subject.create(params)
           expect(credit_card).to be_a(entity_klass)
-          expect(credit_card.number).to eq("547999******6055")
+          expect(credit_card.number).to eq("543950******9013")
           expect(credit_card.holder_name).to eq("JONH DOE")
           expect(credit_card.charge_config_id).to eq(319)
           expect(credit_card.payer_id).to eq(7296)
