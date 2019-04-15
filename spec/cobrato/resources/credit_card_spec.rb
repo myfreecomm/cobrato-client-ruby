@@ -13,7 +13,8 @@ describe Cobrato::Resources::CreditCard do
       expiration: "05/18",
       charge_config_id: 7,
       payer_id: 1,
-      soft_descriptor: "MyCompany"
+      soft_descriptor: "MyCompany",
+      token: "some-random-token"
     }
   end
 
@@ -36,16 +37,46 @@ describe Cobrato::Resources::CreditCard do
   end
 
   describe "#create" do
-    let(:token) { "3ef651d88bbaaa5e77ee4768bc793fd4" }
+    let(:token) { "3fa5e9ecc23e477fd7ba3a41063a9fab" }
 
-    it "creates a credit card" do
-      VCR.use_cassette("credit_cards/create/success") do
-        credit_card = subject.create(params)
-        expect(credit_card).to be_a(entity_klass)
-        expect(credit_card.number).to eq("401200******1112")
-        expect(credit_card.holder_name).to eq("JONH DOE")
-        expect(credit_card.charge_config_id).to eq(7)
-        expect(credit_card.payer_id).to eq(1)
+    context "when charge config is Cielo" do
+      it "creates a credit card" do
+        VCR.use_cassette("credit_cards/create/cielo/success") do
+          credit_card = subject.create(params)
+          expect(credit_card).to be_a(entity_klass)
+          expect(credit_card.number).to eq("401200******1112")
+          expect(credit_card.holder_name).to eq("JONH DOE")
+          expect(credit_card.charge_config_id).to eq(7)
+          expect(credit_card.payer_id).to eq(1)
+        end
+      end
+    end
+
+    context "when charge config is PJBank" do
+      let(:params) do
+        {
+          number: "547999******6055",
+          holder_name: "JONH DOE",
+          brand: "visa",
+          expiration: "02/21",
+          charge_config_id: 319,
+          payer_id: 7296,
+          soft_descriptor: "MyCompany",
+          token: "b156fb5003b1adc2270d1c923c9f83e457d46d4c",
+          national_identifier: "98857339068",
+          cvv: "954"
+        }
+      end
+
+      it "creates a credit card" do
+        VCR.use_cassette("credit_cards/create/pjbank/success") do
+          credit_card = subject.create(params)
+          expect(credit_card).to be_a(entity_klass)
+          expect(credit_card.number).to eq("547999******6055")
+          expect(credit_card.holder_name).to eq("JONH DOE")
+          expect(credit_card.charge_config_id).to eq(319)
+          expect(credit_card.payer_id).to eq(7296)
+        end
       end
     end
   end
