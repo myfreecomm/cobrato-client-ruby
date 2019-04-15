@@ -16,7 +16,8 @@ describe Cobrato::Entities::CreditCard do
       reusability_status: "ok",
       reusability_error_message: "",
       payer_id: 1,
-      charge_config_id: 1
+      charge_config_id: 1,
+      token: "6d7b12bc-bd77-46f8-9f1f-37448a301810"
     }
   end
 
@@ -24,5 +25,5 @@ describe Cobrato::Entities::CreditCard do
 
   it_behaves_like "entity_attributes", [
     :id, :number, :holder_name, :reusability_status, :reusability_error_message, :brand, :expiration,
-    :avs_address, :avs_number, :avs_complement, :avs_district, :avs_zipcode, :payer_id, :charge_config_id]
+    :avs_address, :avs_number, :avs_complement, :avs_district, :avs_zipcode, :payer_id, :charge_config_id, :token]
 end

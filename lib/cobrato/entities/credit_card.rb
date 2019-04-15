@@ -15,6 +15,7 @@ module Cobrato
       attribute :avs_zipcode,               String
       attribute :payer_id,                  Integer
       attribute :charge_config_id,          Integer
+      attribute :token,                     String
     end
   end
 end
