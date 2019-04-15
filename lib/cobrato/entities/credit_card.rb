@@ -16,6 +16,7 @@ module Cobrato
       attribute :payer_id,                  Integer
       attribute :charge_config_id,          Integer
       attribute :token,                     String
+      attribute :national_identifier,       String
     end
   end
 end
