@@ -2,6 +2,9 @@
 
 ## Next version
 
+- Add `token` attribute to CreditCard
+- Add `national_identifier` attribute to CreditCard
+
 ## v1.1.6
 
 - Add `logo` and `logo_url` attributes to PaymentGatewayConfig
