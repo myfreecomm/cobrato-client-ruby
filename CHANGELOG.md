@@ -2,6 +2,8 @@
 
 ## Next version
 
+## v1.1.7
+
 - Add `token` attribute to CreditCard
 - Add `national_identifier` attribute to CreditCard
 
