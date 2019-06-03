@@ -213,10 +213,11 @@ describe Cobrato::Resources::Charge do
       let(:http) { Cobrato::Http.new("3fa5e9ecc23e477fd7ba3a41063a9fab") }
       let(:params) do
         {
-          charge_config_id: 286,
+          charge_config_id: 682,
           charged_amount: 721.0,
-          due_date: "06/05/2018",
+          due_date: "06/05/2028",
           type: "billet",
+          instructions: "instructions about gateway billet",
           payer_attributes: {
             national_identifier_type: "cpf",
             national_identifier: "12345678909",
@@ -230,6 +231,7 @@ describe Cobrato::Resources::Charge do
           charge = subject.create(params)
           expect(charge).to be_a(entity_klass)
           expect(charge.charged_amount).to eq(721.0)
+          expect(charge.instructions).to eq("instructions about gateway billet")
           expect(charge.type).to eq("billet")
         end
       end

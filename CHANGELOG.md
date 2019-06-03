@@ -2,6 +2,8 @@
 
 ## Next version
 
+- Improve gateway billet test
+
 ## v1.1.7
 
 - Add `token` attribute to CreditCard
