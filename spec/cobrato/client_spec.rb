@@ -24,6 +24,12 @@ describe Cobrato::Client do
     end
   end
 
+  describe "#companies" do
+    it "returns an instance of Cobrato::Resources::Company" do
+      expect(subject.companies).to be_a(Cobrato::Resources::Company)
+    end
+  end
+
   describe "#payees" do
     it "returns an instance of Cobrato::Resources::Payee" do
       expect(subject.payees).to be_a(Cobrato::Resources::Payee)

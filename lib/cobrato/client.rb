@@ -15,6 +15,10 @@ module Cobrato
       false
     end
 
+    def companies
+      Resources::Company.new(http)
+    end
+
     def payees
       Resources::Payee.new(http)
     end

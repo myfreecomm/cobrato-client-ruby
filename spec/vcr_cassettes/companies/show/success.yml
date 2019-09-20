@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.cobrato.com/api/v1/companies/227
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v1.1.7
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2019-09-20T20:03:00Z'
+      X-RateLimit-Remaining:
+      - '59'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 39f5e08f-02be-4325-b18c-e32e0118365a
+      X-Runtime:
+      - '0.499738'
+      X-Frame-Options:
+      - sameorigin
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-MiniProfiler-Original-Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-MiniProfiler-Ids:
+      - '["8fgskvh7wcodccbh7dhq","2a9ue11fs1hbyba9lmkg","bmgmdgwy21iafvjsj1b8","g2c5tlg9mc7jcnhx91w8","js9w7r25caorp1beofce","q1lsfpb56f2d9pgykq03"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MjI3LCJuYXRpb25hbF9pZGVudGlmaWVyX3R5cGUiOiJjcGYiLCJuYXRpb25hbF9pZGVudGlmaWVyIjoiMzgwMzExNzE1MTMiLCJuYW1lIjoiSm/Do28gU2lsdmVpcmEiLCJ6aXBjb2RlIjoiOTkwMDAtNzUwIiwiY2l0eSI6IkNhcmFwZWJ1cyIsInN0YXRlIjoiUkoiLCJuZWlnaGJvdXJob29kIjoiQ2VudHJvIiwic3RyZWV0IjoiUnVhIEp1bGlvIGRlIENhc3RpbGhvcyIsIm51bWJlciI6IjEwMCIsImNvbXBsZW1lbnQiOiJBbyBsYWRvIGRhIGxvdMOpcmljYS4iLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jb21wYW5pZXMvMjI3In0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jb21wYW5pZXMvMjI3In0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY29tcGFuaWVzLzIyNyJ9LHsicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheWVlcy8yMjcifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheWVlcy8yMjcifSx7InJlbCI6ImRlc3Ryb3kiLCJtZXRob2QiOiJERUxFVEUiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9wYXllZXMvMjI3In1dfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/companies/227
+  recorded_at: Fri, 20 Sep 2019 20:02:12 GMT
+recorded_with: VCR 2.9.3

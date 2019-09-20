@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.cobrato.com/api/v1/companies
+    body:
+      encoding: UTF-8
+      string: '{"national_identifier_type":"cpf","national_identifier":"38031171513","name":"João
+        Silveira","zipcode":"99000-750","city":"Carapebus","state":"RJ","neighbourhood":"Centro","street":"Rua
+        Julio de Castilhos","number":"100","complement":"Ao lado da lotérica."}'
+    headers:
+      User-Agent:
+      - Cobrato Ruby Client v1.1.7
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Location:
+      - https://sandbox.cobrato.com/api/v1/companies/227
+      Content-Type:
+      - application/json; charset=utf-8
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Reset:
+      - '2019-09-20T19:57:00Z'
+      X-RateLimit-Remaining:
+      - '55'
+      Cache-Control:
+      - no-store, must-revalidate, private, max-age=0
+      X-Request-Id:
+      - d8d046d4-753f-43a7-9766-8079141902a6
+      X-Runtime:
+      - '0.238291'
+      X-Frame-Options:
+      - sameorigin
+      X-Content-Type-Options:
+      - nosniff
+      X-XSS-Protection:
+      - 1; mode=block
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-MiniProfiler-Original-Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-MiniProfiler-Ids:
+      - '["q1lsfpb56f2d9pgykq03","2a9ue11fs1hbyba9lmkg","bmgmdgwy21iafvjsj1b8","g2c5tlg9mc7jcnhx91w8","js9w7r25caorp1beofce"]'
+      Set-Cookie:
+      - __profilin=p%3Dt; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MjI3LCJuYXRpb25hbF9pZGVudGlmaWVyX3R5cGUiOiJjcGYiLCJuYXRpb25hbF9pZGVudGlmaWVyIjoiMzgwMzExNzE1MTMiLCJuYW1lIjoiSm/Do28gU2lsdmVpcmEiLCJ6aXBjb2RlIjoiOTkwMDAtNzUwIiwiY2l0eSI6IkNhcmFwZWJ1cyIsInN0YXRlIjoiUkoiLCJuZWlnaGJvdXJob29kIjoiQ2VudHJvIiwic3RyZWV0IjoiUnVhIEp1bGlvIGRlIENhc3RpbGhvcyIsIm51bWJlciI6IjEwMCIsImNvbXBsZW1lbnQiOiJBbyBsYWRvIGRhIGxvdMOpcmljYS4iLCJfbGlua3MiOlt7InJlbCI6InNlbGYiLCJtZXRob2QiOiJHRVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jb21wYW5pZXMvMjI3In0seyJyZWwiOiJ1cGRhdGUiLCJtZXRob2QiOiJQVVQiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9jb21wYW5pZXMvMjI3In0seyJyZWwiOiJkZXN0cm95IiwibWV0aG9kIjoiREVMRVRFIiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvdjEvY29tcGFuaWVzLzIyNyJ9LHsicmVsIjoic2VsZiIsIm1ldGhvZCI6IkdFVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheWVlcy8yMjcifSx7InJlbCI6InVwZGF0ZSIsIm1ldGhvZCI6IlBVVCIsImhyZWYiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAvYXBpL3YxL3BheWVlcy8yMjcifSx7InJlbCI6ImRlc3Ryb3kiLCJtZXRob2QiOiJERUxFVEUiLCJocmVmIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwL2FwaS92MS9wYXllZXMvMjI3In1dfQ==
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://sandbox.cobrato.com/api/v1/companies
+  recorded_at: Fri, 20 Sep 2019 19:56:38 GMT
+recorded_with: VCR 2.9.3

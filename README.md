@@ -54,7 +54,8 @@ client = Cobrato.client("YOUR_TOKEN_HERE")
 
 Now you have acess to every API endpoint:
 
-* [Payees API](http://docs.cobrato.com/#benefici-rio)
+* [Companies API](http://docs.cobrato.com/#estabelecimento)
+* [Payees API](http://docs.cobrato.com/#benefici-rio) (DEPRECATED)
 * [Bank Accounts API](http://docs.cobrato.com/#conta-banc-ria)
 * [People API](http://docs.cobrato.com/#pessoa)
 * [Payers API](http://docs.cobrato.com/#pagador) (DEPRECATED)
@@ -69,7 +70,17 @@ Now you have acess to every API endpoint:
 
 ## Endpoints
 
-#### [Payees](http://docs.cobrato.com/#benefici-rio)
+#### [Companies](http://docs.cobrato.com/#estabelecimento)
+
+| HTTP method | Endpoint                                                                     | Client method            |
+| ----------- | -----------------------------------------------------------------------------| -------------------------|
+| POST        | [api/v1/companies](http://docs.cobrato.com/#cria-o-de-benefici-rio)          | client.companies.create  |
+| GET         | [api/v1/companies](http://docs.cobrato.com/#lista-de-todos-os-benefici-rios) | client.companies.list    |
+| GET         | [api/v1/companies/:id](http://docs.cobrato.com/#informa-es-do-benefici-rio)  | client.companies.show    |
+| PUT         | [api/v1/companies/:id](http://docs.cobrato.com/#atualiza-o-de-benefici-rio)  | client.companies.update  |
+| DELETE      | [api/v1/companies/:id](http://docs.cobrato.com/#exclus-o-de-benefici-rio)    | client.companies.destroy |
+
+#### [Payees](http://docs.cobrato.com/#benefici-rio) # DEPRECATED
 
 | HTTP method | Endpoint                                                                  | Client method         |
 | ----------- | ------------------------------------------------------------------------- | --------------------- |
@@ -271,6 +282,9 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
 
 #### Available hooks
 
+* companies
+    - cobrato.companies.create
+    - cobrato.companies.destroy
 * payees
     - cobrato.payees.create
     - cobrato.payees.destroy
@@ -293,7 +307,7 @@ When you call `client.payees.destroy(1)`, an event `cobrato.payees.destroy` will
     - cobrato.charge_templates.create
     - cobrato.charge_templates.destroy
 
-## Release 
+## Release
 To release a new version, update the version number in `lib/cobrato/version.rb`, add the version in `CHANGELOG.md`, run `bundle install` and commit & push the changes to the repository.
 
 If this is your first time publishing a RubyGem in your local device, you will have to download your credentials. To do this, follow the instructions in your [profile page in RubyGems](https://rubygems.org/profile/edit) or just type the following in your command line, replacing `$username` with your RubyGems username.
