@@ -14,10 +14,14 @@ describe Cobrato::Entities::Payment do
       note: "Pagamento para Fulano de tal",
 
       bank_code: "341",
-      payee_document_type: "cpf",
-      payee_document: "123.456.789-09",
-      payee_name: "John Doe",
-      payee_id: 7,
+      company_document_type: "cpf",
+      company_document: "123.456.789-09",
+      company_name: "John Doe",
+      company_id: 7,
+      payee_document_type: "cpf", # DEPRECATED
+      payee_document: "123.456.789-09", # DEPRECATED
+      payee_name: "John Doe", # DEPRECATED
+      payee_id: 7, # DEPRECATED
 
       agency: "9358",
       account: "21500",
@@ -61,15 +65,47 @@ describe Cobrato::Entities::Payment do
 
   subject { described_class.new(attributes) }
 
+  describe '#payee_id' do
+    it 'print a deprecation warning' do
+      expect {
+        subject.payee_id
+      }.to output("Warning: 'payee_id' is deprecated. Use 'company_id' instead.\n").to_stdout
+    end
+  end
+
+  describe '#payee_name' do
+    it 'print a deprecation warning' do
+      expect {
+        subject.payee_name
+      }.to output("Warning: 'payee_name' is deprecated. Use 'company_name' instead.\n").to_stdout
+    end
+  end
+
+  describe '#payee_document' do
+    it 'print a deprecation warning' do
+      expect {
+        subject.payee_document
+      }.to output("Warning: 'payee_document' is deprecated. Use 'company_document' instead.\n").to_stdout
+    end
+  end
+
+  describe '#payee_document_type' do
+    it 'print a deprecation warning' do
+      expect {
+        subject.payee_document_type
+      }.to output("Warning: 'payee_document_type' is deprecated. Use 'company_document_type' instead.\n").to_stdout
+    end
+  end
+
   it_behaves_like "entity_attributes",
     [
       # Shared with all
       :id, :payment_config_id, :payment_type, :payment_method, :amount, :date, :registration_status, :our_number,
-      :bank_code, :payee_document_type, :payee_document, :payee_name, :note,
+      :bank_code, :payee_document_type, :payee_document, :payee_name, :note, :company_document_type, :company_document, :company_name,
 
       # Shared with some
       :due_date, :calculation_period, :receita_federal_code, :mulct_amount, :interest_amount, :competency_year,
-      :discount_amount, :payee_id,
+      :discount_amount, :company_id, :payee_id,
 
       # Transfer specific
       :agency, :account, :account_digit, :doc_goal, :ted_goal,

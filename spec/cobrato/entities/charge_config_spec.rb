@@ -3,7 +3,8 @@ require "spec_helper"
 describe Cobrato::Entities::ChargeConfig do
   let(:attributes) do
     {
-      payee_id: 1,
+      company_id: 1,
+      payee_id: 1, # DEPRECATED
       bank_account_id: 1,
       type: "billet",
       portfolio_code: "17",
@@ -29,9 +30,17 @@ describe Cobrato::Entities::ChargeConfig do
 
   subject { described_class.new(attributes) }
 
+  describe '#payee_id' do
+    it 'print a deprecation warning' do
+      expect {
+        subject.payee_id
+      }.to output("Warning: 'payee_id' is deprecated. Use 'company_id' instead.\n").to_stdout
+    end
+  end
+
   it_behaves_like "entity_attributes", [
     # common
-    :id, :type, :name, :status, :payee_id, :available_charge_types, :deactivated_at, :timezone,
+    :id, :type, :name, :status, :payee_id, :company_id, :available_charge_types, :deactivated_at, :timezone,
     # billet specifics
     :bank_account_id, :portfolio_code, :agreement_code, :agreement_code_digit, :initial_number, :next_number,
     :end_number, :registered_charges, :remittance_agreement_code, :initial_remittance_number, :current_remittance_number,

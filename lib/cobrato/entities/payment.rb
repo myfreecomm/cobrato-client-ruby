@@ -12,6 +12,7 @@ module Cobrato
       attribute :registration_status,      String
       attribute :note,                     String
       attribute :payee_name,               String
+      attribute :company_name,             String # DEPRECATED
 
       # Shared with some
       attribute :due_date,                 Date
@@ -32,9 +33,12 @@ module Cobrato
       attribute :account_digit,            String
       attribute :agency,                   String
       attribute :bank_code,                String
-      attribute :payee_id,                 Integer
-      attribute :payee_document_type,      String
-      attribute :payee_document,           String
+      attribute :company_id,               Integer
+      attribute :company_document_type,    String
+      attribute :company_document,         String
+      attribute :payee_id,                 Integer # DEPRECATED
+      attribute :payee_document_type,      String # DEPRECATED
+      attribute :payee_document,           String # DEPRECATED
       attribute :doc_goal,                 String
       attribute :ted_goal,                 String
 
@@ -64,6 +68,26 @@ module Cobrato
       # FGTS specific
       attribute :taxpayer_document,        String
       attribute :taxpayer_document_type,   String
+
+      def payee_id
+        puts "Warning: 'payee_id' is deprecated. Use 'company_id' instead."
+        super
+      end
+
+      def payee_name
+        puts "Warning: 'payee_name' is deprecated. Use 'company_name' instead."
+        super
+      end
+
+      def payee_document
+        puts "Warning: 'payee_document' is deprecated. Use 'company_document' instead."
+        super
+      end
+
+      def payee_document_type
+        puts "Warning: 'payee_document_type' is deprecated. Use 'company_document_type' instead."
+        super
+      end
     end
   end
 end

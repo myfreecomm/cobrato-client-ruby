@@ -5,6 +5,7 @@ module Cobrato
       attribute :name,                      String
       attribute :type,                      String
       attribute :status,                    String
+      attribute :company_id,                String
       attribute :payee_id,                  String
       attribute :available_charge_types,    Array
       attribute :deactivated_at,            DateTime
@@ -37,6 +38,11 @@ module Cobrato
       attribute :use_avs,                   Boolean
       attribute :logo,                      Hash
       attribute :logo_url,                  String
+
+      def payee_id
+        puts "Warning: 'payee_id' is deprecated. Use 'company_id' instead."
+        super
+      end
     end
   end
 end
