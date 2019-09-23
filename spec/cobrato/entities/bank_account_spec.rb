@@ -17,11 +17,11 @@ describe Cobrato::Entities::BankAccount do
 
   describe '#payee_id' do
     it 'print a deprecation warning' do
-      expect {
+      expect do
         subject.payee_id
-      }.to output("Warning: 'payee_id' is deprecated. Use 'company_id' instead.\n").to_stdout
+      end.to output("Warning: 'payee_id' is deprecated. Use 'company_id' instead.\n").to_stdout
     end
   end
 
-  it_behaves_like "entity_attributes", [:id, :payee_id, :company_id, :bank_code, :agency_digit, :agency, :account, :account_digit]
+  it_behaves_like "entity_attributes", %i[id payee_id company_id bank_code agency_digit agency account account_digit]
 end
