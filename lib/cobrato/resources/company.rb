@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Cobrato
   module Resources
     class Company < Base

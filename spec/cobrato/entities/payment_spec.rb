@@ -91,9 +91,9 @@ describe Cobrato::Entities::Payment do
 
   describe '#payee_document_type' do
     it 'print a deprecation warning' do
-      expect {
+      expect do
         subject.payee_document_type
-      }.to output("Warning: 'payee_document_type' is deprecated. Use 'company_document_type' instead.\n").to_stdout
+      end.to output("Warning: 'payee_document_type' is deprecated. Use 'company_document_type' instead.\n").to_stdout
     end
   end
 

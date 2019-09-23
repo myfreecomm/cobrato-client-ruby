@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "spec_helper"
 
 describe Cobrato::Resources::Company do
@@ -49,7 +50,7 @@ describe Cobrato::Resources::Company do
   describe "#update" do
     it "returns a Company instance updated" do
       VCR.use_cassette("companies/update/success") do
-        company = subject.update(227, {name: "RSpec integration"})
+        company = subject.update(227, { name: "RSpec integration" })
         expect(company).to be_a(entity_klass)
         expect(company.name).to eq("RSpec integration")
       end

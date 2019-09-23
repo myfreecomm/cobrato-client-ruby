@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "spec_helper"
 
 describe Cobrato::Entities::Company do
@@ -18,5 +19,5 @@ describe Cobrato::Entities::Company do
 
   subject { described_class.new(attributes) }
 
-  it_behaves_like "entity_attributes", [:id, :national_identifier_type, :national_identifier, :name, :zipcode, :city, :state, :neighbourhood, :number, :complement, :street]
+  it_behaves_like "entity_attributes", %i[id national_identifier_type national_identifier name zipcode city state neighbourhood number complement street]
 end
