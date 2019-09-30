@@ -48,7 +48,12 @@ describe Cobrato::Entities::Charge do
       billet_link: "http://billet_link.com.br/billet_link",
       barcode: "00190.00009 03055.582005 00000.002121 4 73840000001401",
       paid_at: "2018-07-13T00:55:38.961Z",
-      discount_amount: 0.0
+      discount_amount: 0.0,
+      title: "Title for charge",
+      cashback_amount: 12.50,
+      qr_code_link: "https://api.hml.amedigital.com/api/qrcode?qrcode=eyJ0eXBlIjoiUEFZTUVOVCIsIm9yZGVyX2lkIjoiMjY3YTNhZjMtMTJkMy00MjAwLWJmYWEtMWY2OTAxYTRmMmQ0In0=",
+      deepLink:"amedigital://payment?qrcode=eyJ0eXBlIjoiUEFZTUVOVCIsIm9yZGVyX2lkIjoiMjY3YTNhZjMtMTJkMy00MjAwLWJmYWEtMWY2OTAxYTRmMmQ0In0=",
+      order_status: "pending"
     }
   end
 
@@ -69,5 +74,7 @@ describe Cobrato::Entities::Charge do
     # payment gateway specifics
     :credit_card_id, :description, :installments, :payment_gateway_status, :payment_method, :soft_descriptor,
     # gateway billet specifics
-    :discount_amount]
+    :discount_amount,
+    # wallet specifics
+    :title, :cashback_amount, :qr_code_link, :deepLink, :order_status]
 end

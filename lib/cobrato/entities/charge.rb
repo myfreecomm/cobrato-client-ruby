@@ -68,6 +68,13 @@ module Cobrato
 
       # gateway billet specifics
       attribute :discount_amount,                Decimal
+
+      # wallet specifics
+      attribute :title,                          String
+      attribute :cashback_amount,                Decimal
+      attribute :qr_code_link,                   String
+      attribute :deepLink,                       String
+      attribute :order_status,                   String
     end
   end
 end
