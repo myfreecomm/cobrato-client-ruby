@@ -52,7 +52,7 @@ describe Cobrato::Entities::Charge do
       title: "Title for charge",
       cashback_amount: 12.50,
       qr_code_link: "https://api.hml.amedigital.com/api/qrcode?qrcode=eyJ0eXBlIjoiUEFZTUVOVCIsIm9yZGVyX2lkIjoiMjY3YTNhZjMtMTJkMy00MjAwLWJmYWEtMWY2OTAxYTRmMmQ0In0=",
-      deepLink:"amedigital://payment?qrcode=eyJ0eXBlIjoiUEFZTUVOVCIsIm9yZGVyX2lkIjoiMjY3YTNhZjMtMTJkMy00MjAwLWJmYWEtMWY2OTAxYTRmMmQ0In0=",
+      deep_link: "amedigital://payment?qrcode=eyJ0eXBlIjoiUEFZTUVOVCIsIm9yZGVyX2lkIjoiMjY3YTNhZjMtMTJkMy00MjAwLWJmYWEtMWY2OTAxYTRmMmQ0In0=",
       order_status: "pending"
     }
   end
@@ -76,5 +76,5 @@ describe Cobrato::Entities::Charge do
     # gateway billet specifics
     :discount_amount,
     # wallet specifics
-    :title, :cashback_amount, :qr_code_link, :deepLink, :order_status]
+    :title, :cashback_amount, :qr_code_link, :deep_link, :order_status]
 end

@@ -73,7 +73,7 @@ module Cobrato
       attribute :title,                          String
       attribute :cashback_amount,                Decimal
       attribute :qr_code_link,                   String
-      attribute :deepLink,                       String
+      attribute :deep_link,                      String
       attribute :order_status,                   String
     end
   end
